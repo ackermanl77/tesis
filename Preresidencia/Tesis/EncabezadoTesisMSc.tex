@@ -1,0 +1,131 @@
+\documentclass[12pt,spanish,fleqn, letterpaper]{scrbook}
+
+\usepackage[utf8]{inputenc} %fuentes
+\usepackage{lmodern} %fuentes
+\usepackage[T1]{fontenc} %fuentes
+\usepackage[spanish]{babel}
+\usepackage{epsfig}
+\usepackage{epic}
+\usepackage{eepic}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{threeparttable}
+\usepackage{amscd}
+\usepackage{here}
+\usepackage{graphicx}
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{subcaption}
+\usepackage{longtable}
+\usepackage{cite}
+\usepackage{scrhack}
+\usepackage[document]{ragged2e}
+\usepackage{tikz}
+
+ %idoma, cargué los dos porque constantemente estoy cambiando
+\usepackage{listings}
+\usepackage{textgreek} 
+
+\usepackage{babel}
+\usepackage{lmodern}
+\selectlanguage{spanish} 
+\usepackage[spanish,onelanguage]{algorithm2e} %for psuedo code
+%\input{spanishAlgorithmic} % mi archivo de traducción
+
+% Manejo de hypervínculos
+\usepackage{hyperref}
+\hypersetup{bookmarksnumbered=true,
+            colorlinks=true,
+            citecolor=black,
+            linkcolor=black}
+            
+% *** GRAPHICS RELATED PACKAGES ***
+\usepackage{epstopdf}
+ \usepackage[siunitx, american, smartlabels, cute inductors, europeanvoltages]{circuitikz}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{arrows.meta,backgrounds}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{chains}
+\usetikzlibrary{calc}
+\makeatletter
+\ctikzset{lx/.code args={#1 and #2}{ 
+  \pgfkeys{/tikz/circuitikz/bipole/label/name=\parbox{1cm}{\centering #1  \\ #2}}
+    \ctikzsetvalof{bipole/label/unit}{}
+    \ifpgf@circ@siunitx 
+        \pgf@circ@handleSI{#2}
+        \ifpgf@circ@siunitx@res 
+            \edef\pgf@temp{\pgf@circ@handleSI@val}
+            \pgfkeyslet{/tikz/circuitikz/bipole/label/name}{\pgf@temp}
+            \edef\pgf@temp{\pgf@circ@handleSI@unit}
+            \pgfkeyslet{/tikz/circuitikz/bipole/label/unit}{\pgf@temp}
+        \else
+        \fi
+    \else
+    \fi
+}}
+
+%Estilo de los encabezados
+%Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
+\usepackage[Bjornstrup]{fncychap}
+
+%Para rotar texto, objetos y tablas
+\usepackage{rotating} 
+
+% Como numerar las ecuaciones, figuras y tablas
+\renewcommand{\theequation}{\thechapter-\arabic{equation}}
+\renewcommand{\thefigure}{\textbf{\thechapter-\arabic{figure}}}
+\renewcommand{\thetable}{\textbf{\thechapter-\arabic{table}}}
+%% Estilo de las páginas
+
+\KOMAoptions{DIV=14}%Margenes 4-15 (menos numero es menos margen)
+%\usepackage{showframe}
+
+\KOMAoptions{headlines=2.1}
+\KOMAoptions{footsepline=true}
+
+\recalctypearea
+ \fancyhead[RE]{\itshape\nouppercase puto}
+ \fancyhead[LO]{\itshape\nouppercase\rightmark}
+ \fancyfoot[C]{\thepage}
+ 
+
+% Unidades de separación
+\unitlength1mm %Define la unidad LE para Figuras
+\mathindent0cm %Define la distancia de las formulas al texto
+\marginparwidth0cm
+\parindent0cm %Define la distancia de la primera linea de un parrafo
+
+%Espacio entre lineas
+\renewcommand{\baselinestretch}{1}
+
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesection}{\arabic{section}}
+
+\numberwithin{equation}{section}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{corollary}[theorem]{Corolario}
+\newtheorem{lemma}{Lema}[section]
+
+\theoremstyle{definition}
+\newtheorem{defn}[equation]{Definition}
+\newtheorem{exam}[equation]{Example}
+\newtheorem{prob}[equation]{Problem}
+
+
+\theoremstyle{remark}
+\newtheorem{note}[equation]{Note}
+\newtheorem{rem}[equation]{Remark}
+
+
+%Definir comandos nuevos
+\usepackage{Encabezado/Befehle}
+
+
+%separación de silabas de palabras mal cortadas entre líneas
+\hyphenation {u-t}

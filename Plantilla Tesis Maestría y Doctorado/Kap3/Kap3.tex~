@@ -1,0 +1,610 @@
+\chapter{COMPONENTES TRICONEXAS}
+
+Para esta parte se utilizan los conceptos generados por \citep{hopcroft1973} y mejorados por \citep{Gutwenger2000ALT}.
+
+\section{DIVIDIR UN gráfica EN COMPONENTES TRICONEXAS}
+
+\subsection{Introducción}
+
+\paragraph{}
+Las propiedades de conectividad de las gráficas forman una parte importante de la teoría de gráficas. En \citep{hopcroft1973} se considera el problema de dividir una gráfica en sus componentes triconexas. Un algoritmo para esto es de utilidad para analizar circuitos electricos * , para determinar si una gráfica es plana * y para determinar cuando dos gráficas planas son isomorfas *. Un algoritmo para planaridad puede ser usado en el diseño de tablas de circuitos; un algoritmo para isomorfismo de gráficas planas puede ser usado para probar el isomorfismo estructural de compuestos químicos * y en nuestro caso para ayudar a clasificar gráficas de Dynkin de tipo $\DynD_{n}$.\\
+
+\subsection{Gráficas, conectividad y busqueda en profundidad}
+
+\paragraph{}
+Las componentes triconexas pueden ser definidas de varias formas todas equivalentes los resultados a continuacion se dan si prueba provienen de Saunders Maclaine; estas definiciones se modificarion para hacerlos mas acordes a usar para aplicaciones computacionales.
+
+\paragraph{}
+Una gráfica $G = \left(\mathscr{V},\mathscr{E}\right)$ consiste de un conjunto $\mathscr{V}$ que contiene $\mathrm{V}$ vertices y un conjunto $\mathscr{E}$ que contiene $\mathrm{E}$ aristas. En este trabajo se descartan las gráficas dirigidos cualquier duda sobre estos leer * por lo tanto solo trabajaremos con gráficas simples(sin aristas multiples solo se mencionaran aristas multiples en casos necesarios) no dirigidos(al hacer la descomposición ya estaremos trabajando con multigraficas(aristas multiples)). Ahora si $\mathscr{E}^{`}$ es un conjunto de aristas en $G$, $\mathscr{V}\left(\mathscr{E}^{`}\right)$ es el conjunto de vertices que inciden a uno o más aristas en $\mathscr{E}^{`}$. Si $S$ es un conjunto de vertices en $G$, $\mathscr{E}\left(\mathscr{S}\right)$  es el conjunto de aristas incidentes a al menos un vertice en $S$.
+
+\paragraph{}
+Un \textbf{camino} $p:v \overset{\ast}{\Rightarrow} w$ en $G$ es una secuencia de vertices y aristas que van de $v$ a $w$. Un camino es simple si todos sus vertices son distintos. Un camino $p:v \overset{\ast}{\Rightarrow} v$ es un \textbf{ciclo} si todas las aristas son distintas y el único vertice que se repite es en $p$ es $v$ y este está al principio y al final de la secuencia de vertices. Un gráfica no dirigida es conexa si para cada par de vertices $(v, w)$ existe un camino entre$(v,w)$. Sea $G= \left(\mathscr{V},\mathscr{E}\right)$ y sea $G' =  \left(\mathscr{V}^{`},\mathscr{E}^{`}\right)$ dos gráficas tales que $\mathscr{V}^{`}\subseteq\mathscr{V}$ y $\mathscr{E}^{`}\subseteq \mathscr{E}$ entonces $G^{`}$ es una subgráfica de $G$. Una gráfica con exactamente dos vertices $v,w$ y uno o más aristas $\left(v,w\right)$ se le dice \textbf{enlace}.
+
+\paragraph{}
+Un árbol $T$ (dirigido, enraizado) es una gráfica dirigida cuya versión no dirigida es conexa, que tienen un vértice (llamado raíz) y en el que cualquier par de vértices están conectados por exactamente un camino. La relación ``$(v, w)$ es una arista de $T$'' se denota por $v \rightarrow w$. La relación ``hay un camino de $v$ a $w$ en $T$'' se denota por $v \overset{\ast}{\rightarrow}  w$ donde $v$ es el padre de $w$, y $w$ es un hijo de $v$.Si $v \overset{\ast}{\rightarrow} w$, entonces v en un ancestro de w y w es un descendiente de v. El conjunto de descendientes de un vértice $v$ se denota por $D\left(v\right)$. Todo vértice es ancestro y descendiente de sí mismo. Si $G$ es una gráfica no dirigida, un arbol $T$ es un \textbf{arbol} de $G$ si $T$ es un subgráfica de $G$ y $T$ contiene todos los vertices de $G$
+
+\paragraph{}
+Sea $P$ una gráfica no dirigida que consta de dos conjuntos disjuntos de aristas, denotados por $v \rightarrow w$ y $v \rule[1mm]{.1cm}{0.4pt} \rightarrow w$. Supongamos que $P$ satisface las siguientes propiedades:
+\begin{enumerate}
+\item La subgráfica $T$ que contiene las aristas $v \rightarrow w$ es un árbol de recubrimiento de $P$.
+\item Si $v \rule[1mm]{.1cm}{0.4pt} \rightarrow w$, entonces $v \overset{\ast}{\rightarrow}  w$. Es decir, cada arista que no está en el árbol $T$ de $P$ conecta un vértice con uno de sus ancestros en $T$.
+\end{enumerate}
+Entonces a $P$ se le dice árbol. Las aristas $v \rule[1mm]{.1cm}{0.4pt} \rightarrow w$ se les dice ramas de $P$.
+
+\paragraph{}
+Un gráfica conexa $G$ es \textbf{biconexa} si por cada tripleta de vértices distintos $v$, $w$ y $a$ en $V$, hay un camino $p: v \overset{\ast}{\rightarrow} w$ tal que $a$ no está en el camino $p$. Si hay una tripleta distinta $v$, $w$, $a$ tal que $a$ está en cada camino de  $p :v  \overset{\ast}{\rightarrow} w$, entonces se dice que  $a$ es un \textbf{punto de separación} (o  \textbf{punto de articulación}) de $G$. Podemos particionar las aristas de $G$ tal que dos aristas están en el mismo bloque de la partición si y sólo si pertenecen a un \textbf{ciclo}. Sea $G_{i} =  \left(V_{i}, E_{i}\right)$ donde $E_{i}$ es el conjunto de aristas en el $i$-ésimo bloque de la partición, y $V_{i} = V\left(E_{i}\right)$. Entonces lo siguiente se cumple:
+\begin{enumerate}
+\item Cada $G_{i}$ es biconexa.
+\item Ningún $G_{i}$ es una subgráfica propia de una subgráfica biconexa de $G$.
+\item Cada vértice de $G$ que no es un punto de articulación de $G$ está exactamente una vez entre los $V_{i}$ y cada punto de articulación está al menos dos veces.
+\item Para cada $i, j, i \neq j, V_{i} \cap V_{j}$ contiene como máximo un vértice; además, este el vértice (si lo hay) es un punto de articulación.
+\end{enumerate}
+Los subgráficas $G_{i}$ de $G$ se denominan \textbf{componentes biconexas} de $G$. Las componentes biconexas de $G$ son únicas.
+
+\paragraph{}
+Sean $\{a, b\}$ un par de vértices en una gráfica biconexa $G$. Supongamos que las aristas de $G$ se dividen en clases de equivalencia $E_{1}, E_{2}, \ldots, E_{n}$ tal que dos aristas que se encuentran en un camino que no contiene ningún vértice de $\{a, b\}$ excepto como extremo en el camino están en la misma clase. Las clases $E_{i}$ se denominan \textbf{clases de separación} de $G$ con respecto a $\{a, b\}$. Si hay al menos dos clases de separación, entonces $\{a, b\}$ es una \textbf{par de separación} de $G$ a menos que $(i)$ haya exactamente dos clases de separación y una clase consta de una sola arista, o $(ii)$ hay exactamente tres clases, cada una de las cuales consta de una sola arista.
+
+\paragraph{}
+Si $G$ es una gráfica biconexa tal que ningún par $\{a, b\}$ es un par de separación de $G$, entonces $G$ es \textbf{triconexa}. Sea $\{a, b\}$ un par de separación de $G$. Sean $E_{1}, E_{2}, \ldots, E_{n}$  las clases de separación de $G$ con respecto a $\{a,b\}$.  Sea $E^{'} = \bigcup_{i=1}^{k} E_{i}$ y $E^{''}=\bigcup_{i=k+1}^{n} E_{i}$ tal que $\left|E^{'} geq 2\right|, ~  \left|E^{''} geq 2\right|$. Sea $G_{1} = \left(V\left(E'\right), E' \cup \{\left(a,b\right)\}\right)$. Las gráficas $G_{1}$ y $G_{2}$. se les llama \textbf{gráficas de división} de $G$ con respecto a $\{a, b\}$. Reemplazar una gráfica $G$ por dos gráficas de división se le llama \textbf{división} de $G$. Debe de haber muchas formas posibles de dividir una gráfica, incluso con respecto a un par de separación fijo $\{a, b\}$. Una operación de división se denota por $s\left(a, b, i\right)$; donde $i$ es un etiqueta que distingue esta operación de división de otras divisiones. Las nuevas aristas $\{a, b\}$ agregadas a $G_{1}$ y $G_{2}$ se denominan \textbf{aristas virtuales} y están etiquetados para identificarlos con la división que la genero. Una arista virtual $\left(a, b\right)$ asociada con la división $s\left(a, b, i\right)$ se denotará por $\left(a, b, i\right)$. Si $G$ es biconexa, cualquier gráfica dividida de $G$ también es biconexa.
+
+\paragraph{}
+Supongamos que se divide una gráfica $G$, los gráficas divididos se dividen, y así sucesivamente, hasta que no sean posibles más divisiones (cada gráfica restante está triconectada). Los gráficas construidas de esta manera se denominan \textbf{componentes de división} de $G$. Los componentes de división de una gráfica no son necesariamente únicos.
+\begin{lemma}
+Sea $G = \left(V, E \right)$ un gráfica con $\left| E \right| \geq 3$. Sea $G_{1}, G_{2}, \ldots G_{m}$ las componentes de división de $G$. Entonces el número total de aristas en $G_{1}, G_{2}, \ldots , G_{m}$ es delimitado por $3\left| E \right| - 6$.
+\end{lemma}
+
+\begin{proof}
+ El lema se demuestra por inducción sobre el número de aristas de $G$. Si $G$ tiene $3$ aristas, el lema es inmediato, porque $G$ no se puede dividir. Supongamos que el lema es cierto para gráficas con $n-1$ aristas y supongamos que $G$ tiene $n$ aristas. Si $G$ no puede ser dividido, el lema es verdadero para $G$. Supongamos, por otro lado, que $G$ se puede dividir en $G^{'}$ y $G^{"}$, donde $G^{'}$ tiene $k + 1$ aristas y $G^{"}$ tiene $n - k + 1$ aristas tal que $2 \leq k \leq n - 2$. Por inducción, el número total de aristas en $G_{1}, G_{2}, \ldots G_{m}$ debe estar acotado por $3\left(k + 1\right) - 6 + 3\left(n - k + 1\right) - 6 = 3n - 6$. Así, por inducción, el lema 1 es cierto.
+\end{proof}
+
+\paragraph{}
+Para obtener las componentes triconexas únicas, debemos volver a unir parcialmente los componentes de división. Supongamos que $G_{1} = (V_{1},E_{1})$ y $G_{2}=(V_{2},E_{2})$ son dos componentes de división, ambos con una arista virtual $\left(a, b, i\right)$. Sea
+\begin{equation*}
+G = \left(V_{1} \cup V_{2}, \left( E_{1} - \{\left(a, b, i\right)\}\right) \cup \left( E_{2} - \{\left(a, b, i\right)\}\right) \right)
+\end{equation*}
+
+\paragraph{}
+Entonces a $G$ se le llama una \textbf{gráfica de unión} de $G_{1}$ y $G_{2}$; la operación de unión se denotará por $m\left(a, b, i \right)$. La unión es la inversa de la división; si realizamos un suficiente número de uniones en los componentes divididos de una gráfica, recreamos la gráfica original.
+
+\paragraph{}
+Los componentes de división de una gráfica son de tres tipos: 
+\begin{enumerate}
+\item enlaces triples de la forma $\left(\{a, b\}, \{\left(a, b\right),\left(a, b\right),\left(a, b\right)\} \right)$
+\item triangulos de la forma $\left(\{a, b, c\}, \{\left(a, b\right),\left(a, c\right),\left(b, c\right)\}\right)$
+\item gráficas triconexas
+\end{enumerate}
+Sea $G$ una gráfica cuyos componentes de división son un conjunto de enlaces triples $\mathscr{B}_{3}$, un conjunto de triángulos $\mathscr{F}$ y un conjunto de gráficas triconexas $\mathscr{C}$. Supongamos que los enlaces triples $\mathscr{B}_{3}$ se unen tanto como sea posible para dar un conjunto de enlaces $\mathscr{B}$ y que los triángulos $\mathscr{F}$ se unen tanto como sea posible para dar un conjunto de polígonos $\mathscr{P}$. Entonces el conjunto de gráficas $ \mathscr{B} \cup \mathscr{P} \cup \mathscr{C}$ es el conjunto de componentes triconexas de $G$. Si $G$ es una gráfica arbitraria, las componentes triconexas de las componentes biconexas de $G$ se les llama \textbf{componentes triconexas} de $G$.
+
+\begin{lemma}
+Las componentes triconexas de una gráfica $G$ son únicos
+\end{lemma}
+
+\begin{proof}
+Prueba. Ver *, * y *.
+\end{proof}
+
+\paragraph{}
+Los algoritmos de gráficas requieren una forma sistemática de explorar una gráfica. En el articulo * se utiliza un método llamado \textbf{búsqueda en profundidad}. Para llevar a cabo una búsqueda en profundidad en $G$, se comienza desde algún vértice $s$ y se elije una arista que vaya desde $s$ a otro vertice $w$ en el gráfica, después se marca el vertice $s$ como vistado y se elige ahora $w$ como punto de partida ahora vamos a elegir alguna arista que conecta $w$ cuyo vertice que la conecta a $w$ aun no haya sido visitado si cumple esto elegimos esta arista y marcamos a $w$ como visitado y continuamos así hasta que ya no haya vertices a los cuales visitar. Si $G$ es conexa, cada arista se recorre exactamente una vez*.
+
+\paragraph{}
+Si $G$ no es dirigida, una búsqueda sobre $G$ impone una dirección en cada arista de $G$ dada por la dirección en la que se recorre la arista durante la búsqueda. Así la búsqueda convierte $G$ en un gráfica dirigido $G^{'}$.
+
+\begin{lemma}
+Sea $P$ la gráfica dirigida generada por una búsqueda en profundidad de una gráfica no dirigida conexa $G$. Entonces $P$ es un árbol de recorrido.
+\end{lemma}
+
+\begin{proof}
+Véase *.
+\end{proof}
+
+\paragraph{}
+La búsqueda primero en profundidad es importante porque la estructura de los caminos en un árbol es muy simple. Para implementar una búsqueda en profundidad de una gráfica, usamos un procedimiento recursivo simple que mantiene una pila de los viejos vértices con posiblemente aristas inexploradas. Para representar un gráfica, se utiliza un conjunto de \textbf{listas de adyacencia}, uno para cada vértice. Si $v$ es un vértice la lista de adyacencia $A\left(v\right)$ contiene todos los $w$ tales que $\left(v, w\right)$ es una arista de $G$. Estas listas juntas comprenden una \textbf{estructura de adyacencia} para $G$. Si $G$ no es dirigida, cada arista $\left(v, w\right)$ se representa dos veces, una en $A\left(v\right)$ y otra en $A\left(w\right)$. 
+
+\paragraph{}
+A continuación se muestra un procedimiento recursivo para realizar una búsqueda en profundidad dividido en dos partes un método creado para visitar(encontrar) cada uno de los vértices y la busueda en profundidad que utiliza este método. La búsqueda exacta depende del orden de los aristas en las listas de adyacencia. Los números de procedimiento de los vértices del $1$ al $V$ en el orden en que se alcanzan durante el búsqueda, además de identificar arcos y ramas de árboles. La referencia * da una prueba que el procedimiento es correcto y requiere tiempo $\Theta \left(V + E\right)$ para ejecutarse. Es fácil ver que los vértices están numerados de modo que $NUMERO\left(v\right) \le NUMERO\left(w\right)$ si $ v \overset{\ast}{\rightarrow} w$ en el árbol generado.
+
+\begin{algorithm}[!ht]
+\DontPrintSemicolon
+ agregamos $u$ a visitados\;
+ \For{cada $w$ en $A\left(u\right)$}{
+ 	\If{$w$ no esta en visitados}{
+ 		visitar(w, visitados)\;
+ 		\tcp{b: declaración vacía}
+ 	}
+ }
+\caption{visitar($u$,visitados)}\label{alg:visitar}
+\end{algorithm}
+
+\begin{algorithm}[!ht]
+\DontPrintSemicolon
+ $visitados = \{\empty\}$\;
+ \tcp{a: declaración vacía}
+ \For{cada $v$ in $V$}{
+ 	\If{$v$ no esta en visitados}{
+ 		visitar(u, visitados)\;
+ 		\tcp{c: declaración vacía}
+ 	}
+ }
+\caption{DFS($G$)}\label{alg:busqueda en profundidad}
+\end{algorithm}
+
+\paragraph{}
+Las declaraciones a, b, c, se reemplazarán cuando se use DFS para calcular otra información sobre el gráfica. La figura 3 representa el arbol formado aplicando DFS.
+
+\paragraph{}
+Esta sección esboza las ideas detrás del algoritmo de triconectividad. Las secciones posteriores desarrollan los componentes detallados. El algoritmo se basa en una idea de Auslander, Parter y Goldstein ([18], [19]) para probar la planaridad de los gráficas. La idea de Auslander, Parter y Goldstein da lugar a un algoritmo de tiempo $\Theta\left(V\right)$ para probar la planaridad, si la búsqueda primero en profundidad se utiliza para ordenar los cálculos de ([7, [8)). La misma idea da un tiempo $\Theta\left(V + E\right)$ para el algoritmo de encontrar componentes triconexas.
+
+\paragraph{}
+Sea $G$ una gráfica biconexo arbitrario. Supongamos que un ciclo $c$ se encuentra en $G$. Cuando se elimina el ciclo de $G$ quedan ciertas piezas conectadas; a estos se les llama \textbf{segmentos}. Auslander y Parter [18] demuestran que $G$ es plano si y solo si
+\begin{enumerate}
+\item Cualquier subgráfica de $G$ que consta de $c$ más un solo segmento es plano
+\item Los segmentos pueden combinarse consistentemente para dar una incrustación plana de todo la gráfica.
+\end{enumerate}
+Se puede desarrollar un algoritmo de planaridad eficiente a partir de este resultado ([7], [8]). A resultado similar se cumple para los pares de separación de $G$, es decir, el siguiente lema.
+
+\begin{lemma}
+Sea G una gráfica biconexa y sea $c$ un ciclo en $G$. Seaa $S_{1}, \ldots, S_{m}$ las subgráficas de $G \rule[1mm]{.1cm}{0.4pt} c$ tales que $e_{1}$ y $e_{2}$ son aristas de $S_{i}$ si y sólo si algún camino $p$ en $G$ contiene tanto $e_{1}$ como $e_{2}$ y ningún vértice de $c$ se encuentra entre $e_{1}$ y $e_{2}$ en $p$. Los segmentos $S_{i}$ y el ciclo $c$ particionan las aristas de $G$. Sea $\{a, b\}$ un par de separación de $G$ ,entonces se cumplen las siguientes conclusiones.
+\begin{enumerate}
+\item Tanto $a$ como $b$ se encuentran en $c$, o bien $a$ y $b$ se encuentran ambos en algún segmento $S_{i}$.
+\item Supongamos que tanto $a$ como $b$ están en $c$. Sean $p_{1}$ y $p_{2}$ los dos caminos que componen $c$ los cuales unen $a$ y $b$. Entonces o
+\begin{enumerate}
+\item Algún segmento $S_{i}$ con al menos dos aristas tiene solo a $a$ y $b$ en común con $c$, y algún vértice $v$ no está en $S_{i}$ ($\{a, b\}$ se le dice par de separación de ''tipo 1''), o
+\item Ningún segmento contiene un vértice $v \neq a, b$ en $p_{1}$ y un vértice $w \neq a, b$ en $p_{2}$, $p_{1}$ y $p_{2}$ contienen cada uno un vértice además de $a$ y $b$ ($\{a, b\}$ se le dice par de separación de ''tipo 2'').
+\end{enumerate}
+\item A la inversa, cualquier par $\{a, b\}$ que satisfaga (a) o (b) es un par de separación.
+\end{enumerate}
+\end{lemma}
+
+\paragraph{}
+Es fácil probar este lema, una versión más técnica se prueba en el siguiente sección. El Lema 3.4 da lugar a un algoritmo recursivo eficiente para encontrar componentes de división. Encontramos un ciclo en $G$ y determinamos los segmentos formados cuando es eliminado. Probamos cada segmento en busca de pares de separación aplicando el algoritmo recursivamente y probamos el ciclo para pares de separación verificando los criterios en Lema 3.4. La aplicación recursiva del algoritmo requiere encontrar ciclos en subgráficas de $G$ formados por la combinación de un segmento $S_{i}$ y el ciclo inicial $c$.
+
+\paragraph{}
+Podemos hacer que este algoritmo sea muy eficiente ordenando los cálculos usando búsqueda en profundidad. Cada llamada recursiva en el algoritmo requiere que encontremos un ciclo en la parte de la gráfica que se va a probar para los pares de separación. Este ciclo constará de un camino simple de aristas las cuales no están en ciclos previamente encontrados más un camino simple de aristas en ciclos no encontrados. Usamos la búsqueda primero en profundidad para dividir la gráfica en caminos simples que pueden ensamblarse en estos ciclos. El primer ciclo $c$ consistirá en una secuencia de aristas del árbol seguidos por una arista en $P$, el árbol formado a partir de $G$ por búsqueda primero en profundidad. La numeración de vértices es tal que los vértices están ordenados por número a lo largo del ciclo. Cada segmento consistirá en una sola arista $\left(v, w\right)$ o en una arista $\left(v, w\right)$ de el árbol más un subárbol con raíz $w$, además todas las ramas que salen del subárbol. La búsqueda explora los segmentos en orden decreciente de $v$ y divide cada uno en caminos simples que consisten en una secuencia de ramas de el árbol seguido por una vértice.
+
+\paragraph{}
+Encontrar caminos en realidad requiere dos búsquedas porque la búsqueda de caminos debe llevarse a cabo en un orden especial para tener éxito, y ciertos cálculos preliminares son necesarios. La sección sobre cómo encontrar pares de separación describe la proceso de búsqueda de caminos en detalle e incluye una versión del Lema 3.4 que caracteriza pares de separación en términos de los caminos generados. La sección de encontrar componentes de división indica cómo se pueden usar estos resultados para determinar los componentes de división de una gráfica biconexa en tiempo $\Theta \left(V + E\right)$.
+
+\paragraph{}
+Para determinar las componentes triconexas de una gráfica arbitrarias, encontramos las componentes biconexas de la gráfica usando el algoritmo $\Theta \left(V + E\right)$ descrito en * y *. A continuación, los componentes de división de cada componente biconexa se encuentran utilizando el algoritmo descrito anteriormente y presentado en detalle en el siguiente dos secciones. Esto nos da los componentes de división de toda la gráfica. El tamaño total de las componentes divididas es $\Theta \left(V + E\right)$, por el Lema 3.1. A continuación identificamos el conjunto de enlaces triples $\mathscr{B}_{3}$ y el conjunto de triángulos $\mathscr{T}$. Para cada uno de estos dos conjuntos, construimos una gráfica auxiliar $S$ cuyos vértices son los elementos del conjunto; dos componentes de división están unidos por una arista en una gráfica auxiliar si tienen un arista virtual común . Los componentes conectados de $S\left(\mathscr{B}_{3}\right)$ y $S\left(\mathscr{T}\right)$ corresponden a los enlaces polígonos que son componentes triconexas de $G$. Encontrar estos enlaces y polígonos requiere tiempo $\Theta \left(V + E\right)$. A continuación se muestra un esquema de todo el algoritmo.
+
+\begin{algorithm}[!ht]
+\DontPrintSemicolon
+ A: Encontramos las componentes biconexas de $G$;\;
+ \For{cada componente biconexa $\mathcal{C}$ de $G$}{
+ 	C: encontrar los componentes de división de $C$;\;
+ 	D: combinar los triangulos en poligonos al encontrar las componentes conexas correspondientes a las gráficas auxiliares;\;
+ } 
+\caption{TRICONNECTIVITY($G$)}\label{alg:triconexidad}
+\end{algorithm}
+
+\paragraph{}
+Los pasos A, B y D requieren tiempo $\Theta \left(V + E\right)$ si se implementan correctamente. La implementación del paso B se describe en [I5] la implementación de los pasos A y D se deja como ejercicio. El paso difícil es el paso C, cuya implementación se describe en el siguientes dos secciones. Con base en los resultados de estas secciones, toda el algoritmo de triconectividad esta acotado por tiempo y espacio $\Theta  \left(V + E\right)$.
+
+\subsection{Encontrando pares de separación}
+
+\paragraph{}
+Sea $G = \left(\mathscr{V}, \mathscr{E}\right)$ una gráfica biconexa con vértices $V$ y aristas $E$. El problema principal al dividir $G$ en sus componentes de división radica en encontrar sus pares de separación. Esta sección da un criterio simple, basado en la búsqueda primero en profundidad, para identificar los pares de separación de una gráfica. Se deben realizar dos búsquedas en profundidad y algunos cálculos auxiliares. Estos cálculos forman la primera parte del algoritmo de componentes división y se describen a continuación. Las definiciones de las cantidades LOWPT1, ND, etc., utilizadas en el el esquema se dará posteriormente.
+
+\paragraph{Paso 1}
+Realice una búsqueda primero en profundidad en el gráfica $G$, convirtiendo $G$ en un árbol $P$. Numeramos los vértices de $G$ en el orden en que se alcanzan durante la búsqueda. Calculamos LOWPT1$\left(v\right)$, LOWPT2$\left(v\right)$, ND$\left(v\right)$ y PADRE$\left(v\right)$ para cada vértice $v$ en $P$.
+
+\paragraph{Paso 2}
+Construimos una estructura de adyacencia aceptable $A$ para $P$ ordenando las aristas en la estructura de adyacencia de acuerdo con los valores de LOWPT1 y LOWPT2.
+
+\paragraph{Paso 3}
+Realizar una búsqueda en profundidad sobre $P$ utilizando la estructura de adyacencia $A$. Volvemos a numerar los vértices de $A$ desde $V$ a $1$ en el orden en que se examinaron por última vez durante la búsqueda. Particionamos las aristas en caminos simples disjuntos. Recalculamos LOWPT1$\left(v\right)$ y LOWPT2$\left(v\right)$ utilizando los nuevos números de los vértices. Calculamos A1$\left(v\right)$, GRADO$\left(v\right)$, y HIGHPT$\left(v\right)$ para cada vértice $v$.
+
+\paragraph{}
+Los detalles de estos cálculos aparecen a continuación. Desde los pasos 1, 2 y 3, obtenemos suficiente información para determinar rápidamente los pares de separación de $G$. Lema 3.13 da una condición para este propósito.
+
+\paragraph{}
+Supongamos que $G$ se explora primero en profundidad, dando un árbol $P$. Sean los vértices de $P$ numerados desde $1$ a $V$ de modo que $v \overset{\ast}{\rightarrow} w$ en $P$ implica que $v \le w$, si identificamos los vértices por su número. Para cualquier vértice $v$ en $P$, sea PADRE$\left(v\right)$ el padre de $v$ en el árbol de $P$. Sea ND$\left(v\right)$ el número de descendientes de $v$. Sea LOWPT1$\left(v\right) = min\left(\{v\} \cup \{w | v \overset{\ast}{\rightarrow} \rule[1mm]{.1cm}{0.4pt} \rightarrow w\}\right)$. Es decir, LOWPT1$\left(v\right)$ es el vértice más bajo alcanzable desde $v$ atravesando cero o más ramas de árbol en $P$ seguido de en la mayoría una arista. Sea LOWPT2$\left(v\right) = min\left[\{v\} \cup \left(\{w | v \overset{\ast}{\rightarrow} \rule[1mm]{.1cm}{0.4pt} \rightarrow w\} - \{LOWPT1 \left(v\right)\}\right)\right]$. Es decir, LOWPT2$\left(v\right)$ es el segundo vértice más bajo alcanzable desde $v$ atravesando cero o más ramas de el árbol seguidas por una arista de $P$ como máximo, a menos que LOWPT1$\left(v\right) = v$. En este caso, LOWPT2$\left(v\right) = v$.
+
+\begin{lemma}
+LOWPT1$\left(v\right)$ $  \overset{\ast}{\rightarrow} v$ y LOWPT2$\left(v\right) \overset{\ast}{\rightarrow}v$ en $P$.
+\end{lemma}
+
+\begin{proof}
+LOWPT1$\left(v\right) \leq v$ por definición. Si LOWPT1$\left(v\right) = v$, el resultado es inmediato. Si LOWPT1$\left(v\right) \le v$, hay una rama $u \rule[1mm]{.1cm}{0.4pt} \rightarrow $LOWPT1$(v)$ tal que $v \overset{\ast}{\rightarrow} u$. Como $u \rule[1mm]{.1cm}{0.4pt} \rightarrow $LOWPT1$(v)$ es una rama, LOWPT1$\left(v\right) \overset{\ast}{\rightarrow} u$. Como $P$ es un árbol, $v \overset{\ast}{\rightarrow} u$ y\\ LOWPT1$\left(v\right) \overset{\ast}{\rightarrow} u$, ya sea que $v \overset{\ast}{\rightarrow} $LOWPT1$\left(v\right)$ o LOWPT1$\left(v\right) \overset{\ast}{\rightarrow} v$. Pero LOWPT1$\left(v\right) \le v$. Así debe ser el caso que LOWPT1$\left(v\right) \overset{\ast}{\rightarrow} v \overset{\ast}{\rightarrow} u$, y el lema se cumple para LOWPT1$\left(v\right)$. La demostración es la misma para LOWPT2$\left(v\right)$.
+\end{proof}
+
+\begin{lemma}
+Supongamos que LOWPT1$\left(v\right)$ y LOWPT2$\left(v\right)$ se definen en relación con alguna numeración para la cual $v \overset{\ast}{\rightarrow} w$ en $P$ implica NUMERO$\left(v\right) < $ NUMERO$\left(v\right)$. Entonces LOWPT1$\left(v\right)$ y LOWPT2$\left(v\right)$ identifican vértices únicos independientemente de la numeración usada.
+\end{lemma}
+
+\begin{proof}
+LOWPT1$\left(v\right)$ siempre identifica a un ancestro del vertice $v$. Además,\\ LOWPT1$\left(v\right)$ es el ancestro con el número más bajo de $v$ con cierta propiedad relativa al árbol $P$. Dado que el orden de los ancestros de $v$ corresponde al orden de sus números, LOWPT1$\left(v\right)$ identifica a un único vértice independiente de la númeración, es decir, el primer ancestro de $v$ a lo largo de el camino  $1 \overset{\ast}{\rightarrow} v$ tiene la propiedad deseada(Cualquier numeración satisfactoria asigna $1$ a la raíz de $P$.) La prueba es la misma para LOWPT2$\left(v\right)$.
+\end{proof}
+
+\paragraph{}
+Los valores LOWPT de un vértice $v$ dependen solo de los valores LOWPT de los hijos de $v$ y en las ramas que salen de $v$; es fácil ver que si los vértices se identifican por número, entonces
+
+\begin{equation*}
+LOWPT1\left(v\right)= min\left(\{v\} \cup \{LOWPT1\left(w\right)| v \rightarrow w\} U \{w| v \rule[1mm]{.1cm}{0.4pt} \rightarrow w\}\right)
+\end{equation*}
+
+y
+
+\begin{equation*}
+\begin{split}
+LOWPT2\left(v\right) &=  min(\{v\} \cup ((\{LOWPT1\left(w\right)| v \rightarrow w\}\\ 
+				   & 	\hspace{0.8cm} \cup \{LOWPT2\left(w\right)| v \rightarrow w\} \\
+				   &	\hspace{0.8cm} \cup \{w | v \rule[1mm]{.1cm}{0.4pt} \rightarrow  w\}) \newline - \{LOWPT1v\})).
+\end{split}
+\end{equation*}
+
+\paragraph{}
+También tenemos ND$\left(v\right)= 1 + \sum_{v \rightarrow w} $ ND$\left(w\right)$. Podemos calcular los valores de LOWPT, ND y PADRE para todos los vértices en tiempo $\Theta\left(V + E\right)$ insertando las siguientes declaraciones para las declaraciones a, b, c en DFS. La numeración de los vértices en el orden en que se alcanzan durante la búsqueda garantiza claramente que $v \overset{\ast}{\rightarrow} w$ implica $v \le w$.
+
+
+\begin{algorithm}[!ht]
+\DontPrintSemicolon
+a: LOWPT1$\left(v\right)$ = LOWPT2$\left(v\right)$ = NUMERO$\left(v\right)$; \;
+\hspace{0.4cm} ND$\left(v\right)$ = 1 \;
+b: \If{LOWPT1$\left(w\right) < $ LOWPT1$\left(v\right)$}{
+	\hspace{0.4cm} LOWPT2$\left(v\right) = min\{$LOWPT2$\left(v\right), $LOWPT2$\left(w\right)\}$\;
+	\hspace{0.4cm} LOWPT1$\left(v\right) = $ LOWPT1$\left(w\right)$\;
+	}
+\hspace{0.4cm} \ElseIf{LOWPT1$\left(w\right) = $ LOWPT1$\left(v\right)$}{
+   	\hspace{0.4cm} LOWPT2$\left(v\right) = min\{$LOWPT2$\left(v\right), $LOWPT2$\left(w\right)\}$
+   }
+\hspace{0.4cm} \Else{
+   	\hspace{0.4cm} LOWPT2$\left(v\right) = \{$ LOWPT2$\left(v\right), $LOWPT1$\left(w\right)\}$
+   }
+\hspace{0.4cm} ND$\left(v\right) = $ ND$\left(v\right) + $ND$\left(w\right)$\;
+\hspace{0.4cm} FATHER$\left(w\right) = v$\;
+c: \If{NUMERO$\left(w\right) < $ LOWPT1$\left(v\right)$}{
+	\hspace{0.4cm} LOWPT2$\left(v\right) = $ LOWPT1$\left(v\right)$\;
+	\hspace{0.4cm} LOWPT1$\left(v\right) = $ NUMERO$\left(w\right)$\;
+	}
+\hspace{0.4cm} \ElseIf{NUMERO$\left(w\right) = $LOWPT1$\left(v\right)$}{
+   	\hspace{0.4cm} LOWPT2$\left(v\right) = min\{$LOWPT2$\left(v\right), $NUMERO$\left(w\right)\}$
+   }
+\caption{adiciones a DFS($G$)}\label{alg:adicionales a DFS}
+\end{algorithm}
+
+\paragraph{}
+Es fácil verificar que DFS modificado anteriormente calculará LOWPT1, LOWPT2, ND y FATHER correctamente en tiempo $\Theta\left(V + E\right)$. (Ver [8], [17].) LOWPT1 puede usarse para probar la biconectividad de $G$, como se describe en [5]. El siguiente lema es importante.
+
+\begin{lemma}
+Si $G$ es biconexa y $v \rightarrow w$, LOWPT1$\left(w\right) \le v$ a menos que $v=1$, en cuyo caso LOWPT1$\left(w\right) = v = 1$. Además, LOWPT1$\left(1\right) = 1$.
+\end{lemma}
+
+\begin{proof}
+Véase [5].
+\end{proof}
+
+\paragraph{}
+Sea $\phi$ el mapeo de las aristas de $P$ en $\{1, 2, \ldots, 2V + 1\}$ definido por:
+\begin{enumerate}
+\item si $e = v \rule[1mm]{.1cm}{0.4pt} \rightarrow w$, $\phi\left(e\right)= 2w + 1$.
+\item si $e = v \rightarrow w$ y LOWPT2$\left(w\right) \le v, \phi\left(e\right) = 2$LOWPT1$\left(w\right)$.
+\item si $e = v \rightarrow w$ y LOWPT2$\left(w\right) \geq v, \phi\left(e\right) =  2$LOWPT1$\left(w\right) + 1$.
+\end{enumerate}
+Sea $A$ una estructura de adyacencia para $P$. $A$ se le dice aceptable si las aristas $e$ en cada lista de adyacencia de $A$ se ordena de forma creciente de acuerdo a $\phi(e)$.
+
+\begin{lemma}
+Sea P un arbol de una gráfica biconexa $G$ cuyos vértices son numerados de manera que  $v \overset{\ast}{\rightarrow} w$ en $P$ implica $v \le w$. Entonces las estructuras de adyacencia aceptables de $P$ son independientes del esquema de numeración exacto.
+\end{lemma}
+
+\begin{proof}
+Si $v \rightarrow w$ en $P$ entonces por el lema 3.5, LOWPT2$\left(w\right)$ es un ancestro de $w$. Por el lema 3.6 LOWPT2$\left(w\right)$ es un vértice fijo independiente de la numeración. Ya que el orden de los ancestros es independiente de la numeración, la cuestión de si LOWPT2$\left(w\right)$ es menor que $v$ es independiente de la numeración. Como $G$ es biconexa, si $v \rightarrow w$ en $P$ entonces LOWPT1$\left(w\right) \leq v$ por el lema 3.7. Por el lema 3.5, LOWPT1$\left(w\right)$ es un ancestro de $w$. Dado que LOWPT1$\left(w\right) \leq v$, LOWPT1$\left(w\right)$ debe ser un ancestro de $v$. Por e lema 3.6, el vertice correspondiente a LOWPT1$\left(w\right)$ es independiente de el esquema de numeración. De manera similar si $v \rule[1mm]{.1cm}{0.4pt} \rightarrow w$, entonces por el lema 3.3 y la definición de árbol; $w$ es un ancestro de $v$. Pero el orden de los ancestros de $v$ es idéntico al orden de sus números y este orden es independiente de la numeración. Por lo tanto las estructuras de adyacencia aceptables $A$ para $P$ dependen solo de $P$ y no de la numeración exacta
+\end{proof}
+
+\paragraph{}
+En general, un árbol $P$ tiene muchas estructuras de adyacencia aceptables. Dada una numeración satisfactoria de los vértices de $P$, podemos construir fácilmente un aceptable estructura de adyacencia $A$ mediante en * se hace uso de un ordenamiento radix con $2V + 1$ contenedores. El  siguiente procedimiento proporciona el algoritmo de ordenamiento, que es el paso 2 de los cálculos. Todo los vértices se identifican por número. El procedimiento de clasificación requiere un tiempo de $\Theta\left(V + E\right)$ .
+
+\begin{algorithm}[!ht]
+\DontPrintSemicolon
+\For{$i=1$ \emph{\KwTo} $2V + 1$}{
+	BUCKET$\left(i\right) = []$\;
+}
+\For{$\left(v, w\right)$ una arista $G$}{
+	calcular $\phi \left(\left(v, w\right)\right)$\;
+	agregar $\left(v, w\right)$ a BUCKET$\left(\phi(\left(v, w\right)\right)$\;
+}
+
+\For{$i=1$ \emph{\KwTo} $V$}{
+	$A\left(i\right) = []$\;
+}
+
+\For{$i=1$ \emph{\KwTo} $2V + 1$}{
+	\For{$\left(v, w\right) \in$ BUCKET$\left(i\right)$}{
+		agregar $w$ al final de $A\left(v\right)$\;
+	}
+}
+\caption{ConstruccionA($G$)}\label{alg:ordenamiento}
+\end{algorithm}
+
+\paragraph{}
+En el paso 3 de los cálculos realizamos una búsqueda en profundidad sobre $P$ usando el estructura de adyacencia aceptable $A$ dada por el paso 2. Esta búsqueda genera un conjunto de caminos de la siguiente manera: cada vez que atravesamos una arista, esta arista la agregamos al  camino que se está construyendo. Cada vez que atravesamos una arista, la arista se convierte en la última arista del camino actual. Así, cada camino consta de una secuencia de ramas del árbol seguidos por un solo vertice. Debido al ordenamiento impuesto a $A$, cada camino termina en el vértice más bajo posible, el camino inicial es un ciclo, y cada camino excepto el primero es simple y sólo tiene en común su vértice inicial y terminal con las anteriores caminos generados ([7], [8]).
+
+\paragraph{}
+Si $p: s \overset{\ast}{\Rightarrow} f$ es un camino generado, podemos formar un ciclo agregando el camino del árbol $f \overset{\ast}{\rightarrow} s$ a $p$. Los ciclos formados de esta manera son los ciclos generados por llamadas recursivas al algoritmo básico de triconectividad explicado en la última sección.
+
+\paragraph{}
+Solo necesitamos información mínima sobre los caminos. Sean los vértices de $P$ numerados de manera que $v \overset{\ast}{\rightarrow} w$ implica $v \leq w$. Sea A1$\left(v\right)$ el primer vértice de A$\left(v\right)$. Si $v \rule[1mm]{.1cm}{0.4pt} \rightarrow w$ es la primera rama explorada en el paso 3 que termina en $w$, sea HIGHPT$(w) = v$. Sea GRADO$\left(v\right)$ el número de aristas que inciden en el vértice $v$. En el paso 3  numeramos los vértices de $V$ a $1$ en el orden en que se examinaron por última vez durante la búsqueda. Esta numeración garantiza que $v \le w$ si $v \overset{\ast}{\rightarrow} w$. El paso 3 también calcula LOWPT1$\left(v\right)$, HIGHPT$\left(v\right)$, A1$\left(v\right)$ y GRADO$\left(v\right)$ con respecto a la nueva numeración. El algoritmo 5, basado en DFS, realizará el paso 3 en tiempo $\Theta\left(V + E\right)$.
+
+\begin{algorithm}[!ht]
+\DontPrintSemicolon
+NEWNUM$\left(v\right) = m - $ ND$\left(v\right) + 1$\;
+\For{$w \in A\left(v\right)$:}{
+	\If{$s = 0$}{
+		$s = v$\;
+		empezamos un nuevo camino\;
+	}
+	agregamos $\left(v, w\right)$ al camino actual\;
+	\If{$v \rightarrow w$:}{
+		PATHFINDER$\left(w\right)$\;
+		$m = m - 1$\;
+	}
+	\Else{
+		comentar $v \rule[1mm]{.1cm}{0.4pt} \rightarrow w$\;
+		\If{HIGHPT(NEWNUM$\left(w\right)$) $= 0$}{
+			HIGHPT(NEWNUM$\left(w\right)$) $=$ NEWNUM$\left(v\right)$\;
+			\Return{camino actual}\;
+			$s = 0$\;
+		}
+	}\;
+	$s = 0$\;
+	$m = V$\;
+	\For{i = 1 \emph{\KwTo} $V$:}{
+		NEWNUM$\left(i\right) = $ HIGHPT$\left(i\right) = 0$\;
+	}
+	comentar vertice $1$ es el vértice inicial de la busqueda\;
+	PATHFINDER$\left(1\right)$\;
+	\For{todos los vértices $V$:}{
+		calcular $A1\left(v\right)$, DEGREE$\left(v\right)$, LOWPT1$\left(v\right)$ y LOWPT2$\left(v\right)$ usando la nueva numeración\;
+	}
+}
+\caption{PATHFINDER($v$)}\label{alg:encontrarCamino}
+\end{algorithm}
+
+\paragraph{}
+El paso 3 enumera los vértices de $V$ a $1$ en el orden en que se alcanzaron por última vez durante la búsqueda. Sin embargo, a cada vértice en realidad se le debe asignar un número la primera vez que se alcanza, para que el cálculo de HIGHPT se realice correctamente. Para lograr esto, la variable se establece igual a $V$ cuando comienza la búsqueda (afirmación Z). El valor de $i$ disminuye en uno cada vez que se descubre un nuevo vértice (afirmación Y). Así, cuando se alcanza por primera vez un vértice $v$, $i$ es igual al número que desea asignar a $v$ menos el número de vértices a encontrar antes de encontrar $v$ por última vez. Pero los vértices a alcanzar entre el tiempo en que $v$ se examinado por primera vez y el momento en que $v$ se examinar por última vez son solo los descendientes propios de $v$. Por lo tanto, si asignamos el número $i - $ND$\left(v\right) + 1$ a $v$ cuando $v$ se examinar por primera vez (enunciado X), la numeración será correcta. Ejemplo *
+
+\paragraph{}
+Sea G una gráfica biconexa en el que se han realizado los pasos 1, 2 y 3, dando un árbol $P$ y los conjuntos de valores definidos anteriormente. Sea $A$ con una lista de adyacencia $A\left(v\right)$ la estructura de adyacencia aceptable construida en el paso 2. Sean los vértices de $G$ identificados por los números asignados en el paso 3. Necesitamos una definición más. Si $u \rightarrow v$ y $v$ es la primera entrada en $A\left(u\right)$, entonces a $v$ se le llama el primer \textbf{hijo} de $u$. (Para cada vértice $v$, $A1\left(v\right)$, el primer hijo de $v$, si existe, se calcula en el paso 3). Si $u_{0} \rightarrow u_{1} \rightarrow \cdots \rightarrow u_{n}$ y $u_{i}$ es un hijo primogénito de $u_{i-1}$ para $1 \leq i \leq n$, entonces a $u_{n}$, se le llama el primer descendiente de $u_{0}$. La secuencia de ramas del árbol $u_{0} \rightarrow u_{1} \rightarrow u_{2} \rightarrow \cdots \rightarrow u_{n}$ es parte de un camino generado por el paso 3. Los lemas a continuación dan las propiedades que necesitamos para determinar los pares de separación de $G$.
+
+\begin{lemma}
+Sea $A\left(u\right)$ la lista de adyacencia del vértice $u$. Sean $u \rightarrow v$ y $u \rightarrow w$ ramas del árbol con $v$ antes de $w$ en $A\left(u\right)$. Entonces $u \le w \le v$.
+\end{lemma}
+
+\begin{proof}
+El paso 3 numera los vértices de $V$ a $1$ en el orden en que son los últimos examinados en la búsqueda. Si $u \rightarrow v$ se explora antes que $u \rightarrow w$, $v$ se examinarán en último lugar antes de que $w$ se examine en último lugar, y $v$ recibirá un número más alto. Claramente $u$ será el último examinado después de que tanto $v$ como $w$ hayan sido examinados por última vez, por lo que $u$ es el número más pequeño de los tres vértices.
+\end{proof}
+
+\begin{lemma}
+$A$ es aceptable con respecto a la numeración dada por el paso 3.
+\end{lemma}
+
+\begin{proof}
+El ordenamiento en el paso 2 crea una estructura de adyacencia aceptable para el numeración original. Por el Lema 3.9, $u \rightarrow v$ implica $u \le v$ y por lo tanto por el Lema 3.8, $A$ es aceptable para la nueva numeración.
+\end{proof}
+
+\begin{lemma}
+Si $v$ es un vértice y $D\left(v\right)$ es el conjunto de descendientes de $v$, entonces $D\left(v\right) = \{x | v \leq x \le v +ND\left(v\right)\}$. Si $w$ es un primer descendiente de $v$, entonces $D\left(v\right)-D\left(w\right) = \{x | v \leq x \le w\}$.
+\end{lemma}
+
+\begin{proof}
+Supongamos que invertimos todas las listas de adyacencia $A\left(v\right)$ y las usamos para especificar una búsqueda en profundidad de $P$. Los vértices se examinarán por primera vez en sentido ascendente orden de $1$ a $V$, si los vértices se identifican por su número del paso 3. Así a los descendientes de $v$ se les asignan números consecutivos desde $v$ a $v + ND\left(v\right) + 1$. Si $w$ es el primer descendiente de $v$, los vértices en $D\left(w\right)$ se les asignarán números de acuerdo a los vértices en $D\left(v\right) - D\left(w\right)$. Así $D\left(v\right) - D\left(w\right) = \{x | v \leq x \le w\}$.
+\end{proof}
+
+\begin{lemma}
+Sean $\{a, b\}$ un par de separación en $G$ con $a \le b$. Entonces $a \overset{\ast}{\rightarrow} b$ en el árbol generador $T$ de $P$.
+\end{lemma}
+
+\begin{proof}
+Como $a \le b$, $a$ no puede ser descendiente de $b$. Supongamos que $b$ no es un descendiente de $a$. Sean $E_{i}$, para $1 \leq i \le k$, las clases de separación con respecto a $\{a, b\}$. Sea $S = \mathscr{V} - D\left(a\right) - D\left(b\right)$. Los vértices $S$ definen un subárbol en $T$ que no contiene a $a$ ni a $b$, por lo que $E\left(S\right)$ debe estar contenido en alguna clase de separación, digamos $E_{1}$. Sea $c$ cualquiera hijo de $a$. $E\left(D\left(c\right)\right)$ debe estar contenido en alguna clase de separación. Pero como $G$ es biconexa, y $a \neq 1$, LOWPT1$\left(c\right) < a$, por el Lema 3.7. Por lo tanto, alguna arista incide en un vértice en $S$ y a un vértice en $D\left(c\right)$. Así $E\left(D\left(c\right)\right) \subseteq E_{1}$. Un argumento similar demuestra que las aristas incidentes a cualquier descendiente de $b$ están en $E_{1}$. Pero esto significa que $E_{1} = E$, y entonces ${a, b}$ no puede ser un par de separación.
+\end{proof}
+
+\begin{lemma}
+Supongamos que $a < b$. Entonces $\{a, b\}$ es un par de separación de $G$ si y solo si ya sea (i), (ii) o (iii) a continuación se cumple:
+\begin{enumerate}
+\item Hay vértices distintos $r \neq a, b$ y $s \neq a, b$ tales que $b \rightarrow r$, LOWPT1$\left(r\right) = a$ , LOWPT2$\left(r\right) \geq b$ y $s$ no es un descendiente de $r$. (El par $\{a, b\}$ se le llama par de separación "tipo 1". Los pares de tipo 1 ejemplo *.
+\item Hay un vértice $ r \neq b$ tal que $a \rightarrow r \overset{\ast}{\rightarrow} b$; $b$ es el primer descendiente de $r$ (es decir, $a$, $r$ y $b$ se examinarn en una ruta generada);  $a \neq 1$; cada rama $x \rule[1mm]{.1cm}{0.4pt} \rightarrow y$ con $r \leq x \le b$ y  $a \leq y$ y cada rama $x \rule[1mm]{.1cm}{0.4pt} \rightarrow y$ con $a \le y \le b$ y $b \rightarrow w \overset{\ast}{\rightarrow} x$ tiene LOWPT1$\left(w\right) \geq a$. ($\{a, b\}$ se denomina par de separación de "tipo 2". Los pares de tipo 2 para el ejemplo *)
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+La parte inversa del lema es más fácil de probar. Supongamos que un par$\{a, b\}$ satisface $\left(i\right)$, $\left(ii\right)$ o $\left(iii\right)$. Sea $E_{i}$ para $1 \leq i \leq k$ las clases de separación de $G$ con respecto a $\{a, b\}$. Supongamos que $\{a, b\}$ satisface $\left(i\right)$. Entonces la arista $\left(b, r\right)$ está contenido en alguna clase de separación, digamos $E_{1}$. Cada rama del árbol con un vértice final en $D\left(r\right)$ tiene el otro extremo en $D\left(r\right) \cup \{a, b\}$. Además, dado que LOWPT1$\left(r\right) = a$ y LOWPT2$\left(r\right) \geq b$, toda rama con una vértice final en $D\left(r\right)$ tiene la otra vértice final en $D\left(r\right) \cup \{a, b\}$. Por lo tanto, $E_{1}$ consta de todas las aristas con un vértice final en $D\left(r\right)$. No hay otras aristas en $E_{1}$, y las aristas incidentes al vértice $s$ deben estar en alguna otra clase, digamos $E_{2}$. Ya que $E_{1}$ y $E_{2}$ contienen cada uno dos o más aristas, $\{a, b\}$ es un par de separación.\\
+Supongamos que $\{a, b\}$ satisface $\left(ii\right)$. Sea $S = D\left(r\right) - D\left(b\right)$. Todas las aristas incidentes a un vértice en $S$ están en la misma clase de separación, digamos $E_{1}$. Dado que $b$ es un primer descendiente de $r$, $S = \{x | r \leq x \le b\}$ por el Lema 3.1. Sean $b_{1}, b_{2}, \ldots, b_{n}$ los hijos de $b$ en el orden ocurren en $A\left(b\right)$. Sea $i_{0} = min\{i | $ LOWPT1$\left(b\right) \geq a\}$. Por el ordenamiento impuesto en $A$, $i \le i_{0}$ implica LOWPT1$\left(b_{i}\right) \le a$, y $i \geq i_{0}$ implica que LOWPT1$\left(b_{i}\right) \geq a$. Por $\left(ii\right)$, cada rama con cola en $S$ tiene su cabeza en $S \cup \{a\}$. También por $\left(ii\right)$, cada rama con la cabeza en $S$ tiene su cola en $S \cup \{b\} \cup \left(\bigcup_{i\geq i_{0}}D\left(b_{i}\right)\right)$. Cada arista con un vertice final en $D\left(b\right)$, $i \geq i_{0}$, tiene su otro extremo en $S \cup \{a, b\} \cup D\left(b\right)$. Así la clase $E_{1}$ contiene al menos todas las aristas con un vertice final en $S$ y como máximo todas las aristas con un vertice final en $S \cup (\bigcup_{i\geq i_{0}}D(b_{i}))$. Como $a \neq 1$, las aristas incidentes a la raíz de $P$ no pueden estar en $E_{1}$ y por lo tanto $\{a, b\}$ es un par de separación.\\
+Ahora debemos demostrar la parte directa del lema. Supongamos que $\left(a, b\right)$ no es una arista múltiple de $G$. Por el lema 3.12, $a \overset{\ast}{\rightarrow} b$. Sea $E_{i}$, para $1 \leq i \leq k$, las clases de separación de $G$ con respecto a $\{a, b\}$. Sea $v$ el hijo de $a$ tal que $a \rightarrow v  \overset{\ast}{\rightarrow} b$, $S =  D\left(v\right) - D\left(b\right)$, y $X = V - D\left(a\right)$. (O $S$ o $X$ o ambos pueden estar vacíos.). $E\left(S\right)$ y $E\left(X\right)$ están contenidos cada uno en una clase de separación, digamos $E\left(S\right) \subseteq E_{1}$ y $E\left(X\right) \subseteq E_{2}$.\\
+Sea $a_{i} \neq v$ un hijo de $a$. Si $a$ tiene un hijo así, LOWPT1$\left(a\right) \le a$. Esto significa que $E\left(D\left(a_{i}\right)\right) \subseteq E_{2}$. Sean $Y = X \cup \left(\bigcup_{i}D(a_{i}\right)$. Sean $b_{1}, b_{2}, \ldots b_{n}$ los hijos de $b$ en el orden en que aparecen en la lista de adyacencia de $b$. Sea $E\left(D\left(b\right)\right)$ el conjunto de aristas con vertice final en $D\left(b\right)$. Las clases de separación deben ser uniones de los conjuntos $E\left(S\right), E\left(Y\right)$, $\{\left(a, b\right)\}, E\left(D\left(b_{1}\right)\right), E\left(D\left(b_{2}\right)\right), \cdots E\left(D\left(b_{n}\right)\right)$.\\
+Si $E\left(D\left(b\right)\right) = E_{j}$ para algún $i$ y $j$, entonces LOWPT1$\left(b_{i}\right) = a$ ya que $G$ es biconexo y esto significa que LOWPT1$\left(b_{i}\right) \le b$ por el Lema 3.7. También, LOWPT2$\left(b_{i}\right) \geq b$. Ya que $\{a, b\}$ es un par de separación, debe haber una clase de separación distinta de $Ej$ y $\{\left(a, b\right)\}$. Por tanto, existe un vértice $s$ tal que $s \neq a$, $s \neq b$, y $s \notin D\left(b_{i}\right)$. Esto significa que $\{a, b\}$ satisface $\left(i\right)$ donde $r$ es $b_{i}$.\\ 
+Supongamos ahora que ninguna $E\left(D \left(b\right)\right)$ es una clase de separación. Sea $i_{0} = min\{i | $ LOWPT1$\left(b_{i}\right) \geq a\}$. Si $i \geq i_{0}$, entonces como $G$ es biconexo, debe ser el caso que LOWPT1$\left(b\right) \le b$, y estas clases de separación son $E_{1} = E\left(S\right) \cup \left(\bigcup_{i \geq i_{0}}E\left(D\left(b_{i}\right)\right)\right)$,\\ $E_{2} = E\left(Y\right) \cup \left(\bigcup_{i \le i_{0}} E\left(D\left(b_{i}\right)\right)\right),~ E_{3} = \{(a, b)\}$. ($E_{3}$ puede estar vacío.) Tenemos $v \neq b$ ya que $\{a, b\}$ no es un par de tipo 1 y $a \neq 1$ ya que $E_{2}$ no es vacío. Si $x \rule[1mm]{.1cm}{0.4pt} \rightarrow y$ es una rama con $v \leq x \le b$, entonces $x \in S,~ \left(x, y\right) \in E_{1}$, y $a \geq y$. Si $x \rule[1mm]{.1cm}{0.4pt} \rightarrow y$ es una rama con $a \le y \le b$ y $b \rightarrow b_{i} \overset{\ast}{\rightarrow} x$, entonces $y \in S,~ \left(x,y\right) \in E_{1}$ y $ i \geq i_{0}$, lo que significa que LOWPT1$\left(b_{i}\right) \geq a$. Debemos verificar una condición más para demostrar que $\left(ii\right)$ se cumple, es decir, que $b$ es un primer descendiente de $v$. Dado que $G$ es biconexa, LOWPT1$\left(v\right) \le a$. Por lo tanto alguna arista con cola en $D\left(v\right)$ tiene cabeza menor que $a$. Por el ordenamiento impuesto a $A$S y la definición de un primer descendiente, existe alguna rama $x \rule[1mm]{.1cm}{0.4pt} \rightarrow y$ con $x \in D\left(v\right)$ y $y \le a$ tal que $x$ es el primer descendiente de $v$. Si $b$ no fuera el primer descendiente de $v$, entonces $x$ estaría en $S$, y $E_{1}$ y $E_{2}$ no podrían ser clases de separación distintas. Por lo tanto, $b$ es un primer descendiente de $v$, y $\left(ii\right)$ se cumple con $r = v$. Esto completa la prueba  de la parte directa del lema.
+\end{proof}
+
+\paragraph{}
+Vale la pena considerar cuidadosamente el Lema 3.13 y su demostración. El lema da tres condiciones fáciles de aplicar para pares de separación. Las condiciones $\left(i\right)$ y $\left(ii\right)$ identifican los pares de separación no triviales de la gráfica. La condición $\left(iii\right)$ maneja aristas múltiples. La condición $\left(i\right)$ requiere que se realice una prueba simple en cada rama del árbol $P$. Por lo tanto, la prueba de pares de tipo 1 requiere tiempo $\Theta\left(V\right)$. La prueba de pares de tipo 2 es algo más difícil, pero se puede hacer en tiempo $\Theta\left(V + E\right)$ usando otra búsqueda primero en profundidad. Sea $\{a, b\}$ un par de tipo 2 que satisfaga $a \rightarrow r \overset{\ast}{\rightarrow} b$ y $i_{0} = min\{i | LOWPT2\left(b_{i}\right) \geq a\}$, donde $b_{1}, b_{2}, \ldots, b_{n}$, son los hijos de $b$ en el orden en que aparecen en $A\left(b\right)$. Entonces una clase de separación con respecto a $\{a,b\}$ es $E\left(\{x | r \leq x \le b_{i_{0}} + ND\left(b_{i_{0}}\right)\} - \{b\}\right)$. Esto se sigue de la demostración del Lema 3.13. La nueva numeración satisface la condición un tanto extraña en el Lema 3.9 por lo que hace fácil determinar la clases de separación y dividir la gráfica cuando se encuentra un par de separación. Un algoritmo para encontrar los componentes de división basado en el Lema 3.13 se da en el siguiente sección.
+
+\subsection{Encontrando componentes de división}
+
+\paragraph{}
+Encontramos los componentes de división al examinar los caminos generados en orden y probamos los pares de separación con el Lema 3.13. Los pares de separación serán de varios tipos. Pares de tipo 1 son mas faciles de reconocer. También lo son los pares de tipo 2 $\{a, b\}$, donde $a \rightarrow v \rightarrow b$ y $v$ tiene grado dos. Otros pares de tipo 2 son algo más difíciles de reconocer. Sea $c$ el primer camino generado (un ciclo). El ciclo consta de un conjunto de aristas del árbol $1 \rightarrow v_{1} \rightarrow v_{2} \rightarrow \cdots \rightarrow v_{n}$ seguido de una rama $v_{n} \rule[1mm]{.1cm}{0.4pt} \rightarrow 1$. La numeración de los vértices es tal que $1 \le v_{1} \le \cdots \le v_{n}$. Cuando se elimina $c$, la gráfica se divide en varias partes conectadas, llamadas \textbf{segmentos}. Cada segmento consta de una sola arista $\left(v_{i}, v_{j}\right)$ o de una arista del árbol $\left(v_{i}, w\right)$ más un subárbol con raíz $w$ más todas las aristas que salen del subárbol. El orden del camino generado es tal que todas las rutas en un segmento se generan antes que las rutas en cualquier otro segmento, y los segmentos se exploran en orden decreciente de $v_{i}$.\\
+Supongamos que repetimos la búsqueda del camino, usándola ahora para encontrar los componentes de división. Mantendremos una pila de aristas, agregando aristas a esta pila a medida que retrocedemos sobre ellos durante la búsqueda. Cada vez que encontramos un par de separación, eliminamos un conjunto de aristas de la pila correspondiente a un componente de división. Agregamos una arista virtual correspondiente a la división tanto al componente como a la pila de aristas. Nosotros también necesitamos actualizar varias piezas de información, ya que los padres de vértices y los grados de los vértices pueden cambiar cuando se divide una gráfica. El camino completo de la búsqueda creará un conjunto completo de componentes de división. Unir los componentes de división para dar los componentes triconexos es el paso final.\\
+Para identificar los pares de tipo 2, mantenemos una pila (llamada TSTACK) de tripletas $\left(h, a, b\right)$. El par $\{a, b\}$ es un posible par de tipo 2 y $h$ denota el vértice numerado más grande en el componente de división correspondiente. Los pares están en orden anidado en la pila; es decir, si $v_{i}$ es el vértice actual que está siendo examinado por la búsqueda de ruta y $\left(h_{1}, a_{1}, b_{1}\right), \left(h_{2}, a_{2}, b_{2}\right), \cdots, \left(h_{k}, a_{k}, b_{k}\right)$ están en TSTACK, entonces $a_{k} \leq a_{k-1} \leq \cdots \leq a_{2} \leq a_{1} \leq v_{i} \leq b_{1} \leq b_{2} \leq \cdots \leq b_{k}$. Además, todos los $a_{j}$ y $b_{j}$ son vértices. en el ciclo c.\\
+
+\paragraph{}
+Actualizamos TSTACK de las siguientes maneras:
+
+\begin{enumerate}
+\item Cada vez que recorremos un nuevo camino $p: s \overset{\ast}{\Rightarrow} f$, borramos todos las tripletas $(h_{j}, a_{j}, b_{j})$ encima de la pila con $a \ge f$. Si $p$ tiene un segundo vértice $v \neq f$, sea $x = v + ND\left(v\right) + 1$. De lo contrario, sea $x = s$. Sea $y = max\{h_{j} | triple(h_{t}, a_{t}, b_{t})$ que se eliminó de TSTACK$\}$. Si $(h_{k}, a_{k}, b_{k})$ fue la última tripleta eliminada, agregamos $\left(max\left(x, y\right), f, s\right)$ a la pila. Si no se eliminó una tripleta, agregamos $\left(x, f, s\right)$ a la pila.
+\item Cuando retrocedemos sobre una rama del árbol $v_{i} \rightarrow v_{i+1}$ con $v \neq 1$, borramos todos entradas $(h_{j}, a_{j}, b_{j})$ encima de TSTACK que satisfacen HIGHPT$\left(v_{i}\right) > h_{j}$. esta prueba es necesaria para garantizar que las entradas que no correspondan a los pares de tipo 2 no se acumulan en TSTACK.
+\end{enumerate}
+
+\paragraph{}
+Usamos TSTACK para encontrar pares de separación de la siguiente manera: siempre que busquemos hacia atrás a lo largo de una rama del árbol $v_{i} \rightarrow v_{i+1}$ durante la búsqueda de ruta, examinamos la tripleta superior en $\left(h_{1}, a_{1}+, b_{1}\right)$ en TSTACK. Si $v \neq 1$, $a = v_{i}$, y $a \neq$ PADRE$(b_{i})$, $\{a_{1},b_{1}\}$ es un par de separación de tipo 2. Si GRADO$\left(v + 1\right) = 2$ y $v_{i+1}$ tiene un hijo, entonces $v_{i}$ y el hijo de $v_{i+1}$ forman un par de separación tipo 2. Dividimos los componentes correspondientes a los pares de tipo 2 hasta que estas dos condiciones no nos den más componentes. (Simultáneamente, probamos los componentes correspondientes a múltiples aristas y los dividimos.) Luego aplicamos el Lema 3.13 para probar si $\{v,$ LOWPT1$\left(v+ 1\right)\}$ es un par de tipo 1, dividiendo un componente si es necesario. (De nuevo, tenemos que comprobar si hay un componente de múltiples aristas).
+
+\paragraph{}
+Manejamos la parte recursiva del algoritmo de la siguiente manera: recorremos una ruta $p: s \overset{\ast}{\Rightarrow} f$ que comienza en $c$ significa que la búsqueda está entrando a un nuevo segmento. El vértice $f$ debe ser el vértice más bajo en el segmento por el orden impuesto en el búsqueda de caminos. Después de actualizar TSTACK como se describe arriba, si $p$ contiene más de una arista, colocamos un marcador de fin de pila en TSTACK y continuamos encontrando caminos. Esto corresponde a una llamada recursiva de la triconectividad básica del algoritmo. Cuando retrocedemos sobre el primer arista de $p$, eliminamos todas las entradas de TSTACK hasta el marcador de fin de la pila. esto corresponde a apareciendo de la recursividad.
+
+\paragraph{}
+Un punto más necesita explicación: la razón por la que usamos LOWPT2 así como LOWPT1 para construir $A$, la estructura de adyacencia aceptable que determina el orden de búsqueda de caminos. Este paso es necesario para que todas las aristas múltiples sean manejadas correctamente. Supongamos que $v$ es un vértice, y $w_{1}, w_{2}, \ldots, w_{k}$ son los hijos de $v$ tales que LOWPT1$(w_{i}) = u$. Además, supongamos que $v \rule[1mm]{.1cm}{0.4pt} \rightarrow u$. Sea la $w_{i}$ ordenada como en $A\left(v\right)$. Hay algún $i_{0}$ tal que $i \leq i_{0 } \Rightarrow$ LOWPT2$\left(w_{i}\right) \le v$ y $i \ge i_{o} \Rightarrow$ LOWPT2$\left(w_{i}\right) \geq v$. En $A\left(v\right)$, $u$ aparecerá después de el $w_{i}$ con $1 \leq i \leq i_{0}$. Si $i \ge i_{0}$, entonces $\{u, w_{i}\}$ es un par de separación tipo 1; dividiendo los correspondientes componentes produce una nueva arista(virtual) $v \rule[1mm]{.1cm}{0.4pt} \rightarrow u$. Es importante que todos los $w_{i}$ con $i \ge i_{0}$ aparecen juntos en $A\left(v\right)$ para que estas aristas virtuales puedan ser localizadas y combinadas para dar componentes de división que son enlaces.
+
+\LinesNotNumbered {
+\begin{algorithm}[!ht]
+\DontPrintSemicolon
+agregamos $\left(EOS\right)$ a TSTACK\;
+PATHSEARCH(1)\;
+sea $e_{1}, e_{2}, \ldots, e_{\ell}$ aristas en ESTACK\;
+\nlset{3.1} $\mathcal{C} = $ nuevo componente $\left(e_{1}, \ldots, e_{\ell}\right)$
+\caption{SPLIT($G$)}\label{alg:dividirgráfica}
+\end{algorithm}
+}
+
+\LinesNotNumbered {
+\begin{algorithm}[!ht]
+\DontPrintSemicolon
+\For{$e \in A\left(v\right)$:}{
+	\If{$e = v \rightarrow w$}{
+		\If{$e$ empieza un camino}{
+			eliminar todos los $\left(h, a, b\right)$ con $a > LOWPT1(w)$ de TSTACK\;
+			\If{no se eliminar tripletas}{
+				agregar a TSTACK $(w + $ ND$\left(w\right) - 1,$ LOWPT1$\left(w\right), v$\;
+			}
+			\Else{
+				$y = max \{h | \left(h, a, b\right)$ eliminados de TSTACK$\}$\;
+				sea $\left(h, a, b\right)$ la ultima tripleta eliminada\;
+				agregar a TSTACK $(max(y, w + $ ND$\left(w\right) - 1)$, LOWPT1$\left(w\right), b)$\;
+			}
+			agregar a TSTACK $\left(EOS\right)$
+		}
+		PATHSEARCH$\left(w\right)$\;
+		agregamos a ESTACK $\left(v \rightarrow w\right)$\;
+		buscamos pares de tipo 2\;
+		buscamos pares de tipo 1\;
+		\If{$e$ empieza un camino}{
+			quitamos las tripletas en TSTACK hasta el $EOS$\;
+		}
+		\nlset{4.1} \While{$\left(h, a, b\right)$ en TSTACK tiene $a \neq v$ y $b \neq v$ y HIGHPT$\left(v\right) > h$}{
+			eliminamos $\left(h, a, b\right)$ de TSTACK\;
+		}
+	}
+	\Else{
+		sea $e = v \hookrightarrow w$\;
+		\If{e empieza un camino}{
+			eliminar todos los $\left(h, a, b\right)$ con $a > w$ de TSTACK\;
+			\If{no se eliminaron tripletas}{
+				agregamos $\left(v, w, v\right)$ a TSTACK\;
+			}
+			\Else{
+				$y = max\{h |  $ eliminado de TSTACK$\}$\;
+				sea $\left(h, a, b\right)$ la utima tripleta eliminada\;
+				agregamos $\left(y, w, b\right)$ a TSTACK\; 
+			}
+		}
+		\If{$w \in $ parent$\left(v\right)$}{
+			$\mathcal{C} = $ nuevo componente $\left(e, w \rightarrow v\right)$\;
+			$e^{'} = $ nueva arista virtual $(w, v, \mathcal{C})$ \;
+			crear arista vitual $\left(e^{'}, w \rightarrow v\right)$\;
+		}
+		\Else{
+			agregamos $e$ a TSTACK
+		}
+	}
+}
+\caption{PATHSEARCH($v$)}\label{alg:busquedaCamino}
+\end{algorithm}
+}
+
+\begin{algorithm}[!ht]
+\DontPrintSemicolon
+\While{$v \neq 1$ y ($\left(h, a, b\right)$ en TSTACK tiene $a = v$) o (GRADO$\left(v\right) = 2$ y $A1\left(w\right) > w$)}{
+	\If{$a = v$ y FATHER$\left(b\right) = a$}{
+		eliminamos el primero de TSTACK\;
+	}
+	\Else{
+		$e_{ab} = nulo$
+		\If{DEGREE$\left(w\right) = $ y $A1 > w$}{
+			$\mathcal{C}$ = nuevo componente\;
+			quitamos las primeras aristas $\left(v, w\right)$ y $\left(w, b\right)$ de ESTACK y las agregamos a $\mathcal{C}$\;
+			$e^{'} = $ nueva arista virtual $\left(v, x, \mathcal{C}\right)$\;
+			\If{eliminamos $\left(v, b\right)$}{
+				$e_{ab}$ es el primer elemento que eliminamos de ESTACK\;
+			}
+		}
+		\Else{
+			$(h, a, b) = $ primer elemento eliminado de TSTACK\;
+			$\mathcal{C}$ = nuevo componente\;
+			\While{$\left(x, y\right)$ en ESTACK tiene $a \leq x \leq h$ y $a \leq $y $\leq h$}{
+				\If{$\left(x, y\right) = \left(a, b\right)$}{
+					$e_{ab}$ es el primer elemento que eliminamos de ESTACK\;
+				}
+				\Else{
+					$\mathcal{C} = \mathcal{C} \cup \{$ primer elemento eliminado de ESTACK $\}$\;
+				}
+			}
+		}
+		\If{$e_{ab} = nulo$}{
+			$\mathcal{C} = $ nuevo componente $\left(e_{ab}, e^{'}\right)$
+			$e^{'} = $ nueva arista virtual $\left(v, b, \mathcal{C}\right)$
+		}
+		agregamos $e^{'}$ a ESTACK\;
+		creamos la arista del árbol $\left(e^{'}, v \rightarrow b\right)$\;
+		$w = b$\;
+	}
+}
+\caption{checkTipo2($v$)}\label{alg:tipo2}
+\end{algorithm}
+
+\LinesNotNumbered{
+\begin{algorithm}[!ht]
+\DontPrintSemicolon
+\nlset{6.1} \If{LOWPT2$\left(w\right) \geq v$ y LOWPT1$\left(w\right) < v$ y (FATHER$\left(v\right) \neq 1$) o $v$ es adyacente a una rama de el árbol que aún no has sido visitada :}{
+	$\mathcal{C} = $ nuevo componente\;
+	\While{$\left(x, y\right)$ en ESTACK tiene $w \leq x \leq w + $ ND$\left(w\right)$ o $w \leq y \leq w + $ ND$\left(w\right)$}{
+		$\mathcal{C} = \mathcal{C} \cup \{$ESTACK.pop()$\}$\;
+	}
+	$e^{'} = $ nueva arista virutal ($v,$ LOWPT1$\left(w\right), \mathcal{C}$)\;
+	\If{ESTACK.pop() $= \left(v, LOWPT1\left(w\right)\right)$}{
+		$\mathcal{C} = $ nuevo componente $\left(\textbf{ESTACK.pop}(), e^{'}\right)$\;
+		$e^{'} = $ nueva arista virtual ($v,$ LOWPT1$\left(w\right), \mathcal{C}$)\;
+	}
+	\If{LOWPT1$\left(w\right) \neq $ FATHER$\left(v\right)$}{
+		agregar $e^{'}$ a ESTACK\;
+		crear arista de l árbol ($e^{'}, $ LOWPT1$(w) \rightarrow v$)\;
+	}
+	\Else{
+		$\mathcal{C} = $ nuevo componente ($e^{'}, $ LOWPT1$\left(w\right) \rightarrow v$)\;
+		$e^{'} = $ nueva arista virtual (LOWPT1$\left(w\right), v, \mathcal{C}$)\;
+		crear arista de l árbol ($e^{'}, $ LOWPT1$(w) \rightarrow v$)\;
+	}
+}
+\caption{checkTipo1($v$)}\label{alg:tipo1}
+\end{algorithm}
+}
+
+\begin{lemma}
+\textbf{SPLIT} divide correctamente un gráfica biconexo $G$ en sus componentes de división.
+\end{lemma}
+
+\begin{proof}
+Debemos probar dos cosas $\left(i\right)$ si $G$ es triconexo, SPLIT no lo divide y $\left(ii\right)$ si $G$ no es triconexo, el algoritmo lo dividirá. Una vez que tengamos estos dos hechos, podemos demostrar el lema por inducción sobre el número de aristas de la gráfica. Las pruebas para múltiples aristas, para pares de separación de tipo 1 y para vértices de grado 2 son sencillos. (La prueba de tipo 1($G$ en PATHSEARCH) incluye la condición (LOWPT1$\left(w\right) \neq 1$) o (PADRE$\left(v\right) \neq 1$) o ($w \ge 3$) para asegurarse que algún vértice está afuera del componente de división correspondiente.) Estas pruebas descubren un par de separación del tipo correcto, si existe, y no informarán un par de separación si no existe uno. Por lo tanto, solo debemos mostrar que la prueba para el tipo 2 funciona correctamente en gráficas sin vértices de grado dos o pares de separación tipo 1 y habremos verificado $\left(i\right)$ y $\left(ii\right)$.\\
+Supongamos que $G$ es una gráfica biconexo sin vértices de grado dos, o pares de separación tipo 2. Consideremos la prueba de tipo 2 y el cambio contenido de TSTACK a medida de que avanza la búsqueda en $G$. Si$(h_{1}, a_{1}, b_{1}), \cdots , (h_{k}, a_{k}, b_{k})$ son los contenidos de TSTACK por encima del marcador de fin de pila más alto y si $v$ es el vértice que se está examinando actualmente durante la búsqueda, entonces $a_{k} \leq a_{k-1} \leq \cdots \leq a_{1} \leq v \leq b_{1} \leq \cdots \leq b_{k}$. Esto se sigue por inducción de un examen de la  posibles cambios que se pueden hacer en TSTACK (declaraciones $A$, $B$, $C$, $D$, $E$, $F$ en PATHSEARCH). Además, $a_{k}, a_{k-1} \cdots b_{k}$ se encuentran en el ciclo correspondiente a la llamada recursiva actual del algoritmo básico de triconectividad.\\
+Suponga que $\left(h, a, b\right)$ en TSTACK satisface la prueba de tipo 2 cuando el la búsqueda regresa a lo largo de una rama del árbol $v \rightarrow w$. La prueba ($B$, $E$ en PATHSEARCH) establece que $a = v$, $v \neq 1$ y PADRE$\left(b\right) \neq a$. Se sigue que $r = A1 \left(a\right) \neq b$ satisface $a \rightarrow r \overset{\ast}{\rightarrow} b$ y que $b$ es un primer descendiente de $r$ (es decir, $a$, $r$ y $b$ se examinaron en un mismo camino generado). Si alguna rama $x \rule[1mm]{.1cm}{0.4pt}  \rightarrow y$ con $r \leq x \le b$ tuviera $a \ge y$, la tripleta en TSTACK correspondiente a $\left(h, a, b\right)$ se habría eliminado de TSTACK cuando se exploró la arista($A$ o $F$ en PATHSEARCH). Similarmente, si alguna rama $x \rule[1mm]{.1cm}{0.4pt}  \rightarrow y$ con $a \le y \le b$ y $b \rightarrow w \overset{\ast}{\rightarrow} x$ tenía LOWPT1$\left(w\right) \le a$, la tripleta en TSTACK correspondiente a $\left(h, a, b\right)$ habría sido eliminado por la prueba HIGHPT cuando se examinó el vértice $y$ ($D$ en PATHSEARCH). Se sigue que $\{a, b\}$ es un par de separación tipo 2 por el Lema 13.\\
+Por el contrario, supongamos que $G$ tiene un par $\{a, b\}$ de tipo 2. Sean $b_{1}, b_{2}, \ldots, b_{n}$, los hijos de $b$ en el orden en que aparecen en $A\left(b\right)$. Sea $i_{0} = min\{i |$ LOWPT1$\left(b_{i}\right) \geq a\}$. Si $i_{0}$ existe, entonces ($b_{i_{0}} + $ND$\left(b_{i_{0}}\right)$, LOWPT1 $\left(b_{i}\right), b$) se colocará en TSTACK cuando la rama del árbol $b \rightarrow b_{i}$ se explora. Esta tripleta puede ser borrado de TSTACK, pero siempre será reemplazado por una tripleta de la forma $\left(h, x, b\right)$, con LOWPT1$\left(b\right) \geq x \geq a$. Finalmente dicha tripleta satisfará la prueba de tipo 2, a menos que se encuentre primero algún otro par de tipo 2. Si $i_{0}$ no existe, sea $\left(i, j\right)$ la primera arista recorrida después de llegar a $b$ tal que $a \leq i$ y $j \leq b$. Si $i \rule[1mm]{.1cm}{0.4pt}  \rightarrow j$, entonces $\left(i, j, i\right)$ se colocará en TSTACK, posiblemente modificado y eventualmente seleccionado como un par de tipo 2, a menos que algún otro par de tipo 2 sea examinado primero. Si $i \rightarrow j$, entonces ($j + $ND$\left(j\right), $LOWPT1$\left(j\right), i$) se colocará en TSTACK, posiblemente modificado y eventualmente seleccionado como un par de tipo 2 a menos que algún otro par de tipo 2 se examine primero. Por lo tanto, si existe algún par de tipo 2, al menos un par de tipo 2 será encontrado por el algoritmo. De ello se deduce que la prueba de tipo 2 funciona correctamente, y el algoritmo divide un gráfica si y solo si existe un par de separación.\\
+El lema se sigue por inducción sobre el número de aristas en $G$. Supongamos que el lema es cierto para gráficas con menos de $k$ aristas. Sea $G$ una gráfica con $k$ aristas. Si $G$ no puede ser dividido, el algoritmo funciona correctamente en $G$ por el argumento anterior. Si $G$ se puede dividir, se dividirá. Consideremos la primera división realizada por el algoritmo, produciendo gráficas de división $G_{1}$ y $G_{2}$. El comportamiento del algoritmo en $G$ es un compuesto de su comportamiento en $G_{1}$ y $G_{2}$. Dado que el algoritmo divide $G_{1}$ y $G_{2}$ correctamente por la hipótesis de inducción, debe dividir $G$ correctamente. El lema se sigue por inducción.
+\end{proof}
+
+\begin{lemma}
+El algoritmo de componentes triconexas procesa una gráfica $G$ con $V$ vértices y $E$ aristas en tiempo $\Theta \left(V + E\right)$.
+\end{lemma}
+
+\begin{proof}
+El número de aristas en un conjunto de componentes de división de $G$ está acotado por $3E - 6$, por el lema 3.1. Todos los pasos, excepto encontrar componentes de división, requiere un tiempo $\Theta\left(V+ E\right)$, por los resultados de las dos ultimas secciones.. Considerese la ejecución de algoritmo SPLIT. Cada arista se coloca en ESTACK una vez y se elimina una vez. La búsqueda en profundidad en sí misma requiere un tiempo $\Theta\left(V + E\right)$, incluidas las diversas pruebas. El número de tripletas agregadas a TSTACK es $\Theta\left(V + E\right)$. Cada tripleta sólo puede modificarse si está encima de la pila. Por lo tanto, el tiempo necesario para mantener TSTACK es también $\Theta\left(V + E\right)$ y DIVISION requiere de tiempo $\Theta\left(V + E\right)$.
+\end{proof}
+
+\section{Correciones de el Algoritmo de Hopcroft and Tarjan}
+
+\paragraph{}
+
+El procedimiento de \textbf{SPLIT} en \citep{hopcroft1973} no divide el gráfica correctamente en sus componentes de división. Los cambios hechos al algoritmo en \citep{Gutwenger2000ALT} se enumeran a continuación:
+
+\begin{itemize}
+\item Faltaba la creación del último componente de división(línea 3.1).
+\item Se cambió la condición en la línea 4.1. La condición original podría eliminar tripletas de TSTACK correspondientes a pares de separación reales de tipo 2. Tal par de separación no pudo ser reconocido por el procedimiento SPLIT original.
+\item Se cambió la condición en la línea 6.1. La condición original podría identificar incorrectamente los pares de separación después de modificar la gráfica.
+\item Las actualizaciones para $A1\left(v\right)$ y GRADO$\left(v\right)$ no son suficientes.
+\item HIGHPT$\left(w\right)$ no se actualizó, lo cual no es correcto. Es necesario actualizar HIGHPT dinámicamente, cuando se modifica $G_{c}$. Nosotros reemplazó HIGHPT$\left(w\right)$ por una lista de aristas que terminan en $w$, el cual se actualiza como cambios de $G_{c}$.
+\end{itemize}

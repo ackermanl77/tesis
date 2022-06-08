@@ -1,0 +1,22 @@
+\subsection{La idea general de el algoritmo de componentes triconexas}
+
+\begin{algorithm}
+\begin{algorithmic}[1]
+\WHILE {$K \neq \{ \langle v \rangle \}$}
+\STATE Elegir un símplice $\sigma_i$ de $K$ que sea maximal y que contenga una cara libre $\delta\sigma_i$.
+\IF{no hay ningún símplice de esas características}
+\RETURN \FALSE
+\ELSE
+\STATE $K \leftarrow K \setminus \{\sigma_i, \delta\sigma_i\}$
+\ENDIF
+\ENDWHILE
+\RETURN \TRUE
+\end{algorithmic}
+\caption{Contracción de caras libres maximales}\label{alg:algoritmoRaro}
+\end{algorithm}
+
+
+
+
+
+

@@ -1,0 +1,138 @@
+\begin{thebibliography}{}
+
+\bibitem[Abarca~Sotelo, 2011]{AbarcaSoteloMarioAlberto2011Apds}
+Abarca~Sotelo, M.~A. (2011).
+\newblock Algoritmo para decidir si una forma unitaria es de tipo.
+
+\bibitem[Ariyoshi et~al., 1971]{1083313}
+Ariyoshi, H., Shirakawa, I., and Ozaki, H. (1971).
+\newblock Decomposition of a graph into compactly connected two-terminal
+  subgraphs.
+\newblock {\em IEEE Transactions on Circuit Theory}, 18(4):430--435.
+
+\bibitem[AUSLANDER and PARTER, 1961]{auslander-1961}
+AUSLANDER, L. and PARTER, S.~V. (1961).
+\newblock On imbedding graphs in the plane.
+\newblock {\em Journal of Applied Mathematics and Mechanics}, pages 517--523.
+
+\bibitem[Barot, 1999]{Barot1999ACO}
+Barot, M. (1999).
+\newblock A characterization of positive unit forms.
+
+\bibitem[Barot and de~la Pena, 1999]{article123}
+Barot, M. and de~la Pena, J. (1999).
+\newblock The dynkin type of a non-negative unit form.
+\newblock {\em Expositiones Mathematicae}, 17.
+
+\bibitem[Bruno et~al., 1970]{10893101}
+Bruno, J., Steiglitz, K., and Weinberg, L. (1970).
+\newblock A new planarity test based on 3-connectivity.
+\newblock {\em IEEE Transactions on Circuit Theory}, 17(2):197--206.
+
+\bibitem[Busacker et~al., 1965]{busacker1965finite}
+Busacker, R., Busacker, R., Saaty, T., and Grob, B. (1965).
+\newblock {\em Finite Graphs and Networks: An Introduction with Applications}.
+\newblock Number v. 10 in Finite Graphs and Networks: An Introduction with
+  Applications. McGraw-Hill.
+
+\bibitem[EDMONDS and CUNNINGHAM, 1973]{jEdmonds}
+EDMONDS, J. and CUNNINGHAM, W. (1973).
+\newblock private communication.
+
+\bibitem[Gabriel, 1997]{alma991031505829703276}
+Gabriel, P. (1997).
+\newblock {\em Representations of finite-dimensional algebras / P. Gabriel,
+  A.V. Roiter.}
+\newblock Springer, Berlin ;.
+
+\bibitem[Goldstein, 1963]{goldstein1963efficient}
+Goldstein, A. (1963).
+\newblock An efficient and constructive algorithm for testing whether a graph
+  can be embedded in a plane.
+\newblock In {\em Graph and Combinatorics Conference, Contract No. NONR
+  1858-(21), Office of Naval Research Logistics Proj., Dept. of Mathematics,
+  Princeton University, May 16-18}.
+
+\bibitem[Gutwenger and Mutzel, 2000]{Gutwenger2000ALT}
+Gutwenger, C. and Mutzel, P. (2000).
+\newblock A linear time implementation of spqr-trees.
+\newblock In {\em Graph Drawing}.
+
+\bibitem[Harary, 1971]{harary1971graph}
+Harary, F. (1971).
+\newblock {\em Graph Theory}.
+\newblock Addison Wesley series in mathematics. Addison-Wesley.
+
+\bibitem[Hopcroft and Tarjan, 1973a]{efalgm}
+Hopcroft, J. and Tarjan, R. (1973a).
+\newblock Algorithm 447: Efficient algorithms for graph manipulation.
+\newblock {\em Commun. ACM}, 16(6):372–378.
+
+\bibitem[Hopcroft and Tarjan, 1974]{ept}
+Hopcroft, J. and Tarjan, R. (1974).
+\newblock Efficient planarity testing.
+\newblock {\em J. ACM}, 21(4):549–568.
+
+\bibitem[Hopcroft and Tarjan, 1972]{Hopcroft1972}
+Hopcroft, J.~E. and Tarjan, R.~E. (1972).
+\newblock {\em Isomorphism of Planar Graphs (Working Paper)}, pages 131--152.
+\newblock Springer US, Boston, MA.
+
+\bibitem[Hopcroft and Tarjan, 1973b]{hopcroft1973}
+Hopcroft, J.~E. and Tarjan, R.~E. (1973b).
+\newblock {Dividing a Graph into Triconnected Components}.
+\newblock {\em SIAM Journal on Computing}, 2(3):135--158.
+
+\bibitem[Kleitman, 1969]{1082941}
+Kleitman, D. (1969).
+\newblock Methods for investigating connectivity of large graphs.
+\newblock {\em IEEE Transactions on Circuit Theory}, 16(2):232--233.
+
+\bibitem[Lay, 2001]{LayDavidC2001Alys}
+Lay, D.~C. (2001).
+\newblock {\em Algebra lineal y sus aplicaciones}.
+\newblock Pearson Educación, México, 2a ed. actualizada. edition.
+
+\bibitem[Lederberg, 1964]{Lederberg1964DENDRAL64AS}
+Lederberg, J. (1964).
+\newblock Dendral-64: A system for computer construction, enumeration and
+  notation of organic molecules as tree structures and cyclic graphs. part i.
+  notational algorithm for tree structures.
+
+\bibitem[Mac~Lane, 1937]{mac-lane-1937}
+Mac~Lane, S. (1937).
+\newblock A structural characterization of planar combinatorial graphs.
+\newblock {\em Duke Mathematical Journal}, 3(3).
+
+\bibitem[Meghana M~Reddy, 2018]{TricLinTimAlg}
+Meghana M~Reddy, Sai Harsh~Tondomker, D.~C. (2018).
+\newblock Triconnectivity linear time algorithm.
+\newblock
+  \url{https://doc.sagemath.org/html/en/reference/graphs/sage/graphs/connectivity.html#sage.graphs.connectivity.TriconnectivitySPQR}.
+
+\bibitem[Ringel, 1985]{Ringel1985TameAA}
+Ringel, C.~M. (1985).
+\newblock Tame algebras and integral quadratic forms.
+
+\bibitem[Tarjan, 1971a]{4569669}
+Tarjan, R. (1971a).
+\newblock Depth-first search and linear graph algorithms.
+\newblock In {\em 12th Annual Symposium on Switching and Automata Theory (swat
+  1971)}, pages 114--121.
+
+\bibitem[TARJAN and HOPCROFT, 1972]{tarjan-1972}
+TARJAN, R. and HOPCROFT, J. (1972).
+\newblock Finding the triconnected components of a graph.
+\newblock {\em Dept. of Computer Science}, pages 72--140.
+
+\bibitem[Tarjan, 1971b]{tarjan1971efficient}
+Tarjan, R.~E. (1971b).
+\newblock An efficient planarity algorithm.
+\newblock Technical report, STANFORD UNIV CALIF DEPT OF COMPUTER SCIENCE.
+
+\bibitem[Tarjan, 1974]{Tarjan1974FindingDI}
+Tarjan, R.~E. (1974).
+\newblock Finding dominators in directed graphs.
+\newblock {\em SIAM J. Comput.}, 3:62--89.
+
+\end{thebibliography}

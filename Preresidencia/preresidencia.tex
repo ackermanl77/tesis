@@ -1,0 +1,737 @@
+\documentclass[spanish]{beamer}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{lmodern}
+\usepackage{tikz}
+\usepackage[vlined]{algorithm2e}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{dashrule}
+
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\makeatletter
+ \newcommand\makebeamertitle{\frame{\maketitle}}%
+ % (ERT) argument for the TOC
+ \AtBeginDocument{%
+   \let\origtableofcontents=\tableofcontents
+   \def\tableofcontents{\@ifnextchar[{\origtableofcontents}{\gobbletableofcontents}}
+   \def\gobbletableofcontents#1{\origtableofcontents}
+ }
+\makeatother
+
+\usetheme{Frankfurt}
+\usecolortheme{crane}
+\setbeamercovered{transparent}
+\usefonttheme[onlymath]{serif}
+
+\input{simbolos}
+
+\begin{document}
+\title[Clasificación Dynkin]{Clasificación algorítmica en gráficas de tipo
+$\mathbb{D}_n$}
+
+\author[R. Gutiérrez]{Rey David Gutiérrez Torres\\ Daniel Rivera López}
+
+\institute[UAEM]{Universidad Autónoma del Estado de Morelos}
+
+%\date{21 de junio de 2017}
+
+\makebeamertitle
+
+\pgfdeclareimage[height=0.5cm]{institution-logo}{logoUAEM}
+\logo{\pgfuseimage{institution-logo}}
+
+\AtBeginSubsection[]{%
+  \frame<beamer>{ 
+    \frametitle{Índice}   
+    \tableofcontents[currentsection, currentsubsection] 
+  }
+}
+
+%\beamerdefaultoverlayspecification{<+->}
+
+\begin{frame}{Índice}
+  \tableofcontents{}
+\end{frame}
+
+\section{Conceptos y relaciones}
+
+\begin{frame}{Matriz de Cartan simétrica}
+  \begin{columns}
+    \begin{column}{5cm}
+        \begin{definition}
+          \begin{itemize}
+            \item<+->  Una matriz $\mat{A} \in \MatrixSet{\Zset}$ es 
+            \textbf{casi Cartan} si $\mat{A}$ es simétrica y $\entry{\mat{A}}{i}{i} = 2$ para toda $i = 1, \ldots, n$.
+            \item<+-> Se denotan por $\sqCclass$.
+          \end{itemize}      
+        \end{definition}
+    \end{column}
+    \begin{column}{5cm}
+      \begin{example}<+->
+        \begin{equation*}
+        \begin{pmatrix}
+        2 & -2 & 1 & 0\\
+        -2 & 2 & -1 & 0\\
+        1 & -1 & 2 & 1\\
+        0 & 0 & 1 & 2\\
+        \end{pmatrix}
+        \end{equation*}
+      \end{example}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Forma unitaria}
+  \framesubtitle{}{}
+  \begin{itemize}
+  \item Una forma cuadrática es un polinomio $q : R^{n} \rightarrow
+R$ (con $n > 0$) si cada monomio del mismo es una variable al cuadrado o la multiplicación de dos variables. Esto es equivalente a decir que $q$ se puede expresar como:
+	\begin{align*}
+    q\left(x\right) &=  \sum_{i=1}^{n}q_{ii}\,x_{i}^{2} + \sum_{1 \leq i \leq j \leq n}q_{ij\,}x_{i}\,x_{j} \in \mathbb{Z}[x_{1}, \ldots, x_{n}]
+  \end{align*}
+  \item Una forma cuadratica unitaria es un caso especial donde $q_{ii}=1$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Forma unitaria asociada a una matriz casi Cartan}
+  \framesubtitle{Matriz casi-Cartan simétrica $\leftrightarrow$ Forma unitaria}
+  \begin{align*}
+    \Quadratic{\mat{A}}\left(\vec{x}\right) &= \frac{1}{2} 
+    \transpose{\vec{x}} \mat{A} \vec{x}  \pause \\
+    &= \frac{1}{2} \left( \sum_{i = 1}^{n} \sum_{j = 1}^{n} 
+      \entry{\mat{A}}{i}{j} x_i x_j \right) \pause \\
+    &= \frac{1}{2} \left(\sum_{i=1}^{n} \entry{\mat{A}}{i}{i} x_i^2
+       + 2 \sum_{1 \le i < j \le n} \entry{\mat{A}}{i}{j} x_i x_j\right)  
+       \pause \\
+    &= \sum_{i=1}^{n} x_i^2 + \sum_{1 \le i < j \le n} \entry{\mat{A}}{i}{j}    
+       x_i x_j \text{.}
+  \end{align*}
+\end{frame}
+
+\begin{frame}{Forma unitaria asociada a una matriz casi Cartan}
+  \begin{definition}
+  Una matriz casi Cartan simétrica $A$ es \textbf{definida positiva} si y sólo si 
+  $\Quadratic{\mat{A}}\left(\vec{x}\right) = \frac{1}{2} \transpose{\vec{x}} \mat{A} \vec{x}>0$, para toda $x\in \mathbb{Z}$ con $x\neq \vec{0}$.
+  \end{definition}
+\end{frame}
+
+
+\begin{frame}{Bigráfica asociada a una matriz casi Cartan}
+  \framesubtitle{Matriz casi-Cartan simétrica $\leftrightarrow$ Bigráfica}
+  \begin{theorem}
+    Sea $A\in M_{n}(\mathbb{Z})$ una matriz casi Cartan simétrica y definida positiva sean  $i,j\in\{1,2...n\}$, entonces 
+\begin{enumerate}
+\item [$(a)$] $0\leq A_{ij}A_{ji}<4$ 
+\item [$(b)$] $A_{ij}\in\{-1,0,1\}$\end{enumerate}  \end{theorem}\pause
+La bigráfica $\Bigraph{\mat{A}}$ asociada a la matriz $A$  tiene  vértices $\left\{ 1,2,\ldots,n\right\} $, y para cada par de vértices $i$, $j$ con $i\neq j$:\pause
+	\begin{enumerate}
+		\item Si $A_{ij}=-1=A_{ji}$ trazamos una arista solida entre los vértices,
+		\begin{tikzpicture}[baseline = (v1.base), scale = 1.5]
+      \node (v1) at (-0.8604975358129109, -0.4070708333164735) {$i$};   
+      \node (v2) at (0.000, -0.4070708333164735) {$j$};
+      \draw (v1)--(v2);  
+       \end{tikzpicture}\pause
+		\item Si $A_{ij}=1=A_{ji}$ trazamos una arista punteada entre los vértices, 
+		\begin{tikzpicture}[baseline = (v1.base), scale = 1.5]
+      \node (v1) at (-0.8604975358129109, -0.4070708333164735) {$i$};   
+      \node (v2) at (0.000, -0.4070708333164735) {$j$};
+      \draw[dotted] (v1)--(v2);  
+       \end{tikzpicture}
+	\end{enumerate}
+ \end{frame}
+
+\begin{frame}{Equivalencia de conceptos}
+  \framesubtitle{Ejemplo}
+  $\mat{A} =
+  \begin{pmatrix}
+    2 & -1 & 0 & 1\\
+    -1 & 2 & 1 & 1\\
+    0 & 1 & 2 & 0\\
+    1 & 1 & 0 & 2\\
+  \end{pmatrix}$\pause
+  \qquad
+  \begin{tikzpicture}[baseline = (v3.base), scale = 0.9]
+  \node (v0) at (-0.7604975358129109, -0.9070708333164735) {$1$};
+  \node (v1) at (1.1732333853473758, -0.63758645858272716) {$2$};
+  \node (v2) at (2.84142321122027776, -0.6585990909663623) {$3$};
+  \node (v3) at (-0.144076010236877, 0.5397895385876869) {$4$};
+  \begin{pgfonlayer}{bg}
+  \draw (v0) -- (v1);
+  \draw[dotted] (v0) -- (v3);
+  \draw (v1) -- (v0);
+  \draw[dotted] (v1) -- (v2);
+  \draw[dotted] (v1) -- (v3);
+  \draw[dotted] (v2) -- (v1);
+  \draw[dotted] (v3) -- (v0);
+  \draw[dotted] (v3) -- (v1);
+  \end{pgfonlayer}
+  \node[draw = none, shape = rectangle] (t) at (0.51273585,-1.237586459) 
+  {$\Bigraph{\mat{A}}$};
+  \end{tikzpicture}\pause
+  \begin{equation*}
+    \Quadratic{\mat{A}}\left(x_1, x_2, x_3, x_4\right) = x_1^2 + x_2^2 + x_3^2 
+    + x_4^2 - x_1 x_2 + x_1 x_4 + x_2 x_3 + x_2 x_4
+  \end{equation*}
+\end{frame}
+
+\begin{frame}{$\Zset$-equivalencia}
+  \begin{definitions}
+    \begin{itemize}
+      \item<+-> Una matriz $\mat{M} \in \MatrixSet{\Zset}$ es 
+        \Zset-invertible si tiene inversa $\mat{M}^{-1} \in 
+        \MatrixSet{\Zset}$.
+      \item<+-> $\mat{A}, \mat{A^{\prime}} \in \sqCclass$ son 
+      \Zset-equivalentes si existe una matriz $\Zset$-invertible 
+      $\mat{M}$ tal que $\mat{A}^\prime = \transpose{\mat{M}} \mat{A} \mat{M}$.
+    \end{itemize}
+  \end{definitions}
+\end{frame}
+
+\begin{frame}{Diagramas de Dynkin}
+  \begin{itemize}
+    \item Todas las bigráficas conexas, definidas positivas, de aristas sólidas:
+  \end{itemize}
+  \pause
+  \begin{tabular}{ll}
+    Familia & Gráfica\\
+    $\DynA_{n}$, $n\ge1$ &
+    \begin{tikzpicture}
+    [baseline=(v1.base)]
+    \node (v1) at (0, 0) {$1$};
+    \node (v2) at (1, 0) {$2$};
+    \node (v3) at (4, 0) {$n$};
+    \node[draw = none] (v5) at (2.5, 0) {$\ldots$};
+    \draw (v1) -- (v2) -- (2, 0);
+    \draw (3, 0) -- (v3);
+    \end{tikzpicture} \pause \\
+    $\DynD_{n}$, $n\ge4$ &
+    \begin{tikzpicture}
+    [baseline=(v1.base)]
+    \node (v1) at (0, 0) {$2$};
+    \node (v2) at (1, 0) {$3$};
+    \node (v3) at (2, 0) {$4$};
+    \node (v4) at (5, 0) {$n$};
+    \node (v5) at (1, 1) {$1$};
+    \node[draw = none] (dots) at (3.5, 0) {$\ldots$};
+    \draw (v1) -- (v2) -- (v3) -- (3, 0); \draw (v5)
+    -- (v2); \draw (4, 0) -- (v4);
+    \end{tikzpicture}\pause \\
+    $\DynE_{n}$, $6\le n\le8$ &
+    \begin{tikzpicture} [baseline=(v1.base)]
+    \node (v1) at (0, 0) {$2$};
+    \node (v2) at (1, 0) {$3$};
+    \node (v3) at (2, 0) {$4$};
+    \node (v4) at (3, 0) {$5$};
+    \node (v5) at (6, 0) {$n$};
+    \node (v6) at (2, 1) {$1$};
+    \node[draw = none] (dots) at (4.5, 0) {$\ldots$};
+    \draw (v1) -- (v2) -- (v3) -- (v4) -- (4, 0);
+    \draw (v6) -- (v3);
+    \draw (5, 0) -- (v5);
+    \end{tikzpicture}\\
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{La clasificación \DynA-\DynD-\DynE}
+  \begin{theorem}<+->[S. Ovsienko -- 1978]
+    Toda bigráfica $G$ definida positiva es \Zset-equivalente a una bigráfica 
+    sin aristas punteadas, que está determinada de forma única hasta 
+    isomorfismo de gráficas, y es la unión disjunta de diagramas de Dynkin.
+  \end{theorem}
+  \begin{proof}
+   Demostración constructiva mediante el \textbf{algoritmo de las inflaciones}.
+  \end{proof}
+\end{frame}
+
+\section{Algoritmo de las inflaciones}
+\begin{frame}{Inflaciones}
+  \begin{definitions}
+    \begin{itemize}[<+->]
+      \item $\mat{I}$ denota la matriz identidad con vectores columna 
+      $\vec{e}_j$.
+      \item $\Elementary{s}{r}{\sigma} \defeq \mat{I} + \sigma \, \vec{e}_s \, 
+      \transpose{\vec{e}_r}$ ($s, r \in \Set{1, \ldots, n}$, $\sigma \in 
+      \mathbb{R}$) denota una \textbf{matriz elemental} de suma de renglones/columnas.
+      \item Si $\mat{A} \in \sqCclass$ y $\entry{\mat{A}}{s}{r} = 1$ entonces 
+      $\transpose{\left(\Elementary{s}{r}{-1}\right)} \mat{A} 
+      \left(\Elementary{s}{r}{-1}\right)$ es una \textbf{inflación} de $\mat{A}$.
+    \end{itemize}
+  \end{definitions}
+\end{frame}
+
+\begin{frame}{Algoritmo de las inflaciones}
+  \begin{block}{Algoritmo de las inflaciones}<+->
+  \SetKwFunction{Inflaciones}{inflaciones}
+    \begin{algorithm}[H]
+      \Function{\Inflaciones{$\mat{A}$}}{
+        \While{exista una entrada no diagonal $\entry{\mat{A}}{s}{r} = 1$}{
+          $\mat{A} \gets \transpose{\left(\Elementary{s}{r}{-1}\right)} \, 
+          \mat{A} 
+          \, \left(\Elementary{s}{r}{-1}\right)$
+        }
+      }
+    \end{algorithm}
+  \end{block}
+  \begin{itemize}[<+->]
+    \item Se justifica en que $\abs{\Quadratic{\mat{A}}^{-1}\left(1\right)} < 
+    \infty$ permanece constante en cada iteración mientras que 
+    $\abs{\Quadratic{\mat{A}}^{-1}\left(1\right)\cap\Nset^n}$ crece.
+    \item Cota superior del número de raíces positivas $\bigOh{n \cdot 6^{n}}$ (Kosakowska -- 2012).
+  \end{itemize}
+\end{frame}
+	
+\section{Caso $\DynA_{n}$}
+
+\begin{frame}{$\DynA$-bloques}
+  \begin{definitions}
+    \begin{itemize}[<+->]
+      \item Sean $\mathrm{X}$ y $\mathrm{Y}$ conjuntos disjuntos de vértices. Denotamos por $\mathrm{F [X, Y]}$ el bigrafo no separable obtenido uniendo cada par de vértices $(x, y)$ con $x \in \mathrm{X}$ e $y \in \mathrm{Y}$ por una arista sólida, y todos los demás pares de vértices por una arista punteada, tal bigrafo se llama un $\DynA$ bloque.
+    \end{itemize}
+  \end{definitions}
+  \begin{example}<+->
+  \centering
+  \begin{tikzpicture}[baseline=(current bounding box.center)]
+  \node (v0) at (1, 0.0) {};
+  \node (v1) at (0.0, 1) {};
+  \draw (v0) -- (v1);
+  \node[draw = none, shape = rectangle, fill=none] at (1, -0.5) {$F_{1,1}$};
+  \end{tikzpicture}
+  \qquad
+  \begin{tikzpicture}[baseline=(current bounding box.center)]
+  \node (v0) at (1, 0.0) {};
+  \node (v1) at (-0.0, 1) {};
+  \node (v2) at (-1, -0.0) {};
+  \node (v3) at (0.0, -1) {};
+  \draw (v0) -- (v1);
+  \draw (v0) -- (v2);
+  \draw[dotted] (v0) -- (v3);
+  \draw (v1) -- (v0);
+  \draw (v1) -- (v3);
+  \draw[dotted] (v1) -- (v2);
+  \draw (v2) -- (v3);
+  \draw (v2) -- (v0);
+  \draw[dotted] (v2) -- (v1);
+  \draw (v3) -- (v1);
+  \draw (v3) -- (v2);
+  \draw[dotted] (v3) -- (v0);
+  \node[draw = none, shape = rectangle, fill=none] at (1, -0.5) {$F_{2,2}$};
+  \end{tikzpicture}
+  \qquad
+  \begin{tikzpicture}[baseline=(current bounding box.center)]
+  \node (v0) at (1, 0.0) {};
+  \node[draw = none, shape = rectangle, fill=none] at (1, -0.5) {$F_{1,0}$};
+  \end{tikzpicture}
+  \qquad
+  \begin{tikzpicture}[baseline=(current bounding box.center)]
+  \node (v0) at (1, 0.0) {};
+  \node (v1) at (-0.0, 1) {};
+  \node (v2) at (-1, -0.0) {};
+  \draw (v0) -- (v1);
+  \draw (v0) -- (v2);
+  \draw[dotted] (v2) -- (v1);
+  \node[draw = none, shape = rectangle, fill=none] at (1, -0.5) {$F_{1,2}$};
+  \end{tikzpicture}
+  \end{example}
+\end{frame}
+
+\begin{frame}{$\DynA_{n}$}
+    \begin{definitions}
+	 Una componente biconexa de una gráfica, es una subgráfica biconexa maximal (no contenida propiamente en ninguna otra subgráfica biconexa).
+	\end{definitions}
+\end{frame}
+
+\begin{frame}{Vértices de corte}
+  \begin{definition}<+->[F. Harary -- 1969]
+    Sea $G$ una gráfica.
+    \begin{itemize}[<+->]
+      \item $\kappa\left(G\right)$ denota a la cantidad de componentes conexas de $G$.
+      \item $v \in \VertexSet{G}$ es un \textbf{vértice de corte} si  $\kappa\left(G\right) < \kappa\left(G - v\right)$.
+    \end{itemize}
+  \end{definition}
+  \begin{example}<+->
+    \centering
+    \begin{tikzpicture}[every node/.style={circle, draw, inner sep=1.5pt, fill=white}, 
+      rotate=-45, scale=0.5]
+  	\node[fill=red, text=white] (v0) at (-1.6, 0.45) {};
+  	\node[fill=red, text=white] (v1) at (-1.65, -0.64) {};
+  	\node (v2) at (-2.46, -0.02) {};
+  	\node[fill=red, text=white] (v3) at (-0.46, 1.0) {};
+  	\node (v4) at (0.5, 1.59) {};
+  	\node (v5) at (1.42, 0.83) {};
+  	\node (v6) at (0.27, -0.26) {};
+  	\node (v7) at (0.42, 0.75) {};
+  	\node (v8) at (-1.07, -1.59) {};
+  	\draw (v0) -- (v1);
+  	\draw (v0) -- (v2);
+  	\draw (v3) -- (v6);
+  	\draw (v0) -- (v3);
+  	\draw (v1) -- (v0);
+  	\draw (v1) -- (v2);
+  	\draw (v1) -- (v8);
+  	\draw (v2) -- (v1);
+  	\draw (v2) -- (v0);
+  	\draw (v3) -- (v0);
+  	\draw (v3) -- (v4);
+  	\draw (v3) -- (v7);
+  	\draw (v4) -- (v3);
+  	\draw (v4) -- (v5);
+  	\draw (v4) -- (v7);
+  	\draw (v5) -- (v4);
+  	\draw (v5) -- (v6);
+  	\draw (v5) -- (v7);
+  	\draw (v6) -- (v5);
+  	\draw (v6) -- (v7);
+  	\draw (v7) -- (v6);
+  	\draw (v7) -- (v5);
+  	\draw (v7) -- (v4);
+  	\draw (v7) -- (v3);
+  	\draw (v8) -- (v1);
+	\end{tikzpicture}
+  \end{example}
+\end{frame}
+
+\begin{frame}{$\DynA_{n}$}
+    \begin{corollary}
+	 Una forma unitaria $q$ es de tipo $\DynA_{n}$ si y solo si $\mathbf{B_{q}}$ es conexa, sus componentes biconexas son $\DynA$-bloques y todo vértice de corte pertenece a exactamente dos de estas componentes.
+\end{corollary}
+	\begin{proof}
+	Mediante el algoritmo de las inflaciones y el algoritmo de recorrido en profundidad.
+	\end{proof}
+\end{frame}
+
+\begin{frame}{$\DynA$-bloques}
+    \begin{lemma}
+	Todo $\DynA$-bloque es de tipo $\DynA_{n}$
+	\end{lemma}
+\end{frame}
+
+\begin{frame}{$\DynA$-bloques}
+	\begin{lemma}
+	Sean $\mathbf{B_{1}}$ y $\mathbf{B_{2}}$ particiones de $\mathbf{B}$, si $\mathbf{B_{1}}$ y $\mathbf{B_{2}}$ son $\DynA$-bloques, entonces $\mathbf{B}$ es de tipo $\DynA_{n}$
+	\end{lemma}
+\end{frame}
+
+\begin{frame}{$\DynA$-bloques}
+	\begin{lemma}
+	Si $\mathbf{B_{1}}, \mathbf{B_{2}} \ldots \mathbf{B_{n}}$ son  $\DynA$-bloques, entonces $\mathbf{B}$ es de tipo $\DynA_{n}$
+	\end{lemma}
+\end{frame}
+
+\section{Descripción de el problema}
+\begin{frame}{Descripción de el problema}
+  \begin{itemize}
+     \item El problema propuesto es la clasificación algorítmica en gráficas de tipo $\DynD_{n}$
+     \item Para esto se propone usar el algoritmo de componentes triconexas para caracterizar las de tipo $D_{n}$
+    \end{itemize}	
+\end{frame}
+
+\begin{frame}{Algoritmo de Componentes triconexas}
+  \begin{enumerate}
+  	\item Divide las aristas múltiples para formar enlaces triples y un grafo biconexo simple $G'$.
+    \item Encuentra los componentes de separación de $G'$.
+    \item Combina los enlaces triples y triángulos en enlaces y polígonos.
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{Componentes triconexas}
+Sea $G = (V, E)$ un multigrafo. Sea $H = (W, F)$ un subgrafo de $G$, defininimos una relacion de equivalencia sobre $E - F$ como sigue:
+  \begin{definitions}
+    \begin{enumerate}
+    \item $\forall e \in E - F$, $e \widetilde{=} e$.
+    \item $\forall e, f \in E - F$, $e \widetilde{=} f$ si y solo si existe un camino que une $e, f$ que no tiene un vértice en $W$.
+    \end{enumerate}
+  \end{definitions}
+\end{frame}
+
+\begin{frame}{Componentes triconexas}
+Si $H = \{\{a, b\}, \emptyset\}$ las clases de equivalencia son llamadas clases de separación relativas al par $\{a, b\}$.
+  \begin{definitions}
+    \begin{itemize}
+      \item Sean $S_1,S_2,\ldots, S_k$, las clases de separación relativas a el par $(a,b)$. Si existe una partición $(A,B)$ de $\{1,2, . . . , k\}$ tal que $|E_1 = \bigcup_{i \in A} S_i| \geq 2$ y $ |E= \bigcup_{j \in B} S_j| \geq 2$, decimos que $\{a,b\}$ es un par de separación.
+    \end{itemize}
+  \end{definitions}
+\end{frame}
+
+\begin{frame}{Componentes triconexas}
+  \begin{definitions}
+    \begin{itemize}
+     \item Si $G$ es biconexa y $G$ no tiene par de separación entonces $G$ es triconexa.
+     \end{itemize}
+  \end{definitions}
+  \centering
+  \begin{example}<+->
+  \quad
+  \begin{tikzpicture}[baseline=(current bounding box.center)]
+  \node (v0) at (1, 0) {};
+  \node (v1) at (-1, 0) {};
+  \node (v2) at (0.0, 1) {};
+  \draw (v0) -- (v1);
+  \draw (v0) -- (v2);
+  \draw (v1) -- (v0);
+  \draw (v1) -- (v2);
+  \draw (v2) -- (v1);
+  \draw (v2) -- (v0);
+  \end{tikzpicture}
+  \quad
+  \quad
+  \quad
+  \quad
+  \quad
+  \begin{tikzpicture}
+	\node(v0) at (0,0) {};
+	\node(v1) at (1,0) {};
+	\draw (v0) to (v1);
+	\draw (v0) to[bend right] (v1);
+	\draw (v1) to[bend right] (v0);
+  \end{tikzpicture}
+  \quad
+  \quad
+  \quad
+  \quad
+  \quad
+  \begin{tikzpicture}[baseline=(current bounding box.center)]
+  \node (v0) at (1, 0.) {};
+  \node (v1) at (-1, 0) {};
+  \node (v2) at (0.0, -1) {};
+  \node (v3) at (0.0, 1) {};
+  \draw (v0) -- (v1);
+  \draw (v0) -- (v2);
+  \draw (v0) -- (v3);
+  \draw (v1) -- (v0);
+  \draw (v1) -- (v2);
+  \draw (v1) -- (v3);
+  \draw (v2) -- (v1);
+  \draw (v2) -- (v0);
+  \draw (v2) -- (v3);
+  \draw (v3) -- (v2);
+  \draw (v3) -- (v1);
+  \draw (v3) -- (v0);
+  \end{tikzpicture}
+  \quad
+  \end{example}
+1\end{frame}
+
+\begin{frame}{La operación de división}
+\begin{itemize}
+	\item Estos grafos son biconexos.
+	\item Por lo tanto podemos dividir los grafos de división hasta que no sea posible dividir.
+	\item  Los grafos obtenidos se dividen en tres clases, los tres enlaces, los triángulos y los grafos triconexos con mas de 3 aristas.
+	\item Estos son llamados los componentes de división de $G$. No son únicos.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{La operación de división}
+  El siguiente resultado es debido a Hopcroft and Tarjan[6].
+  \begin{lemma}
+   El número total de aristas en todos los componentes de división no excede $3|E| - 6$
+  \end{lemma}
+\end{frame}
+
+\begin{frame}{La operación de división}
+  Sea $G$ el bigrafo y $H=\{\{2, 3\},  \emptyset\}$
+\begin{example}<+->
+  \centering
+  \begin{tikzpicture}
+  \node (v0) at (1.15, 0.21) {1};
+  \node (v1) at (0.08, 0.69) {2};
+  \node (v2) at (-0.41, -0.29) {3};
+  \node (v3) at (0.62, -0.85) {4};
+  \node (v4) at (-0.97, 0.6) {5};
+  \draw (v0) -- (v1);
+  \draw[dotted] (v0) -- (v3);
+  \draw (v1) -- (v0);
+  \draw (v1) -- (v4);
+  \draw (v1) -- (v2);
+  \draw[dotted] (v2) -- (v4);
+  \draw (v2) -- (v3);
+  \draw (v2) -- (v1);
+  \draw (v3) -- (v2);
+  \draw[dotted] (v3) -- (v0);
+  \draw (v4) -- (v1);
+  \draw[dotted] (v4) -- (v2);
+  \end{tikzpicture}
+  \end{example}
+La clase de equivalencia de $2\rule[1mm]{4mm}{0.3mm}5$ es el conjunto:\\
+$S_{1} = \{2\rule[1mm]{4mm}{0.3mm}5, 3 \hdashrule[1mm]{4mm}{1pt}{1pt} 5\}$\\
+La clase de equivalencia de $1\hdashrule[1mm]{4mm}{1pt}{1pt} 4$ es el conjunto:\\
+$S_{1} = \{1 \hdashrule[1mm]{4mm}{1pt}{1pt} 4, 1\rule[1mm]{4mm}{0.3mm}2, 4\rule[1mm]{4mm}{0.3mm}3\}$\\
+La clase de equivalencia de $2\rule[1mm]{4mm}{0.3mm}3$ es el conjunto:\\
+$S_{1} = \{2\rule[1mm]{4mm}{0.3mm}3\}$\\
+\end{frame}
+
+\begin{frame}{La operación de división}
+\begin{block}
+Para saber si $\{2,3\}$ es un par de separación hay que encontrar una partición de $\{1, 2, 3\} = A \cup B$, $A \cap B = \{\emptyset\}$ tal que se cumple que $|E(H_{1})| \geq 2, |E(H_{2})| \geq 2$.\\ En este caso $A = \{1, 3\}$, $B=\{2\}$ es una partición posible que buscamos y entonces  $\{2, 3\}$ es un par de separación.\\
+\end{block}
+
+\end{frame}
+
+
+\begin{frame}{La operación de división}
+\begin{block}
+Ahora supongamos $\{a, b\}$ es un para de separación. Si $H=\{\{a, b\}\emptyset\}$ y $S_{1},S_{2}, \ldots, S_{k}$ son las clases de separación del par $\{a, b\}$(las clases de equivalencia definidas por $H$). Sea $A, B$ la partición del conjunto $\{1,2,\ldots,k\}$ tal que  $|E(H_{1})| \geq 2, |E(H_{2})| \geq 2$. Si $H_{1} = (V(E_{1}, E_{1}))$ y $H_{2} = (V(E_{2}, E_{2}))$ entonces $V(E_{1}) \cap V(E_{1} = \{a, b\}$. Sea $G_{i} = H_{i} + a\rule[1mm]{4mm}{0.3mm} b$ para $i \in \{1, 2\}$. Las $G_{i}$ son los bigrafos de división de $G$ en $\{a, b\}$. La arista $a\rule[1mm]{4mm}{0.3mm} b$ es llamada arista virtual.
+\end{block}
+ 
+\end{frame}
+
+\begin{frame}{La operación de división}
+Donde $A=\{1,3\}$ y $B=\{2\}$ 
+\begin{example}<+->
+  \quad
+  \tikzset{every node/.style={font=\scriptsize}}
+  \begin{tikzpicture}
+  \node (v0) at (-0.5, 0.78) {1};
+  \node (v1) at (0.49, 0.47) {2};
+  \node (v2) at (0.18, -0.53) {3};
+  \node (v3) at (-0.82, -0.22) {4};
+  \draw[dotted] (v0) -- (v3);
+  \draw (v0) -- (v1);
+  \draw[thick, red] (v2) -- node[below=10pt] {1} (v1);
+  \draw (v2) -- (v3);
+  \draw[dotted] (v3) -- (v0);
+  \node[draw = none, shape = rectangle, fill=none] at (1, -0.5) {$G_{2}$};
+  \end{tikzpicture}
+  \quad
+  \quad
+  \begin{tikzpicture}
+  \node (v0) at (0.64, 0.0) {5};
+  \node (v1) at (-0.32, -0.56) {3};
+  \node (v2) at (-0.32, 0.56) {2};
+  \draw (v0) -- (v2);
+  \draw (v1) -- (v2);
+  \draw[dotted] (v1) -- (v0);
+  \draw[thick, red] (v2) to[bend right] (v1);
+  \node[draw = none, shape = rectangle, fill=none] at (1, -0.5) {$G_{1}$};
+  \end{tikzpicture}
+  \end{example}
+  \quad
+Donde $A=\{2,3\}$ y $B=\{1\}$
+\begin{example}<+->
+  \quad
+  \begin{tikzpicture}
+  \node (v0) at (-0.5, 0.78) {1};
+  \node (v1) at (0.49, 0.47) {2};
+  \node (v2) at (0.18, -0.53) {3};
+  \node (v3) at (-0.82, -0.22) {4};
+  \draw[dotted] (v0) -- (v3);
+  \draw (v0) -- (v1);
+  \draw (v1) -- (v2);
+  \draw[thick, red] (v2) to[bend right] (v1);
+  \draw (v2) -- (v3);
+  \draw[dotted] (v3) -- (v0);
+  \node[draw = none, shape = rectangle, fill=none] at (1, -0.5) {$G_{1}$};
+  \end{tikzpicture}
+  \quad
+  \quad
+  \begin{tikzpicture}
+  \node (v0) at (0.64, 0.0) {5};
+  \node (v1) at (-0.32, -0.56) {3};
+  \node (v2) at (-0.32, 0.56) {2};
+  \draw (v0) -- (v2);
+  \draw (v1) -- (v2);
+  \draw[dotted] (v1) -- (v0);
+  \draw[thick, red] (v2) -- (v1);
+  \node[draw = none, shape = rectangle, fill=none] at (1, -0.5) {$G_{2}$};
+  \end{tikzpicture}
+  \end{example}
+ A esta arista se le coloca una etiqueta $n$ para distinguirla de otras arista virtuales. 
+o\end{frame}
+
+\begin{frame}{La operación de unión}
+	\begin{itemize}
+	\item Sean $H_{1}$ y $H_{2}$ particiones de $G$ tal que ambas contengan la misma arista virtual $(a, b, n)$.
+	\item Combinamos estos dejando que $H = H_{1} + H_{2} - (a, b, n)$.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{La operación de unión}
+	\begin{itemize}
+	\item Ahora supongamos que dividimos $G$ en sus componentes de división. 
+	\item Entonces los enlaces triples son combinados tanto posible para formar un conjunto de enlaces y triángulos son combinados tanto posible para formar un conjunto de polígonos.
+	\item El conjunto final de grafos es llamado conjunto completo de componentes de $G$.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{La operación de unión}
+  \begin{lemma}
+   Un conjunto completo de componentes triconexos es único hasta isomorfismo.
+  \end{lemma}
+\end{frame}
+
+\begin{frame}
+	\begin{definitions}
+	Una bigráfica cumple la condición de ciclo si todo ciclo sin cuerdas tiene un número impar de aristas punteadas.
+	\end{definitions}
+	\begin{example}<+->
+  \centering
+  \begin{tikzpicture}
+  \node (v0) at (0.89, 1.06) {1};
+  \node (v1) at (2.03, 1.19) {2};
+  \node (v2) at (2.14, -0.03) {3};
+  \node (v3) at (1.1, -0.24) {4};
+  \node (v4) at (-0.15, 1.24) {5};
+  \node (v5) at (-1.04, 0.49) {6};
+  \node (v6) at (-0.87, -0.66) {7};
+  \node (v7) at (0.3, -0.94) {8};
+  \draw (v0) -- (v1);
+  \draw (v0) -- (v3);
+  \draw (v0) -- (v4);
+  \draw (v1) -- (v0);
+  \draw[dotted] (v1) -- (v2);
+  \draw[dotted] (v2) -- (v1);
+  \draw (v2) -- (v3);
+  \draw (v3) -- (v2);
+  \draw (v3) -- (v0);
+  \draw[dotted] (v3) -- (v7);
+  \draw (v4) -- (v0);
+  \draw[dotted] (v4) -- (v5);
+  \draw[dotted] (v5) -- (v4);
+  \draw (v5) -- (v6);
+  \draw (v6) -- (v5);
+  \draw[dotted] (v6) -- (v7);
+  \draw[dotted] (v7) -- (v6);
+  \draw[dotted] (v7) -- (v3);
+\end{tikzpicture}
+  \end{example}
+\end{frame}
+
+\begin{frame}{$\DynD$-nucleo}
+  \begin{itemize}
+  \item Una bigráfica cíclica $ H = x_{1} - x_{2} - \cdots - x_{h}-x_{1}$ (todos los $x_{i}$ distintos para $ 1 \leq i \leq h$) que satisface la condición de ciclo.
+  \item  Por convención exigimos $h > 2$ permitiendo a H colapsar en un doble enlace cuando h = 2 (un $n$-enlace es un manojo de $n$ aristas paralelas). 
+  \item A esta bigráfica $H$ le llamaremos el $\DynD$-núcleo.
+  \end{itemize}
+\end{frame}
+
+
+\appendix
+
+\section*{Apéndice}
+
+\subsection*{Lecturas complementarias}
+\begin{frame}[allowframebreaks]{Lecturas complementarias}
+
+\beamertemplatebookbibitems
+\begin{thebibliography}{1}
+%\bibitem{Autor1990}A. Autor. \newblock\emph{Manual de Lo que sea}.\newblock
+%Editorial, 1990.\beamertemplatearticlebibitems
+
+\bibitem{Abarca2016}M. Abarca \& D. Rivera\newblock Graph Theoretical and 
+Algorithmic Characterizations of Positive Definite Symmetric Quasi-Cartan 
+Matrices\emph{.}
+\newblock\emph{Fundamenta Informaticae}. 149(3):241--261, 2016.
+
+\bibitem{Barot1999}M. Barot.\newblock A characterization of positive unit 
+forms\emph{.}
+\newblock\emph{Boletín de la Sociedad Matemática Mexicana}. 5:87--94, 1999.
+
+\bibitem{Barot2001}M. Barot.\newblock A characterization of positive unit 
+forms, part II\emph{.}
+\newblock\emph{Boletín de la Sociedad Matemática Mexicana}. 7:13--22, 2001.
+
+\end{thebibliography}
+\end{frame}
+\end{document}

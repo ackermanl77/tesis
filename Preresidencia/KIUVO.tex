@@ -1,0 +1,164 @@
+\documentclass[11pt]{beamer}
+\usetheme{PaloAlto}
+%NO NECESITAS HACER OTRO ARCHIVO PARA CAMBIAR DE TEMA, SI QUIERES CAMBIAR
+%SOLO BORRA EEL DE ARRIBA Y ESCRRIBE EL QUE TE GUSTE, OBVIAMENTE DE LOS QUE TIENE MORRO
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%NECESITAS QUITAR LOS "%" DE ABAJO PARA HABILITAR LAS FUNCIONES QUE QUIERAS MORRO
+\author{MATECHOLO}
+\title{UNA NO MUY LARGA INTRODUCCIÓN A BEAMER}
+%\setbeamercovered{transparent} 
+%\setbeamertemplate{navigation symbols}{} 
+%\logo{} 
+%\institute{} 
+%\date{} 
+%\subject{} 
+\begin{document}
+
+%ESTE OBVIO ES PARA LA PORTADA DEL BEAMER
+\begin{frame}
+\titlepage
+\end{frame}
+
+%Y ESTE LA TABLA DE CONTENIDOS
+\begin{frame}
+\tableofcontents
+\end{frame}
+
+%ESTO DE "SECCION" ES LO QUE APARECE EN LAS LA TABLA DE CONTENIDO
+\section{la primer sección}
+% Y ESTA OBVIAMENTE UNA SUBSECCIÓN
+\subsection{la primer subsection}
+%CADA FRAME ES UNA DIAPOSITIVA
+\begin{frame}{AQUI VAN LOS TITULOS DE LAS DIAPOOSTIVAS}
+Y AQUI UN CONTENIDO NORMAL.\\
+ES COMO PARA INTRODUCCIONES O TEXTOS COMUNES.
+\end{frame}
+
+\begin{frame}
+ESTA ES UNA DIAPOSITIVA SIN TITULO.\\
+VES?.
+\end{frame}
+
+\begin{frame}{DIAPOSITIVAS RÁPIDAS}
+PARA HACER MÁS RÁPIDO UNA DIAPOSITIVA SOLO ESRIBE LA BARRA INVERTIDA Y  begin LE DAS ENTER A LAS OPCION QUE TE RECOMIENDA Y DESPUÉS f Y LE DAS ENTER, ES COMO EL PREDICTOR DE PALABRAS DE GOOGLE.\\
+SI NO LO VES YA TE DARÁS CUENTA ESE.
+\end{frame}
+
+\section{FÓRMULAS}
+\begin{frame}
+PARA UNA FÓRMULA MATEMÁTICA USA ESTO \[AQUI\:VA\:LA\:FORMULA\] ASI LA FORMULA APARECE EN UNA LÍNEA APARTE Y CENTRADA Y NO NECESITAS PONER EL SIGNO DE PESOS PARA PONER UN CARACTER ESPECIAL, COMO LETRA GRIEGAS O ASÍ. \\
+LA BARRA INVERTIDA Y LOS DOS PUNTOS ES PARA DAR UN ESPACIO YA QUE AHÍ NO LES DA ESPACIO AUNQUE LOS SEPARES UN BUEN.\quad ESTO ES PARA UN ESPACIO MÁS GRANDE Y \qquad ES PARA UNO AÚN MÁS GRANDE.\\
+RECUERDA DEJAR EL ESPACIO ENTRE EL quad Y EL TEXTO O TE PRROVOCARA UN ERROR.\\
+\begin{center}
+IGUAL PARA LOS OTROS
+\end{center}
+\end{frame}
+
+\section{ESPACIOS Y OTRAS COSAS}
+\begin{frame}[shrink]
+LA ACCIÓN DE  shrink ES PARA CUANDO PONES DEMASIADO TEXTO EN UNA SOLA DIAPOSITIVA.\
+
+ESTE LO AJUSTA, PERO SOLO A LO LARGO Y NO A LO ANCHO. \
+
+PERO SI PONES POCO TEXTO EN UNOS TEMAS SE VE UN POCO RARO Y NO MUY ESTETICO.\\
+\vspace{3mm}
+LA ANTERIOR ACCIÓN ES DAR UN ESPACIO VERTICAL.\\
+\vspace{4mm}
+Y TU LE DICES QUE TAN GRANDE.
+\begin{center}
+CON ESTO ESCRIBES EN EL CENTRO
+\end{center}
+\begin{flushright}
+Y CON ESTE A LA IZQUIERDA.
+\end{flushright}
+\end{frame}
+
+\subsection{LAS OTRAS COSAS}
+\begin{frame}{PARA TEOREMAS Y ESAS COSAS}
+ASI COMIENZA UN TEOREMA
+\begin{theorem}
+Y ESCRIBES EL TEOREMA
+\end{theorem}
+Y ASÍ LAS DEMO-S-TRACIONES
+\begin{proof}
+LA DEMOSTRACIÓN ES TRIVIAL :P
+\end{proof}
+\end{frame}
+
+\begin{frame}
+PERO SI SON MUY LARGOS LOS PUEDES ESCRIBIR EN BLOQUES
+\begin{block}{POR SI LE QUIERES PONER TITULOS}
+Y COMIENZAS A ESCRIBIR
+\end{block}
+\begin{block}{DEMOSTRACIÓN}
+IGUAL PARA LAS GRANDE DEMOSTRACIONES NO USE LA OPCIÓN DE proof USÉ LOS DE BLOCK Y PARA EL CUADRITO ALGO ASI
+\begin{flushright}
+$\square$
+\end{flushright}
+\end{block}
+SOLO QUE CAMBIA EL COLOR DEL CUADRO EN ALGUNOS TEMAS, PERO CASI NADIE SE DA CUENTA.
+\end{frame}
+
+\subsection{LOS BLOCKS}
+\begin{frame}
+\begin{block}
+
+SI NO LE PONES TITULO AL BLOCK, ENTONCES DEBES DEJAR UN ESPACO O SOLO LA PRIMER LETRA LA PONDRA COMO TÍTULO
+\end{block}
+\begin{block}
+ALGO ASÍ
+\end{block}
+\end{frame}
+
+\section{UN EJEMPLO DE LO QUE USE}
+\begin{frame}{Operador integral singular}
+Tomaremos en cuenta los operadores integrales singulares de la forma \[(\textit{S}_{\Gamma}\varphi)(\textit{t})=\frac{1}{\pi \imath} \int_{\Gamma} \frac{\varphi(\tau)}{\tau-\textit{t}}d\tau\]
+donde $\textit{S}_{\Gamma}$ es entendida en el sentido del valor principal de Cauchy.\\
+Sea $\Gamma$ una curva orientada en contra de las manecillas del reloj. \\
+\vspace{3mm}
+Llamaremos a $\Gamma$ una \emph{curva cerrada} si separa la extensión del plano complejo $\textbf{C}^\infty=\textbf{C}\cup{\infty}$ en dos dominios $\textit{F}_{\Gamma}^{+}$ y $\textit{F}_{\Gamma}^{-}$ tal que $\Gamma$ es frontera de ambos dominios. Asumiremos que $z=0\in F_{\Gamma}^{+}$ y $z=\infty\in F_{\Gamma}^{-}$.\\
+\vspace{3mm}
+ Denotaremos a $\textit{R}(\Gamma)$ como el conjunto de todas funciones racionales que no tienen polos en la curva $\Gamma$, mientras que $\textit{R}_{\pm}(\Gamma)$ será el conjunto de todas funciones racionales de los cuales sus polos son localizados en $\textit{F}_{\Gamma}^{\pm}$.
+\end{frame}
+
+\begin{frame}
+ \begin{theorem}[2]
+	Sea $A=r_{1}P_{\Gamma}+r_{2}Q_{\Gamma}$ un operador con coeficientes $r_{1},r_{2}\in R(\Gamma)$. Es 			necesario y suficiente para que el operador $A$ sea invertible de un lado en el espacio $L_{p}(\Gamma,		\rho)$ son las validaciones de las condiciones \[r_{j}(t)\neq 0\quad(j=1,2;t\in \Gamma).\] Si se 	satisfacen estas condiciones, entonces el operador $A$ es invertible, solo es invertible por la izquierda 	o solo es invertible por la derecha dependiendo de si el número \[k=ind\:(r_{1}/r_{2})\] es igual a 	cero, positivo o negativo.
+ \end{theorem}
+\end{frame}
+
+\begin{frame}[shrink]
+\begin{block}{Demostración}
+$\Leftarrow$)\
+
+Supongamos que $r_{j}\neq 0$ ($j=1,2;t\in\Gamma$) y $r=r_{-}t^{k}r_{+}$ es la factorización de la función $r=r_{1}/r_{2}$. Entonces el operador $A$ tiene la forma \[A=r_{2}(r_{-}t^{k}r_{+}P_\Gamma+Q_{\Gamma})=r_{2}r_{-}(t^{k}r_{+}P_{\Gamma}+r_{-}^{-1}Q_{\Gamma})\] y lo podemos reescribir en la forma \[A=r_{2}r_{-}(t^{k}P_{\Gamma}+Q_{\Gamma})(r_{+}P_{\Gamma}+r_{-}^{-1}Q_{\Gamma}).\] Los operadores $r_{2}r_{-}I$ y $r_{+}P_{\Gamma}+r_{-}^{-1}Q_{\Gamma}$ son invertibles, donde \[(r_{2}r_{-}I)^{-1}=r_{2}^{-1}r_{-}^{-1}I,\quad(r_{+}P_{\Gamma}+r_{-}^{-1}Q_{\Gamma})^{-1}=r_{+}^{-1}P_{\Gamma}+r_{-}Q_{\Gamma}.\] El operador $t^{k}P_{\Gamma}+Q_{\Gamma}$ es invertible solo por la izquierda para $k>0$ y es solo invertible por la derecha para $k<0$. La correspondiente inversa a el operador es $t^{-k}P_{\Gamma}+Q_{\Gamma}$.
+\end{block}
+\end{frame}
+
+\begin{frame}[shrink]
+\begin{block}
+
+$\Rightarrow$)\
+
+Primero consideremos el caso $r_{2}=1$. Supongamos que $r_{1}$ tiene un cero en algún punto $t_{0}\in\Gamma$. Lo expresamos en la forma $r_{1}=(t-t_{0})s$ y $r_{1}=(t^{-1}-t_{0}^{-1})q$. Para el operador $A=r_{1}P_{\Gamma}+Q_{\Gamma}$, tenemos las ecuaciones
+\[A=(sP_{\Gamma}+Q_{\Gamma})((t-t_{0})P_{\Gamma}+Q_{\Gamma})\] y \[A=((t^{-1}-t_{0}^{-1})P_{\Gamma}+Q_{\Gamma})(P_{\Gamma}qP_{\Gamma}+(t^{-1}-t_{0}^{-1})Q_{\Gamma}qP_{\Gamma}+Q_{\Gamma}).\] El operador $A$ por la observación 1 no puede ser invertible pues los operadores $(t-t_{0})P_{\Gamma}+Q_{\Gamma}$ y $(t^{-1}-t_{0}^{-1})P_{\Gamma}+Q_{\Gamma}$ no son invertibles.\
+
+De manera similar si el operador tiene la forma $P_{\Gamma}+r_{2}Q_{\Gamma}$ y es invertible de un lado, entonces $r_{2}$ no desaparece en $\Gamma$.
+\end{block}
+\end{frame}
+
+\begin{frame}[shrink]
+\begin{block}
+
+En el caso general, $A=r_{1}P_{\Gamma}+r_{2}Q_{\Gamma}$. Escogemos las funciones $\chi_{1},\chi_{2}\in R(\Gamma)$ que no desaparecen en $\Gamma$. Más aún,
+\[\chi_{1}r_{1}\in R_{+}(\Gamma),\quad \chi_{2}r_{2}\in R_{-}(\Gamma).\] Bajo estas condiciones el operador $A$ puede ser representado en dos formas \[A=\chi_{1}^{-1}(P_{\Gamma}+\chi_{1}r_{2}Q_{\Gamma})(\chi_{1}r_{1}P_{\Gamma}+Q_{\Gamma})\] y \[A=\chi_{2}^{-1}(\chi_{2}r_{1}P_{\Gamma}+Q_{\Gamma})(P_{\Gamma}+\chi_{2}r_{2}Q_{\Gamma}).\] Por lo que si $A$ es invertible por la izquierda, entonces los operadores $\chi_{2}r_{1}P_{\Gamma}+Q_{\Gamma}$ y $P_{\Gamma}+\chi_{1}r_{2}Q_{\Gamma}$ son invertibles por la izquierda. Similarmente si es invertible por la derecha, entonces los operadores $P_{\Gamma}+\chi_{2}r_{2}Q_{\Gamma}$ y $\chi_{1}r_{1}P_{\Gamma}+Q_{\Gamma}$ también son invertibles por la derecha.\
+
+Por lo anterior probado, podemos deducir que las funciones $r_{1}$ y $r_{2}$ no desaparecen en $\Gamma$.\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad$\square$
+\end{block}
+\end{frame}
+
+\end{document}

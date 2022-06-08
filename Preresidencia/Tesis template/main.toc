@@ -1,0 +1,76 @@
+\babel@toc {english}{}
+\contentsline {chapter}{Abstract}{1}{chapter*.1}%
+\addvspace {1em}
+\contentsline {chapter}{\numberline {1}Physical problems addressed in this thesis}{7}{chapter.1}%
+\contentsline {section}{\numberline {1.1}The dark matter in the Universe}{7}{section.1.1}%
+\contentsline {section}{\numberline {1.2}How to search for dark matter?}{11}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Dark matter interpretation of the galactic center excess}{13}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Relations between dark matter and the non-zero neutrino masses}{15}{section.1.4}%
+\contentsline {chapter}{\numberline {2}Introduction to the singlet-doublet fermion DM model}{19}{chapter.2}%
+\contentsline {section}{\numberline {2.1}The SDFDM model}{19}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Neutral mass spectra}{20}{subsection.2.1.1}%
+\contentsline {subsubsection}{Neutral mass eigenstates}{21}{equation.2.1.8}%
+\contentsline {subsection}{\numberline {2.1.2}The interaction Lagrangian}{22}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Invisible decays}{23}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Electroweak precision observables (EWPO) }{23}{section.2.3}%
+\contentsline {section}{\numberline {2.4}The dark matter abundance $\Omega h^2$ }{25}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Model's implementation}{26}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Indirect detection }{27}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Scanning and constraints}{27}{subsection.2.6.1}%
+\contentsline {section}{\numberline {2.7}Direct detection}{28}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}The spin-independent cross section $\sigma _{SI}$}{28}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}The spin-dependent cross section $\sigma _{SD}$}{29}{subsection.2.7.2}%
+\contentsline {section}{\numberline {2.8}Neutrino masses in the SDFDM model}{30}{section.2.8}%
+\contentsline {subsection}{\numberline {2.8.1}The SDFDM model with reals scalars singlets}{31}{subsection.2.8.1}%
+\contentsline {subsection}{\numberline {2.8.2}One-loop neutrino masses}{31}{subsection.2.8.2}%
+\contentsline {chapter}{\numberline {3}Phenomenology of the SDFDM model with real scalars singlets}{33}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Neutrino masses}{33}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Lepton flavor violation}{35}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Collider phenomenology}{36}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Coannihilation }{38}{section.3.4}%
+\contentsline {chapter}{\numberline {4}The \textit {Fermi}-LAT gamma-ray excess at the galactic center in the SDFDM model}{41}{chapter.4}%
+\contentsline {section}{\numberline {4.1}The Galactic Center excess in a nutshell }{41}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Good self-annihilation channels in the high region of the SDFDM model}{42}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Gamma-rays from the Galactic Center }{43}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Numerical analysis}{45}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Results}{45}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Probing the viable solutions with future observations}{46}{subsection.4.4.2}%
+\contentsline {chapter}{\numberline {5}Dark matter annihilation into two photons}{49}{chapter.5}%
+\contentsline {section}{\numberline {5.1}General properties of the annihilation process DM DM $\to \gamma \gamma $}{49}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Scalar DM}{50}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Majorana DM}{50}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Vector DM}{51}{subsection.5.1.3}%
+\contentsline {section}{\numberline {5.2}Classification of the diagrams}{51}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Calculation of the amplitude}{55}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Topologies 1, 2 and 3}{55}{subsection.5.3.1}%
+\contentsline {subsubsection}{Interactions of DM field $\text {DM}$ with the charged mediators ${\Phi }$ and ${\phi }$}{55}{table.caption.42}%
+\contentsline {subsubsection}{Interactions of the charged mediators ${\Phi }$ and ${\phi }$ with photons}{56}{table.caption.42}%
+\contentsline {subsection}{\numberline {5.3.2}Topologies associated to s-channels }{57}{subsection.5.3.2}%
+\contentsline {section}{\numberline {5.4}Two concrete examples}{60}{section.5.4}%
+\contentsline {chapter}{Conclusions}{63}{chapter*.48}%
+\contentsline {part}{Appendices}{65}{section*.49}%
+\contentsline {chapter}{\numberline {A}Details: SDFDM model}{67}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Analytical formulas for masses and mixing matrix of neutral fermions}{67}{section.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}Approximate mixing matrix}{68}{subsection.A.1.1}%
+\contentsline {section}{\numberline {A.2}The interaction Lagrangian}{69}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Spin-independent cross section in the SDFDM model}{71}{section.A.3}%
+\contentsline {section}{\numberline {A.4}One-loop neutrino masses in the interaction basis}{72}{section.A.4}%
+\contentsline {section}{\numberline {A.5}$\mu \rightarrow e \gamma $ process in the SDFDM model with real scalars singlets}{74}{section.A.5}%
+\contentsline {subsubsection}{$\sigma _L$ and $\sigma _R$ in SDFDM model}{75}{equation.A.5.41}%
+\contentsline {subsubsection}{ Branching ($\mu \rightarrow e \gamma $)}{76}{equation.A.5.46}%
+\contentsline {chapter}{\numberline {B}General details}{77}{appendix.B}%
+\contentsline {section}{\numberline {B.1}Casas-Ibarra parametrization}{77}{section.B.1}%
+\contentsline {section}{\numberline {B.2}Velocity averaged annihilation cross section $\langle \sigma v \rangle $ }{78}{section.B.2}%
+\contentsline {subsubsection}{$\langle \sigma v_r\rangle $ for DM annihilation into $\gamma \gamma $}{79}{equation.B.2.12}%
+\contentsline {section}{\numberline {B.3}Passarino-Veltman One-loop integrals}{79}{section.B.3}%
+\contentsline {subsection}{\numberline {B.3.1}Tensor Coefficients}{80}{subsection.B.3.1}%
+\contentsline {subsection}{\numberline {B.3.2}Conventions for the Momenta}{81}{subsection.B.3.2}%
+\contentsline {subsection}{\numberline {B.3.3}$C$ and $D$ reduction to scalar integrals}{81}{subsection.B.3.3}%
+\contentsline {section}{\numberline {B.4}Non-linear $R_\xi $ gauges}{85}{section.B.4}%
+\contentsline {subsection}{\numberline {B.4.1}Charged gauge bosons }{85}{subsection.B.4.1}%
+\contentsline {subsection}{\numberline {B.4.2}Neutral gauge bosons in the s-channel }{86}{subsection.B.4.2}%
+\contentsline {chapter}{Acknowledgements}{89}{appendix*.55}%
+\vspace \bigskipamount 
+\contentsline {chapter}{Bibliography}{91}{appendix*.55}%
+\contentsline {chapter}{Abbreviations}{91}{appendix*.56}%
+\contentsline {subparagraph}{}{93}{appendix*.56}%

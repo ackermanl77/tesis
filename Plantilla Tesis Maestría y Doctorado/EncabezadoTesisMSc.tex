@@ -1,0 +1,167 @@
+\documentclass[12pt,spanish,openany,letterpaper,pagesize]{scrbook}
+\usepackage[utf8]{inputenc} %fuentes
+\usepackage{lmodern} %fuentes
+\usepackage{hyperref}
+\usepackage[T1]{fontenc} %fuentes
+\usepackage[spanish]{babel}
+\usepackage{epsfig}
+\usepackage{epic}
+\usepackage{eepic}
+\usepackage[square, numbers, comma, sort&compress]{natbib} % Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' 
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{booktabs}
+%\usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{dashrule}
+\usepackage{amsfonts}
+\usepackage{marginnote}
+\usepackage{threeparttable}
+\usepackage{fancyhdr}
+\usepackage{amscd}
+\usepackage{here}
+\usepackage{mathrsfs}
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{subcaption}
+\usepackage{longtable}
+\usepackage{scrhack}
+\usepackage{epsfig}
+\usepackage{longtable}
+\usepackage{tikz}
+\usepackage{tkz-graph}
+\usetikzlibrary{graphdrawing,positioning,graphs}
+\usegdlibrary{layered, trees}
+\usepackage{anyfontsize}
+ %idoma, cargué los dos porque constantemente estoy cambiando
+\usepackage{listings}
+\usepackage{textgreek}
+\usepackage{geometry}
+\usepackage{multirow, array} % para las tablas
+\usepackage{float} % para usar [H] 'numbers' 
+\usepackage{stackengine}
+\usepackage{multicol}%
+\usetikzlibrary{arrows}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{lmodern}
+\selectlanguage{spanish}
+\usepackage[linesnumbered,ruled, noline, noend, onelanguage]{algorithm2e}
+%\input{spanishAlgorithmic} % mi archivo de traducción
+\usepackage{rotating} %Para rotar texto, objetos y tablas seite. No se ve en DVI solo en PS. Seite 328 Hundebuch
+
+\usepackage[
+    type={CC},
+    modifier={by-sa},
+    version={4.0},
+]{doclicense}
+
+%\geometry{
+%paperwidth=15.3cm,
+%paperheight=23.2cm,
+%top=1.5cm,
+%bottom=.8cm,
+%left=1.9cm,
+%right=1.9cm
+%}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % 
+
+\DefineNamedColor{named}{Maroon} {cmyk}{0,0.87,0.68,0.32}
+
+\SetKwIF{If}{ElseIf}{Else}{si}{}{si no}{en otro caso}{endif}
+\SetKwFor{For}{para}{}{endfor}
+\SetKwFor{While}{mientras}{}{endw}
+
+\newcommand{\nosemic}{\renewcommand{\@endalgocfline}{\relax}}% Drop semi-colon ;
+\newcommand{\dosemic}{\renewcommand{\@endalgocfline}{\algocf@endline}}% Reinstate semi-colon ;
+\newcommand{\pushline}{\Indp}% Indent
+\newcommand{\popline}{\Indm\dosemic}% Undent
+\let\oldnl\nl% Store \nl in \oldnl
+\newcommand{\nonl}{\renewcommand{\nl}{\let\nl\oldnl}}% Remove line number for one line
+
+                        %se usa junto con \rotate, \sidewidestable ....
+% Como numerar las ecuaciones, figuras y tablas
+
+\renewcommand{\theequation}{\thechapter-arabic{equation}}
+\renewcommand{\thefigure}{\textbf{\thechapter-\arabic{figure}}}
+\renewcommand{\thetable}{\textbf{\thechapter-\arabic{table}}}
+
+%Estilo de los encabezados
+
+%Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
+\usepackage[Bjornstrup]{fncychap}
+
+\KOMAoptions{DIV=13}%Margenes 4-15 (menos numero es menos margen)
+%\usepackage{showframe}
+
+
+\KOMAoptions{headlines=2.1}
+\KOMAoptions{footsepline=true}
+
+ 
+\newcommand{\chapternumbering}[1]{% 
+  \setcounter{chapter}{0}% 
+   \renewcommand{\thechapter}{\csname #1\endcsname{chapter}}}
+
+\addtolength{\headwidth}{0cm}
+%\unitlength1mm %Define la unidad LE para Figuras
+\marginparwidth0cm
+\parindent0cm %Define la distancia de la primera linea de un parrafo a la margen
+
+%Para tablas,  redefine el backschlash en tablas donde se define la posici\'{o}n del texto en las
+%casillas (con \centering \raggedright o \raggedleft)
+\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
+\let\PBS=\PreserveBackslash
+
+%Espacio entre lineas
+\setlength{\parskip}{2sp}
+\renewcommand{\baselinestretch}{.5}
+
+%\renewcommand{\thesection}{\arabic{section}}
+
+\numberwithin{equation}{chapter}
+\numberwithin{algocf}{chapter}
+%\numberwithin{algorithm}{chapter}
+
+
+%%% Coloring the comment as blue
+\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{blue}{#1}}
+\SetCommentSty{mycommfont}
+
+
+\theoremstyle{plain}
+\newtheorem{definition}{Definición}[chapter]
+\newtheorem{theorem}{\underline{\textbf{Teorema}}}[chapter]
+\newtheorem{lemma}[theorem]{\underline{\textbf{Lema}}}
+\newtheorem{corollary}[theorem]{\underline{\textbf{Corolario}}}
+\counterwithin{figure}{chapter}
+\counterwithin{table}{chapter}
+\newtheorem{example}{Ejemplo}[chapter]
+
+\theoremstyle{definition}
+\newtheorem{defn}[equation]{Definition}
+\newtheorem{prob}[equation]{Problem}
+
+
+\theoremstyle{remark}
+\newtheorem{note}[equation]{Note}
+\newtheorem{rem}[equation]{Remark}
+
+
+%Neuer Befehl f\"{u}r die Tabelle Eigenschaften der Aktivkohlen
+\newcommand{\arr}[1]{\raisebox{1.5ex}[0cm][0cm]{#1}}
+
+%Neue Kommandos
+\usepackage{Befehle}
+
+
+%Trennungsliste
+\hyphenation {Reaktor-ab-me-ssun-gen Gas-zu-sa-mmen-set-zung
+Raum-gesch-win-dig-keit Durch-fluss Stick-stoff-gemisch
+Ad-sorp-tions-tem-pe-ra-tur Klein-schmidt
+Kohlen-stoff-Mole-kular-siebe Py-rolysat-aus-beu-te
+Trans-port-vor-gan-ge}
+
+%\hypersetup{colorlinks,linkcolor={blue},citecolor={blue},urlcolor={red}}
+\hypersetup{urlcolor=black, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying

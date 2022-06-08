@@ -1,0 +1,8 @@
+\babel@toc {spanish}{}
+\beamer@sectionintoc {1}{la primer sección}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{la primer subsection}{3}{0}{1}
+\beamer@sectionintoc {2}{FÓRMULAS}{6}{0}{2}
+\beamer@sectionintoc {3}{ESPACIOS Y OTRAS COSAS}{7}{0}{3}
+\beamer@subsectionintoc {3}{1}{LAS OTRAS COSAS}{8}{0}{3}
+\beamer@subsectionintoc {3}{2}{LOS BLOCKS}{10}{0}{3}
+\beamer@sectionintoc {4}{UN EJEMPLO DE LO QUE USE}{11}{0}{4}

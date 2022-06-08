@@ -1,0 +1,105 @@
+\begin{tikzpicture}[scale = 0.66, every node/.style={draw, circle, inner 
+sep=2pt}]
+  %An
+  \node[draw = none] (A) at (0, 5) {$\DynA_n, n\ge 1$};
+  \node (v0) at (2, 5) {};
+  \node (v1) at (3, 5) {};
+  \node[draw=none] (v2) at (4, 5) {};
+  \node[draw=none] (v3) at (5, 5) {};
+  \node[draw=none] (p) at (4.5, 5) {$\cdots$};
+  \node (v4) at (6, 5) {};
+  \node (v5) at (7, 5) {};
+  \foreach \from/\to in {v1/v0, v2/v1, v4/v3, v5/v4}
+  \draw (\from) -- (\to);
+  
+  %Bn
+  \node[draw = none] (B) at (0, 4) {$\DynB_n, n\ge 2$};
+  \node (v0) at (2, 4) {};
+  \node (v1) at (3, 4) {};
+  \node[draw=none] (v2) at (4, 4) {};
+  \node[draw=none] (v3) at (5, 4) {};
+  \node[draw=none] (p) at (4.5, 4) {$\cdots$};
+  \node (v4) at (6, 4) {};
+  \node (v5) at (7, 4) {};
+  \foreach \from/\to in {v1/v0, v2/v1, v4/v3}
+  \draw (\from) -- (\to);
+  \draw[->] (v4) -- (v5);
+  
+  %Cn
+  \node[draw = none] (C) at (0, 3) {$\DynC_n, n\ge 3$};
+  \node (v0) at (2, 3) {};
+  \node (v1) at (3, 3) {};
+  \node[draw=none] (v2) at (4, 3) {};
+  \node[draw=none] (v3) at (5, 3) {};
+  \node[draw=none] (p) at (4.5, 3) {$\cdots$};
+  \node (v4) at (6, 3) {};
+  \node (v5) at (7, 3) {};
+  \foreach \from/\to in {v1/v0, v2/v1, v4/v3}
+  \draw (\from) -- (\to);
+  \draw[->] (v5) -- (v4);
+  
+  %Dn
+  \node[draw = none] (D) at (0, 2) {$\DynD_n, n\ge 4$};
+  \node (v0) at (2, 2) {};
+  \node (v1) at (3, 2) {};
+  \node[draw=none] (v2) at (4, 2) {};
+  \node[draw=none] (v3) at (5, 2) {};
+  \node[draw=none] (p) at (4.5, 2) {$\cdots$};
+  \node (v4) at (6, 2) {};
+  \node (v5) at (6.86602540378, 2.5) {};
+  \node (v6) at (6.86602540378, 1.5) {};
+  \foreach \from/\to in {v1/v0, v2/v1, v4/v3, v4/v5, v4/v6}
+  \draw (\from) -- (\to);
+  
+  %E6
+  \node[draw = none] (D) at (0, 0.5) {$\DynE_6\phantom{, n\ge 4}$};
+  \node (v0) at (4, 1) {};
+  \node (v1) at (2, 0) {};
+  \node (v2) at (3, 0) {};
+  \node (v3) at (4, 0) {};
+  \node (v4) at (5, 0) {};
+  \node (v5) at (6, 0) {};
+  \foreach \from/\to in {v3/v0, v2/v1, v3/v2, v4/v3, v5/v4}
+  \draw (\from) -- (\to);
+  
+  %E7
+  \node[draw = none] (D) at (8, 4.5) {$\DynE_7$};
+  \node (v0) at (11, 5) {};
+  \node (v1) at (9, 4) {};
+  \node (v2) at (10, 4) {};
+  \node (v3) at (11, 4) {};
+  \node (v4) at (12, 4) {};
+  \node (v5) at (13, 4) {};
+  \node (v6) at (14, 4) {};
+  \foreach \from/\to in {v3/v0, v2/v1, v3/v2, v4/v3, v5/v4, v5/v6}
+  \draw (\from) -- (\to);
+  
+  %E8
+  \node[draw = none] (D) at (8, 2.5) {$\DynE_8$};
+  \node (v0) at (11, 3) {};
+  \node (v1) at (9, 2) {};
+  \node (v2) at (10, 2) {};
+  \node (v3) at (11, 2) {};
+  \node (v4) at (12, 2) {};
+  \node (v5) at (13, 2) {};
+  \node (v6) at (14, 2) {};
+  \node (v7) at (15, 2) {};
+  \foreach \from/\to in {v3/v0, v2/v1, v3/v2, v4/v3, v5/v4, v5/v6, v6/v7}
+  \draw (\from) -- (\to);
+  
+  %F4
+  \node[draw = none] (D) at (8, 1) {$\DynF_4$};
+  \node (v1) at (9, 1) {};
+  \node (v2) at (10, 1) {};
+  \node (v3) at (11, 1) {};
+  \node (v4) at (12, 1) {};
+  \foreach \from/\to in {v2/v1, v4/v3}
+  \draw (\from) -- (\to);
+  \draw[->] (v2) -- (v3);
+  
+  %G2
+  \node[draw = none] (G) at (8,0) {$\DynG_2$};
+  \node (v1) at (9, 0) {};
+  \node (v2) at (10, 0) {};
+  \draw[->] (v1) to node[auto, draw=none] {\scriptsize$3$} (v2);
+\end{tikzpicture}
