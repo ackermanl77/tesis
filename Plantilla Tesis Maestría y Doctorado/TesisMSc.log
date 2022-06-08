@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2022.1.19)  21 APR 2022 10:35
+This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2022.1.19)  8 JUN 2022 01:04
  restricted system commands enabled.
 **TesisMSc.tex
 (./TesisMSc.tex
@@ -1501,177 +1501,10 @@ File: csquotes.cfg
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/ccicons/ccicons.sty
 Package: ccicons 2017/10/30 v1.6 LaTeX support for Creative Commons icons
-) (./TesisMSc.aux
-(./HojaTitulo/HojaTituloMSc.aux)
-LaTeX Info: Redefining \. on input line 27.
-LaTeX Info: Redefining \% on input line 27.
-LaTeX Info: Redefining \. on input line 29.
-LaTeX Info: Redefining \% on input line 29.
- (./Tab_Simbolos/TabSimbolosMSc.aux)
-(./Kap1/Kap1.aux) (./Kap2/Kap2.aux) (./Kap3/Kap3.aux
+)
+No file TesisMSc.aux.
 
-LaTeX Warning: Label `fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:f1' multiply defined.
-
-) (./Kap4/Kap4.aux
-
-LaTeX Warning: Label `fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `figura:componentesTriconexas' multiply defined.
-
-
-LaTeX Warning: Label `fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `figura:componentesTriconexas' multiply defined.
-
-
-LaTeX Warning: Label `fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:f1' multiply defined.
-
-
-LaTeX Warning: Label `figura:componentesTriconexas1' multiply defined.
-
-) (./Kap5/Kap5.aux) (./Anexos/Anexos.aux))
 \openout1 = TesisMSc.aux
-
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
 LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
@@ -1682,7 +1515,6 @@ LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 4.
-
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
@@ -1723,8 +1555,6 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 4.
 LaTeX Info: Redefining \pageref on input line 4.
 LaTeX Info: Redefining \nameref on input line 4.
-
-(./TesisMSc.out) (./TesisMSc.out)
 \@outlinefile=\write4
 
 \openout4 = TesisMSc.out
@@ -1928,33 +1758,6 @@ LaTeX Font Info:    Trying to load font information for T1+lmss on input line 17
 .
  (/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) (./TesisMSc.toc
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-LaTeX Info: Redefining \. on input line 2.
-LaTeX Info: Redefining \% on input line 2.
-Package tocbasic Info: Using my definition of `\numberline' on input line 3.
-Package tocbasic Info: Using my definition of `\numberline' on input line 4.
-Package tocbasic Info: Using my definition of `\numberline' on input line 5.
-Package tocbasic Info: Using my definition of `\numberline' on input line 6.
-Package tocbasic Info: Using my definition of `\numberline' on input line 7.
-Package tocbasic Info: Using my definition of `\numberline' on input line 8.
-Package tocbasic Info: Using my definition of `\numberline' on input line 9.
-Package tocbasic Info: Using my definition of `\numberline' on input line 10.
-Package tocbasic Info: Using my definition of `\numberline' on input line 11.
-Package tocbasic Info: Using my definition of `\numberline' on input line 12.
-Package tocbasic Info: Using my definition of `\numberline' on input line 13.
-Package tocbasic Info: Using my definition of `\numberline' on input line 14.
-Package tocbasic Info: Using my definition of `\numberline' on input line 15.
-Package tocbasic Info: Using my definition of `\numberline' on input line 16.
-Package tocbasic Info: Using my definition of `\numberline' on input line 20.
-Package tocbasic Info: Using my definition of `\numberline' on input line 21.
-Package tocbasic Info: Using my definition of `\numberline' on input line 22.
-Package tocbasic Info: Using my definition of `\numberline' on input line 23.
-Package tocbasic Info: Using my definition of `\numberline' on input line 24.
-Package tocbasic Info: Using my definition of `\numberline' on input line 25.
-Package tocbasic Info: Using my definition of `\numberline' on input line 26.
-Package tocbasic Info: Using my definition of `\numberline' on input line 27.
 )
 \tf@toc=\write5
 
@@ -1985,36 +1788,72 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
  []
 
 
+Package natbib Warning: Citation `AbarcaSoteloMarioAlberto2011Apds' on page 1 un
+defined on input line 4.
+
+
+Package natbib Warning: Citation `LayDavidC2001Alys' on page 1 undefined on inpu
+t line 10.
+
+
 warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
 [1
 
 
 
 ]
-LaTeX Info: Redefining \. on input line 122.
-LaTeX Info: Redefining \% on input line 122.
+
+LaTeX Warning: Reference `ecuacion:1.1' on page 2 undefined on input line 78.
+
+
+Underfull \vbox (badness 1077) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 88.
+LaTeX Info: Redefining \% on input line 88.
 
 warning  (pdf backend): ignoring duplicate destination with the name 'page.2'
 [2]
-LaTeX Info: Redefining \. on input line 211.
-LaTeX Info: Redefining \% on input line 211.
+
+LaTeX Warning: Reference `ecuacion:1.3' on page 3 undefined on input line 121.
+
+LaTeX Info: Redefining \. on input line 141.
+LaTeX Info: Redefining \% on input line 141.
 
 warning  (pdf backend): ignoring duplicate destination with the name 'page.3'
 [3]
-LaTeX Info: Redefining \. on input line 276.
-LaTeX Info: Redefining \% on input line 276.
+
+LaTeX Warning: Reference `teorema:1.1' on page 4 undefined on input line 221.
+
+LaTeX Info: Redefining \. on input line 223.
+LaTeX Info: Redefining \% on input line 223.
 
 warning  (pdf backend): ignoring duplicate destination with the name 'page.4'
 [4]
-Underfull \vbox (badness 1939) has occurred while \output is active []
+LaTeX Info: Redefining \. on input line 273.
+LaTeX Info: Redefining \% on input line 273.
+ [5]
+
+Package natbib Warning: Citation `Ringel1985TameAA' on page 6 undefined on input
+ line 284.
+
+
+Package natbib Warning: Citation `alma991031505829703276' on page 6 undefined on
+ input line 284.
 
 LaTeX Info: Redefining \. on input line 325.
 LaTeX Info: Redefining \% on input line 325.
- [5]
+[6]
+
+LaTeX Warning: Reference `figura:1.2' on page 7 undefined on input line 328.
+
 LaTeX Info: Redefining \. on input line 421.
 LaTeX Info: Redefining \% on input line 421.
+[7]
 
-[6]
+Package natbib Warning: Citation `AbarcaSoteloMarioAlberto2011Apds' on page 8 un
+defined on input line 422.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 427--428
 
  []
@@ -2029,12 +1868,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 444--445
 
  []
 
-LaTeX Info: Redefining \. on input line 547.
-LaTeX Info: Redefining \% on input line 547.
-[7]
-LaTeX Info: Redefining \. on input line 590.
-LaTeX Info: Redefining \% on input line 590.
- [8]
+LaTeX Info: Redefining \. on input line 514.
+LaTeX Info: Redefining \% on input line 514.
+[8]
+
+LaTeX Warning: Reference `teorema:1.6' on page 9 undefined on input line 535.
+
+
+LaTeX Warning: Reference `corolario:1.9' on page 9 undefined on input line 538.
+
+
+LaTeX Warning: Reference `sec:2.1' on page 9 undefined on input line 542.
+
+LaTeX Info: Redefining \. on input line 569.
+LaTeX Info: Redefining \% on input line 569.
+[9]
+
+LaTeX Warning: Reference `teorema:1.4' on page 10 undefined on input line 572.
+
+
+LaTeX Warning: Reference `teorema:1.5' on page 10 undefined on input line 588.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 608.
+LaTeX Info: Redefining \% on input line 608.
+ [10]
 Underfull \hbox (badness 10000) in paragraph at lines 608--609
 
  []
@@ -2046,33 +1906,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 629--630
 
 LaTeX Info: Redefining \. on input line 655.
 LaTeX Info: Redefining \% on input line 655.
-[9]
-LaTeX Info: Redefining \. on input line 796.
-LaTeX Info: Redefining \% on input line 796.
- [10]
-Underfull \hbox (badness 10000) in paragraph at lines 808--809
+[11]
+
+LaTeX Warning: Reference `lema:1.7' on page 12 undefined on input line 658.
+
+
+LaTeX Warning: Reference `lema:1.8' on page 12 undefined on input line 670.
+
+
+LaTeX Warning: Reference `figura:1.3' on page 12 undefined on input line 682.
+
+
+LaTeX Warning: Reference `ecuacion:1.5' on page 12 undefined on input line 781.
+
+LaTeX Info: Redefining \. on input line 782.
+LaTeX Info: Redefining \% on input line 782.
+[12]
+
+LaTeX Warning: Reference `figura:1.4' on page 13 undefined on input line 806.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 806--807
 
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 832.
+(Font)              <10.95> on input line 830.
 
-Overfull \hbox (1.67493pt too wide) in paragraph at lines 853--854
+Overfull \hbox (1.67493pt too wide) in paragraph at lines 851--852
  [][] 
  []
 
 
-Overfull \hbox (32.97269pt too wide) in paragraph at lines 899--900
+Overfull \hbox (32.97269pt too wide) in paragraph at lines 897--898
  [][] 
  []
 
 
-Overfull \hbox (2.61105pt too wide) in paragraph at lines 812--903
+Overfull \hbox (2.61105pt too wide) in paragraph at lines 810--901
 [][] []
  []
 
 
-Overfull \hbox (2.61105pt too wide) in paragraph at lines 812--903
+Overfull \hbox (2.61105pt too wide) in paragraph at lines 810--901
 [] [] 
  []
 
@@ -2080,7 +1956,7 @@ Overfull \hbox (2.61105pt too wide) in paragraph at lines 812--903
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (4.35095pt too wide) in paragraph at lines 928--929
+Overfull \hbox (4.35095pt too wide) in paragraph at lines 926--927
 \T1/lmr/m/n/12 una sub-grá-fi-ca Eu-cli-dia-na. Sea $\OML/lmm/m/it/12 G$ \T1/l
 mr/m/n/12 una grá-fi-ca co-ne-xa de $\OML/lmm/m/it/12 n$ \T1/lmr/m/n/12 vér-t
 i-ces dis-tin-ta de $\U/msb/m/n/12 A[]D[]\OML/lmm/m/it/12 ; \U/msb/m/n/12 E[]\O
@@ -2088,12 +1964,25 @@ ML/lmm/m/it/12 ; \U/msb/m/n/12 E[] []\OML/lmm/m/it/12 y []\U/msb/m/n/12 E[]$\T1
 /lmr/m/n/12 .
  []
 
-LaTeX Info: Redefining \. on input line 934.
-LaTeX Info: Redefining \% on input line 934.
-[11])
+LaTeX Info: Redefining \. on input line 927.
+LaTeX Info: Redefining \% on input line 927.
+[13]
+
+LaTeX Warning: Reference `lema:1.7' on page 14 undefined on input line 936.
+
+
+LaTeX Warning: Reference `sec:2.1' on page 14 undefined on input line 937.
+
+
+LaTeX Warning: Reference `teorema:1.6' on page 14 undefined on input line 937.
+
+)
 LaTeX Info: Redefining \. on input line 21.
 LaTeX Info: Redefining \% on input line 21.
- [12]
+ [14]
+LaTeX Info: Redefining \. on input line 21.
+LaTeX Info: Redefining \% on input line 21.
+ [15]
 \openout2 = Kap2/Kap2.aux
  (./Kap2/Kap2.tex
 chapter 2.
@@ -2103,23 +1992,59 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
  []
 
 
+Package natbib Warning: Citation `alma991031505829703276' on page 16 undefined o
+n input line 3.
+
+
+Package natbib Warning: Citation `Barot1999ACO' on page 16 undefined on input li
+ne 3.
+
+
+LaTeX Warning: Reference `teorema:1.6' on page 16 undefined on input line 9.
+
+
+Package natbib Warning: Citation `alma991031505829703276' on page 16 undefined o
+n input line 9.
+
+
+LaTeX Warning: Reference `lema:1.3' on page 16 undefined on input line 12.
+
+
+LaTeX Warning: Reference `lema:1.7' on page 16 undefined on input line 12.
+
+
+LaTeX Warning: Reference `figura:1.2' on page 16 undefined on input line 12.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 12--13
 
  []
 
-[13
+[16
 
 
 
 ]
-LaTeX Info: Redefining \. on input line 114.
-LaTeX Info: Redefining \% on input line 114.
- [14]
+LaTeX Info: Redefining \. on input line 95.
+LaTeX Info: Redefining \% on input line 95.
+ [17]
+
+LaTeX Warning: Reference `ecuacion:2.1' on page 18 undefined on input line 109.
+
+
+LaTeX Warning: Reference `ecuacion:1.5' on page 18 undefined on input line 119.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 119--120
 
  []
 
 
+LaTeX Warning: Reference `figura:2.1' on page 18 undefined on input line 152.
+
+LaTeX Info: Redefining \. on input line 153.
+LaTeX Info: Redefining \% on input line 153.
+[18]
 Overfull \hbox (57.40746pt too wide) in paragraph at lines 156--169
 []$[]$ 
  []
@@ -2139,32 +2064,81 @@ Overfull \hbox (2.61105pt too wide) in paragraph at lines 206--240
 [][] [] 
  []
 
+
+Package natbib Warning: Citation `alma991031505829703276' on page 19 undefined o
+n input line 247.
+
+
+LaTeX Warning: Reference `alg:algoritmoInflaciones' on page 19 undefined on inpu
+t line 247.
+
+
+LaTeX Warning: Reference `ecuacion:1.5' on page 19 undefined on input line 270.
+
 LaTeX Info: Redefining \. on input line 298.
 LaTeX Info: Redefining \% on input line 298.
-[15]
+[19]
+
+LaTeX Warning: Reference `ecuacion:1.5' on page 20 undefined on input line 313.
+
+
+LaTeX Warning: Reference `teorema:1.6' on page 20 undefined on input line 317.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 317--318
 
  []
 
 
-Underfull \vbox (badness 1546) has occurred while \output is active []
+LaTeX Warning: Reference `alg:algoritmoInflaciones' on page 20 undefined on inpu
+t line 326.
+
+
+LaTeX Warning: Reference `ecuacion:1.4' on page 20 undefined on input line 329.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 338.
 LaTeX Info: Redefining \% on input line 338.
- [16]
-LaTeX Info: Redefining \. on input line 385.
-LaTeX Info: Redefining \% on input line 385.
+ [20]
 
-[17]
-LaTeX Info: Redefining \. on input line 445.
-LaTeX Info: Redefining \% on input line 445.
- [18]
-LaTeX Info: Redefining \. on input line 501.
-LaTeX Info: Redefining \% on input line 501.
- [19]
+LaTeX Warning: Reference `ecuacion:1.4' on page 21 undefined on input line 341.
+
+
+LaTeX Warning: Reference `ecuacion:2.2' on page 21 undefined on input line 354.
+
+LaTeX Info: Redefining \. on input line 373.
+LaTeX Info: Redefining \% on input line 373.
+[21]
+LaTeX Info: Redefining \. on input line 427.
+LaTeX Info: Redefining \% on input line 427.
+ [22]
+
+LaTeX Warning: Reference `ecuacion:2.4' on page 23 undefined on input line 462.
+
+LaTeX Info: Redefining \. on input line 470.
+LaTeX Info: Redefining \% on input line 470.
+[23]
+
+LaTeX Warning: Reference `alg:algoritmoInflaciones' on page 24 undefined on inpu
+t line 494.
+
+
+LaTeX Warning: Reference `corolario:1.9' on page 24 undefined on input line 494.
+
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 512--513
 
  []
+
+LaTeX Info: Redefining \. on input line 513.
+LaTeX Info: Redefining \% on input line 513.
+[24]
+
+LaTeX Warning: Reference `alg:algoritmoInflaciones' on page 25 undefined on inpu
+t line 514.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 514--515
@@ -2177,9 +2151,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 521--522
  []
 
 
+LaTeX Warning: Reference `alg:algoritmoInflaciones' on page 25 undefined on inpu
+t line 523.
+
+
+LaTeX Warning: Reference `lema:1.7' on page 25 undefined on input line 523.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 523--524
 
  []
+
+
+LaTeX Warning: Reference `teorema:1.6' on page 25 undefined on input line 525.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 525--526
@@ -2193,6 +2177,13 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 527.
+
+
+Package natbib Warning: Citation `Barot1999ACO' on page 25 undefined on input li
+ne 531.
+
+
+LaTeX Warning: Reference `figura:2.3' on page 25 undefined on input line 531.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 531--532
@@ -2232,22 +2223,22 @@ Overfull \hbox (57.40746pt too wide) in paragraph at lines 595--610
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Figuras/A-bloque1.pdf, id=373, 104.39pt x 110.011pt>
+<Figuras/A-bloque1.pdf, id=282, 104.39pt x 110.011pt>
 File: Figuras/A-bloque1.pdf Graphic file (type pdf)
 <use Figuras/A-bloque1.pdf>
 Package luatex.def Info: Figuras/A-bloque1.pdf  used on input line 638.
 (luatex.def)             Requested size: 113.39894pt x 119.50278pt.
-<Figuras/A-bloque2.pdf, id=374, 104.39pt x 110.011pt>
+<Figuras/A-bloque2.pdf, id=283, 104.39pt x 110.011pt>
 File: Figuras/A-bloque2.pdf Graphic file (type pdf)
 <use Figuras/A-bloque2.pdf>
 Package luatex.def Info: Figuras/A-bloque2.pdf  used on input line 644.
 (luatex.def)             Requested size: 113.39894pt x 119.50278pt.
-<Figuras/A-bloque3.pdf, id=375, 104.39pt x 110.011pt>
+<Figuras/A-bloque3.pdf, id=284, 104.39pt x 110.011pt>
 File: Figuras/A-bloque3.pdf Graphic file (type pdf)
 <use Figuras/A-bloque3.pdf>
 Package luatex.def Info: Figuras/A-bloque3.pdf  used on input line 650.
 (luatex.def)             Requested size: 113.39894pt x 119.50278pt.
-<Figuras/A-bloque.pdf, id=376, 104.39pt x 110.011pt>
+<Figuras/A-bloque.pdf, id=285, 104.39pt x 110.011pt>
 File: Figuras/A-bloque.pdf Graphic file (type pdf)
 <use Figuras/A-bloque.pdf>
 Package luatex.def Info: Figuras/A-bloque.pdf  used on input line 656.
@@ -2263,33 +2254,43 @@ Overfull \hbox (2.61105pt too wide) in paragraph at lines 635--659
  []
 
 
-Underfull \vbox (badness 1107) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 662.
 LaTeX Info: Redefining \% on input line 662.
- [20]
-<Figuras/graph.png, id=386, 906.38625pt x 300.3722pt>
+ [25]
+
+Package natbib Warning: Citation `Barot1999ACO' on page 26 undefined on input li
+ne 663.
+
+<Figuras/graph.png, id=291, 906.38625pt x 300.3722pt>
 File: Figuras/graph.png Graphic file (type png)
 <use Figuras/graph.png>
 Package luatex.def Info: Figuras/graph.png  used on input line 669.
 (luatex.def)             Requested size: 285.16742pt x 94.50548pt.
-
-Underfull \vbox (badness 1742) has occurred while \output is active []
-
 LaTeX Info: Redefining \. on input line 671.
 LaTeX Info: Redefining \% on input line 671.
- [21<./Figuras/A-bloque1.pdf><./Figuras/A-bloque2.pdf><./Figuras/A-bloque3.pdf><
-./Figuras/A-bloque.pdf>]
-<Figuras/graph1.png, id=396, 934.24031pt x 313.9228pt>
+[26<./Figuras/A-bloque1.pdf><./Figuras/A-bloque2.pdf><./Figuras/A-bloque3.pdf><.
+/Figuras/A-bloque.pdf>]
+<Figuras/graph1.png, id=300, 934.24031pt x 313.9228pt>
 File: Figuras/graph1.png Graphic file (type png)
 <use Figuras/graph1.png>
 Package luatex.def Info: Figuras/graph1.png  used on input line 674.
 (luatex.def)             Requested size: 281.24362pt x 94.50548pt.
-<Figuras/graph3.png, id=397, 736.25063pt x 249.93375pt>
+<Figuras/graph3.png, id=301, 736.25063pt x 249.93375pt>
 File: Figuras/graph3.png Graphic file (type png)
 <use Figuras/graph3.png>
 Package luatex.def Info: Figuras/graph3.png  used on input line 679.
 (luatex.def)             Requested size: 278.39633pt x 94.50548pt.
+
+
+Package natbib Warning: Citation `article123' on page 27 undefined on input line
+ 687.
+
+
+LaTeX Warning: Reference `alg:algoritmoInflaciones' on page 27 undefined on inpu
+t line 692.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 692--693
 
@@ -2300,7 +2301,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 694--695
 
  []
 
-<Figuras/graph4.png, id=400, 213.04594pt x 207.77625pt>
+LaTeX Info: Redefining \. on input line 695.
+LaTeX Info: Redefining \% on input line 695.
+[27
+Missing character: There is no “ (U+201C) in font ec-lmr12!
+Missing character: There is no ” (U+201D) in font ec-lmr12!
+<./Figuras/graph.PNG><./Figuras/graph1.PNG><./Figuras/graph3.PNG>]
+<Figuras/graph4.png, id=316, 213.04594pt x 207.77625pt>
 File: Figuras/graph4.png Graphic file (type png)
 <use Figuras/graph4.png>
 Package luatex.def Info: Figuras/graph4.png  used on input line 700.
@@ -2310,7 +2317,7 @@ Overfull \hbox (57.40746pt too wide) in paragraph at lines 698--702
 []$[]$ 
  []
 
-<Figuras/graph5.png, id=401, 197.23688pt x 200.24812pt>
+<Figuras/graph5.png, id=317, 197.23688pt x 200.24812pt>
 File: Figuras/graph5.png Graphic file (type png)
 <use Figuras/graph5.png>
 Package luatex.def Info: Figuras/graph5.png  used on input line 707.
@@ -2320,7 +2327,7 @@ Overfull \hbox (57.40746pt too wide) in paragraph at lines 705--709
 []$[]$ 
  []
 
-<Figuras/graph6.png, id=402, 202.50656pt x 212.29312pt>
+<Figuras/graph6.png, id=318, 202.50656pt x 212.29312pt>
 File: Figuras/graph6.png Graphic file (type png)
 <use Figuras/graph6.png>
 Package luatex.def Info: Figuras/graph6.png  used on input line 714.
@@ -2330,60 +2337,76 @@ Overfull \hbox (57.40746pt too wide) in paragraph at lines 712--716
 []$[]$ 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-LaTeX Info: Redefining \. on input line 723.
-LaTeX Info: Redefining \% on input line 723.
-[22
-Missing character: There is no “ (U+201C) in font ec-lmr12!
-Missing character: There is no ” (U+201D) in font ec-lmr12!
-<./Figuras/graph.PNG><./Figuras/graph1.PNG><./Figuras/graph3.PNG>]
-<Figuras/graph7.png, id=418, 163.3603pt x 145.29282pt>
+<Figuras/graph7.png, id=319, 163.3603pt x 145.29282pt>
 File: Figuras/graph7.png Graphic file (type png)
 <use Figuras/graph7.png>
 Package luatex.def Info: Figuras/graph7.png  used on input line 726.
 (luatex.def)             Requested size: 56.9055pt x 50.61159pt.
+
+LaTeX Warning: Reference `alg:algoritmoInflaciones' on page 28 undefined on inpu
+t line 729.
+
+
+LaTeX Warning: Reference `teorema:2.5' on page 28 undefined on input line 729.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 729--730
 
  []
 
 
+LaTeX Warning: Reference `lema:2.6' on page 28 undefined on input line 738.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 736--739
 
  []
+
+LaTeX Info: Redefining \. on input line 739.
+LaTeX Info: Redefining \% on input line 739.
+[28
+Missing character: There is no “ (U+201C) in font ec-lmr12!
+Missing character: There is no ” (U+201D) in font ec-lmr12!
+<./Figuras/graph4.PNG><./Figuras/graph5.PNG><./Figuras/graph6.PNG><./Figuras/gra
+ph7.PNG>]
+
+LaTeX Warning: Reference `alg:algoritmoInflaciones' on page 29 undefined on inpu
+t line 740.
+
+
+LaTeX Warning: Reference `teorema:2.5' on page 29 undefined on input line 740.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 740--741
 
  []
 
-LaTeX Info: Redefining \. on input line 741.
-LaTeX Info: Redefining \% on input line 741.
-[23
-Missing character: There is no “ (U+201C) in font ec-lmr12!
-Missing character: There is no ” (U+201D) in font ec-lmr12!
-<./Figuras/graph4.PNG><./Figuras/graph5.PNG><./Figuras/graph6.PNG><./Figuras/gra
-ph7.PNG>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 765--766
 
  []
+
+
+LaTeX Warning: Reference `lema:2.7' on page 29 undefined on input line 767.
+
+
+LaTeX Warning: Reference `teorema:2.5' on page 29 undefined on input line 768.
+
+
+LaTeX Warning: Reference `lema:2.6' on page 29 undefined on input line 769.
+
+
+LaTeX Warning: Reference `lema:2.8' on page 29 undefined on input line 770.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 773--774
 
  []
 
-LaTeX Info: Redefining \. on input line 784.
-LaTeX Info: Redefining \% on input line 784.
-[24
-Missing character: There is no “ (U+201C) in font ec-lmr12!
-Missing character: There is no ” (U+201D) in font ec-lmr12!
-Missing character: There is no “ (U+201C) in font ec-lmr12!
-Missing character: There is no ” (U+201D) in font ec-lmr12!
-]
-<Figuras/graph8.png, id=451, 185.94469pt x 178.41656pt>
+LaTeX Info: Redefining \. on input line 774.
+LaTeX Info: Redefining \% on input line 774.
+[29]
+<Figuras/graph8.png, id=341, 185.94469pt x 178.41656pt>
 File: Figuras/graph8.png Graphic file (type png)
 <use Figuras/graph8.png>
 Package luatex.def Info: Figuras/graph8.png  used on input line 789.
@@ -2393,7 +2416,7 @@ Overfull \hbox (57.40746pt too wide) in paragraph at lines 787--791
 []$[]$ 
  []
 
-<Figuras/graph9.png, id=452, 206.27063pt x 189.70876pt>
+<Figuras/graph9.png, id=342, 206.27063pt x 189.70876pt>
 File: Figuras/graph9.png Graphic file (type png)
 <use Figuras/graph9.png>
 Package luatex.def Info: Figuras/graph9.png  used on input line 796.
@@ -2403,7 +2426,7 @@ Overfull \hbox (57.40746pt too wide) in paragraph at lines 794--798
 []$[]$ 
  []
 
-<Figuras/graph10.png, id=453, 173.89969pt x 170.13562pt>
+<Figuras/graph10.png, id=343, 173.89969pt x 170.13562pt>
 File: Figuras/graph10.png Graphic file (type png)
 <use Figuras/graph10.png>
 Package luatex.def Info: Figuras/graph10.png  used on input line 803.
@@ -2413,7 +2436,7 @@ Overfull \hbox (57.40746pt too wide) in paragraph at lines 801--805
 []$[]$ 
  []
 
-<Figuras/graph11.png, id=454, 173.14688pt x 168.63pt>
+<Figuras/graph11.png, id=344, 173.14688pt x 168.63pt>
 File: Figuras/graph11.png Graphic file (type png)
 <use Figuras/graph11.png>
 Package luatex.def Info: Figuras/graph11.png  used on input line 810.
@@ -2423,7 +2446,7 @@ Overfull \hbox (57.40746pt too wide) in paragraph at lines 808--812
 []$[]$ 
  []
 
-<Figuras/graph12.png, id=455, 167.12437pt x 173.14688pt>
+<Figuras/graph12.png, id=345, 167.12437pt x 173.14688pt>
 File: Figuras/graph12.png Graphic file (type png)
 <use Figuras/graph12.png>
 Package luatex.def Info: Figuras/graph12.png  used on input line 817.
@@ -2433,7 +2456,7 @@ Overfull \hbox (57.40746pt too wide) in paragraph at lines 815--819
 []$[]$ 
  []
 
-<Figuras/graph13.png, id=456, 179.16937pt x 178.41656pt>
+<Figuras/graph13.png, id=346, 179.16937pt x 178.41656pt>
 File: Figuras/graph13.png Graphic file (type png)
 <use Figuras/graph13.png>
 Package luatex.def Info: Figuras/graph13.png  used on input line 824.
@@ -2453,7 +2476,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 840--841
 
  []
 
-<Figuras/graph20.png, id=458, 171.64125pt x 292.84406pt>
+LaTeX Info: Redefining \. on input line 841.
+LaTeX Info: Redefining \% on input line 841.
+[30
+Missing character: There is no “ (U+201C) in font ec-lmr12!
+Missing character: There is no ” (U+201D) in font ec-lmr12!
+Missing character: There is no “ (U+201C) in font ec-lmr12!
+Missing character: There is no ” (U+201D) in font ec-lmr12!
+<./Figuras/graph8.PNG><./Figuras/graph9.PNG><./Figuras/graph10.PNG><./Figuras/gr
+aph11.PNG><./Figuras/graph12.PNG><./Figuras/graph13.PNG>]
+
+LaTeX Warning: Reference `lemma:2.9' on page 31 undefined on input line 842.
+
+<Figuras/graph20.png, id=359, 171.64125pt x 292.84406pt>
 File: Figuras/graph20.png Graphic file (type png)
 <use Figuras/graph20.png>
 Package luatex.def Info: Figuras/graph20.png  used on input line 848.
@@ -2463,7 +2498,7 @@ Overfull \hbox (19.30554pt too wide) in paragraph at lines 846--850
 []$[]$ 
  []
 
-<Figuras/graph21.png, id=459, 150.5625pt x 234.8775pt>
+<Figuras/graph21.png, id=360, 150.5625pt x 234.8775pt>
 File: Figuras/graph21.png Graphic file (type png)
 <use Figuras/graph21.png>
 Package luatex.def Info: Figuras/graph21.png  used on input line 855.
@@ -2473,7 +2508,7 @@ Overfull \hbox (19.30554pt too wide) in paragraph at lines 853--857
 []$[]$ 
  []
 
-<Figuras/graph22.png, id=460, 184.43906pt x 279.29344pt>
+<Figuras/graph22.png, id=361, 184.43906pt x 279.29344pt>
 File: Figuras/graph22.png Graphic file (type png)
 <use Figuras/graph22.png>
 Package luatex.def Info: Figuras/graph22.png  used on input line 862.
@@ -2483,7 +2518,7 @@ Overfull \hbox (19.30554pt too wide) in paragraph at lines 860--864
 []$[]$ 
  []
 
-<Figuras/graph23.png, id=461, 212.29312pt x 193.47281pt>
+<Figuras/graph23.png, id=362, 212.29312pt x 193.47281pt>
 File: Figuras/graph23.png Graphic file (type png)
 <use Figuras/graph23.png>
 Package luatex.def Info: Figuras/graph23.png  used on input line 869.
@@ -2498,15 +2533,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 881--882
 
  []
 
-LaTeX Info: Redefining \. on input line 884.
-LaTeX Info: Redefining \% on input line 884.
-[25
-Missing character: There is no “ (U+201C) in font ec-lmr12!
-Missing character: There is no ” (U+201D) in font ec-lmr12!
-<./Figuras/graph8.PNG><./Figuras/graph9.PNG><./Figuras/graph10.PNG><./Figuras/gr
-aph11.PNG><./Figuras/graph12.PNG><./Figuras/graph13.PNG><./Figuras/graph20.PNG><
-./Figuras/graph21.PNG><./Figuras/graph22.PNG><./Figuras/graph23.PNG>]
-<Figuras/graph14.png, id=480, 139.27031pt x 207.77625pt>
+<Figuras/graph14.png, id=363, 139.27031pt x 207.77625pt>
 File: Figuras/graph14.png Graphic file (type png)
 <use Figuras/graph14.png>
 Package luatex.def Info: Figuras/graph14.png  used on input line 889.
@@ -2516,7 +2543,7 @@ Overfull \hbox (19.30554pt too wide) in paragraph at lines 887--891
 []$[]$ 
  []
 
-<Figuras/graph15.png, id=481, 138.5175pt x 202.50656pt>
+<Figuras/graph15.png, id=364, 138.5175pt x 202.50656pt>
 File: Figuras/graph15.png Graphic file (type png)
 <use Figuras/graph15.png>
 Package luatex.def Info: Figuras/graph15.png  used on input line 896.
@@ -2526,7 +2553,7 @@ Overfull \hbox (19.30554pt too wide) in paragraph at lines 894--898
 []$[]$ 
  []
 
-<Figuras/graph16.png, id=482, 152.82094pt x 202.50656pt>
+<Figuras/graph16.png, id=365, 152.82094pt x 202.50656pt>
 File: Figuras/graph16.png Graphic file (type png)
 <use Figuras/graph16.png>
 Package luatex.def Info: Figuras/graph16.png  used on input line 903.
@@ -2536,7 +2563,7 @@ Overfull \hbox (19.30554pt too wide) in paragraph at lines 901--905
 []$[]$ 
  []
 
-<Figuras/graph17.png, id=483, 161.85469pt x 167.87718pt>
+<Figuras/graph17.png, id=366, 161.85469pt x 167.87718pt>
 File: Figuras/graph17.png Graphic file (type png)
 <use Figuras/graph17.png>
 Package luatex.def Info: Figuras/graph17.png  used on input line 910.
@@ -2551,12 +2578,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 923--924
 
  []
 
-<Figuras/graph18.png, id=484, 389.20406pt x 402.75468pt>
+LaTeX Info: Redefining \. on input line 924.
+LaTeX Info: Redefining \% on input line 924.
+[31
+Missing character: There is no “ (U+201C) in font ec-lmr12!
+Missing character: There is no ” (U+201D) in font ec-lmr12!
+Missing character: There is no “ (U+201C) in font ec-lmr12!
+Missing character: There is no ” (U+201D) in font ec-lmr12!
+<./Figuras/graph20.PNG><./Figuras/graph21.PNG><./Figuras/graph22.PNG><./Figuras/
+graph23.PNG><./Figuras/graph14.PNG><./Figuras/graph15.PNG><./Figuras/graph16.PNG
+><./Figuras/graph17.PNG>]
+<Figuras/graph18.png, id=382, 389.20406pt x 402.75468pt>
 File: Figuras/graph18.png Graphic file (type png)
 <use Figuras/graph18.png>
 Package luatex.def Info: Figuras/graph18.png  used on input line 929.
 (luatex.def)             Requested size: 96.2318pt x 99.58464pt.
-<Figuras/graph19.png, id=485, 519.44063pt x 513.41812pt>
+<Figuras/graph19.png, id=383, 519.44063pt x 513.41812pt>
 File: Figuras/graph19.png Graphic file (type png)
 <use Figuras/graph19.png>
 Package luatex.def Info: Figuras/graph19.png  used on input line 936.
@@ -2567,27 +2604,36 @@ Overfull \hbox (2.61105pt too wide) in paragraph at lines 926--940
  []
 
 
+LaTeX Warning: Reference `teorema:2.5' on page 32 undefined on input line 953.
+
+
+LaTeX Warning: Reference `lemma:2.9' on page 32 undefined on input line 953.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 953--954
 
  []
 
-LaTeX Info: Redefining \. on input line 955.
-LaTeX Info: Redefining \% on input line 955.
-[26
-Missing character: There is no “ (U+201C) in font ec-lmr12!
-Missing character: There is no ” (U+201D) in font ec-lmr12!
-<./Figuras/graph14.PNG><./Figuras/graph15.PNG><./Figuras/graph16.PNG><./Figuras/
-graph17.PNG><./Figuras/graph18.PNG><./Figuras/graph19.PNG>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 955--956
 
  []
+
+
+LaTeX Warning: Reference `teorema:2.5' on page 32 undefined on input line 963.
+
+
+LaTeX Warning: Reference `alg:algoritmoInflaciones' on page 32 undefined on inpu
+t line 963.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 963--964
 
  []
 
-
+LaTeX Info: Redefining \. on input line 964.
+LaTeX Info: Redefining \% on input line 964.
+[32<./Figuras/graph18.PNG><./Figuras/graph19.PNG>]
 Underfull \hbox (badness 10000) in paragraph at lines 965--966
 
  []
@@ -2595,7 +2641,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 965--966
 )
 LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
- [27]
+ [33]
 \openout2 = Kap3/Kap3.aux
  (./Kap3/Kap3.tex
 chapter 3.
@@ -2605,9 +2651,72 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
  []
 
 
+Package natbib Warning: Citation `hopcroft1973' on page 34 undefined on input li
+ne 3.
+
+
+Package natbib Warning: Citation `Gutwenger2000ALT' on page 34 undefined on inpu
+t line 3.
+
+
+Package natbib Warning: Citation `hopcroft1973' on page 34 undefined on input li
+ne 10.
+
+
+Package natbib Warning: Citation `1083313' on page 34 undefined on input line 10
+.
+
+
+Package natbib Warning: Citation `10893101' on page 34 undefined on input line 1
+0.
+
+
+Package natbib Warning: Citation `Hopcroft1972' on page 34 undefined on input li
+ne 10.
+
+
+Package natbib Warning: Citation `Lederberg1964DENDRAL64AS' on page 34 undefined
+ on input line 10.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
+
+
+Package natbib Warning: Citation `4569669' on page 34 undefined on input line 12
+.
+
+
+Package natbib Warning: Citation `efalgm' on page 34 undefined on input line 12.
+
+
+
+Package natbib Warning: Citation `tarjan1971efficient' on page 34 undefined on i
+nput line 12.
+
+
+Package natbib Warning: Citation `ept' on page 34 undefined on input line 12.
+
+
+Package natbib Warning: Citation `Tarjan1974FindingDI' on page 34 undefined on i
+nput line 12.
+
+
+Package natbib Warning: Citation `1083313' on page 34 undefined on input line 12
+.
+
+
+Package natbib Warning: Citation `1082941' on page 34 undefined on input line 12
+.
+
+
+Package natbib Warning: Citation `hopcroft1973' on page 34 undefined on input li
+ne 12.
+
+
+Package natbib Warning: Citation `Gutwenger2000ALT' on page 34 undefined on inpu
+t line 12.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 12--13
@@ -2619,28 +2728,40 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
  []
 
+[34
+
+
+
+]
+
+Package natbib Warning: Citation `busacker1965finite' on page 35 undefined on in
+put line 18.
+
+
+Package natbib Warning: Citation `harary1971graph' on page 35 undefined on input
+ line 18.
+
+
+Package natbib Warning: Citation `mac-lane-1937' on page 35 undefined on input l
+ine 18.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
-[28
-
-
-
-]
-LaTeX Info: Redefining \. on input line 46.
-LaTeX Info: Redefining \% on input line 46.
- [29]
+LaTeX Info: Redefining \. on input line 39.
+LaTeX Info: Redefining \% on input line 39.
+[35]
 Missing character: There is no − (U+2212) in font rm-lmr12!
-
+LaTeX Info: Redefining \. on input line 86.
+LaTeX Info: Redefining \% on input line 86.
+ [36]
 Underfull \hbox (badness 10000) in paragraph at lines 92--94
 
  []
 
-LaTeX Info: Redefining \. on input line 98.
-LaTeX Info: Redefining \% on input line 98.
-[30]
+
 Overfull \hbox (0.50195pt too wide) in paragraph at lines 103--114
 []$[]$ 
  []
@@ -2655,14 +2776,41 @@ Overfull \hbox (0.50195pt too wide) in paragraph at lines 132--153
 []$[]$ 
  []
 
-LaTeX Info: Redefining \. on input line 188.
-LaTeX Info: Redefining \% on input line 188.
-[31]
-<Figuras/plotgraph.png, id=604, 447.8331pt x 303.2931pt>
+LaTeX Info: Redefining \. on input line 165.
+LaTeX Info: Redefining \% on input line 165.
+[37]
+
+LaTeX Warning: Reference `figura:Enlaces' on page 38 undefined on input line 183
+.
+
+
+LaTeX Warning: Reference `figura:Triangulos' on page 38 undefined on input line 
+184.
+
+
+LaTeX Warning: Reference `figura:Poligonos' on page 38 undefined on input line 1
+85.
+
+
+Package natbib Warning: Citation `mac-lane-1937' on page 38 undefined on input l
+ine 195.
+
+
+Package natbib Warning: Citation `jEdmonds' on page 38 undefined on input line 1
+95.
+
+
+Package natbib Warning: Citation `tarjan-1972' on page 38 undefined on input lin
+e 195.
+
+<Figuras/plotgraph.png, id=445, 447.8331pt x 303.2931pt>
 File: Figuras/plotgraph.png Graphic file (type png)
 <use Figuras/plotgraph.png>
 Package luatex.def Info: Figuras/plotgraph.png  used on input line 201.
 (luatex.def)             Requested size: 284.52756pt x 192.70004pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Overfull \hbox (57.40746pt too wide) in paragraph at lines 208--233
 []$[]$ 
@@ -2728,77 +2876,221 @@ Overfull \hbox (2.61105pt too wide) in paragraph at lines 207--439
 [] [] 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 LaTeX Info: Redefining \. on input line 442.
 LaTeX Info: Redefining \% on input line 442.
- [32<./Figuras/plotgraph.png>]
-LaTeX Info: Redefining \. on input line 460.
-LaTeX Info: Redefining \% on input line 460.
- [33]
+[38]
+
+Package natbib Warning: Citation `hopcroft1973' on page 39 undefined on input li
+ne 444.
+
+LaTeX Info: Redefining \. on input line 445.
+LaTeX Info: Redefining \% on input line 445.
+[39<./Figuras/plotgraph.png>]
+
+Package natbib Warning: Citation `4569669' on page 40 undefined on input line 45
+5.
+
+
+LaTeX Warning: Reference `alg:busqueda en profundidad' on page 40 undefined on i
+nput line 462.
+
+
+Package natbib Warning: Citation `4569669' on page 40 undefined on input line 46
+2.
+
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 46
 7.
- (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<Figuras/G2.png, id=631, 420.57124pt x 830.10126pt>
+
+LaTeX Warning: Reference `figura:3.3' on page 40 undefined on input line 493.
+
+<Figuras/G2.png, id=466, 420.57124pt x 830.10126pt>
 File: Figuras/G2.png Graphic file (type png)
 <use Figuras/G2.png>
 Package luatex.def Info: Figuras/G2.png  used on input line 497.
 (luatex.def)             Requested size: 170.71652pt x 336.94916pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: Reference `figura:3.1' on page 40 undefined on input line 498.
+
+
+LaTeX Warning: Reference `figura:3.1' on page 40 undefined on input line 498.
+
+
+Underfull \vbox (badness 3514) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 501.
 LaTeX Info: Redefining \% on input line 501.
- [34]
-LaTeX Info: Redefining \. on input line 517.
-LaTeX Info: Redefining \% on input line 517.
+ [40]
+Overfull \vbox (32.62299pt too high) has occurred while \output is active []
 
-[35<./Figuras/G2.png>]
-LaTeX Info: Redefining \. on input line 541.
-LaTeX Info: Redefining \% on input line 541.
- [36]
-LaTeX Info: Redefining \. on input line 574.
-LaTeX Info: Redefining \% on input line 574.
- [37]
+LaTeX Info: Redefining \. on input line 501.
+LaTeX Info: Redefining \% on input line 501.
+
+[41<./Figuras/G2.png>]
+
+Package natbib Warning: Citation `auslander-1961' on page 42 undefined on input 
+line 505.
+
+
+Package natbib Warning: Citation `goldstein1963efficient' on page 42 undefined o
+n input line 505.
+
+
+Package natbib Warning: Citation `efalgm' on page 42 undefined on input line 505
+.
+
+
+Package natbib Warning: Citation `ept' on page 42 undefined on input line 505.
+
+
+Package natbib Warning: Citation `auslander-1961' on page 42 undefined on input 
+line 508.
+
+
+Package natbib Warning: Citation `efalgm' on page 42 undefined on input line 513
+.
+
+
+Package natbib Warning: Citation `ept' on page 42 undefined on input line 513.
+
+
+LaTeX Warning: Reference `lema:3.4' on page 42 undefined on input line 531.
+
+
+LaTeX Warning: Reference `lema:3.4' on page 42 undefined on input line 531.
+
+LaTeX Info: Redefining \. on input line 535.
+LaTeX Info: Redefining \% on input line 535.
+[42]
+
+LaTeX Warning: Reference `lema:3.4' on page 43 undefined on input line 537.
+
+
+Package natbib Warning: Citation `4569669' on page 43 undefined on input line 54
+0.
+
+
+Package natbib Warning: Citation `efalgm' on page 43 undefined on input line 540
+.
+
+
+LaTeX Warning: Reference `lema:3.1' on page 43 undefined on input line 540.
+
+
+Package natbib Warning: Citation `Gutwenger2000ALT' on page 43 undefined on inpu
+t line 540.
+
+
+Package natbib Warning: Citation `4569669' on page 43 undefined on input line 55
+5.
+
+LaTeX Info: Redefining \. on input line 556.
+LaTeX Info: Redefining \% on input line 556.
+[43]
+
+LaTeX Warning: Reference `lema:3.13' on page 44 undefined on input line 572.
+
+LaTeX Info: Redefining \. on input line 584.
+LaTeX Info: Redefining \% on input line 584.
+[44]
 Underfull \hbox (badness 10000) in paragraph at lines 610--611
 
  []
 
-LaTeX Info: Redefining \. on input line 631.
-LaTeX Info: Redefining \% on input line 631.
-[38]
-LaTeX Info: Redefining \. on input line 684.
-LaTeX Info: Redefining \% on input line 684.
- [39]
+LaTeX Info: Redefining \. on input line 635.
+LaTeX Info: Redefining \% on input line 635.
+[45]
+
+Package natbib Warning: Citation `ept' on page 46 undefined on input line 664.
+
+
+Package natbib Warning: Citation `tarjan-1972' on page 46 undefined on input lin
+e 664.
+
+
+Package natbib Warning: Citation `4569669' on page 46 undefined on input line 66
+4.
+
+
+LaTeX Warning: Reference `figura:3.1' on page 46 undefined on input line 687.
+
+LaTeX Info: Redefining \. on input line 692.
+LaTeX Info: Redefining \% on input line 692.
+[46]
+
+LaTeX Warning: Reference `lema:3.5' on page 47 undefined on input line 710.
+
+
+LaTeX Warning: Reference `lema:3.6' on page 47 undefined on input line 710.
+
+
+LaTeX Warning: Reference `lema:3.7' on page 47 undefined on input line 710.
+
+
+LaTeX Warning: Reference `lema:3.5' on page 47 undefined on input line 710.
+
+
+LaTeX Warning: Reference `lema:3.3' on page 47 undefined on input line 710.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 713--714
 
  []
 
-LaTeX Info: Redefining \. on input line 720.
-LaTeX Info: Redefining \% on input line 720.
-[40]
+
+Package natbib Warning: Citation `ept' on page 47 undefined on input line 716.
+
+
+Package natbib Warning: Citation `tarjan1971efficient' on page 47 undefined on i
+nput line 716.
+
+LaTeX Info: Redefining \. on input line 723.
+LaTeX Info: Redefining \% on input line 723.
+[47]
 Underfull \hbox (badness 10000) in paragraph at lines 727--735
 
  []
 
-LaTeX Info: Redefining \. on input line 757.
-LaTeX Info: Redefining \% on input line 757.
-[41]
+
+LaTeX Warning: Reference `figura:3.1' on page 48 undefined on input line 736.
+
+LaTeX Info: Redefining \. on input line 753.
+LaTeX Info: Redefining \% on input line 753.
+[48]
+
+LaTeX Warning: Reference `lema:3.9' on page 49 undefined on input line 756.
+
+
+LaTeX Warning: Reference `lema:3.8' on page 49 undefined on input line 756.
+
+
+LaTeX Warning: Reference `figura:3.1' on page 49 undefined on input line 780.
+
+
+LaTeX Warning: Reference `figura:3.1' on page 49 undefined on input line 781.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 787--788
 
  []
+
+LaTeX Info: Redefining \. on input line 788.
+LaTeX Info: Redefining \% on input line 788.
+[49]
+
+LaTeX Warning: Reference `lema:3.1' on page 50 undefined on input line 789.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 789--790
 
  []
 
-LaTeX Info: Redefining \. on input line 790.
-LaTeX Info: Redefining \% on input line 790.
-[42]
+
+LaTeX Warning: Reference `lema:3.12' on page 50 undefined on input line 791.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 791--792
 
  []
@@ -2822,16 +3114,34 @@ Overfull \hbox (16.65897pt too wide) in paragraph at lines 797--798
  []
 
 
-LaTeX Warning: Reference `lemma:3.13' on page 43 undefined on input line 801.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 802.
-LaTeX Info: Redefining \% on input line 802.
-[43]
+LaTeX Info: Redefining \. on input line 798.
+LaTeX Info: Redefining \% on input line 798.
+ [50]
+
+LaTeX Warning: Reference `lemma:3.13' on page 51 undefined on input line 801.
+
+
+LaTeX Warning: Reference `lema:3.13' on page 51 undefined on input line 801.
+
+
+LaTeX Warning: Reference `lema:3.9' on page 51 undefined on input line 801.
+
+
+LaTeX Warning: Reference `lema:3.13' on page 51 undefined on input line 801.
+
+
+LaTeX Warning: Reference `lema:3.13' on page 51 undefined on input line 806.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 806--809
 
  []
 
-
+LaTeX Info: Redefining \. on input line 810.
+LaTeX Info: Redefining \% on input line 810.
+[51]
 Underfull \hbox (badness 10000) in paragraph at lines 810--811
 
  []
@@ -2841,29 +3151,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 817--818
 
  []
 
-LaTeX Info: Redefining \. on input line 818.
-LaTeX Info: Redefining \% on input line 818.
-[44]
+
+Package natbib Warning: Citation `Gutwenger2000ALT' on page 52 undefined on inpu
+t line 823.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 822--824
 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 LaTeX Info: Redefining \. on input line 891.
 LaTeX Info: Redefining \% on input line 891.
- [45]
+[52]
 LaTeX Info: Redefining \. on input line 891.
 LaTeX Info: Redefining \% on input line 891.
-
-[46]
+ [53]
 LaTeX Info: Redefining \. on input line 960.
 LaTeX Info: Redefining \% on input line 960.
- [47]
+ [54]
+
+LaTeX Warning: Reference `lema:3.13' on page 55 undefined on input line 970.
+
 LaTeX Info: Redefining \. on input line 973.
 LaTeX Info: Redefining \% on input line 973.
- [48]
+[55]
 Overfull \hbox (57.40746pt too wide) in paragraph at lines 977--1002
 []$[]$ 
  []
@@ -2918,10 +3229,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 976--1178
 [] [] []
  []
 
+
+LaTeX Warning: Reference `figura:3.1' on page 56 undefined on input line 1202.
+
+
+LaTeX Warning: Reference `figura:3.1' on page 56 undefined on input line 1202.
+
+
+LaTeX Warning: Reference `lema:3.1' on page 56 undefined on input line 1212.
+
 )
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
- [49]
+ [56]
 \openout2 = Kap4/Kap4.aux
  (./Kap4/Kap4.tex
 chapter 4.
@@ -2954,10 +3274,16 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 3.
 
+[57
+
+
+
+]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <14.4> on input line 69.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 69.
+
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 69.
@@ -2970,11 +3296,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 69.
 
-[50
-
-
-
-]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 93.
@@ -2988,16 +3309,25 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 93.
 
 
+Package natbib Warning: Citation `TricLinTimAlg' on page 58 undefined on input l
+ine 94.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 95.
+LaTeX Info: Redefining \% on input line 95.
+ [58]
+
+Package natbib Warning: Citation `TricLinTimAlg' on page 59 undefined on input l
+ine 102.
+
+
 Overfull \hbox (2.61105pt too wide) in paragraph at lines 107--168
 [][]  [] 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 171.
-LaTeX Info: Redefining \% on input line 171.
- [51]
 Overfull \hbox (57.40746pt too wide) in paragraph at lines 175--198
 []$[]$ 
  []
@@ -3012,22 +3342,25 @@ Overfull \hbox (57.40746pt too wide) in paragraph at lines 215--226
 []$[]$ 
  []
 
-<Figuras/G3.png, id=899, 357.335pt x 348.30125pt>
+<Figuras/G3.png, id=682, 357.335pt x 348.30125pt>
 File: Figuras/G3.png Graphic file (type png)
 <use Figuras/G3.png>
 Package luatex.def Info: Figuras/G3.png  used on input line 237.
 (luatex.def)             Requested size: 170.71652pt x 166.40144pt.
-<Figuras/G4.png, id=900, 181.67876pt x 541.02126pt>
+LaTeX Info: Redefining \. on input line 240.
+LaTeX Info: Redefining \% on input line 240.
+[59]
+<Figuras/G4.png, id=691, 181.67876pt x 541.02126pt>
 File: Figuras/G4.png Graphic file (type png)
 <use Figuras/G4.png>
 Package luatex.def Info: Figuras/G4.png  used on input line 244.
 (luatex.def)             Requested size: 85.35826pt x 254.18921pt.
-LaTeX Info: Redefining \. on input line 248.
-LaTeX Info: Redefining \% on input line 248.
-[52<./Figuras/G3.png>]
-LaTeX Info: Redefining \. on input line 291.
-LaTeX Info: Redefining \% on input line 291.
- [53<./Figuras/G4.png>]
+
+Underfull \vbox (badness 2452) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 268.
+LaTeX Info: Redefining \% on input line 268.
+ [60<./Figuras/G3.png><./Figuras/G4.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 298--304
 
  []
@@ -3037,7 +3370,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 317--323
 
  []
 
-
+LaTeX Info: Redefining \. on input line 323.
+LaTeX Info: Redefining \% on input line 323.
+[61]
 Overfull \hbox (28.9547pt too wide) in paragraph at lines 328--346
 []$[]$ 
  []
@@ -3093,16 +3428,16 @@ Overfull \hbox (2.61105pt too wide) in paragraph at lines 470--584
  []
 
 
-Underfull \vbox (badness 3118) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 587.
-LaTeX Info: Redefining \% on input line 587.
- [54]
 Overfull \hbox (2.61105pt too wide) in paragraph at lines 589--641
 [][] [] 
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 644.
+LaTeX Info: Redefining \% on input line 644.
+ [62]
 Overfull \hbox (57.40746pt too wide) in paragraph at lines 689--705
 []$[]$ 
  []
@@ -3127,16 +3462,10 @@ Overfull \hbox (2.61105pt too wide) in paragraph at lines 754--803
 [][] [] 
  []
 
-
-Underfull \vbox (badness 1859) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 806.
-LaTeX Info: Redefining \% on input line 806.
- [55])
+)
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
-
-[56]
+ [63]
 \openout2 = Kap5/Kap5.aux
  (./Kap5/Kap5.tex
 chapter 5.
@@ -3169,7 +3498,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 3.
 
-) [57
+) [64
 
 
 
@@ -3177,21 +3506,13 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 \openout2 = Anexos/Anexos.aux
  (./Anexos/Anexos.tex)
 
-(./TesisMSc.bbl [58
+No file TesisMSc.bbl.
 
+Package natbib Warning: There were undefined citations.
 
-
-
-])
-LaTeX Info: Redefining \. on input line 32.
-LaTeX Info: Redefining \% on input line 32.
- [59
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 32.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 32.
- (./TesisMSc.aux (./HojaTitulo/HojaTituloMSc.aux)
+(./TesisMSc.aux (./HojaTitulo/HojaTituloMSc.aux)
 LaTeX Info: Redefining \. on input line 27.
 LaTeX Info: Redefining \% on input line 27.
 LaTeX Info: Redefining \. on input line 29.
@@ -3201,31 +3522,37 @@ LaTeX Info: Redefining \% on input line 29.
 (./Kap3/Kap3.aux) (./Kap4/Kap4.aux) (./Kap5/Kap5.aux) (./Anexos/Anexos.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 32.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 32.
-Package rerunfilecheck Info: File `TesisMSc.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
+
+Package rerunfilecheck Warning: File `TesisMSc.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `TesisMSc.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
 
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 32.
 )
 
 Here is how much of LuaTeX's memory you used:
- 38563 strings out of 481365
+ 38340 strings out of 481365
  100000,1373583 words of node,token memory allocated
- 1218 words of node memory still in use:
-   8 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 163 attribute, 98 glue_spe
-c, 83 attribute_list, 2 write, 1 special, 2 pdf_action nodes
-   avail lists: 1:6,2:12756,3:2816,4:370,5:428,6:69,7:5625,8:135,9:1166,10:33,11
-:667
- 53297 multiletter control sequences out of 65536+600000
- 108 fonts using 9005147 bytes
+ 1228 words of node memory still in use:
+   8 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 171 attribute, 94 glue_spe
+c, 87 attribute_list, 6 write, 1 special, 1 pdf_action nodes
+   avail lists: 1:6,2:12339,3:2753,4:326,5:409,6:65,7:5626,8:101,9:1157,10:33,11
+:611
+ 53194 multiletter control sequences out of 65536+600000
+ 107 fonts using 8923731 bytes
  67i,28n,83p,10165b,1533s stack positions out of 5000i,500n,10000p,200000b,100000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips
-/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/tex
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips
+/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/tex
 mf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvi
 ps/base/8r.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/te
 xmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmb
@@ -3240,15 +3567,15 @@ fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb>
 /public/lm/lmro12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr
 /share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/te
-xmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmt
-t12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam1
-0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on TesisMSc.pdf (63 pages, 1153802 bytes).
+xmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfchan/uzcmi
+8a.pfb>
+Output written on TesisMSc.pdf (68 pages, 1117832 bytes).
 
-PDF statistics: 1123 PDF objects out of 1200 (max. 8388607)
- 959 compressed objects within 10 object streams
- 431 named destinations out of 1000 (max. 131072)
+PDF statistics: 893 PDF objects out of 1000 (max. 8388607)
+ 729 compressed objects within 8 object streams
+ 409 named destinations out of 1000 (max. 131072)
  192 words of extra memory for PDF output out of 10000 (max. 100000000)
 

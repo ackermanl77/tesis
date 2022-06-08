@@ -3,25 +3,24 @@
 \contentsline {chapter}{\hbox to\@tempdima {\hfil }Lista de s\'{\i }mbolos}{4}{Doc-Start}%
 \contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}FORMAS CUADRÁTICAS}{1}{section.1.1}%
-\contentsline {section}{\numberline {1.2}FORMAS UNITARIAS}{5}{section.1.2}%
-\contentsline {chapter}{\numberline {2}Antecedentes}{13}{chapter.2}%
-\contentsline {section}{\numberline {2.1}EL MÉTODO DE LAS INFLACIONES}{13}{section.2.1}%
-\contentsline {section}{\numberline {2.2}ENSAMBLAJE POR $\ensuremath {\mathbb {A}}$-BLOQUES}{20}{section.2.2}%
-\contentsline {chapter}{\numberline {3}COMPONENTES TRICONEXAS}{28}{chapter.3}%
-\contentsline {section}{\numberline {3.1}DIVIDIR UNA GRÁFICA EN COMPONENTES TRICONEXAS}{28}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}INTRODUCCIÓN}{28}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Gráficas, conectividad y busqueda en profundidad}{28}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}La idea de el algoritmo de triconectividad}{35}{subsection.3.1.3}%
-\contentsline {section}{\numberline {3.2}El algoritmo para encontrar componentes triconexas}{37}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Encontrando pares de separación}{37}{subsection.3.2.1}%
-\contentsline {paragraph}{\nonumberline Paso 1}{37}{section*.106}%
-\contentsline {paragraph}{\nonumberline Paso 2}{37}{section*.107}%
-\contentsline {paragraph}{\nonumberline Paso 3}{37}{section*.108}%
-\contentsline {subsection}{\numberline {3.2.2}Encontrando componentes de separación}{44}{subsection.3.2.2}%
-\contentsline {chapter}{\numberline {4}Clasificación $\ensuremath {\mathbb {D}}_{n}$}{50}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Componentes triconexas en gráficas de tipo $\ensuremath {\mathbb {D}}_{n}$}{50}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Idea general de la clasificación algoritmica de $\ensuremath {\mathbb {D}}_{n}$}{51}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Clasificación algoritmica de $\ensuremath {\mathbb {D}}_{n}$}{51}{subsection.4.1.2}%
-\contentsline {chapter}{\numberline {5}Componentes triconexas en un bigrafo $\ensuremath {\mathbb {D}}_{n}$.}{57}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Algoritmo para encontrar componentes triconexas de un bigrafo de tipo $\ensuremath {\mathbb {D}}_{n}$}{57}{section.5.1}%
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliograf\'{\i }a}{58}{section*.136}%
+\contentsline {section}{\numberline {1.2}FORMAS UNITARIAS}{6}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Antecedentes}{16}{chapter.2}%
+\contentsline {section}{\numberline {2.1}EL MÉTODO DE LAS INFLACIONES}{16}{section.2.1}%
+\contentsline {section}{\numberline {2.2}ENSAMBLAJE POR $\ensuremath {\mathbb {A}}$-BLOQUES}{25}{section.2.2}%
+\contentsline {chapter}{\numberline {3}COMPONENTES TRICONEXAS}{34}{chapter.3}%
+\contentsline {section}{\numberline {3.1}DIVIDIR UNA GRÁFICA EN COMPONENTES TRICONEXAS}{34}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}INTRODUCCIÓN}{34}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Gráficas, conectividad y busqueda en profundidad}{35}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}La idea de el algoritmo de triconectividad}{42}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}El algoritmo para encontrar componentes triconexas}{43}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Encontrando pares de separación}{44}{subsection.3.2.1}%
+\contentsline {paragraph}{\nonumberline Paso 1}{44}{section*.106}%
+\contentsline {paragraph}{\nonumberline Paso 2}{44}{section*.107}%
+\contentsline {paragraph}{\nonumberline Paso 3}{44}{section*.108}%
+\contentsline {subsection}{\numberline {3.2.2}Encontrando componentes de separación}{51}{subsection.3.2.2}%
+\contentsline {chapter}{\numberline {4}Clasificación $\ensuremath {\mathbb {D}}_{n}$}{57}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Componentes triconexas en gráficas de tipo $\ensuremath {\mathbb {D}}_{n}$}{57}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Idea general de la clasificación algoritmica de $\ensuremath {\mathbb {D}}_{n}$}{58}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Clasificación algoritmica de $\ensuremath {\mathbb {D}}_{n}$}{59}{subsection.4.1.2}%
+\contentsline {chapter}{\numberline {5}Componentes triconexas en un bigrafo $\ensuremath {\mathbb {D}}_{n}$.}{64}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Algoritmo para encontrar componentes triconexas de un bigrafo de tipo $\ensuremath {\mathbb {D}}_{n}$}{64}{section.5.1}%
