@@ -210,18 +210,18 @@ Tomemos como ejemplo el siguiente grafo para mostrar todo el procedimiento.
             \begin{tikzpicture}[scale=.4]
             \GraphInit[vstyle=Normal]
             %
-            \Vertex[L=\hbox{$10$},x=2.8358cm,y=0.0cm]{v0}
-            \Vertex[L=\hbox{$11$},x=5.0cm,y=2.7306cm]{v1}
-            \Vertex[L=\hbox{$12$},x=0.0cm,y=2.2719cm]{v2}
-            \Vertex[L=\hbox{$8$},x=2.1623cm,y=5.0cm]{v3}
-            \Vertex[L=\hbox{$9$},x=2.5985cm,y=2.4402cm]{v4}
+            \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
+            \Vertex[L=\hbox{$10$},x=2.4209cm,y=5.0cm]{v0}
+            \Vertex[L=\hbox{$11$},x=5.0cm,y=2.5701cm]{v1}
+            \Vertex[L=\hbox{$12$},x=0.0cm,y=2.4362cm]{v2}
+            \Vertex[L=\hbox{$8$},x=2.574cm,y=0.0cm]{v3}
+            \Vertex[L=\hbox{$9$},x=2.4254cm,y=2.4944cm]{v4}
             %
             \Edge[](v0)(v1)
             \Edge[](v0)(v2)
             \Edge[](v4)(v0)
             \Edge[](v3)(v1)
             \Edge[](v4)(v1)
-            
             \Edge[](v4)(v2)
             \Edge[](v3)(v4)
             \tikzstyle{EdgeStyle}=[color=red]
@@ -237,12 +237,15 @@ Tomemos como ejemplo el siguiente grafo para mostrar todo el procedimiento.
             \begin{tikzpicture}[scale=.4]
             \GraphInit[vstyle=Normal]
             %
-            \Vertex[L=\hbox{$12$},x=0.0cm,y=5.0cm]{v0}
-            \Vertex[L=\hbox{$8$},x=5.0cm,y=0.0cm]{v1}
+            \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
+            \Vertex[L=\hbox{$12$},x=5.0cm,y=5.0cm]{v0}
+            \Vertex[L=\hbox{$8$},x=0.0cm,y=0.0cm]{v1}
             %
+            \Edge[](v1)(v0)
             \tikzstyle{EdgeStyle}=[color=red]
             \tikzset{LabelStyle/.style = {fill=white, scale=.6}}
-            \Edge[label=$B$](v1)(v0)
+            \Edge[label=$A$, style={bend left}](v1)(v0)
+            \Edge[label=$B$, style={bend right}](v1)(v0)
             %
             \end{tikzpicture}
        \end{minipage}
@@ -253,9 +256,10 @@ Tomemos como ejemplo el siguiente grafo para mostrar todo el procedimiento.
             \begin{tikzpicture}[scale=.4]
             \GraphInit[vstyle=Normal]
             %
-            \Vertex[L=\hbox{$12$},x=0.0cm,y=3.1826cm]{v0}
-            \Vertex[L=\hbox{$1$},x=4.0946cm,y=0.0cm]{v1}
-            \Vertex[L=\hbox{$8$},x=5.0cm,y=5.0cm]{v2}
+            \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
+            \Vertex[L=\hbox{$12$},x=5.0cm,y=2.1281cm]{v0}
+            \Vertex[L=\hbox{$1$},x=0.0cm,y=0.0cm]{v1}
+            \Vertex[L=\hbox{$8$},x=0.51cm,y=5.0cm]{v2}
             %
             \Edge[](v1)(v0)
             \tikzstyle{EdgeStyle}=[color=red]
@@ -272,12 +276,15 @@ Tomemos como ejemplo el siguiente grafo para mostrar todo el procedimiento.
             \begin{tikzpicture}[scale=.4]
             \GraphInit[vstyle=Normal]
             %
+            \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
             \Vertex[L=\hbox{$1$},x=0.0cm,y=5.0cm]{v0}
             \Vertex[L=\hbox{$8$},x=5.0cm,y=0.0cm]{v1}
             %
+            \Edge[](v0)(v1)
             \tikzstyle{EdgeStyle}=[color=red]
             \tikzset{LabelStyle/.style = {fill=white, scale=.6}}
-            \Edge[label=$D$](v0)(v1)
+            \Edge[label=$C$, style={bend left}](v1)(v0)
+            \Edge[label=$D$, style={bend right}](v1)(v0)
             %
             \end{tikzpicture}
        \end{minipage}
@@ -288,9 +295,10 @@ Tomemos como ejemplo el siguiente grafo para mostrar todo el procedimiento.
             \begin{tikzpicture}[scale=.4]
             \GraphInit[vstyle=Normal]
             %
+            \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
             \Vertex[L=\hbox{$1$},x=0.0cm,y=5.0cm]{v0}
-            \Vertex[L=\hbox{$5$},x=0.176cm,y=0.0cm]{v1}
-            \Vertex[L=\hbox{$8$},x=5.0cm,y=2.6234cm]{v2}
+            \Vertex[L=\hbox{$5$},x=1.4425cm,y=0.0cm]{v1}
+            \Vertex[L=\hbox{$8$},x=5.0cm,y=3.8666cm]{v2}
             %
             \Edge[](v1)(v2)
             \tikzstyle{EdgeStyle}=[color=red]
@@ -307,10 +315,11 @@ Tomemos como ejemplo el siguiente grafo para mostrar todo el procedimiento.
             \begin{tikzpicture}[scale=.4]
             \GraphInit[vstyle=Normal]
             %
-            \Vertex[L=\hbox{$4$},x=0.0cm,y=1.5298cm]{v0}
-            \Vertex[L=\hbox{$5$},x=5.0cm,y=3.4699cm]{v1}
-            \Vertex[L=\hbox{$6$},x=1.3808cm,y=5.0cm]{v2}
-            \Vertex[L=\hbox{$7$},x=3.6201cm,y=0.0cm]{v3}
+            \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
+            \Vertex[L=\hbox{$4$},x=2.2676cm,y=0.0cm]{v0}
+            \Vertex[L=\hbox{$5$},x=0.0cm,y=2.8922cm]{v1}
+            \Vertex[L=\hbox{$6$},x=2.7386cm,y=5.0cm]{v2}
+            \Vertex[L=\hbox{$7$},x=5.0cm,y=2.1171cm]{v3}
             %
             \Edge[](v0)(v2)
             \Edge[](v0)(v3)
@@ -330,10 +339,15 @@ Tomemos como ejemplo el siguiente grafo para mostrar todo el procedimiento.
             \begin{tikzpicture}[scale=.4]
             \GraphInit[vstyle=Normal]
             %
-            \Vertex[L=\hbox{$4$},x=0.0cm,y=5.0cm]{v0}
-            \Vertex[L=\hbox{$5$},x=5.0cm,y=0.0cm]{v1}
+            \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
+            \Vertex[L=\hbox{$4$},x=0.0cm,y=0.0cm]{v0}
+            \Vertex[L=\hbox{$5$},x=5.0cm,y=5.0cm]{v1}
             %
             \Edge[](v0)(v1)
+            \tikzstyle{EdgeStyle}=[color=red]
+            \tikzset{LabelStyle/.style = {fill=white, scale=.6}}
+            \Edge[label=$F$, style={bend left}](v0)(v1)
+            \Edge[label=$G$, style={bend right}](v0)(v1)
             %
             \end{tikzpicture}
        \end{minipage}
@@ -344,9 +358,10 @@ Tomemos como ejemplo el siguiente grafo para mostrar todo el procedimiento.
             \begin{tikzpicture}[scale=.4]
             \GraphInit[vstyle=Normal]
             %
-            \Vertex[L=\hbox{$1$},x=0.0cm,y=2.242cm]{v0}
-            \Vertex[L=\hbox{$4$},x=5.0cm,y=0.0cm]{v1}
-            \Vertex[L=\hbox{$5$},x=4.6745cm,y=5.0cm]{v2}
+            \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
+            \Vertex[L=\hbox{$1$},x=0.0cm,y=5.0cm]{v0}
+            \Vertex[L=\hbox{$4$},x=2.0511cm,y=0.0cm]{v1}
+            \Vertex[L=\hbox{$5$},x=5.0cm,y=4.3924cm]{v2}
             %
             \tikzstyle{EdgeStyle}=[color=red]
             \tikzset{LabelStyle/.style = {fill=white, scale=.6}}
@@ -363,12 +378,15 @@ Tomemos como ejemplo el siguiente grafo para mostrar todo el procedimiento.
             \begin{tikzpicture}[scale=.4]
             \GraphInit[vstyle=Normal]
             %
+            \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
             \Vertex[L=\hbox{$1$},x=5.0cm,y=5.0cm]{v0}
             \Vertex[L=\hbox{$4$},x=0.0cm,y=0.0cm]{v1}
             %
+            \Edge[](v0)(v1)
             \tikzstyle{EdgeStyle}=[color=red]
             \tikzset{LabelStyle/.style = {fill=white, scale=.6}}
-            \Edge[label=$I$](v0)(v1)
+            \Edge[label=$I$, style={bend left}](v0)(v1)
+            \Edge[label=$H$, style={bend right}](v0)(v1)
             %
             \end{tikzpicture}
        \end{minipage}
@@ -379,9 +397,10 @@ Tomemos como ejemplo el siguiente grafo para mostrar todo el procedimiento.
             \begin{tikzpicture}[scale=.4]
             \GraphInit[vstyle=Normal]
             %
-            \Vertex[L=\hbox{$1$},x=2.5331cm,y=5.0cm]{v0}
-            \Vertex[L=\hbox{$3$},x=5.0cm,y=0.0cm]{v1}
-            \Vertex[L=\hbox{$4$},x=0.0cm,y=0.0448cm]{v2}
+            \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
+            \Vertex[L=\hbox{$1$},x=5.0cm,y=0.202cm]{v0}
+            \Vertex[L=\hbox{$3$},x=0.0cm,y=0.0cm]{v1}
+            \Vertex[L=\hbox{$4$},x=2.3629cm,y=5.0cm]{v2}
             %
             \Edge[](v1)(v2)
             \tikzstyle{EdgeStyle}=[color=red]
@@ -399,10 +418,11 @@ Tomemos como ejemplo el siguiente grafo para mostrar todo el procedimiento.
             \begin{tikzpicture}[scale=.4]
             \GraphInit[vstyle=Normal]
             %
-            \Vertex[L=\hbox{$13$},x=0.0cm,y=0.7915cm]{v0}
-            \Vertex[L=\hbox{$1$},x=0.6765cm,y=5.0cm]{v1}
-            \Vertex[L=\hbox{$2$},x=4.0342cm,y=0.0cm]{v2}
-            \Vertex[L=\hbox{$3$},x=5.0cm,y=4.4335cm]{v3}
+            \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
+            \Vertex[L=\hbox{$13$},x=0.0cm,y=1.6413cm]{v0}
+            \Vertex[L=\hbox{$1$},x=5.0cm,y=3.3643cm]{v1}
+            \Vertex[L=\hbox{$2$},x=3.4414cm,y=0.0cm]{v2}
+            \Vertex[L=\hbox{$3$},x=1.556cm,y=5.0cm]{v3}
             %
             \Edge[](v1)(v0)
             \Edge[](v2)(v0)
@@ -960,16 +980,19 @@ El lema se sigue por inducción sobre el número de aristas en $G$. Supongamos q
         \GraphInit[vstyle=Normal]
         %
         \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
-        \Vertex[L=\hbox{$4$},x=0.0cm,y=0.9409cm]{v0}
-        \Vertex[L=\hbox{$5$},x=0.8497cm,y=5.0cm]{v1}
-        \Vertex[L=\hbox{$6$},x=4.15cm,y=0.0cm]{v2}
-        \Vertex[L=\hbox{$7$},x=5.0cm,y=4.0601cm]{v3}
+        \Vertex[L=\hbox{$10$},x=5.0cm,y=2.2221cm]{v0}
+        \Vertex[L=\hbox{$11$},x=1.757cm,y=0.0cm]{v1}
+        \Vertex[L=\hbox{$12$},x=2.869cm,y=5.0cm]{v2}
+        \Vertex[L=\hbox{$8$},x=0.0cm,y=3.0519cm]{v3}
+        \Vertex[L=\hbox{$9$},x=2.5067cm,y=2.5599cm]{v4}
         %
         \Edge[](v0)(v2)
-        \Edge[](v0)(v3)
-        \Edge[](v1)(v2)
-        \Edge[](v1)(v3)
-        \Edge[](v2)(v3)
+        \Edge[](v4)(v0)
+        \Edge[](v3)(v1)
+        \Edge[](v4)(v1)
+        \Edge[](v3)(v2)
+        \Edge[](v4)(v2)
+        \Edge[](v3)(v4)
         \tikzstyle{EdgeStyle}=[color=red]
         \tikzset{LabelStyle/.style = {fill=white, scale=.6}}
         \Edge[label=$A$](v0)(v1)
@@ -984,10 +1007,14 @@ El lema se sigue por inducción sobre el número de aristas en $G$. Supongamos q
         \GraphInit[vstyle=Normal]
         %
         \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
-        \Vertex[L=\hbox{$4$},x=0.0cm,y=5.0cm]{v0}
-        \Vertex[L=\hbox{$5$},x=5.0cm,y=0.0cm]{v1}
+        \Vertex[L=\hbox{$12$},x=5.0cm,y=5.0cm]{v0}
+        \Vertex[L=\hbox{$8$},x=0.0cm,y=0.0cm]{v1}
         %
-        \Edge[](v0)(v1)
+        \Edge[](v1)(v0)
+        \tikzstyle{EdgeStyle}=[color=red]
+        \tikzset{LabelStyle/.style = {fill=white, scale=.6}}
+        \Edge[label=$A$,style={bend left}](v1)(v0)
+        \Edge[label=$B$,style={bend right}](v1)(v0)
         %
         \end{tikzpicture}
         \end{minipage}
@@ -999,19 +1026,17 @@ El lema se sigue por inducción sobre el número de aristas en $G$. Supongamos q
         \GraphInit[vstyle=Normal]
         %
         \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
-        \Vertex[L=\hbox{$1$},x=4.3602cm,y=0.0cm]{v0}
-        \Vertex[L=\hbox{$4$},x=0.0cm,y=0.5614cm]{v1}
-        \Vertex[L=\hbox{$5$},x=0.6398cm,y=5.0cm]{v2}
-        \Vertex[L=\hbox{$8$},x=5.0cm,y=4.4386cm]{v3}
+        \Vertex[L=\hbox{$12$},x=1.3848cm,y=0.0cm]{v0}
+        \Vertex[L=\hbox{$1$},x=5.0cm,y=3.6303cm]{v1}
+        \Vertex[L=\hbox{$8$},x=0.0cm,y=5.0cm]{v2}
         %
-        \Edge[](v2)(v3)
+        \Edge[](v1)(v0)
         \tikzstyle{EdgeStyle}=[color=red]
         \tikzset{LabelStyle/.style = {fill=white, scale=.6}}
-        \Edge[label=$F$](v0)(v1)
-        \Edge[label=$G$](v0)(v3)
-        \Edge[label=$B$](v1)(v2)
+        \Edge[label=$B$](v2)(v0)
+        \Edge[label=$C$](v1)(v2)
         %
-      \end{tikzpicture}
+        \end{tikzpicture}
       \end{minipage}
       \end{subfigure}
      \begin{subfigure}[b]{0.3\textwidth}
@@ -1021,19 +1046,14 @@ El lema se sigue por inducción sobre el número de aristas en $G$. Supongamos q
         \GraphInit[vstyle=Normal]
         %
         \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
-        \Vertex[L=\hbox{$13$},x=4.4812cm,y=5.0cm]{v0}
-        \Vertex[L=\hbox{$1$},x=3.2501cm,y=2.2335cm]{v1}
-        \Vertex[L=\hbox{$2$},x=0.0cm,y=2.2462cm]{v2}
-        \Vertex[L=\hbox{$3$},x=5.0cm,y=0.0cm]{v3}
+        \Vertex[L=\hbox{$1$},x=5.0cm,y=0.0cm]{v0}
+        \Vertex[L=\hbox{$8$},x=0.0cm,y=5.0cm]{v1}
         %
         \Edge[](v1)(v0)
-        \Edge[](v2)(v0)
-        \Edge[](v3)(v0)
-        \Edge[](v1)(v2)
-        \Edge[](v2)(v3)
         \tikzstyle{EdgeStyle}=[color=red]
         \tikzset{LabelStyle/.style = {fill=white, scale=.6}}
-        \Edge[label=$D$](v1)(v3)
+        \Edge[label=$D$,style={bend left}](v1)(v0)
+        \Edge[label=$C$,style={bend right}](v1)(v0)
         %
         \end{tikzpicture}
         \end{minipage}
@@ -1047,92 +1067,108 @@ El lema se sigue por inducción sobre el número de aristas en $G$. Supongamos q
         \GraphInit[vstyle=Normal]
         %
         \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
-        \Vertex[L=\hbox{$1$},x=2.7344cm,y=5.0cm]{v0}
-        \Vertex[L=\hbox{$3$},x=0.0cm,y=0.7381cm]{v1}
+        \Vertex[L=\hbox{$1$},x=0.2007cm,y=5.0cm]{v0}
+        \Vertex[L=\hbox{$4$},x=0.0cm,y=0.8289cm]{v1}
+        \Vertex[L=\hbox{$5$},x=4.8222cm,y=0.0cm]{v2}
+        \Vertex[L=\hbox{$8$},x=5.0cm,y=4.2545cm]{v3}
+        %
+        \Edge[](v2)(v3)
+        \tikzstyle{EdgeStyle}=[color=red]
+        \tikzset{LabelStyle/.style = {fill=white, scale=.6}}
+        \Edge[label=$H$](v0)(v1)
+        \Edge[label=$D$](v0)(v3)
+        \Edge[label=$G$](v1)(v2)
+        %
+        \end{tikzpicture}
+        \end{minipage}
+        \caption{}
+        \label{fig:f1}
+      \end{subfigure}
+      \begin{subfigure}[b]{0.3\textwidth}
+        \begin{minipage}{7cm}
+        \centering% El subgrafo está centrado
+        \begin{tikzpicture}[scale=.4]
+        \GraphInit[vstyle=Normal]
+        %
+        \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
+        \Vertex[L=\hbox{$4$},x=1.7504cm,y=0.0cm]{v0}
+        \Vertex[L=\hbox{$5$},x=0.0cm,y=3.1911cm]{v1}
+        \Vertex[L=\hbox{$6$},x=5.0cm,y=1.862cm]{v2}
+        \Vertex[L=\hbox{$7$},x=3.1144cm,y=5.0cm]{v3}
+        %
+        \Edge[](v0)(v1)
+        \Edge[](v0)(v2)
+        \Edge[](v0)(v3)
+        \Edge[](v1)(v2)
+        \Edge[](v1)(v3)
+        \tikzstyle{EdgeStyle}=[color=red]
+        \tikzset{LabelStyle/.style = {fill=white, scale=.6}}
+        \Edge[label=$F$](v2)(v3)
+        %
+        \end{tikzpicture}
+        \end{minipage}
+        \caption{}
+        \label{fig:f1}
+      \end{subfigure}
+      \begin{subfigure}[b]{0.3\textwidth}
+        \begin{minipage}{7cm}
+        \centering% El subgrafo está centrado
+        \begin{tikzpicture}[scale=.4]
+        \GraphInit[vstyle=Normal]
+        %
+        \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
+        \Vertex[L=\hbox{$4$},x=5.0cm,y=0.0cm]{v0}
+        \Vertex[L=\hbox{$5$},x=0.0cm,y=5.0cm]{v1}
+        %
+        \Edge[](v1)(v0)
+        \tikzstyle{EdgeStyle}=[color=red]
+        \tikzset{LabelStyle/.style = {fill=white, scale=.6}}
+        \Edge[label=$F$,style={bend left}](v1)(v0)
+        \Edge[label=$G$,style={bend right}](v1)(v0)
+        %
+        %
+        \end{tikzpicture}
+        \end{minipage}
+        \caption{}
+        \label{fig:f1}
+     \end{subfigure}
+     \begin{subfigure}[b]{0.3\textwidth}
+        \begin{minipage}{7cm}
+        \centering% El subgrafo está centrado
+        \begin{tikzpicture}[scale=.4]
+        \GraphInit[vstyle=Normal]
+        %
+        \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
+        \Vertex[L=\hbox{$1$},x=5.0cm,y=5.0cm]{v0}
+        \Vertex[L=\hbox{$4$},x=0.0cm,y=0.0cm]{v1}
+        %
+        \Edge[](v1)(v0)
+        \tikzstyle{EdgeStyle}=[color=red]
+        \tikzset{LabelStyle/.style = {fill=white, scale=.6}}
+        \Edge[label=$H$,style={bend left}](v1)(v0)
+        \Edge[label=$I$,style={bend right}](v1)(v0)
+        %
+        \end{tikzpicture}
+        \end{minipage}
+        \caption{}
+        \label{fig:f1}
+     \end{subfigure}
+     \begin{subfigure}[b]{0.3\textwidth}
+        \begin{minipage}{7cm}
+        \centering% El subgrafo está centrado
+        \begin{tikzpicture}[scale=.4]
+        \GraphInit[vstyle=Normal]
+        %
+        \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
+        \Vertex[L=\hbox{$1$},x=0.0cm,y=1.2008cm]{v0}
+        \Vertex[L=\hbox{$3$},x=3.4427cm,y=5.0cm]{v1}
         \Vertex[L=\hbox{$4$},x=5.0cm,y=0.0cm]{v2}
         %
         \Edge[](v1)(v2)
         \tikzstyle{EdgeStyle}=[color=red]
         \tikzset{LabelStyle/.style = {fill=white, scale=.6}}
-        \Edge[label=$D$](v0)(v1)
-        \Edge[label=$E$](v0)(v2)
-        %
-        \end{tikzpicture}
-        \end{minipage}
-        \caption{}
-        \label{fig:f1}
-      \end{subfigure}
-      \begin{subfigure}[b]{0.3\textwidth}
-        \begin{minipage}{7cm}
-        \centering% El subgrafo está centrado
-        \begin{tikzpicture}[scale=.4]
-        \GraphInit[vstyle=Normal]
-        %
-        \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
-        \Vertex[L=\hbox{$1$},x=0.0cm,y=0.0cm]{v0}
-        \Vertex[L=\hbox{$4$},x=5.0cm,y=5.0cm]{v1}
-        %
-        \tikzstyle{EdgeStyle}=[color=red]
-        \tikzset{LabelStyle/.style = {fill=white, scale=.6}}
-        \Edge[label=$F$](v0)(v1)
-        %
-        \end{tikzpicture}
-        \end{minipage}
-        \caption{}
-        \label{fig:f1}
-      \end{subfigure}
-      \begin{subfigure}[b]{0.3\textwidth}
-        \begin{minipage}{7cm}
-        \centering% El subgrafo está centrado
-        \begin{tikzpicture}[scale=.4]
-        \GraphInit[vstyle=Normal]
-        %
-        \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
-        \Vertex[L=\hbox{$1$},x=0.0cm,y=5.0cm]{v0}
-        \Vertex[L=\hbox{$8$},x=5.0cm,y=0.0cm]{v1}
-        %
-        \Edge[](v0)(v1)
-        %
-        \end{tikzpicture}
-        \end{minipage}
-        \caption{}
-        \label{fig:f1}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.3\textwidth}
-        \begin{minipage}{7cm}
-        \centering% El subgrafo está centrado
-        \begin{tikzpicture}[scale=.4]
-        \GraphInit[vstyle=Normal]
-        %
-        \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
-        \Vertex[L=\hbox{$12$},x=5.0cm,y=5.0cm]{v0}
-        \Vertex[L=\hbox{$1$},x=0.0cm,y=3.3926cm]{v1}
-        \Vertex[L=\hbox{$8$},x=3.8436cm,y=0.0cm]{v2}
-        %
-        \Edge[](v1)(v2)
-        \tikzstyle{EdgeStyle}=[color=red]
-        \tikzset{LabelStyle/.style = {fill=white, scale=.6}}
-        \Edge[label=$H$](v1)(v0)
-        \Edge[label=$I$](v2)(v0)
-        %
-        \end{tikzpicture}
-        \end{minipage}
-        \caption{}
-        \label{fig:f1}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.3\textwidth}
-        \begin{minipage}{7cm}
-        \centering% El subgrafo está centrado
-        \begin{tikzpicture}[scale=.4]
-        \GraphInit[vstyle=Normal]
-        %
-        \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
-        \Vertex[L=\hbox{$12$},x=5.0cm,y=0.0cm]{v0}
-        \Vertex[L=\hbox{$8$},x=0.0cm,y=5.0cm]{v1}
-        %
-        \tikzstyle{EdgeStyle}=[color=red]
-        \tikzset{LabelStyle/.style = {fill=white, scale=.6}}
         \Edge[label=$J$](v1)(v0)
+        \Edge[label=$I$](v2)(v0)
         %
         \end{tikzpicture}
         \end{minipage}
@@ -1146,19 +1182,16 @@ El lema se sigue por inducción sobre el número de aristas en $G$. Supongamos q
         \GraphInit[vstyle=Normal]
         %
         \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
-        \Vertex[L=\hbox{$10$},x=3.9336cm,y=0.0cm]{v0}
-        \Vertex[L=\hbox{$12$},x=5.0cm,y=3.7488cm]{v1}
-        \Vertex[L=\hbox{$11$},x=0.0cm,y=1.2768cm]{v2}
-        \Vertex[L=\hbox{$8$},x=1.0836cm,y=5.0cm]{v3}
-        \Vertex[L=\hbox{$9$},x=2.5778cm,y=2.4518cm]{v4}
+        \Vertex[L=\hbox{$13$},x=0.8149cm,y=5.0cm]{v0}
+        \Vertex[L=\hbox{$1$},x=4.2027cm,y=0.0cm]{v1}
+        \Vertex[L=\hbox{$2$},x=5.0cm,y=4.2847cm]{v2}
+        \Vertex[L=\hbox{$3$},x=0.0cm,y=0.7423cm]{v3}
         %
-        \Edge[](v0)(v1)
-        \Edge[](v0)(v2)
-        \Edge[](v4)(v0)
-        \Edge[](v3)(v4)
-        \Edge[](v4)(v1)
-        \Edge[](v3)(v2)
-        \Edge[](v4)(v2)
+        \Edge[](v1)(v0)
+        \Edge[](v2)(v0)
+        \Edge[](v3)(v0)
+        \Edge[](v1)(v2)
+        \Edge[](v2)(v3)
         \tikzstyle{EdgeStyle}=[color=red]
         \tikzset{LabelStyle/.style = {fill=white, scale=.6}}
         \Edge[label=$J$](v3)(v1)
@@ -1169,7 +1202,6 @@ El lema se sigue por inducción sobre el número de aristas en $G$. Supongamos q
      \caption{Componentes triconexas finales de la gráfica \ref{figura:3.1}}
     \label{figura:3.6}
 \end{figure}
-
 
 \begin{lemma}
 El algoritmo de componentes triconexas procesa una gráfica $G$ con $V$ vértices y $E$ aristas en tiempo $\Theta \left(V + E\right)$.
