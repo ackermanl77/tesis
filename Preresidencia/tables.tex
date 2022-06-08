@@ -1,0 +1,396 @@
+\newsavebox{\Ta}
+\newsavebox{\Tb}
+\newsavebox{\Tc}
+\newsavebox{\Lagrangian}
+\newsavebox{\schLagrangian}
+\newsavebox{\Aform}
+\newsavebox{\Lagrangianone}
+\newsavebox{\Lagrangiantwothree}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%T1, T2, T3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+%\begin{table}[h]
+\begin{lrbox}{\Ta}
+\centering
+\begin{tabular}{|c|c|c|}\hline
+{\bf Topology} & {\bf Diagrams}% & {\bf Required fields }
+ & {\bf Interactions}\\\hline\hline
+\multirow{2}{*}{\raisebox{-\height}{\includegraphics[height=2cm]{t1}}}
+&
+\raisebox{-.5\height}{\includegraphics[height=2.3cm]{figures/t1r1}\includegraphics[height=2.3cm]{figures/t1r2}}
+%&$\DM, \DM^\pm, \phi^\pm$
+&
+\dguno
+
+\\\cline{2-3}
+T1
+&
+\raisebox{-.5\height}{\includegraphics[height=2.3cm]{figures/t1r3}}
+%&$\DM, \DM^\pm, \phi^\pm$
+&
+\dguno
+
+\\\hline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\multirow{2}{*}{\raisebox{-\height}{\includegraphics[height=2cm]{t2}}}
+&
+\raisebox{-.5\height}{\includegraphics[height=2.3cm]{figures/t2r1}\includegraphics[height=2.3cm]{figures/t2r2}}
+%&$\DM, \DM^\pm, \phi^\pm$
+&
+\dgtres 
+\dgdos
+
+\\\cline{2-3}
+T2
+&
+\raisebox{-.5\height}{\includegraphics[height=2.3cm]{figures/t2r3}}
+%&$\DM, \DM^\pm, \phi^\pm$
+&
+%\raisebox{-.5\height}{\includegraphics[height=1.5cm]{dg3}}
+\dgcuatro
+
+\\\hline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\multirow{3}{*}{\raisebox{-1.5\height}{\includegraphics[height=2cm]{t3}}}
+&
+\raisebox{-.5\height}{\includegraphics[height=2.3cm]{figures/t3r1}\includegraphics[height=2.3cm]{figures/t3r2}}
+%&$\DM, \DM^\pm, \phi^\pm$
+&
+\dguno
+
+\\\cline{2-3}
+&
+\raisebox{-.5\height}{\includegraphics[height=2.3cm]{figures/t3r3}\includegraphics[height=2.3cm]{figures/t3r4}}
+%&$\DM, \DM^\pm, \phi^\pm$
+&
+\dgtres
+\dgdos
+
+\\\cline{2-3}
+\raisebox{5\height}{T3}
+&
+\raisebox{-.5\height}{\includegraphics[height=2.3cm]{figures/t3r5}\includegraphics[height=2.3cm]{figures/t3r6}}
+%&$\DM, \DM^\pm, \phi^\pm$
+&
+\dguno
+\dgcuatro
+
+\\\hline
+\end{tabular}
+%\end{table}
+%
+%
+\end{lrbox}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%s-channel: T4 and T5
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{lrbox}{\Tb}
+%\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|}\hline
+{\bf Topology} & {\bf Diagrams} %& {\bf Required fields } 
+& {\bf Interactions}\\\hline\hline
+\multirow{3}{*}{\raisebox{-1.5\height}{\includegraphics[height=2cm]{t4}}}
+&
+\raisebox{-.5\height}{\includegraphics[height=2.3cm]{figures/t4r1}\includegraphics[height=2.3cm]{figures/t4r2}}
+%&$\DM, \DM^\pm, \phi^\pm$
+&
+\Ltwelve
+
+\\\cline{2-3}
+&
+\raisebox{-.5\height}{\includegraphics[height=2.3cm]{figures/t4r3}}%\includegraphics[height=2cm]{figures/t4r4}}
+%&$\DM, \DM^\pm, \phi^\pm$
+&
+\dgcinco \dgseis 
+%
+\\\cline{2-3}
+\raisebox{1.5\height}{T4}
+&
+\raisebox{-.5\height}{\includegraphics[height=2.3cm]{figures/t4r5}\includegraphics[height=2.3cm]{figures/t4r6}}
+%&$\DM, \DM^\pm, \phi^\pm$
+&
+\Leleven
+%
+\\\hline
+\multirow{3}{*}{\raisebox{-1.5\height}{\includegraphics[height=2cm]{t5}}}
+&
+\raisebox{-.5\height}{\includegraphics[height=1.7cm]{figures/t5r1}}%\includegraphics[height=2.3cm]{figures/t5r2}}
+%&$\DM, \DM^\pm, \phi^\pm$
+&
+\dgcinco  \dgseis 
+
+\\\cline{2-3}
+&
+\raisebox{-.5\height}{\includegraphics[height=1.7cm]{figures/t5r3}\includegraphics[height=1.7cm]{figures/t5r4}}
+%&$\DM, \DM^\pm, \phi^\pm$
+&
+\Ltwelve
+
+\\\cline{2-3}
+\raisebox{5\height}{T5}
+&
+\raisebox{-.5\height}{\includegraphics[height=2.9cm]{figures/t5r5}}
+%&$\DM, \DM^\pm, \phi^\pm$
+&
+\Leleven
+
+\\\hline
+\end{tabular}
+%\end{table}
+\end{lrbox}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Topology T6
+
+%%%%%%%%%%%%%%%%%%%
+
+\begin{lrbox}{\Tc}
+%\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|}\hline
+{\bf Topology} & {\bf Diagrams} &% {\bf Required fields } &
+ {\bf Interactions}\\\hline\hline
+\multirow{4}{*}{\raisebox{-1.7\height}{\includegraphics[height=2cm]{t6}}}
+&
+\raisebox{-.5\height}{\includegraphics[height=2.3cm]{figures/t6r1}}
+&
+%$\DM, \DM^\pm, \phi^\pm$&
+\Leleven
+
+\\\cline{2-3}
+&
+\raisebox{-.5\height}{\includegraphics[height=2.3cm]{figures/t6r2}}%\includegraphics[height=2.3cm]{figures/t6r3}}
+&
+\dgcinco \dgocho
+%$...$
+\\\cline{2-3}
+T6
+&
+\raisebox{-.5\height}{\includegraphics[height=2.3cm]{figures/t6r4}}
+&
+%$\DM, \DM^\pm, \phi^\pm$&
+\Ltwelve 
+
+\\\cline{2-3}
+&
+\raisebox{-.5\height}{\includegraphics[height=2.3cm]{figures/t6r5}\includegraphics[height=2.3cm]{figures/t6r6}}
+&
+%$\DM, \DM^\pm, \phi^\pm$&
+\Leleven
+
+\\\hline
+\end{tabular}
+%\end{table}
+\end{lrbox}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Lagrangian 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{lrbox}{\Lagrangian}
+	\centering
+		\begin{tabular}{|c|c|c|c|c|} \hline
+%
+\multirow{2}{*}{DM field} & \multicolumn{2}{c|}{\multirow{2}{*}{Mediators}}&  \multirow{3}{*}{\dguno}& \multirow{3}{*}{\dgdos\dgtres}\\
+\multirow{2}{*}{ $\DM$}&\multicolumn{2}{c|}{}& &
+\\\cline{2-3}
+ &\,\,$\medp$\,\,\,&$\DMp$&    & \\\hline\hline
+\multirow{3}{*}{Real scalar} & S 
+ & S
+&$g_1\, \DM \, \DMm  \medp  $
+&
+$\DM^2 \left(g_2\,  \DMp \DMm + g_3\, \medp \medm\right) $
+\\\cline{2-5}
+&
+F & F
+&
+$
+\, \DM\, \overline{\DMp} \left(g_{1L} P_L 
++g_{1R} P_R\right) \medp
+$
+&
+$0$
+\\\cline{2-5}
+&
+V
+& S
+&$
+i  \, {\medp}^\mu\left(g_{11} \DM {\cal D}_\mu  \DMm +g_{12}{\cal D}_\mu \DM\DMm \right)
+$
+&
+$
+ \DM^2 (g_2\, \DMp \DMm +g_3\, \medp_\mu {\medm}^\mu )
+$
+\\\hline
+%
+\multirow{3}{*}{Majorana}
+& S 
+& F
+& 
+$
+\medp \overline{\DM} \left(g_{1L} P_L
++g_{1R} \,P_R \right)\DMm 
+$
+&
+\multirow{3}{*}{0}
+\\\cline{2-4}
+& F
+& S
+&
+$
+\DMm\overline{\DM}\left(g_{1L} P_L +g_{1R} P_R \right) \medp 
+$
+&
+\\\cline{2-4}
+& V 
+& F
+&
+$
+ \overline{\DM}\medp^\mu \gamma_\mu \left( g_{1L} P_L + g_{1R}  P_R \right)\DMm 
+$
+&
+\\\hline
+\multirow{2}{*}{Real vector} &
+S
+ & S
+&
+$ i g_1  \,\DM^{\mu}  ( {\cal D}_\mu \DMm \medp - \DMm {\cal D}_\mu \medp) $ 
+&
+
+$ \DM_\mu \DM^\mu \left(g_2\,  \DMp \DMm+ g_3\, \medm  \medp\right)$
+\\\cline{2-5}
+&
+F & F
+&
+$
+ \overline{\DMp} \DM^{\mu }\gamma_{\mu }  \left( g_{1L} P_L  
++g_{1R}  P_R \right)\medp
+$
+&
+0
+\\\hline
+\end{tabular}
+\end{lrbox}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Lagrangian s-channel 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{lrbox}{\Aform}
+	\centering
+		\begin{tabular}{|c|c|c|} \hline
+%
+\multicolumn{2}{|c|}{\multirow{2}{*}{Mediators}}&  \multirow{3}{*}{\dgseis}\\
+\multicolumn{2}{|c|}{}&
+\\\cline{1-2}
+ \,\, $\medz$\,\,\,&\,\,\,\,\,$\medp$\,\,\,\,\,&     \\\hline\hline
+\multirow{3}{*}{CP-even}  
+ & S
+&$g_6 \medz \, \medm \medp   $
+\\\cline{2-3}
+& F
+&
+$g_6 \medz \, \overline{\medp} \medp   $
+\\\cline{2-3}
+&
+V
+&
+$g_6 \medz {\medm}^\mu{\medp}_\mu$
+\\\cline{2-3}
+&
+Gh
+&
+$g_6 \medz \, \left(\overline{\med}^-\medp+\overline{\med}^+ \medm \right)   $
+\\\hline
+\multirow{3}{*}{CP-odd}  
+ & S
+&$0  $
+\\\cline{2-3}
+& F 
+&
+$i g_6 \medz \, \overline{\medp}\gamma_5 \medp   $
+\\\cline{2-3}
+&
+V
+&
+0 
+\\\cline{2-3}
+&
+Gh
+&
+$ig_6 \medz \, \left(\overline{\med}^-\medp-\overline{\med}^+ \medm \right)   $
+\\\hline
+\end{tabular}
+\end{lrbox}
+
+
+
+
+
+\begin{lrbox}{\schLagrangian}
+	\centering
+		\begin{tabular}{|c|c|c|} \hline
+%
+%
+\multirow{3}{*}{DM field $\DM$} & \multirow{3}{*}{ Mediator $\medz$}&  \multirow{3}{*}{\dgcinco}\\
+& & 
+\\ &&\\\hline\hline
+\multirow{2}{*}{Real scalar} & CP-even  
+&$g_5 \medz \DM^2$
+\\\cline{2-3}
+& CP-odd & 0
+\\\hline
+%
+\multirow{2}{*}{Majorana}
+& CP-even  
+& 
+$
+g_5\medz \overline{\DM}\DM
+$
+\\\cline{2-3}
+& CP-odd  
+& 
+$
+i g_5\medz \overline{\DM}\gamma_5\DM
+$
+\\\hline
+\multirow{2}{*}{
+Real vector
+}
+&CP-even  
+&
+$
+g_5 \medz \DM_\mu \DM^\mu
+$
+\\\cline{2-3}
+& CP-odd & 0
+\\\hline
+\end{tabular}
+\end{lrbox}
+
+

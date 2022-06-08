@@ -67,28 +67,22 @@ Su diagrama se obtiene reemplazando aristas punteadas por sólidas.
 \end{example}
 
 \subsection{Idea general de la clasificación algoritmica de $\DynD_{n}$}
-Aquí daremos la idea general de el algoritmo de clasificación cuando tenemos un ciclo $>2$:
+Aquí daremos la idea general de el algoritmo de clasificación:
 \begin{enumerate}
  \item Descomponemos la bigrafica en sus componentes biconexas.
- \item Si todas excepto una son componentes biconexas entonces:
+ \item Si todas excepto una son componentes biconexas.
+ \item A la componente que no es biconexa aplicamos el algoritmo de componentes triconexas a el marco de la bigráfica.
+ \item Ya que obtengamos las componentes triconexas finales regresamos las aristas a su forma original y para las aristas virtuales con la misma etiqueta hacemos lo siguiente:
  \begin{enumerate}
-  \item A la componente que no es biconexa aplicamos el algoritmo de componentes triconexas a el marco de la bigráfica.
- \item Ya que obtengamos las componentes triconexas finales regresamos las aristas a su forma original.
- \item a los enlaces les quitamos las aristas paralelas y hacemos que la arista sea solida.
- \item y para las aristas virtuales de los poligonos o componentes triconexas con la misma etiqueta hacemos lo siguiente:
- \begin{enumerate}
-  \item Calculamos el camino mas corto hacia la arista virtual si el numero de aristas punteadas es par la arista virtual la hacemos punteada si el número es impar la arista virtual la hacemos solida.
+  \item Calculamos el camino mas corto hacia la arista virtual si el numero de aristas punteadas es par la arista virtual la hacemos punteada si el número es impar la arista la hacemos solida.
  \end{enumerate}
- \item Ya que tengamos una arista virtual definida si existe otra arista con la misma etiqueta solo cambiamos el tipo de arista en esa etiqueta (solida $\rightarrow $ punteada, punteada $\rightarrow $ solida).
+ \item Ya que tengamos una arista virtual definida si existe otra arista con la misma etiqueta solo cambiamos el tipo de arista en esa etiqueta (solida \rightarrow punteada, punteada \rightarrow solida).
  \item Si tenemos que todas las componentes triconexas finales excepto una son $\DynA_{n}$ entonces:
  \begin{enumerate}
-  \item Verificamos que la componente triconexa que no es un $\DynA$-bloque cumpla la condición de ciclo(si el ciclo es $>2$).
+  \item Verificamos que la componente triconexa que no es un $\DynA$-bloque cumpla la condición de ciclo.
   \item Si lo cumple entonces podemos decir que la bigrafica es de tipo $\DynD_{n}$ comn $n = \left|V\right|$
  \end{enumerate}
- \end{enumerate}
 \end{enumerate}
-
-Si tenemos un ciclo $=2$ entonces nuestras componentes triconexas van a ser necesariamente $\DynA$-bloques.
 
 \subsection{Clasificación algoritmica de $\DynD_{n}$}
 En \citep{TricLinTimAlg} existe una implementación de el algoritmo de componentes triconexas en el lenguaje Python la cual verifica si es una gráfica triconexa y te devuelve las componentes triconexas finales de la gráfica ingresada solo funciona con gráficas por lo cual utilizaremos el marco de la bigráfica para poder utilizar este algoritmo y ya que tengamos las componentes finales volvemos las aristas a su forma original a las aristas virtuales si son punteadas o solidas lo definiremos conforme a la idea general.
@@ -266,6 +260,7 @@ vertice & lowpt1 & lowpt2 \\
 \end{center}
 \end{table}
 
+
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{lll}
@@ -321,7 +316,7 @@ Los caminos generados de $G_{2}$ son:
 5: $3 \hookrightarrow 1$ & \\
 \end{tabular}\\
 
-Solo hay un par de separación de tipo 2 en $G_{2}$ el cual es $(3, 4)$.
+Solo hay pares de separación de tipo 2 en $G_{2}$ el cual es $(3, 4)$.
 
 \begin{figure}[H]
      \begin{subfigure}[b]{0.3\textwidth}
@@ -331,9 +326,9 @@ Solo hay un par de separación de tipo 2 en $G_{2}$ el cual es $(3, 4)$.
         \GraphInit[vstyle=Normal]
         %
         \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
-        \Vertex[L=\hbox{$3$},x=4.4318cm,y=0.0cm]{v0}
-        \Vertex[L=\hbox{$4$},x=0.0cm,y=2.9366cm]{v1}
-        \Vertex[L=\hbox{$7$},x=5.0cm,y=5.0cm]{v2}
+        \Vertex[L=\hbox{$3$},x=5.0cm,y=4.3243cm]{v0}
+        \Vertex[L=\hbox{$4$},x=0.0cm,y=5.0cm]{v1}
+        \Vertex[L=\hbox{$7$},x=1.9982cm,y=0.0cm]{v2}
         %
         \Edge[](v0)(v2)
         \Edge[](v1)(v2)
@@ -353,14 +348,10 @@ Solo hay un par de separación de tipo 2 en $G_{2}$ el cual es $(3, 4)$.
         \GraphInit[vstyle=Normal]
         %
         \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
-        \Vertex[L=\hbox{$3$},x=0.0cm,y=0.0cm]{v0}
-        \Vertex[L=\hbox{$4$},x=5.0cm,y=5.0cm]{v1}
+        \Vertex[L=\hbox{$3$},x=5.0cm,y=5.0cm]{v0}
+        \Vertex[L=\hbox{$4$},x=0.0cm,y=0.0cm]{v1}
         %
         \Edge[](v0)(v1)
-        \tikzstyle{EdgeStyle}=[color=red]
-        \tikzset{LabelStyle/.style = {fill=white, scale=.6}}
-        \Edge[label=$A$, style={bend left}](v0)(v1)
-        \Edge[label=$B$, style={bend right}](v0)(v1)
         %
         \end{tikzpicture}
         \end{minipage}
@@ -374,12 +365,11 @@ Solo hay un par de separación de tipo 2 en $G_{2}$ el cual es $(3, 4)$.
         \GraphInit[vstyle=Normal]
         %
         \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
-        \Vertex[L=\hbox{$1$},x=0.0cm,y=2.3583cm]{v0}
-        \Vertex[L=\hbox{$3$},x=5.0cm,y=0.0cm]{v1}
-        \Vertex[L=\hbox{$4$},x=4.8519cm,y=5.0cm]{v2}
+        \Vertex[L=\hbox{$1$},x=5.0cm,y=0.4477cm]{v0}
+        \Vertex[L=\hbox{$3$},x=2.1386cm,y=5.0cm]{v1}
+        \Vertex[L=\hbox{$4$},x=0.0cm,y=0.0cm]{v2}
         %
         \Edge[](v0)(v2)
-        %
         \tikzstyle{EdgeStyle}=[color=red]
         \tikzset{LabelStyle/.style = {fill=white, scale=.6}}
         \Edge[label=$C$](v0)(v1)
@@ -397,10 +387,10 @@ Solo hay un par de separación de tipo 2 en $G_{2}$ el cual es $(3, 4)$.
         \GraphInit[vstyle=Normal]
         %
         \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
-        \Vertex[L=\hbox{$2$},x=2.2651cm,y=0.0cm]{v0}
-        \Vertex[L=\hbox{$3$},x=0.0cm,y=2.6956cm]{v1}
-        \Vertex[L=\hbox{$5$},x=2.7348cm,y=5.0cm]{v2}
-        \Vertex[L=\hbox{$6$},x=5.0cm,y=2.3047cm]{v3}
+        \Vertex[L=\hbox{$2$},x=2.075cm,y=0.0cm]{v0}
+        \Vertex[L=\hbox{$3$},x=2.9237cm,y=5.0cm]{v1}
+        \Vertex[L=\hbox{$5$},x=0.0cm,y=3.0162cm]{v2}
+        \Vertex[L=\hbox{$6$},x=5.0cm,y=1.9785cm]{v3}
         %
         \Edge[](v0)(v2)
         \Edge[](v0)(v3)
@@ -423,14 +413,10 @@ Solo hay un par de separación de tipo 2 en $G_{2}$ el cual es $(3, 4)$.
         \GraphInit[vstyle=Normal]
         %
         \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
-        \Vertex[L=\hbox{$2$},x=0.0cm,y=5.0cm]{v0}
-        \Vertex[L=\hbox{$3$},x=5.0cm,y=0.0cm]{v1}
+        \Vertex[L=\hbox{$2$},x=5.0cm,y=5.0cm]{v0}
+        \Vertex[L=\hbox{$3$},x=0.0cm,y=0.0cm]{v1}
         %
         \Edge[](v0)(v1)
-        \tikzstyle{EdgeStyle}=[color=red]
-        \tikzset{LabelStyle/.style = {fill=white, scale=.6}}
-        \Edge[label=$D$, style={bend left}](v0)(v1)
-        \Edge[label=$E$, style={bend right}](v0)(v1)
         %
         \end{tikzpicture}
         \end{minipage}
@@ -444,9 +430,9 @@ Solo hay un par de separación de tipo 2 en $G_{2}$ el cual es $(3, 4)$.
         \GraphInit[vstyle=Normal]
         %
         \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
-        \Vertex[L=\hbox{$1$},x=4.1519cm,y=0.0cm]{v0}
-        \Vertex[L=\hbox{$2$},x=0.0cm,y=3.1432cm]{v1}
-        \Vertex[L=\hbox{$3$},x=5.0cm,y=5.0cm]{v2}
+        \Vertex[L=\hbox{$1$},x=5.0cm,y=0.0cm]{v0}
+        \Vertex[L=\hbox{$2$},x=0.0cm,y=0.0267cm]{v1}
+        \Vertex[L=\hbox{$3$},x=2.5186cm,y=5.0cm]{v2}
         %
         \Edge[](v0)(v1)
         \tikzstyle{EdgeStyle}=[color=red]
@@ -470,19 +456,23 @@ Las componentes triconexas finales de las bigráficas:
      \begin{subfigure}[b]{0.5\textwidth}
         \begin{minipage}{7cm}
         \centering% El subgrafo está centrado
-        \begin{tikzpicture}[scale=.4]
+        \begin{tikzpicture}[scale=.7]
         \GraphInit[vstyle=Normal]
         %
         \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
-        \Vertex[L=\hbox{$3$},x=0.0cm,y=5.0cm]{v0}
-        \Vertex[L=\hbox{$4$},x=5.0cm,y=3.5243cm]{v1}
-        \Vertex[L=\hbox{$7$},x=1.3175cm,y=0.0cm]{v2}
+        \Vertex[L=\hbox{$2$},x=4.01cm,y=2.517cm]{v1}
+        \Vertex[L=\hbox{$3$},x=1.7633cm,y=2.517cm]{v2}
+        \Vertex[L=\hbox{$5$},x=1.7633cm,y=4.5228cm]{v4}
+        \Vertex[L=\hbox{$6$},x=4.01cm,y=4.5228cm]{v5}
         %
-        \Edge[](v0)(v2)
-        \Edge[](v1)(v2)
+        \Edge[](v1)(v4)
+        \Edge[](v1)(v5)
+        \Edge[](v2)(v4)
+        \Edge[](v2)(v5)
+        \Edge[](v4)(v5)
         \tikzstyle{EdgeStyle}=[color=red]
         \tikzset{LabelStyle/.style = {fill=white, scale=.6}}
-        \Edge[label=$A$](v1)(v0)
+        \Edge[label=$D$](v1)(v2)
         %
         \end{tikzpicture}
         \end{minipage}
@@ -492,42 +482,16 @@ Las componentes triconexas finales de las bigráficas:
      \begin{subfigure}[b]{0.5\textwidth}
         \begin{minipage}{7cm}
         \centering% El subgrafo está centrado
-        \begin{tikzpicture}[scale=.4]
+        \begin{tikzpicture}[scale=.7]
         \GraphInit[vstyle=Normal]
         %
         \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
-        \Vertex[L=\hbox{$3$},x=5.0cm,y=0.0cm]{v0}
-        \Vertex[L=\hbox{$4$},x=0.0cm,y=5.0cm]{v1}
+        \Vertex[L=\hbox{$2$},x=4.01cm,y=3.2064cm]{v1}
+        \Vertex[L=\hbox{$3$},x=1.7633cm,y=2.517cm]{v2}
         %
-        \Edge[](v0)(v1)
-        \tikzstyle{EdgeStyle}=[color=red]
-        \tikzset{LabelStyle/.style = {fill=white, scale=.6}}
-        \Edge[label=$A$, style={bend left}](v0)(v1)
-        \Edge[label=$B$, style={bend right}](v0)(v1)
-        %
-        \end{tikzpicture}
-        \end{minipage}
-        \caption{}
-         \label{fig:f1}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.3\textwidth}
-        \begin{minipage}{7cm}
-        \centering% El subgrafo está centrado
-        \begin{tikzpicture}[scale=.4]
-        \GraphInit[vstyle=Normal]
-        %
-        \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
-        \Vertex[L=\hbox{$1$},x=5.0cm,y=1.2919cm]{v0}
-        \Vertex[L=\hbox{$2$},x=1.4292cm,y=0.0cm]{v1}
-        \Vertex[L=\hbox{$3$},x=0.0cm,y=3.5377cm]{v2}
-        \Vertex[L=\hbox{$4$},x=3.6225cm,y=5.0cm]{v3}
-        %
-        \Edge[](v0)(v1)
-        \Edge[](v0)(v3)
         \tikzstyle{EdgeStyle}=[color=red]
         \tikzset{LabelStyle/.style = {fill=white, scale=.6}}
         \Edge[label=$E$](v1)(v2)
-        \Edge[label=$B$](v2)(v3)
         %
         \end{tikzpicture}
         \end{minipage}
@@ -537,23 +501,17 @@ Las componentes triconexas finales de las bigráficas:
      \begin{subfigure}[b]{0.3\textwidth}
         \begin{minipage}{7cm}
         \centering% El subgrafo está centrado
-        \begin{tikzpicture}[scale=.4]
+        \begin{tikzpicture}[scale=.7]
         \GraphInit[vstyle=Normal]
         %
         \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
-        \Vertex[L=\hbox{$2$},x=5.0cm,y=4.0504cm]{v0}
-        \Vertex[L=\hbox{$3$},x=0.1743cm,y=5.0cm]{v1}
-        \Vertex[L=\hbox{$5$},x=4.8257cm,y=0.0cm]{v2}
-        \Vertex[L=\hbox{$6$},x=0.0cm,y=0.9496cm]{v3}
+        \Vertex[L=\hbox{$3$},x=1.3633cm,y=2.517cm]{v2}
+        \Vertex[L=\hbox{$4$},x=2.3604cm,y=0.0cm]{v3}
+        \Vertex[L=\hbox{$7$},x=0.0cm,y=0.0cm]{v6}
         %
-        \Edge[](v0)(v2)
-        \Edge[](v0)(v3)
-        \Edge[](v1)(v2)
-        \Edge[](v1)(v3)
         \Edge[](v2)(v3)
-        \tikzstyle{EdgeStyle}=[color=red]
-        \tikzset{LabelStyle/.style = {fill=white, scale=.6}}
-        \Edge[label=$D$](v0)(v1)
+        \Edge[](v2)(v6)
+        \Edge[](v3)(v6)
         %
         \end{tikzpicture}
         \end{minipage}
@@ -563,18 +521,40 @@ Las componentes triconexas finales de las bigráficas:
      \begin{subfigure}[b]{0.3\textwidth}
         \begin{minipage}{7cm}
         \centering% El subgrafo está centrado
-        \begin{tikzpicture}[scale=.4]
+        \begin{tikzpicture}[scale=.7]
         \GraphInit[vstyle=Normal]
         %
         \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
-        \Vertex[L=\hbox{$2$},x=5.0cm,y=0.0cm]{v0}
-        \Vertex[L=\hbox{$3$},x=0.0cm,y=5.0cm]{v1}
+        \tikzstyle{EdgeStyle}=[color=red]
+        \Vertex[L=\hbox{$3$},x=1.7633cm,y=1.517cm]{v2}
+        \Vertex[L=\hbox{$4$},x=2.3604cm,y=0.0cm]{v3}
+        %
+        \tikzset{LabelStyle/.style = {fill=white, scale=.6}}
+        \Edge[label=$A$](v2)(v3)
+        %
+        \end{tikzpicture}
+        \end{minipage}
+        \caption{}
+         \label{fig:f1}
+     \end{subfigure}
+     \begin{subfigure}[b]{0.3\textwidth}
+        \begin{minipage}{7cm}
+        \centering% El subgrafo está centrado
+        \begin{tikzpicture}[scale=.7]
+        \GraphInit[vstyle=Normal]
+        %
+        \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
+        \Vertex[L=\hbox{$1$},x=5.0cm,y=0.0cm]{v0}
+        \Vertex[L=\hbox{$2$},x=5.0cm,y=2.517cm]{v1}
+        \Vertex[L=\hbox{$3$},x=2.3604cm,y=2.517cm]{v2}
+        \Vertex[L=\hbox{$4$},x=2.3604cm,y=0.0cm]{v3}
         %
         \Edge[](v0)(v1)
+        \Edge[](v0)(v3)
+        \Edge[](v1)(v2)
         \tikzstyle{EdgeStyle}=[color=red]
         \tikzset{LabelStyle/.style = {fill=white, scale=.6}}
-        \Edge[label=$D$, style={bend left}](v0)(v1)
-        \Edge[label=$E$, style={bend right}](v0)(v1)
+        \Edge[label=$B$](v2)(v3)
         %
         \end{tikzpicture}
         \end{minipage}
@@ -589,23 +569,24 @@ Las componentes triconexas finales de las bigráficas:
     \begin{subfigure}[b]{0.5\textwidth}
         \begin{minipage}{7cm}
         \centering% El subgrafo está centrado
-        \begin{tikzpicture}[scale=.4]
+        \begin{tikzpicture}[scale=.6]
         \GraphInit[vstyle=Normal]
         %
         \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
-        \Vertex[L=\hbox{$3$},x=2.7617cm,y=5.0cm]{v0}
-        \Vertex[L=\hbox{$4$},x=5.0cm,y=2.3416cm]{v1}
-        \Vertex[L=\hbox{$5$},x=0.0cm,y=2.8439cm]{v2}
-        \Vertex[L=\hbox{$6$},x=2.4111cm,y=0.0cm]{v3}
+        \Vertex[L=\hbox{$3$},x=2.8524cm,y=2.0745cm]{v2}
+        \Vertex[L=\hbox{$4$},x=0.3702cm,y=2.0745cm]{v3}
+        \Vertex[L=\hbox{$5$},x=2.8524cm,y=4.8114cm]{v4}
+        \Vertex[L=\hbox{$6$},x=0.3702cm,y=4.8114cm]{v5}
         %
         \Edge[](v2)(v3)
-        \Edge[](v0)(v2)
-        \Edge[](v0)(v3)
-        \Edge[](v1)(v2)
-        \Edge[](v1)(v3)
+        \Edge[](v2)(v4)
+        \Edge[](v2)(v5)
+        \Edge[](v4)(v5)
+        \Edge[](v4)(v3)
+        \Edge[](v3)(v5)
         \tikzstyle{EdgeStyle}=[color=red]
         \tikzset{LabelStyle/.style = {fill=white, scale=.6}}
-        \Edge[label=$A$](v0)(v1)
+        \Edge[label=$A$](v2)(v3)
         %
         \end{tikzpicture}
         \end{minipage}
@@ -615,20 +596,20 @@ Las componentes triconexas finales de las bigráficas:
      \begin{subfigure}[b]{0.5\textwidth}
         \begin{minipage}{7cm}
         \centering% El subgrafo está centrado
-        \begin{tikzpicture}[scale=.4]
+        \begin{tikzpicture}[scale=.6]
         \GraphInit[vstyle=Normal]
         %
         \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
-        \Vertex[L=\hbox{$1$},x=4.7286cm,y=5.0cm]{v0}
-        \Vertex[L=\hbox{$2$},x=5.0cm,y=0.1367cm]{v1}
-        \Vertex[L=\hbox{$3$},x=0.0cm,y=4.8796cm]{v2}
-        \Vertex[L=\hbox{$4$},x=0.3559cm,y=0.0cm]{v3}
+        \Vertex[L=\hbox{$1$},x=4.4008cm,y=0.0cm]{v0}
+        \Vertex[L=\hbox{$2$},x=4.4008cm,y=2.7015cm]{v1}
+        \Vertex[L=\hbox{$3$},x=1.8549cm,y=2.7015cm]{v2}
+        \Vertex[L=\hbox{$4$},x=1.8549cm,y=0.0cm]{v3}
         %
         \Edge[](v0)(v1)
         \Edge[](v0)(v2)
-        \Edge[](v0)(v3)
         \Edge[](v1)(v2)
-        \Edge[](v1)(v3)
+        \Edge[](v3)(v1)
+        \Edge[](v3)(v0)
         \tikzstyle{EdgeStyle}=[color=red]
         \tikzset{LabelStyle/.style = {fill=white, scale=.6}}
         \Edge[label=$A$](v2)(v3)
@@ -647,7 +628,7 @@ Obtenemos ahora la bigráfica original y aplicamos el criterio para decidir si l
      \begin{subfigure}[b]{0.5\textwidth}
         \begin{minipage}{7cm}
         \centering% El subgrafo está centrado
-        \begin{tikzpicture}[scale=.6]
+        \begin{tikzpicture}[scale=.7]
         \GraphInit[vstyle=Normal]
         %
         \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
@@ -671,11 +652,11 @@ Obtenemos ahora la bigráfica original y aplicamos el criterio para decidir si l
      \begin{subfigure}[b]{0.5\textwidth}
         \begin{minipage}{7cm}
         \centering% El subgrafo está centrado
-        \begin{tikzpicture}[scale=.6]
+        \begin{tikzpicture}[scale=.7]
         \GraphInit[vstyle=Normal]
         %
         \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
-        \Vertex[L=\hbox{$2$},x=4.31cm,y=3.2064cm]{v1}
+        \Vertex[L=\hbox{$2$},x=4.01cm,y=3.2064cm]{v1}
         \Vertex[L=\hbox{$3$},x=1.7633cm,y=2.517cm]{v2}
         %
         \Edge[](v1)(v2)
@@ -688,7 +669,7 @@ Obtenemos ahora la bigráfica original y aplicamos el criterio para decidir si l
      \begin{subfigure}[b]{0.3\textwidth}
         \begin{minipage}{7cm}
         \centering% El subgrafo está centrado
-        \begin{tikzpicture}[scale=.6]
+        \begin{tikzpicture}[scale=.7]
         \GraphInit[vstyle=Normal]
         %
         \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
@@ -708,11 +689,11 @@ Obtenemos ahora la bigráfica original y aplicamos el criterio para decidir si l
      \begin{subfigure}[b]{0.3\textwidth}
         \begin{minipage}{7cm}
         \centering% El subgrafo está centrado
-        \begin{tikzpicture}[scale=.6]
+        \begin{tikzpicture}[scale=.7]
         \GraphInit[vstyle=Normal]
         %
         \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
-        \Vertex[L=\hbox{$3$},x=1.7633cm,y=2.317cm]{v2}
+        \Vertex[L=\hbox{$3$},x=1.7633cm,y=1.517cm]{v2}
         \Vertex[L=\hbox{$4$},x=2.3604cm,y=0.0cm]{v3}
         %
         \Edge[](v2)(v3)
@@ -725,7 +706,7 @@ Obtenemos ahora la bigráfica original y aplicamos el criterio para decidir si l
      \begin{subfigure}[b]{0.3\textwidth}
         \begin{minipage}{7cm}
         \centering% El subgrafo está centrado
-        \begin{tikzpicture}[scale=.6]
+        \begin{tikzpicture}[scale=.7]
         \GraphInit[vstyle=Normal]
         %
         \tikzset{VertexStyle/.append style={minimum size=1pt, inner sep=1pt}}
