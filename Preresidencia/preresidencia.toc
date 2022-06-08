@@ -1,5 +1,0 @@
-\babel@toc {spanish}{}
-\beamer@sectionintoc {1}{Conceptos y relaciones}{3}{0}{1}
-\beamer@sectionintoc {2}{Algoritmo de las inflaciones}{26}{0}{2}
-\beamer@sectionintoc {3}{Caso $\ensuremath {\mathbb {A}}_{n}$}{32}{0}{3}
-\beamer@sectionintoc {4}{Descripción de el problema}{43}{0}{4}
