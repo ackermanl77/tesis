@@ -778,16 +778,29 @@ Ahora que hemos descartado a las gráficas de aristas multiples (a las pseudogr�
 \end{figure}
 
 \paragraph{}
-Hasta ahora hemos asociado vértices con variables(\begin{tikzpicture}\node (v1) at (-0.0, 0.56) {x}; \end{tikzpicture} con x) pero vamos a extender el concepto de la siguiente manera: si en lugar de etiquetar con variables etiquetamos con números enteros(\begin{tikzpicture}\node (v1) at (-0.0, 0.56) {2}; \end{tikzpicture} con 2), convenimos que estamos evaluando la variable correspondiente a dicho número.
+Hasta ahora hemos asociado vértices con variables(\begin{tikzpicture}\node (v1) at (-0.0, 0.56) {x}; \end{tikzpicture} con x) pero vamos a extender el concepto de la siguiente manera: si en lugar de etiquetar con variables etiquetamos con números enteros(\begin{tikzpicture}\node (v1) at (-0.0, 0.56) {2}; \end{tikzpicture} con 2), convenimos que estamos evaluando la variable correspondiente a dicho número.Ejemplo, consideremos la forma cuadrática asociada a \ref{ecuacion:1.5}; entonces la gráfica  
 
-\begin{example}
-Consideremos la forma cuadrática asociada a \ref{ecuacion:1.5}; entonces la gráfica representa la evaluación $x = 2$, $y=1$, $z=2$, $w=-1$, es decir
+\begin{center}
+\begin{tikzpicture}[scale=1.7]
+  \node (v0) at (-0.56, 0.0) {x};
+  \node (v1) at (-0.0, 0.56) {y};
+  \node (v2) at (0.56, 0.0) {z};
+  \node (v3) at (-0.0, -0.56) {w};
+  \draw[dotted] (v0) -- (v3);
+  \draw (v0) -- (v1);
+  \draw (v0) -- (v2);
+  \draw[dotted] (v1) -- (v2);
+  \draw (v1) -- (v3);
+  \draw (v2) -- (v3);
+\end{tikzpicture}
+\end{center}
+
+representa la evaluación $x = 2$, $y=1$, $z=2$, $w=-1$, es decir
 
 \begin{align*}
 q(2, 1, 2, -1) &  = 2^{2} + 1^{2} + 2^{2} + (-1)^{2} + 2\cdot 1 + 2\cdot(-1) - 2\cdot1 - 1\cdot(-1) - 2\cdot(-1) - 2\cdot 2 \\
                &  = 7
 \end{align*}
-\end{example}
 
 \paragraph{}
 Usando esta notación mostraremos que si $\textbf{B}_{q}$ contiene una subgráfica Euclidiana entonces existe un vector $\overrightarrow{x} \neq 0$ tal que $q\left(\overrightarrow{x}\right) = 0$, mostrando así que $q(\overrightarrow{x})$ no es definida positiva. Este vector se construye de la siguiente manera: se evalúan todas las variables que corresponden a la subgráfica Euclidiana de acuerdo a la figura \ref{figura:1.4} y todas las demas variables se evalúan a cero. Un simple cálculo nos muestra que esta evaluación produce un vector $\overrightarrow{x} \neq \overrightarrow{0}$ tal que $q\left(\overrightarrow{x}\right) = 0$.\\
