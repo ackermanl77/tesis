@@ -793,14 +793,14 @@ Ahora que hemos descartado a las bigráficas de aristas con peso mayor que uno e
 \end{figure}
 
 \paragraph{}
-Hasta ahora hemos asociado vértices con variables(\begin{tikzpicture}\node (v1) at (-0.0, 0.56) {x_{i}}; \end{tikzpicture} con $x_{i}$). Ahora cada variable $x_{i}$
+Hasta ahora hemos asociado vértices con variables(\begin{tikzpicture}\node (v1) at (-0.0, 0.56) {x}; \end{tikzpicture} con x)  
 
 \begin{center}
 \begin{tikzpicture}[scale=1.7]
-  \node (v0) at (-0.56, 0.0) {x_{1}};
-  \node (v1) at (-0.0, 0.56) {x_{2}};
-  \node (v2) at (0.56, 0.0) {x_{3}};
-  \node (v3) at (-0.0, -0.56) {x_{4}};
+  \node (v0) at (-0.56, 0.0) {$x_{1}$};
+  \node (v1) at (-0.0, 0.56) {$x_{2}$};
+  \node (v2) at (0.56, 0.0) {$x_{3}$};
+  \node (v3) at (-0.0, -0.56) {$x_{4}$};
   \draw[dotted] (v0) -- (v3);
   \draw (v0) -- (v1);
   \draw (v0) -- (v2);
@@ -810,8 +810,11 @@ Hasta ahora hemos asociado vértices con variables(\begin{tikzpicture}\node (v1)
 \end{tikzpicture}
 \end{center}
 
+representa la evaluación $x = 2$, $y=1$, $z=2$, $w=-1$
+
 \paragraph{}
 Mostraremos que si $\textbf{B}_{q}$ contiene una subgráfica Euclidiana entonces existe un vector $\overrightarrow{x} \neq 0$ tal que $q\left(\overrightarrow{x}\right) = 0$, mostrando así que $q(\overrightarrow{x})$ no es definida positiva. Un simple cálculo nos muestra que esta evaluación produce un vector $\overrightarrow{x} \neq \overrightarrow{0}$ tal que $q\left(\overrightarrow{x}\right) = 0$.\\
+
 
 \begin{figure}[h]
     \begin{subfigure}[b]{0.5\textwidth}
