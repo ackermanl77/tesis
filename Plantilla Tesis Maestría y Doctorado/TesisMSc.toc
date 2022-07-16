@@ -14,9 +14,9 @@
 \contentsline {subsection}{\numberline {3.1.3}La idea de el algoritmo de triconectividad}{42}{subsection.3.1.3}%
 \contentsline {section}{\numberline {3.2}El algoritmo para encontrar componentes triconexas}{43}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Encontrando pares de separación}{44}{subsection.3.2.1}%
-\contentsline {paragraph}{\nonumberline Paso 1}{44}{section*.106}%
-\contentsline {paragraph}{\nonumberline Paso 2}{44}{section*.107}%
-\contentsline {paragraph}{\nonumberline Paso 3}{44}{section*.108}%
+\contentsline {paragraph}{\nonumberline Paso 1}{44}{section*.107}%
+\contentsline {paragraph}{\nonumberline Paso 2}{44}{section*.108}%
+\contentsline {paragraph}{\nonumberline Paso 3}{44}{section*.109}%
 \contentsline {subsection}{\numberline {3.2.2}Encontrando componentes de separación}{51}{subsection.3.2.2}%
 \contentsline {chapter}{\numberline {4}Clasificación $\ensuremath {\mathbb {D}}_{n}$}{57}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Componentes triconexas en gráficas de tipo $\ensuremath {\mathbb {D}}_{n}$}{57}{section.4.1}%
@@ -24,4 +24,4 @@
 \contentsline {subsection}{\numberline {4.1.2}Clasificación algoritmica de $\ensuremath {\mathbb {D}}_{n}$}{59}{subsection.4.1.2}%
 \contentsline {chapter}{\numberline {5}Componentes triconexas en un bigrafo $\ensuremath {\mathbb {D}}_{n}$.}{64}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Algoritmo para encontrar componentes triconexas de un bigrafo de tipo $\ensuremath {\mathbb {D}}_{n}$}{64}{section.5.1}%
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliograf\'{\i }a}{65}{section*.136}%
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliograf\'{\i }a}{65}{section*.137}%

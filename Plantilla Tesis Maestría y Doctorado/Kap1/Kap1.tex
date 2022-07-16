@@ -1,7 +1,7 @@
 \chapter{Introducción}
 \begin{center}
 	En este capítulo se presenta una introducción a las formas\\ 		
-	cuadráticas, sus representaciones y su clasificación \citep{AbarcaSoteloMarioAlberto2011Apds}.
+	cuadráticas, sus representaciones y su clasificación.
 \end{center}
 
 \section{FORMAS CUADRÁTICAS}
@@ -10,14 +10,14 @@
 Esta sección fue adaptada de \citep{LayDavidC2001Alys}. Algunas demostraciones aquí omitidas pueden consultarse en dicha referencia.\\
 Fijamos un conjunto de variables $\{x_1, x_2, \ldots, x_n\}$. Un \textbf{monomio} es un producto de la forma $x_{1}^{e_{1}} \cdot x_{2}^{e_{2}} \cdots x_{n}^{e_{n}}$ donde cada $e_{i}$ es un número natural. Un \textbf{término} se forma al multiplicar a un monomio por una constante, a la cual llamamos \textbf{coeficiente} del término. Un \textbf{polinomio} es una suma finita de términos.\\
 Ejemplo: $7x^{2}y + 5x^z{4} - y$ es un polinomio sobre las variables $x$, $y$ y $z$ con tres monomios: $x^{2}y$, $xz^{4}$ y $y$ cuyos respectivos coeficientes son $2$, $4$, $1$ respectivamente.\\
-Todo polinomio sobre $n$ varialbles es una función con dominio $\mathbb{R}^{n}$ y rango $\mathbb{R}$. Una \textbf{forma cuadrática} es un polinomio $q : \mathbb{R}^{n} \rightarrow \mathbb{R}$(con $n > 0$) si cada monomio del mismo es una variable al cuadrado o la multiplicación de dos variables. Esto es equivalente a decir que $q$ se puede expresar como
+Una \textbf{forma cuadrática} es un polinomio en el que $q : \mathbb{R}^{n} \rightarrow \mathbb{R}$(con $n > 0$) en el que cada monomio del mismo es una variable al cuadrado o la multiplicación de dos variables. Esto es equivalente a decir que $q$ se puede expresar como
 
 \begin{equation*}
 q(x_{1}, x_{2}, \ldots, x_{n}) = \sum_{i=1}^{n} q_{ii}x_{i}^{2}+ \sum_{j=2}^{n}\sum_{i=1}^{j-1} q_{ij}x_{i}x_{j}
 \end{equation*}
 
 \paragraph*{}
-Los ejemplos más usuales aparecen al lado izquierdo del signo igual de las ecuaciones en las cónicas con centro en el origen
+Los ejemplos más usuales aparecen al lado izquierdo del signo igual de las ecuaciones de las cónicas con centro en el origen
 
 \begin{equation*}
 ax^{2} + 2bxy + cy^{2} = d
@@ -91,7 +91,7 @@ a_{ij} = \left \{
 Por ejemplo, para $q(x, y, x) = 6x^{2} + 2y^{2} + 4z^{2} - 2xy + 10xz - 6yz$
 
 \begin{equation*}
-q(x. y. z) = = \frac{1}{2}\left[x ~  y ~ z\right] 
+q(x. y. z) = \frac{1}{2}\left[x ~  y ~ z\right] 
 \begin{bmatrix}
 12 & -2 & 10\\
 -2 & 4 & -6\\
@@ -134,7 +134,7 @@ Gatantizamos que $P^{T}~A~P$ es una matriz simétrica (y por tanto que en verdad
 \end{eqnarray*}
 
 \paragraph*{}
-Mediante el cambio de variable $\overrightarrow{y} = P~\overrightarrow{x}$ tenemos que $q(\overrightarrow{x}) = q'(\overrightarrow{y})$ y diremos que $q$ y $q'$ son \textbf{equivalentes} mediante la matriz invertible $P$. Si denotamos $\overrightarrow{y} = L(\overrightarrow{x})$(es decir, $L(\overrightarrow{x}) = P\overrightarrow{x})$ entonces $q'(\overrightarrow{y}) = q'\left(L(\overrightarrow{x})\right) = \left(q' \circ L\right)(\overrightarrow{x})$, por lo tanto
+Mediante el cambio de variable $\overrightarrow{y} = P~\overrightarrow{x}$ tenemos que $q(\overrightarrow{x}) = q'(\overrightarrow{y})$ y diremos que $q$ y $q'$ son \textbf{equivalentes} mediante la matriz invertible $P$. Si denotamos con $L(\overrightarrow{x})$ a la transformación dada por, $L(\overrightarrow{x}) = P\overrightarrow{x}$ y tomamos $\overrightarrow{y} = L(\overrightarrow{x})$, entonces $q'(\overrightarrow{y}) = q'\left(L(\overrightarrow{x})\right) = \left(q' \circ L\right)(\overrightarrow{x})$, por lo tanto
 
 \begin{equation*}
 q' = q \circ L
@@ -218,7 +218,7 @@ Toda matriz es ortogonalmente diagonizable si y solo si es simétrica
 \end{theorem}
 
 \paragraph*{}
-El teorema \ref{teorema:1.1} se dejara sin demostración. Lo importante es que, a partir de este teorema, y dado que las matrices asociadas a las formas cuadráticas son simëtricas, se sigue el siguente resultado:
+El teorema \ref{teorema:1.1} se dejara sin demostración. Lo importante es que, a partir de este teorema, y dado que las matrices asociadas a las formas cuadráticas son simétricas, se sigue el siguente resultado:
 
 \begin{theorem}(de los ejes principales).
 Toda forma cuadrática $q(\overrightarrow{x})$ es equivalente mediante una matriz ortogonal $P$ a una forma cuadrática 
@@ -252,7 +252,7 @@ Si dos formas cuadráticas $q(\overrightarrow{x})$ y $q'(\overrightarrow{y})$ so
 \end{lemma}
 
 \begin{proof}
-Supongamos que $q(\overrightarrow{x})$ es definida positiva y definimos la transformación lineal $L(\overrightarrow{x}) = P\overrightarrow{x}$, entonces $L(\overrightarrow{0}) = L(\overrightarrow{0}+ \overrightarrow{0}) = L(\overrightarrow{0}) + L(\overrightarrow{0})$, de donde $L(\overrightarrow{0}) = \overrightarrow{0}$. Como $P$ es una matriz invertible entonces $L^{-1}(\overrightarrow{x}) = P^{-1}x$. En particular $L$ debe ser inyectiva y por lo tanto $L(\overrightarrow{x})=\overrightarrow{0}$ implica que $\overrightarrow{x}=\overrightarrow{0}$. SI $q$ es definida positiva entonces $q(\overrightarrow{x}) = q'(\overrightarrow{y}) > 0$ para todo $\overrightarrow{x} \neq 0$; por lo tanto $q'$ es definida positiva , entonces aplicando el mismo razonamiento con $L(\overrightarrow{y}) = P^{-1}\overrightarrow{y}$ se llega a la conclusión de que $q$ tambien es definida positiva. 
+Supongamos que $q(\overrightarrow{x})$ es definida positiva y definimos la transformación lineal $L(\overrightarrow{x}) = P\overrightarrow{x}$, entonces $L(\overrightarrow{0}) = L(\overrightarrow{0}+ \overrightarrow{0}) = L(\overrightarrow{0}) + L(\overrightarrow{0})$, de donde $L(\overrightarrow{0}) = \overrightarrow{0}$. Como $P$ es una matriz invertible entonces $L^{-1}(\overrightarrow{x}) = P^{-1}x$. En particular $L$ debe ser inyectiva y por lo tanto $L(\overrightarrow{x})=\overrightarrow{0}$ implica que $\overrightarrow{x}=\overrightarrow{0}$. Si $q$ es definida positiva entonces $q(\overrightarrow{x}) = q'(\overrightarrow{y}) > 0$ para todo $\overrightarrow{y} \neq \overrightarrow{0}$ y se cumple que $\overrightarrow{x} \neq \overrightarrow{0} \Leftrightarrow \overrightarrow{y} = P^{-1}\overrightarrow{x} \neq \overrightarrow{0}$; por lo tanto $q'$ es definida positiva , entonces aplicando el mismo razonamiento con $L(\overrightarrow{y}) = P^{-1}\overrightarrow{y}$ se llega a la conclusión de que $q$ tambien es definida positiva. 
 \end{proof}
 
 \begin{theorem}
@@ -279,26 +279,46 @@ Una matriz $A$ es definida positiva si y solo si tiene \textbf{factorización de
 \label{teorema:1.5}
 \end{theorem}
 
+\paragraph{}
+El siguiente teorema es el criterio de Sylvester para que una forma cuadrática sea positiva definida.
+
+\begin{theorem}
+Sean $V$ un espacio vectorial real de dimensión $n, q \in \mathcal{Q}(V)$, $B$ una base de $V$ . Denotamos por $q$ a la matriz asociada a la forma cuadrática q respecto a la base $\mathcal{B}$. Entonces las siguientes condiciones son equivalentes:
+\begin{enumerate}
+\item $q > 0$, esto es, $q(x) > 0$ para todo $x \in V \setminus \{0\}$.
+\item todos los menores principales de $qB$ son positivos:
+\begin{equation*}
+\forall I \subseteq {1, . . . , n} ~~ \delta_{I}(q_{\mathcal{B}}) > 0.
+\end{equation*}
+\item todos los menores de la matriz $q_{\mathcal{B}}$ son positivos: para todo $k \in {1, \ldots, n}$
+\begin{equation*}
+\Delta_{k}(q_{B}) > 0.
+\end{equation*}
+\end{enumerate}
+\label{teorema:1.6}
+\end{theorem}
+
 \section{FORMAS UNITARIAS}
 \paragraph*{}
-Esta sección fue adaptada de \citep{Ringel1985TameAA} y \citep{alma991031505829703276}. Las \textbf{formas cuadráticas enteras} son un caso especial de las formas cuadráticas donde todos los coeficientes $q_{ij}$ son todos números enteros. Si además exigimos que $q_{ii} = 1$ para $i = 1, 2, \ldots, n$ entonces las llamamos \textbf{formas cuadráticas unitarias}. En el resto de este trabajo solo se trabaja con formas cuadráticas enteras que son unitarias por lo que  las llamaremos \textbf{formas unitarias} en adelante a las que son cuadráticas y enteras.
+Esta sección fue adaptada de \citep{Ringel1985TameAA} y \citep{alma991031505829703276}. Las \textbf{formas cuadráticas enteras} son un caso especial de las formas cuadráticas donde todos los coeficientes $q_{ij}$ son todos números enteros. Si además exigimos que $q_{ii} = 1$ para $i = 1, 2, \ldots, n$ entonces las llamamos \textbf{formas cuadráticas unitarias}. En el resto de este trabajo solo se trabaja con formas cuadráticas enteras que son unitarias por lo que  las llamaremos \textbf{formas unitarias}.
 
 \paragraph*{}
 \textbf{CAMBIO DE VARIABLE ENTERO}
 
 \paragraph*{}
-Una \textbf{matriz entera $M$} es una matriz tal que todas sus entradas son números enteros, y es $\mathbb{Z}$\textbf{-invertible} si además su matriz inversa $M^{-1}$ tambien es una matriz entera. Un \textbf{cambio de variable entero} es un cambio de variable $\overrightarrow{y} = P\overrightarrow{x}$ donde $P$ es una matriz $\mathbb{Z}$-invertible. Los cambios de variables enteros tienen la propiedad de que transforman formas cuadráticas enteras en formas cuadráticas enteras(demostración: sean $A$ y $P$ matrices enteras, entonces $P^{T}~A~P$ es una matriz entera). Cuando $q(\overrightarrow{x}) = q'(\overrightarrow{y})$ mediante el cambio de variable entero $\overrightarrow{y} = P\overrightarrow{x}$ diremos que $q$ y $q'$ son $\mathbb{Z}$-\textbf{equivalentes} mediante la matriz $\mathbb{Z}$-invertible $P$.
+Una \textbf{matriz entera $M$} es una matriz tal que todas sus entradas son números enteros, y es $\mathbb{Z}$\textbf{-invertible} si además su matriz inversa $M^{-1}$ también es una matriz entera. Un \textbf{cambio de variable entero} es un cambio de variable $\overrightarrow{y} = P\overrightarrow{x}$ donde $P$ es una matriz $\mathbb{Z}$-invertible. Los cambios de variables enteros tienen la propiedad de que transforman formas cuadráticas enteras en formas cuadráticas enteras(demostración: sean $A$ y $P$ matrices enteras, entonces $P^{T}~A~P$ es una matriz entera). Cuando $q(\overrightarrow{x}) = q'(\overrightarrow{y})$ mediante el cambio de variable entero $\overrightarrow{y} = P\overrightarrow{x}$ diremos que $q$ y $q'$ son $\mathbb{Z}$-\textbf{equivalentes} mediante la matriz $\mathbb{Z}$-invertible $P$.
 
 \paragraph*{}
-\textbf{GRÁFICAS DE DYNKIN}
+\textbf{Bi-gráficas asociadas a formas unitarias}
 
 \paragraph*{}
-Si $q$ es una forma unitaria entonces le asociaremos una multigráfica \textbf{$B$}$_{q}$ construida de la siguiente manera:
+Si $q$ es una forma unitaria entonces le asociaremos una bigráfica \textbf{$B$}$_{q}$ construida de la siguiente manera:
 
 \begin{itemize}
     \item Existe un vértice $x_{i}$ para cada variable $x_{i}$
-    \item Si $q_{ij} > 0$ entonces hay $q_{ij}$ aristas punteadas entre los vértices $x_{i}$ y $x_{j}$(cada una de ellas denotada como $x_{i}$ \rule[1mm]{.1cm}{0.4pt} \rule[1mm]{.1cm}{0.4pt} \rule[1mm]{.1cm}{0.4pt} \rule[1mm]{.1cm}{0.4pt} $x_{j}$)
-    \item Si $q_{ij} < 0$ entonces hay $|q_{ij}|$ aristas sólidas entre los vértices $x_{i}$ y $x_{j}$(cada una de ellas denotada por $x_{i} \rule[1mm]{5mm}{0.1mm} x_{j}$)
+    \item Si $q_{ij} > 0$ entonces trazamos aristas punteadas entre los vértices $x_{i}$ y $x_{j}$ con peso $q_{ij}$.$$x_{i}\overset{q_{ij}}{\cdots\cdots}x_{j}$$
+    
+    \item Si $q_{ij} < 0$ entonces trazamos aristas sólidas entre los vértices $x_{i}$ y $x_{j}$ con peso $|q_{ij}|$.$$x_{i}\overset{|q_{ij}|}{\rule[1mm]{7mm}{0.1mm}}x_{j}$$
 \end{itemize}
 
 \begin{figure}[H]
@@ -309,8 +329,8 @@ Si $q$ es una forma unitaria entonces le asociaremos una multigráfica \textbf{$
   \node (v2) at (0, -1) {z};
   \node (v3) at (0, 1) {w};
   \draw (v0) -- (v1);
-  \draw[double, double distance = 0.5ex] (v1) -- (v2);
- \draw[dotted][double, double distance = 0.5ex] (v3) -- (v0);
+  \draw (v1) -- (v2);
+  \draw[dotted] (v3) -- (v0);
   \draw (v0) -- (v2);
   \draw (v1) -- (v0);
   \draw[dotted](v1) -- (v3);
@@ -318,20 +338,20 @@ Si $q$ es una forma unitaria entonces le asociaremos una multigráfica \textbf{$
   \draw (v2) -- (v3);
   \draw (v3) -- (v2);
 \end{tikzpicture}
-\caption{Gráfica asociada a  $2wx -2yz - xz - xy - wz + wy$}
+\caption{Bigráfica asociada a  $2wx -2yz - xz - xy - wz + wy$}
 \label{figura:1.1}
 \end{center}
 \end{figure}
 
 \paragraph*{}
-Este proceso se puede revertir y asociar a toda gráfica $G$ (posiblemente con aristas punteadas) una forma unitaria que denotaremos por \textbf{$q_{G}$}. Ahora, toda la información de $q_{G}$ está codificada en $G$: La existencia de un vértice $x$ nos dice que la forma cuadrática está definida sobre alguna variable $x$ y que contiene el término $x^{2}$ (porque $q$ es una forma cuadrática unitaria). El coeficiente del monomio $xy$ es $c = a_{p} - a_{s}$ donde $a_{p}$ es la cantidad de aristas punteadas entre $x$ y $y$, y $a_{s}$ es la cantidad de aristas sólidas entre estos mismos vértices. Más aún cabe recalcar que nosotros estamos descartando gráficas con lazos, por lo que cualquier gráfica en verdad define a una forma cuadrática unitaria.\\
-Las gráficas de Dynkin se presentan en la figura \ref{figura:1.2}. Denótese que las gráficas $\DynD_{n}$ están definidas para $n \geq 4$ mientras que las gráficas $\DynE_{n}$ solo se definen para $n = 6, 7, 8$. Lo impotante de estas gráficas radica en que permite dar una caracterización elegante de las formas unitarias que son definidas positivas tal como se explica a continuación.
+Este proceso se puede revertir y asociar a toda bigráfica $G$ (posiblemente con aristas punteadas) una forma unitaria que denotaremos por \textbf{$q_{G}$}. Ahora, toda la información de $q_{G}$ está codificada en $G$: La existencia de un vértice $x$ nos dice que la forma cuadrática está definida sobre alguna variable $x$ y que contiene el término $x^{2}$ (porque $q$ es una forma cuadrática unitaria). El coeficiente del monomio $xy$ es $c = a_{p} - a_{s}$ donde $a_{p}$ es la cantidad de aristas punteadas entre $x$ y $y$, y $a_{s}$ es la cantidad de aristas sólidas entre estos mismos vértices. Más aún cabe recalcar que nosotros estamos descartando gráficas con lazos, por lo que cualquier gráfica en verdad define a una forma cuadrática unitaria.\\
+Las gráficas de Dynkin se presentan en la figura \ref{figura:1.2}. Hay que resaltar que las gráficas $\DynD_{n}$ están definidas para $n \geq 4$ mientras que las gráficas $\DynE_{n}$ solo se definen para $n = 6, 7, 8$. Lo impotante de estas gráficas radica en que permite dar una caracterización elegante de las formas unitarias que son definidas positivas tal como se explica a continuación.
 
 \begin{figure}[H]
 \begin{center}
     \begin{tabular}{ll}
     \hline
-    Notación \vline & Gráfica\\ 
+    Notación \vline & Diagrama de Dynkin\\ 
     \hline
     $\DynA_{n}$, $n\ge1$ &
     \begin{tikzpicture}
@@ -403,21 +423,21 @@ Las gráficas de Dynkin se presentan en la figura \ref{figura:1.2}. Denótese qu
     \draw (v7) -- (v8);
     \end{tikzpicture}
     \end{tabular} 
-    \caption{Gráficas de Dynkin. El subíndice $n$ indica la cantidad de vértices que tiene la gráfica.}
+    \caption{Gráficas de Dynkin. El subíndice $n$ indica la cantidad de vértices que tiene la bigráfica.}
     \label{figura:1.2}
 \end{center}
 \end{figure}
 
 \paragraph*{}
-Decimos que la forma unitaria $q$ es \textbf{positiva} si es definida positiva.
+Toda forma unitaria $q$ manejada en este trabajo es definida positiva.
 
 \begin{theorem}
-Toda forma unitaria $q$ es definida positiva si y solamente si $q$ es $\mathbb{Z}$-equivalente a otra forma unitaria $q'$ donde cada componente conexa de $\textbf{B}_{q'}$ es una gráfica de Dynkin.
+Toda forma unitaria $B_{q}$ es conexa, así $q$ es $\mathbb{Z}$-equivalente a una forma unitaria cuya bigráfica asociada es un diagrama de Dynkin.
 \label{teorema:1.6}
 \end{theorem}
 
 \paragraph{}
-Para poder hacer la demostración hay que comprender el teorema. El teorema dice que la forma unitaria $q(\overrightarrow{x}) = \frac{1}{2}\overrightarrow{x}^{T}A\overrightarrow{x}$ es positiva si y solo si se puede llevar, mediante un cambio de variable entero $\overrightarrow{y} = P\overrightarrow{x}$, a la forma $q'(\overrightarrow{y}) = \frac{1}{2}\overrightarrow{y}^{T}\left(P^{T}~A~P\right)\overrightarrow{y}$ donde $\textbf{B}_{q'}$, tiene la propiedad de que cada una de sus componentes conexas es una gráfica de Dynkin. A dicha gráfica $\textbf{B}_{q'}$ se le llama el \textbf{tipo Dynkin} de $q$.
+Para poder hacer la demostración hay que comprender el teorema. El teorema dice que la forma unitaria y conexa $q(\overrightarrow{x}) = \frac{1}{2}\overrightarrow{x}^{T}A\overrightarrow{x}$ es definida positiva si, y sólo si, se puede llevar, mediante un cambio de variable entero $\overrightarrow{y} = P\overrightarrow{x}$, a la forma $q'(\overrightarrow{y}) = \frac{1}{2}\overrightarrow{y}^{T}\left(P^{T}~A~P\right)\overrightarrow{y}$ donde $\textbf{B}_{q'}$, tiene la propiedad de que cada una de sus componentes conexas es una gráfica de Dynkin. A dicha gráfica $\textbf{B}_{q'}$ se le llama el \textbf{tipo Dynkin} de $q$.
 
 \begin{example}\citep{AbarcaSoteloMarioAlberto2011Apds}
 La forma unitaria
@@ -426,7 +446,7 @@ La forma unitaria
     \label{ecuacion:1.5}
 \end{equation}\\
 
-tiene asociada la gráfica\\
+tiene asociada la bigráfica\\
 
 \begin{center}
 \begin{tikzpicture}[scale=1.7]
@@ -528,26 +548,26 @@ con gráfica asociada
 \end{tikzpicture}
 \end{center}
 
-Esta gráfica es isomorfa a $\mathbb{A}_{4}$, por lo tanto ese es el tipo Dynkin de $q$.
+Esta gráfica es isomorfa a $\mathbb{A}_{4}$, por lo tanto ese el tipo Dynkin es $\mathbb{A}_{4}$.
 \end{example}
 
 \paragraph{}
 Para demostrar el teorema \ref{teorema:1.6} lo dividiremos en dos partes:
 
 \begin{enumerate}
-    \item Demostramos que las gráficas de Dynkin son las únicas gráficas conexas de aristas sólidas que definen formas unitarias que son definidas positivas (tomando en cuenta inclusive a las gráficas de aristas múltiples, ver corolario \ref{corolario:1.9}) .
+    \item Demostramos que las gráficas de Dynkin son las únicas gráficas conexas de aristas sólidas que definen formas unitarias que son definidas positivas (las aristas multiples las consideraremos como aristas con peso, ver corolario \ref{corolario:1.9}) .
     \item Demostramos que siempre es posible hacer cambios de variable enteros de tal manera que la gráfica resultante no contenga aristas solidas.
 \end{enumerate}
 
-El ultimo será demostrado en \ref{sec:2.1}
+La última afirmación será demostrada en \ref{sec:2.1}
 
 \begin{lemma}
-Las gráficas de Dynkin son las únicas gráficas conexas de aristas sólidas que tienen asociadas formas unitarias positivas.
+Los diagramas de Dynkin son las únicas gráficas conexas de aristas sólidas que tienen asociadas formas unitarias definidas positivas.
 \label{lema:1.7}
 \end{lemma}
 
 \paragraph{}
-Para comenzar necesitamos convencernos en verdad de que las gráficas de Dynkin definen formas unitarias positivas. Comencemos con las gráficas de tipo $\DynA_{n}$:
+Para comenzar necesitamos convencernos en verdad de que los diagramas de Dynkin definen formas unitarias definidas positivas. Comencemos con las gráficas de tipo $\DynA_{n}$:
 
 $$x_{1}\rule[1mm]{.1cm}{0.4pt} x_{2} \rule[1mm]{.1cm}{0.4pt}\cdots\rule[1mm]{.1cm}{0.4pt} x_{n}$$
 
@@ -577,19 +597,17 @@ Por el teorema \ref{teorema:1.4} se concluye que $q_{\DynA_{n}}$ es definida pos
 
 \paragraph{}
 de tal forma que 
-
 \begin{eqnarray*}
  q_{\DynD_{n}}(\overrightarrow{x}) &  =  & \sum_{i=1}^{n}x_{i}^{2} - x_{1}x_{3} -  \sum_{i=2}^{n-1} x_{i}x_{i+1}\\
  &  =  & \frac{1}{2}\left[\left(x_{3} - x_{2} - x_{1}\right)^{2} + \left(x_{2} - x_{1}\right)^{2} + \sum_{i=3}^{n-1}\left(x_{i} - x_{i+1}\right)^{2}  + x_{n}^{2}\right]
-\end{eqnarray*}. 
+\end{eqnarray*}
 
 \paragraph{}
 Para las gráficas $\DynE_{6}$, $\DynE_{7}$ y $\DynE_{8}$ usaremos el siguente razonamiento:\\
-Supongamos que $A_{\Delta}$ es la matriz asociada a la gráfica $\Delta$ (con $\Delta = \DynE_{6},\DynE_{7},\DynE_{8}$); si existe una matriz $R_{\Delta}$ tal que $A_{\Delta} = R_{\Delta}^{T}R_{\Delta}$ entonces por teorema \ref{teorema:1.5} se sigue que $\Delta$ define una forma unitaria definida positiva.\\
+Supongamos que $A_{\Delta}$ es la matriz asociada a la gráfica $\Delta$ (con $\Delta = \DynE_{6},\DynE_{7},\DynE_{8}$); si existe una matriz $R_{\Delta}$ triangular superior, con entradas positivas en la diagonal principal tal que $A_{\Delta} = R_{\Delta}^{T}R_{\Delta}$ entonces por teorema \ref{teorema:1.5} se sigue que $\Delta$ define una forma unitaria definida positiva.\\
 En efecto tenemos que:
-
 \begin{align*}
- A\DynE_{6} &  =  \begin{bmatrix}
+ A_{\DynE_{6}} &  =  \begin{bmatrix}
  2 & 0 & 0 & -1 & 0 & 0\\
  0 & 2 & -1 & 0 & 0 & 0\\
  0 & -1 & 2& -1 & 0 & 0\\
@@ -597,7 +615,7 @@ En efecto tenemos que:
  0 & 0 & 0 & -1 & 2 & -1\\
  0 & 0 & 0 & 0 & -1 & 2\\
  \end{bmatrix}\\
- R\DynE_{6} &  =   \begin{bmatrix}
+ R_{\DynE_{6}} &  =   \begin{bmatrix}
  \sqrt{2} & 0 & 0 & -\frac{1}{\sqrt{2}} & 0 & 0\\
  0 & sqrt(2) & - \frac{1}{\sqrt{2}}& 0 & 0 & 0\\
  0 & 0 & \frac{\sqrt{3}}{\sqrt{2}} & -\frac{\sqrt{2}}{\sqrt{3}} & 0 & 0\\
@@ -606,9 +624,8 @@ En efecto tenemos que:
  0 & 0 & 0 & 0 & 0 & \frac{\sqrt{3}}{2}\\
  \end{bmatrix}
  \end{align*}\\
-
  \begin{align*}
- A\DynE_{7} &  =  \begin{bmatrix}
+ A_{\DynE_{7}} &  =  \begin{bmatrix}
  2 & 0 & 0 & -1 & 0 & 0 & 0\\
  0 & 2 & -1 & 0 & 0 & 0 & 0\\
  0 & -1 & 2 & -1 & 0 & 0 & 0\\
@@ -617,7 +634,7 @@ En efecto tenemos que:
  0 & 0 0 & 0 & 0 & -1 & 2 & -1\\
  0 & 0 & 0 & 0 & 0 & -1 & 2\\
  \end{bmatrix}\\
- R\DynE_{7} &  =  \begin{bmatrix}
+ R_{\DynE_{7}} &  =  \begin{bmatrix}
  \sqrt{2} & 0 & 0 & -\frac{1}{\sqrt{2}} & 0 & 0 & 0 & 0\\
  0 & sqrt(2) & - \frac{1}{\sqrt{2}}& 0 & 0 & 0 & 0 & 0\\
  0 & 0 & \frac{\sqrt{3}}{\sqrt{2}} & -\frac{\sqrt{2}}{\sqrt{3}} & 0 & 0 & 0 & 0\\
@@ -627,9 +644,8 @@ En efecto tenemos que:
  0 & 0 & 0 & 0 & 0 & 0 & 0 & \frac{\sqrt{2}}{\sqrt{3}}\\
  \end{bmatrix}
  \end{align*}\\
-
  \begin{align*}
- A\DynE_{8} &  = \begin{bmatrix}
+ A_{\DynE_{8}} &  = \begin{bmatrix}
  2 & 0 & 0 & -1 & 0 & 0 & 0 & 0\\
  0 & 2 & -1 & 0 & 0 & 0 & 0 & 0\\
  0 & -1 & 2 & -1 & 0 & 0 & 0 & 0\\
@@ -640,9 +656,8 @@ En efecto tenemos que:
  0 & 0 & 0 & 0 & 0 & 0 & -1 & 2\\
  \end{bmatrix}
 \end{align*}
-
 \begin{align*}
- R\DynE_{8} &  = \begin{bmatrix}
+ R_{\DynE_{8}} &  = \begin{bmatrix}
  \sqrt{2} & 0 & 0 & -\frac{1}{\sqrt{2}} & 0 & 0 & 0 & 0 & 0\\
  0 & sqrt(2) & - \frac{1}{\sqrt{2}}& 0 & 0 & 0 & 0 & 0 & 0\\
  0 & 0 & \frac{\sqrt{3}}{\sqrt{2}} & -\frac{\sqrt{2}}{\sqrt{3}} & 0 & 0 & 0 & 0 & 0\\
@@ -655,32 +670,32 @@ En efecto tenemos que:
 \end{align*}
 
 \paragraph{}
-Aun no hemos terminado la demostración del lema \ref{lema:1.7} . Falta demostrar que las gráficas de Dynkin son las únicas gráficas de aristas sólidas que definen formas unitarias positivas. Comenzaremos con el siguiente lema, el cual muestra que toda gráfica que tenga aristas múltiples no corresponde a ninguna forma unitaria positiva.
+Aun no hemos terminado la demostración del lema \ref{lema:1.7} . Falta demostrar que los diagramas de Dynkin son las únicas bigráficas de aristas sólidas que definen formas unitarias definidas positivas. Comenzaremos con el siguiente lema, el cual muestra que toda bigráfica que tenga aristas con mayor peso no corresponde a ninguna forma unitaria definida positiva.
 
 \begin{lemma}
-Si la forma unitaria $q(\overrightarrow{x})$ es positiva entonces $q_{ij} \in \{-1,0,1\}$ para todo $1\leq i \le j \leq n$.
+Si la forma unitaria $q(\overrightarrow{x})$ es definida positiva entonces $q_{ij} \in \{-1,0,1\}$ para todo $1\leq i \le j \leq n$.
 \label{lema:1.8}
 \end{lemma}
 
 \begin{proof}
-Denotemos con $ \overrightarrow{e}_{k} = \left(d_{1},d_{2}, \ldots , d_{n}\right)$ al vector dado por $d_{k} = 1$ y $d_{i} = 0$ para toda $i\neq k$. Si $q_{ij} \geq 2$ entonces $q(\overrightarrow{e}_{i} + \overrightarrow{e}_{j}) = 2 - q_{ij} \leq 0$ pero $\overrightarrow{e}_{i} - \overrightarrow{e}_{j} \neq \overrightarrow{0}$. Si $q_{ij} \leq -2$ entonces $q\left(\overrightarrow{e}_{i}+ \overrightarrow{e}_{j}\right) = 2 - q_{i,j} \leq 0$ pero $\overrightarrow{e}_{i} - e_{j} \neq \overrightarrow{0}$. De lo anterior, ya que $q$ es definida positiva, entonces $|q_{ij}| \le 2$ para todo $1 \leq i \le j \leq n$.
+Denotemos con $ \overrightarrow{e}_{k} = \left(d_{1},d_{2}, \ldots , d_{n}\right)$ al vector dado por $d_{k} = 1$ y $d_{i} = 0$ para toda $i\neq k$. Si $q_{ij} \geq 2$ entonces $q(\overrightarrow{e}_{i} + \overrightarrow{e}_{j}) = 2 - q_{ij} \leq 0$ pero $\overrightarrow{e}_{i} - \overrightarrow{e}_{j} \neq \overrightarrow{0}, ~ i \neq j$. Si $q_{ij} \leq -2$ entonces $q\left(\overrightarrow{e}_{i}+ \overrightarrow{e}_{j}\right) = 2 - q_{i,j} \geq 4$ pero $\overrightarrow{e}_{i} - e_{j} \neq \overrightarrow{0}$. De lo anterior, ya que $q$ es definida positiva, entonces $|q_{ij}| \le 2$ para todo $1 \leq i < j \leq n$.
 \end{proof}
 
 \paragraph{}
-Cada $|q_{ij}|$ nos dice la cantidad de aristas que hay entre los vértices $x_{i}$ y $x_{j}$ de la gráfica $\textbf{B}_{q}$; por lo tanto si $|q_{ij}| \leq 1$ tenemos que $\textbf{B}_{q}$ es una gráfica simple. Es decir que el lema \ref{lema:1.8} se puede reescribir como sigue:
+Cada $|q_{ij}|$ nos dice el peso de las aristas que hay entre los vértices $x_{i}$ y $x_{j}$ de la gráfica $\textbf{B}_{q}$; por lo tanto si $|q_{ij}| \leq 1$ tenemos que $\textbf{B}_{q}$ es una bigráfica simple. Es decir que el lema \ref{lema:1.8} se puede reescribir como sigue:
 
 \begin{corollary}
-Si $q$ es una forma unitaria positiva entonces necesariamente $\textbf{B}_{q}$ es una gráfica simple.
+Si $q$ es una forma unitaria positiva entonces necesariamente $\textbf{B}_{q}$ es una bigráfica simple.
 \label{corolario:1.9}
 \end{corollary}
 
 \paragraph{}
-Con base en este corolario diremos que una forma unitaria $q$ es \textbf{simple} si su gráfica asociada $\textbf{B}_{q}$ es una gráfica simple.\\
-Ahora que hemos descartado a las gráficas de aristas multiples (a las pseudográficas que tienen lazos sencillamente no se consideran en este trabajo) el resto de la demostración es como sigue:
+Con base en este corolario diremos que una forma unitaria $q$ es \textbf{simple} si su gráfica asociada $\textbf{B}_{q}$ es una bigráfica simple.\\
+Ahora que hemos descartado a las bigráficas de aristas con peso mayor que uno el resto de la demostración es como sigue:
 
 \begin{enumerate}
-    \item Demostraremos que toda gráfica que contenga a una gráfica Euclidiana (Figura \ref{figura:1.3}) no define a una forma unitaria positiva
-    \item Demostraremos que toda gráfica conexa que no sea de Dynkin necesariamente contiene una subgráfica Euclidiana
+    \item Demostraremos que toda gráfica que contenga a un diagrama Euclidiano (Figura \ref{figura:1.3}) no define a una forma unitaria definida positiva
+    \item Demostraremos que toda gráfica conexa que no sea un diagrama de Dynkin necesariamente contiene una sub-gráfica Euclidiana(bigráfica con sólo aristas solidas).
 \end{enumerate}
 
 \begin{figure}
@@ -773,19 +788,19 @@ Ahora que hemos descartado a las gráficas de aristas multiples (a las pseudogr�
     \draw (v9) -- (v8);
     \end{tikzpicture}
     \end{tabular} 
-    \caption{Gráficas Euclidianas. La cantidad de vértices que tiene cada gráfica es $n = m + 1$.}
+    \caption{Diagramas Euclidianos. La cantidad de vértices que tiene cada gráfica es $n = m + 1$.}
     \label{figura:1.3}
 \end{figure}
 
 \paragraph{}
-Hasta ahora hemos asociado vértices con variables(\begin{tikzpicture}\node (v1) at (-0.0, 0.56) {x}; \end{tikzpicture} con x) pero vamos a extender el concepto de la siguiente manera: si en lugar de etiquetar con variables etiquetamos con números enteros(\begin{tikzpicture}\node (v1) at (-0.0, 0.56) {2}; \end{tikzpicture} con 2), convenimos que estamos evaluando la variable correspondiente a dicho número.Ejemplo, consideremos la forma cuadrática asociada a \ref{ecuacion:1.5}; entonces la gráfica  
+Hasta ahora hemos asociado vértices con variables(\begin{tikzpicture}\node (v1) at (-0.0, 0.56) {x_{i}}; \end{tikzpicture} con $x_{i}$). Ahora cada variable $x_{i}$
 
 \begin{center}
 \begin{tikzpicture}[scale=1.7]
-  \node (v0) at (-0.56, 0.0) {x};
-  \node (v1) at (-0.0, 0.56) {y};
-  \node (v2) at (0.56, 0.0) {z};
-  \node (v3) at (-0.0, -0.56) {w};
+  \node (v0) at (-0.56, 0.0) {x_{1}};
+  \node (v1) at (-0.0, 0.56) {x_{2}};
+  \node (v2) at (0.56, 0.0) {x_{3}};
+  \node (v3) at (-0.0, -0.56) {x_{4}};
   \draw[dotted] (v0) -- (v3);
   \draw (v0) -- (v1);
   \draw (v0) -- (v2);
@@ -795,16 +810,8 @@ Hasta ahora hemos asociado vértices con variables(\begin{tikzpicture}\node (v1)
 \end{tikzpicture}
 \end{center}
 
-representa la evaluación $x = 2$, $y=1$, $z=2$, $w=-1$, es decir
-
-\begin{align*}
-q(2, 1, 2, -1) &  = 2^{2} + 1^{2} + 2^{2} + (-1)^{2} + 2\cdot 1 + 2\cdot(-1) - 2\cdot1 - 1\cdot(-1) - 2\cdot(-1) - 2\cdot 2 \\
-               &  = 7
-\end{align*}
-
 \paragraph{}
-Usando esta notación mostraremos que si $\textbf{B}_{q}$ contiene una subgráfica Euclidiana entonces existe un vector $\overrightarrow{x} \neq 0$ tal que $q\left(\overrightarrow{x}\right) = 0$, mostrando así que $q(\overrightarrow{x})$ no es definida positiva. Este vector se construye de la siguiente manera: se evalúan todas las variables que corresponden a la subgráfica Euclidiana de acuerdo a la figura \ref{figura:1.4} y todas las demas variables se evalúan a cero. Un simple cálculo nos muestra que esta evaluación produce un vector $\overrightarrow{x} \neq \overrightarrow{0}$ tal que $q\left(\overrightarrow{x}\right) = 0$.\\
-
+Mostraremos que si $\textbf{B}_{q}$ contiene una subgráfica Euclidiana entonces existe un vector $\overrightarrow{x} \neq 0$ tal que $q\left(\overrightarrow{x}\right) = 0$, mostrando así que $q(\overrightarrow{x})$ no es definida positiva. Un simple cálculo nos muestra que esta evaluación produce un vector $\overrightarrow{x} \neq \overrightarrow{0}$ tal que $q\left(\overrightarrow{x}\right) = 0$.\\
 
 \begin{figure}[h]
     \begin{subfigure}[b]{0.5\textwidth}
@@ -827,7 +834,7 @@ Usando esta notación mostraremos que si $\textbf{B}_{q}$ contiene una subgráfi
         \draw[dotted] (v6) -- (v0);
         \end{tikzpicture}
         \end{minipage}
-        \caption{Raíz de $\widetilde{\DynA}_{m}$}
+        \caption{$\widetilde{\DynA}_{m}$}
      \end{subfigure}
      \begin{subfigure}[b]{0.5\textwidth}
         \begin{minipage}{7cm}
@@ -850,7 +857,7 @@ Usando esta notación mostraremos que si $\textbf{B}_{q}$ contiene una subgráfi
         \draw (v5) -- (v6);
         \end{tikzpicture}
         \end{minipage}
-        \caption{Raíz de $\widetilde{\DynE}_{7}$}
+        \caption{$\widetilde{\DynE}_{7}$}
      \end{subfigure}
      \begin{subfigure}[b]{0.5\textwidth}
         \begin{minipage}{7cm}
@@ -871,7 +878,7 @@ Usando esta notación mostraremos que si $\textbf{B}_{q}$ contiene una subgráfi
         \draw (v5) -- (v6);
         \end{tikzpicture}
         \end{minipage}
-        \caption{Raíz de $\widetilde{\DynE}_{6}$}
+        \caption{$\widetilde{\DynE}_{6}$}
      \end{subfigure}
      \begin{subfigure}[b]{0.5\textwidth}
         \begin{minipage}{7cm}
@@ -896,7 +903,7 @@ Usando esta notación mostraremos que si $\textbf{B}_{q}$ contiene una subgráfi
         \draw (v0) -- (v8);
         \end{tikzpicture}
         \end{minipage}
-        \caption{Raíz de $\widetilde{\DynD}_{m}$}
+        \caption{$\widetilde{\DynD}_{m}$}
      \end{subfigure}
      \begin{center}
       \begin{subfigure}[b]{0.8\textwidth}
@@ -916,14 +923,14 @@ Usando esta notación mostraremos que si $\textbf{B}_{q}$ contiene una subgráfi
         \draw (5.17, -0.13) -- (v4) -- (v5);
         \draw (v4) -- (v6);
         \end{tikzpicture}
-        \caption{Raíz de $\widetilde{\DynE}_{8}$}
+        \caption{$\widetilde{\DynE}_{8}$}
       \end{subfigure}
      \end{center}
-     \caption{Raíces de las formas unitarias asociadas a las gráficas Euclidianas.}
+     \caption{Formas unitarias asociadas a las gráficas Euclidianas.}
     \label{figura:1.4}
 \end{figure}
 
-Solamente falta demostrar que toda gráfica que no sea de Dynkin necesariamente contiene a una subgráfica Euclidiana. Sea $G$ una gráfica conexa de $n$ vértices distinta de $\DynA_{n} \DynD_{n}, \DynE_{6}, \DynE_{7} ~y~ \DynE_{8}$. Si $G$ no es un árbol entonces $G$ contiene un ciclo; es decir contiene una subgráfica de $\widetilde{\DynA}_{m}$ para algún $m < n$. Si $G$ es un árbol, y dado que $G\neq \DynA_{n}$, entonces existe al menos un vértice $v$ de grado 3 o más. Claramente $v$ pertenece a una subgráfica de $\DynD_{r}$ para algún $r \leq n$, pero habíamos supuesto que $G \neq \DynD_{n}$ por lo tanto hay tres casos:
+Solamente falta demostrar que toda gráfica que no sea de Dynkin necesariamente contiene a una subgráfica Euclidiana. Sea $G$ una gráfica conexa de $n$ vértices distinta de $\DynA_{n}$, $\DynB_{n}$, $\DynD_{n}$, $\DynE_{6}$, $\DynE_{7}$ y $\DynE_{8}$. Si $G$ no es un árbol entonces $G$ contiene un ciclo; es decir contiene una subgráfica de $\widetilde{\DynA}_{m}$ para algún $m < n$. Si $G$ es un árbol, y dado que $G \neq \DynA_{n}$, entonces existe al menos un vértice $v$ de grado 3 o más. Claramente $v$ pertenece a una subgráfica de $\DynD_{r}$ para algún $r \leq n$, pero habíamos supuesto que $G \neq \DynD_{n}$ por lo tanto hay tres casos:
 
 \begin{enumerate}
     \item Si $v$ tiene grado estrictamente mayor a 3 entonces $G$ contiene a $\widetilde{D}_{4}$
@@ -932,6 +939,6 @@ Solamente falta demostrar que toda gráfica que no sea de Dynkin necesariamente 
 \end{enumerate}
 
 \paragraph{}
- Ahora ya que habiamos supuesto que $G \neq \DynE_{6}$, por tanto $n > 6$. Eneste caso $G$ debe contener a $\widetilde{\DynE}_{6}$ o $\DynE_{7}$. Si tenemos que $G = \DynE_{7}$ entonces $n > 8$., de donde obtenemos que $G$ contiene a $\widetilde{\DynE}_{7}$ o $\DynE_{8}$, pero si $G \neq \DynE_{8}$ entonces $n > 8$ y por lo tanto $G$ contiene a $\widetilde{\DynE}_{8}$.\\
-Resumiendo, las gráficas de Dynkin definen formas unitarias positivas, y cualquier otra gráfica conexa y de aristas solidas que no sea de Dynkin necesariamente contiene una gráfica Euclidiana que la vuelve no positiva: por lo tanto las gráficas de Dynkin son las únicas gráficas conexas de aristas sólidas que definen formas unitarias positivas. Esto conluye la demostración del lema \ref{lema:1.7}.\\
+ Ahora ya que habiamos supuesto que $G \neq \DynE_{6}$, por tanto $n > 6$. Eneste caso $G$ debe contener a $\widetilde{\DynE}_{6}$ o $\DynE_{7}$. Si tenemos que $G \neq \DynE_{7}$ entonces $n > 8$., de donde obtenemos que $G$ contiene a $\widetilde{\DynE}_{7}$ o $\DynE_{8}$, pero si $G \neq \DynE_{8}$ entonces $n > 8$ y por lo tanto $G$ contiene a $\widetilde{\DynE}_{8}$.\\
+Resumiendo, las gráficas de Dynkin definen formas unitarias positivas, y cualquier otra gráfica conexa y de aristas solidas que no sea un diagrama de Dynkin necesariamente contiene una gráfica Euclidiana que la vuelve no positiva: por lo tanto las gráficas de Dynkin son las únicas gráficas conexas de aristas sólidas que definen formas unitarias definidas positivas. Esto conluye la demostración del lema \ref{lema:1.7}.\\
 En la sección \ref{sec:2.1} se dará termino a la demostración del teorema \ref{teorema:1.6}
