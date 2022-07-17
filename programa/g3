@@ -1,0 +1,17 @@
+add 1--3--2--4--5--1--4
+add 2..5
+plot
+
+
+add 1--2..4--5..1--4
+add 2--5
+plot
+apply Inflations verbose
+
+
+
+
+add 1--2..4--5--1--4
+add 2--5
+plot
+apply Inflations verbose
