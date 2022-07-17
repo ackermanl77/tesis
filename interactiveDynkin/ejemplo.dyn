@@ -1,0 +1,15 @@
+add 1--2..3--4--5
+add 3--6
+plot
+T 3 4
+describe as matrix in latex
+T 2 3
+plot
+describe as graph in tikz
+describe as polynomial in latex
+print A continuación aplicamos deflaciones al azar:
+apply Deflations
+plot
+print Ahora lo reducimos a su diagrama de Dynkin
+apply Inflations verbose
+plot
