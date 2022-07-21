@@ -1,0 +1,840 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{class} \PYG{n+nc}{TriconnectivitySPQR}\PYG{p}{:}
+
+	\PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{G}\PYG{p}{,} \PYG{n}{check}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{):}
+
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{n} \PYG{o}{=} \PYG{n}{G}\PYG{o}{.}\PYG{n}{order}\PYG{p}{()}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{m} \PYG{o}{=} \PYG{n}{G}\PYG{o}{.}\PYG{n}{size}\PYG{p}{()}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{graph\PYGZus{}name} \PYG{o}{=} \PYG{n}{G}\PYG{o}{.}\PYG{n}{name}\PYG{p}{()}
+
+
+		\PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{n} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{2}\PYG{p}{:}
+			\PYG{k}{raise} \PYG{n+ne}{ValueError}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Graph is not biconnected\PYGZdq{}}\PYG{p}{)}
+		\PYG{k}{elif} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{n} \PYG{o}{==} \PYG{l+m+mi}{2} \PYG{o+ow}{and} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{m}\PYG{p}{:}
+
+			\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{comp\PYGZus{}list\PYGZus{}new} \PYG{o}{=} \PYG{p}{[}\PYG{n}{G}\PYG{o}{.}\PYG{n}{edges}\PYG{p}{()]}
+			\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{comp\PYGZus{}type} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+			\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}build\PYGZus{}spqr\PYGZus{}tree}\PYG{p}{()}
+			\PYG{k}{return}
+		\PYG{k}{elif} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{m} \PYG{o}{\PYGZlt{}} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{n} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{:}
+
+			\PYG{k}{raise} \PYG{n+ne}{ValueError}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Graph is not connected\PYGZdq{}}\PYG{p}{)}
+		\PYG{k}{elif} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{m} \PYG{o}{\PYGZlt{}} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{n}\PYG{p}{:}
+
+			\PYG{k}{raise} \PYG{n+ne}{ValueError}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Graph is not biconnected\PYGZdq{}}\PYG{p}{)}
+
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{int\PYGZus{}to\PYGZus{}vertex} \PYG{o}{=} \PYG{n}{G}\PYG{o}{.}\PYG{n}{vertices}\PYG{p}{()}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{vertex\PYGZus{}to\PYGZus{}int} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{n}{u}\PYG{p}{:}\PYG{n}{i} \PYG{k}{for} \PYG{n}{i}\PYG{p}{,}\PYG{n}{u} \PYG{o+ow}{in} \PYG{n+nb}{enumerate}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{int\PYGZus{}to\PYGZus{}vertex}\PYG{p}{)\PYGZcb{}}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{int\PYGZus{}to\PYGZus{}original\PYGZus{}edge\PYGZus{}label} \PYG{o}{=} \PYG{p}{[]}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{graph\PYGZus{}copy} \PYG{o}{=} \PYG{n}{Graph}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{n}\PYG{p}{,} \PYG{n}{multiedges}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+		\PYG{k}{for} \PYG{n}{i}\PYG{p}{,(}\PYG{n}{u}\PYG{p}{,} \PYG{n}{v}\PYG{p}{,} \PYG{n}{l}\PYG{p}{)} \PYG{o+ow}{in} \PYG{n+nb}{enumerate}\PYG{p}{(}\PYG{n}{G}\PYG{o}{.}\PYG{n}{edge\PYGZus{}iterator}\PYG{p}{()):}
+			\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{graph\PYGZus{}copy}\PYG{o}{.}\PYG{n}{add\PYGZus{}edge}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{vertex\PYGZus{}to\PYGZus{}int}\PYG{p}{[}\PYG{n}{u}\PYG{p}{],} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{vertex\PYGZus{}to\PYGZus{}int}\PYG{p}{[}\PYG{n}{v}\PYG{p}{],} \PYG{n}{i}\PYG{p}{)}
+			\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{int\PYGZus{}to\PYGZus{}original\PYGZus{}edge\PYGZus{}label}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{l}\PYG{p}{)}
+
+
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{edge\PYGZus{}status} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{n}{e}\PYG{p}{:} \PYG{l+m+mi}{0} \PYG{k}{for} \PYG{n}{e} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{graph\PYGZus{}copy}\PYG{o}{.}\PYG{n}{edge\PYGZus{}iterator}\PYG{p}{()\PYGZcb{}}
+
+
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{reverse\PYGZus{}edges} \PYG{o}{=} \PYG{n+nb}{set}\PYG{p}{()}
+
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{dfs\PYGZus{}number} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{0} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{n}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{)]}
+
+
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{highpt} \PYG{o}{=} \PYG{p}{[}\PYG{n}{\PYGZus{}LinkedList}\PYG{p}{()} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{n}\PYG{p}{)]}
+
+
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{in\PYGZus{}high} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{n}{e}\PYG{p}{:}\PYG{k+kc}{None} \PYG{k}{for} \PYG{n}{e} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{graph\PYGZus{}copy}\PYG{o}{.}\PYG{n}{edge\PYGZus{}iterator}\PYG{p}{()\PYGZcb{}}
+
+
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{old\PYGZus{}to\PYGZus{}new} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{0} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{n}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{)]}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{newnum} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{0} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{n}\PYG{p}{)]}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{node\PYGZus{}at} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{0} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{n}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{)]}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1} \PYG{o}{=} \PYG{p}{[}\PYG{k+kc}{None} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{n}\PYG{p}{)]}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt2} \PYG{o}{=} \PYG{p}{[}\PYG{k+kc}{None} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{n}\PYG{p}{)]}
+
+
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{adj} \PYG{o}{=} \PYG{p}{[}\PYG{n}{\PYGZus{}LinkedList}\PYG{p}{()} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{n}\PYG{p}{)]}
+
+
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{in\PYGZus{}adj} \PYG{o}{=} \PYG{p}{\PYGZob{}\PYGZcb{}}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{nd} \PYG{o}{=} \PYG{p}{[}\PYG{k+kc}{None} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{n}\PYG{p}{)]}
+
+
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{parent} \PYG{o}{=} \PYG{p}{[}\PYG{k+kc}{None} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{n}\PYG{p}{)]}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{degree} \PYG{o}{=} \PYG{p}{[}\PYG{k+kc}{None} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{n}\PYG{p}{)]}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{tree\PYGZus{}arc} \PYG{o}{=} \PYG{p}{[}\PYG{k+kc}{None} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{n}\PYG{p}{)]}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{vertex\PYGZus{}at} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{1} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{n}\PYG{p}{)]}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{dfs\PYGZus{}counter} \PYG{o}{=} \PYG{l+m+mi}{0}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{components\PYGZus{}list} \PYG{o}{=} \PYG{p}{[]}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{graph\PYGZus{}copy\PYGZus{}adjacency} \PYG{o}{=} \PYG{p}{[[]} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{n}\PYG{p}{)]}
+
+
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{starts\PYGZus{}path} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{n}{e}\PYG{p}{:}\PYG{k+kc}{False} \PYG{k}{for} \PYG{n}{e} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{graph\PYGZus{}copy}\PYG{o}{.}\PYG{n}{edge\PYGZus{}iterator}\PYG{p}{()\PYGZcb{}}
+
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{is\PYGZus{}biconnected} \PYG{o}{=} \PYG{k+kc}{True}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{cut\PYGZus{}vertex} \PYG{o}{=} \PYG{k+kc}{None}
+
+
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{virtual\PYGZus{}edge\PYGZus{}num} \PYG{o}{=} \PYG{l+m+mi}{0}
+
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{virtual\PYGZus{}edges} \PYG{o}{=} \PYG{n+nb}{set}\PYG{p}{()}
+
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{new\PYGZus{}path} \PYG{o}{=} \PYG{k+kc}{False}
+
+
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{e\PYGZus{}stack} \PYG{o}{=} \PYG{p}{[]}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}h} \PYG{o}{=} \PYG{p}{[}\PYG{k+kc}{None} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{m} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{)]}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}a} \PYG{o}{=} \PYG{p}{[}\PYG{k+kc}{None} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{m} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{)]}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}b} \PYG{o}{=} \PYG{p}{[}\PYG{k+kc}{None} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{m} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{)]}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}top} \PYG{o}{=} \PYG{l+m+mi}{0}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}a}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}top}\PYG{p}{]} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}
+
+
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{comp\PYGZus{}list\PYGZus{}new} \PYG{o}{=} \PYG{p}{[]}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{comp\PYGZus{}type} \PYG{o}{=} \PYG{p}{[]}
+
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{spqr\PYGZus{}tree} \PYG{o}{=} \PYG{k+kc}{None}
+
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{type1} \PYG{o}{=} \PYG{p}{[]}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{type2} \PYG{o}{=} \PYG{p}{[]}
+
+		\PYG{k}{for} \PYG{n}{e} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{graph\PYGZus{}copy}\PYG{o}{.}\PYG{n}{edge\PYGZus{}iterator}\PYG{p}{():}
+			\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{graph\PYGZus{}copy\PYGZus{}adjacency}\PYG{p}{[}\PYG{n}{e}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]]}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{e}\PYG{p}{)}
+			\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{graph\PYGZus{}copy\PYGZus{}adjacency}\PYG{p}{[}\PYG{n}{e}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]]}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{e}\PYG{p}{)}
+
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{dfs\PYGZus{}counter} \PYG{o}{=} \PYG{l+m+mi}{0}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{start\PYGZus{}vertex} \PYG{o}{=} \PYG{l+m+mi}{0}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{cut\PYGZus{}vertex} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}dfs1}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{start\PYGZus{}vertex}\PYG{p}{,} \PYG{n}{check}\PYG{o}{=}\PYG{n}{check}\PYG{p}{)}
+
+		\PYG{k}{if} \PYG{n}{check}\PYG{p}{:}
+			\PYG{c+c1}{\PYGZsh{} If graph is disconnected}
+			\PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{dfs\PYGZus{}counter} \PYG{o}{\PYGZlt{}} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{n}\PYG{p}{:}
+				\PYG{k}{raise} \PYG{n+ne}{ValueError}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Graph is not connected\PYGZdq{}}\PYG{p}{)}
+
+			\PYG{c+c1}{\PYGZsh{} If graph has a cut vertex}
+			\PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{cut\PYGZus{}vertex} \PYG{o}{!=} \PYG{k+kc}{None}\PYG{p}{:}
+				\PYG{k}{raise} \PYG{n+ne}{ValueError}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Graph has a cut vertex\PYGZdq{}}\PYG{p}{)}
+
+
+		\PYG{k}{for} \PYG{n}{e} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{graph\PYGZus{}copy}\PYG{o}{.}\PYG{n}{edge\PYGZus{}iterator}\PYG{p}{():}
+			\PYG{n}{up} \PYG{o}{=} \PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{dfs\PYGZus{}number}\PYG{p}{[}\PYG{n}{e}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]]} \PYG{o}{\PYGZhy{}} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{dfs\PYGZus{}number}\PYG{p}{[}\PYG{n}{e}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]])} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0}
+			\PYG{k}{if} \PYG{p}{(}\PYG{n}{up} \PYG{o+ow}{and} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{edge\PYGZus{}status}\PYG{p}{[}\PYG{n}{e}\PYG{p}{]}\PYG{o}{==}\PYG{l+m+mi}{2}\PYG{p}{)} \PYG{o+ow}{or} \PYG{p}{(}\PYG{o+ow}{not} \PYG{n}{up} \PYG{o+ow}{and} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{edge\PYGZus{}status}\PYG{p}{[}\PYG{n}{e}\PYG{p}{]}\PYG{o}{==}\PYG{l+m+mi}{1}\PYG{p}{):}
+
+				\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{reverse\PYGZus{}edges}\PYG{o}{.}\PYG{n}{add}\PYG{p}{(}\PYG{n}{e}\PYG{p}{)}
+
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}build\PYGZus{}acceptable\PYGZus{}adj\PYGZus{}struct}\PYG{p}{()}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}dfs2}\PYG{p}{()}
+
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}path\PYGZus{}search}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{start\PYGZus{}vertex}\PYG{p}{)}
+
+
+		\PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{e\PYGZus{}stack}\PYG{p}{:}
+			\PYG{n}{e} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}estack\PYGZus{}pop}\PYG{p}{()}
+			\PYG{n}{c} \PYG{o}{=} \PYG{n}{\PYGZus{}Component}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{e\PYGZus{}stack}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{)}
+			\PYG{n}{c}\PYG{o}{.}\PYG{n}{finish\PYGZus{}tric\PYGZus{}or\PYGZus{}poly}\PYG{p}{(}\PYG{n}{e}\PYG{p}{)}
+			\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{components\PYGZus{}list}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{c}\PYG{p}{)}
+
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}print\PYGZus{}split}\PYG{p}{()}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}assemble\PYGZus{}triconnected\PYGZus{}components}\PYG{p}{()}
+
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}build\PYGZus{}spqr\PYGZus{}tree}\PYG{p}{()}
+
+	\PYG{k}{def} \PYG{n+nf}{\PYGZus{}\PYGZus{}tstack\PYGZus{}push}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{h}\PYG{p}{,} \PYG{n}{a}\PYG{p}{,} \PYG{n}{b}\PYG{p}{):}
+
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}top} \PYG{o}{+=} \PYG{l+m+mi}{1}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}h}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}top}\PYG{p}{]} \PYG{o}{=} \PYG{n}{h}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}a}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}top}\PYG{p}{]} \PYG{o}{=} \PYG{n}{a}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}b}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}top}\PYG{p}{]} \PYG{o}{=} \PYG{n}{b}
+
+	\PYG{k}{def} \PYG{n+nf}{\PYGZus{}\PYGZus{}tstack\PYGZus{}push\PYGZus{}eos}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}top} \PYG{o}{+=} \PYG{l+m+mi}{1}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}a}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}top}\PYG{p}{]} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}
+
+	\PYG{k}{def} \PYG{n+nf}{\PYGZus{}\PYGZus{}tstack\PYGZus{}not\PYGZus{}eos}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+
+		\PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}a}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}top}\PYG{p}{]} \PYG{o}{!=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}
+
+	\PYG{k}{def} \PYG{n+nf}{\PYGZus{}\PYGZus{}tstack\PYGZus{}print}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+
+		\PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}a}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}b}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}h}
+
+	\PYG{k}{def} \PYG{n+nf}{\PYGZus{}\PYGZus{}estack\PYGZus{}pop}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+
+		\PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{e\PYGZus{}stack}\PYG{o}{.}\PYG{n}{pop}\PYG{p}{()}
+
+	\PYG{k}{def} \PYG{n+nf}{\PYGZus{}\PYGZus{}estack\PYGZus{}print}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+
+		\PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{e\PYGZus{}stack}
+
+	\PYG{k}{def} \PYG{n+nf}{\PYGZus{}\PYGZus{}new\PYGZus{}component}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{edges}\PYG{o}{=}\PYG{p}{[],} \PYG{n}{type\PYGZus{}c}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{):}
+
+		\PYG{n}{c} \PYG{o}{=} \PYG{n}{\PYGZus{}Component}\PYG{p}{(}\PYG{n}{edges}\PYG{p}{,} \PYG{n}{type\PYGZus{}c}\PYG{p}{)}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{components\PYGZus{}list}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{c}\PYG{p}{)}
+		\PYG{k}{return} \PYG{n}{c}
+
+	\PYG{k}{def} \PYG{n+nf}{\PYGZus{}\PYGZus{}new\PYGZus{}virtual\PYGZus{}edge}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{u}\PYG{p}{,} \PYG{n}{v}\PYG{p}{):}
+
+		\PYG{n}{e} \PYG{o}{=} \PYG{p}{(}\PYG{n}{u}\PYG{p}{,} \PYG{n}{v}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}newVEdge\PYGZdq{}}\PYG{o}{+}\PYG{n+nb}{str}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{virtual\PYGZus{}edge\PYGZus{}num}\PYG{p}{))}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{virtual\PYGZus{}edge\PYGZus{}num} \PYG{o}{+=} \PYG{l+m+mi}{1}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{virtual\PYGZus{}edges}\PYG{o}{.}\PYG{n}{add}\PYG{p}{(}\PYG{n}{e}\PYG{p}{)}
+		\PYG{k}{return} \PYG{n}{e}
+
+	\PYG{k}{def} \PYG{n+nf}{\PYGZus{}\PYGZus{}high}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{v}\PYG{p}{):}
+
+		\PYG{n}{head} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{highpt}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]}\PYG{o}{.}\PYG{n}{get\PYGZus{}head}\PYG{p}{()}
+		\PYG{k}{if} \PYG{n}{head} \PYG{o+ow}{is} \PYG{k+kc}{None}\PYG{p}{:}
+			\PYG{k}{return} \PYG{l+m+mi}{0}
+		\PYG{k}{else}\PYG{p}{:}
+			\PYG{k}{return} \PYG{n}{head}\PYG{o}{.}\PYG{n}{get\PYGZus{}data}\PYG{p}{()}
+
+	\PYG{k}{def} \PYG{n+nf}{\PYGZus{}\PYGZus{}del\PYGZus{}high}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{e}\PYG{p}{):}
+
+		\PYG{k}{if} \PYG{n}{e} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{in\PYGZus{}high}\PYG{p}{:}
+			\PYG{n}{it} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{in\PYGZus{}high}\PYG{p}{[}\PYG{n}{e}\PYG{p}{]}
+			\PYG{k}{if} \PYG{n}{it}\PYG{p}{:}
+				\PYG{k}{if} \PYG{n}{e} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{reverse\PYGZus{}edges}\PYG{p}{:}
+					\PYG{n}{v} \PYG{o}{=} \PYG{n}{e}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+				\PYG{k}{else}\PYG{p}{:}
+					\PYG{n}{v} \PYG{o}{=} \PYG{n}{e}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}
+				\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{highpt}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]}\PYG{o}{.}\PYG{n}{remove}\PYG{p}{(}\PYG{n}{it}\PYG{p}{)}
+
+	\PYG{k}{def} \PYG{n+nf}{\PYGZus{}\PYGZus{}bucket\PYGZus{}sort}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{bucket}\PYG{p}{,} \PYG{n}{edge\PYGZus{}list}\PYG{p}{):}
+
+		\PYG{k}{if} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{bucket}\PYG{p}{)} \PYG{o}{==} \PYG{l+m+mi}{1}\PYG{p}{:}
+			\PYG{k}{return}
+
+		\PYG{c+c1}{\PYGZsh{} Create n bucket linked lists}
+		\PYG{n}{bucket\PYGZus{}list} \PYG{o}{=} \PYG{p}{[]}
+		\PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{n}\PYG{p}{):}
+			\PYG{n}{bucket\PYGZus{}list}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{\PYGZus{}LinkedList}\PYG{p}{())}
+
+		\PYG{c+c1}{\PYGZsh{} Get the head pointer of the edge list}
+		\PYG{n}{e\PYGZus{}node} \PYG{o}{=} \PYG{n}{edge\PYGZus{}list}\PYG{o}{.}\PYG{n}{head}
+
+		\PYG{c+c1}{\PYGZsh{} Link the n buckets w.r.t bucketId}
+		\PYG{k}{while} \PYG{n}{e\PYGZus{}node}\PYG{p}{:}
+			\PYG{n}{bucketId} \PYG{o}{=} \PYG{n}{bucket}\PYG{p}{[}\PYG{n}{e\PYGZus{}node}\PYG{o}{.}\PYG{n}{get\PYGZus{}data}\PYG{p}{()]}
+			\PYG{k}{if} \PYG{n}{bucket\PYGZus{}list}\PYG{p}{[}\PYG{n}{bucketId}\PYG{p}{]}\PYG{o}{.}\PYG{n}{get\PYGZus{}head}\PYG{p}{():}
+				\PYG{n}{bucket\PYGZus{}list}\PYG{p}{[}\PYG{n}{bucketId}\PYG{p}{]}\PYG{o}{.}\PYG{n}{tail}\PYG{o}{.}\PYG{n}{next} \PYG{o}{=} \PYG{n}{e\PYGZus{}node}
+				\PYG{n}{bucket\PYGZus{}list}\PYG{p}{[}\PYG{n}{bucketId}\PYG{p}{]}\PYG{o}{.}\PYG{n}{tail} \PYG{o}{=} \PYG{n}{bucket\PYGZus{}list}\PYG{p}{[}\PYG{n}{bucketId}\PYG{p}{]}\PYG{o}{.}\PYG{n}{tail}\PYG{o}{.}\PYG{n}{next}
+			\PYG{k}{else}\PYG{p}{:}
+				\PYG{n}{bucket\PYGZus{}list}\PYG{p}{[}\PYG{n}{bucketId}\PYG{p}{]}\PYG{o}{.}\PYG{n}{set\PYGZus{}head}\PYG{p}{(}\PYG{n}{e\PYGZus{}node}\PYG{p}{)}
+			\PYG{n}{e\PYGZus{}node} \PYG{o}{=} \PYG{n}{e\PYGZus{}node}\PYG{o}{.}\PYG{n}{next}
+
+		\PYG{c+c1}{\PYGZsh{} Rearrange the `edge\PYGZus{}list` Using bucket list}
+		\PYG{n}{new\PYGZus{}tail} \PYG{o}{=} \PYG{k+kc}{None}
+		\PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{n}\PYG{p}{):}
+			\PYG{n}{new\PYGZus{}head} \PYG{o}{=} \PYG{n}{bucket\PYGZus{}list}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{o}{.}\PYG{n}{get\PYGZus{}head}\PYG{p}{()}
+			\PYG{k}{if} \PYG{n}{new\PYGZus{}head}\PYG{p}{:}
+				\PYG{k}{if} \PYG{n}{new\PYGZus{}tail}\PYG{p}{:}
+					\PYG{n}{new\PYGZus{}tail}\PYG{o}{.}\PYG{n}{next} \PYG{o}{=} \PYG{n}{new\PYGZus{}head}
+				\PYG{k}{else}\PYG{p}{:}
+					\PYG{n}{edge\PYGZus{}list}\PYG{o}{.}\PYG{n}{set\PYGZus{}head}\PYG{p}{(}\PYG{n}{new\PYGZus{}head}\PYG{p}{)}
+				\PYG{n}{new\PYGZus{}tail} \PYG{o}{=} \PYG{n}{bucket\PYGZus{}list}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{o}{.}\PYG{n}{tail}
+
+		\PYG{n}{edge\PYGZus{}list}\PYG{o}{.}\PYG{n}{tail} \PYG{o}{=} \PYG{n}{new\PYGZus{}tail}
+		\PYG{n}{new\PYGZus{}tail}\PYG{o}{.}\PYG{n}{next} \PYG{o}{=} \PYG{k+kc}{None}
+
+	\PYG{k}{def} \PYG{n+nf}{\PYGZus{}\PYGZus{}sort\PYGZus{}edges}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+
+		\PYG{c+c1}{\PYGZsh{} Create a linkedlist of edges}
+		\PYG{n}{edge\PYGZus{}list} \PYG{o}{=} \PYG{n}{\PYGZus{}LinkedList}\PYG{p}{()}
+		\PYG{k}{for} \PYG{n}{e} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{graph\PYGZus{}copy}\PYG{o}{.}\PYG{n}{edges}\PYG{p}{(}\PYG{n}{sort}\PYG{o}{=}\PYG{k+kc}{False}\PYG{p}{):}
+			\PYG{n}{edge\PYGZus{}list}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{\PYGZus{}LinkedListNode}\PYG{p}{(}\PYG{n}{e}\PYG{p}{))}
+
+		\PYG{n}{bucketMin} \PYG{o}{=} \PYG{p}{\PYGZob{}\PYGZcb{}} \PYG{c+c1}{\PYGZsh{} Contains the lower index of edge end point}
+		\PYG{n}{bucketMax} \PYG{o}{=} \PYG{p}{\PYGZob{}\PYGZcb{}} \PYG{c+c1}{\PYGZsh{} Contains the higher index of edge end point}
+
+		\PYG{c+c1}{\PYGZsh{} In `graph\PYGZus{}copy`, every edge `(u, v)` is such that `u \PYGZlt{} v`.}
+		\PYG{c+c1}{\PYGZsh{} Hence, `bucketMin` of an edge `(u, v)` will be `u`}
+		\PYG{c+c1}{\PYGZsh{} and `bucketMax` will be `v`.}
+		\PYG{k}{for} \PYG{n}{e} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{graph\PYGZus{}copy}\PYG{o}{.}\PYG{n}{edge\PYGZus{}iterator}\PYG{p}{():}
+			\PYG{n}{bucketMin}\PYG{p}{[}\PYG{n}{e}\PYG{p}{]} \PYG{o}{=} \PYG{n}{e}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+			\PYG{n}{bucketMax}\PYG{p}{[}\PYG{n}{e}\PYG{p}{]} \PYG{o}{=} \PYG{n}{e}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}
+
+		\PYG{c+c1}{\PYGZsh{} Sort according to the endpoint with lower index}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}bucket\PYGZus{}sort}\PYG{p}{(}\PYG{n}{bucketMin}\PYG{p}{,} \PYG{n}{edge\PYGZus{}list}\PYG{p}{)}
+		\PYG{c+c1}{\PYGZsh{} Sort according to the endpoint with higher index}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}bucket\PYGZus{}sort}\PYG{p}{(}\PYG{n}{bucketMax}\PYG{p}{,} \PYG{n}{edge\PYGZus{}list}\PYG{p}{)}
+
+		\PYG{c+c1}{\PYGZsh{} Return the head pointer to the sorted edge list}
+		\PYG{k}{return} \PYG{n}{edge\PYGZus{}list}\PYG{o}{.}\PYG{n}{get\PYGZus{}head}\PYG{p}{()}
+
+	\PYG{k}{def} \PYG{n+nf}{\PYGZus{}\PYGZus{}dfs1}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{v}\PYG{p}{,} \PYG{n}{u}\PYG{o}{=}\PYG{k+kc}{None}\PYG{p}{,} \PYG{n}{check}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{):}
+
+		\PYG{n}{first\PYGZus{}son} \PYG{o}{=} \PYG{k+kc}{None} \PYG{c+c1}{\PYGZsh{} For testing biconnectivity}
+		\PYG{n}{s1} \PYG{o}{=} \PYG{k+kc}{None} \PYG{c+c1}{\PYGZsh{} Storing the cut vertex, if there is one}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{dfs\PYGZus{}counter} \PYG{o}{+=} \PYG{l+m+mi}{1}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{dfs\PYGZus{}number}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{dfs\PYGZus{}counter}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{parent}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{=} \PYG{n}{u}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{degree}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{graph\PYGZus{}copy}\PYG{o}{.}\PYG{n}{degree}\PYG{p}{(}\PYG{n}{v}\PYG{p}{)}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt2}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{dfs\PYGZus{}number}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{nd}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{1}
+		\PYG{k}{for} \PYG{n}{e} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{graph\PYGZus{}copy\PYGZus{}adjacency}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]:}
+			\PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{edge\PYGZus{}status}\PYG{p}{[}\PYG{n}{e}\PYG{p}{]:}
+				\PYG{k}{continue}
+
+			\PYG{n}{w} \PYG{o}{=} \PYG{n}{e}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{k}{if} \PYG{n}{e}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{!=} \PYG{n}{v} \PYG{k}{else} \PYG{n}{e}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]} \PYG{c+c1}{\PYGZsh{} Opposite vertex of edge e}
+			\PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{dfs\PYGZus{}number}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{:}
+				\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{edge\PYGZus{}status}\PYG{p}{[}\PYG{n}{e}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{1} \PYG{c+c1}{\PYGZsh{} tree edge}
+				\PYG{k}{if} \PYG{n}{first\PYGZus{}son} \PYG{o+ow}{is} \PYG{k+kc}{None}\PYG{p}{:}
+					\PYG{n}{first\PYGZus{}son} \PYG{o}{=} \PYG{n}{w}
+				\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{tree\PYGZus{}arc}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]} \PYG{o}{=} \PYG{n}{e}
+				\PYG{n}{s1} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}dfs1}\PYG{p}{(}\PYG{n}{w}\PYG{p}{,} \PYG{n}{v}\PYG{p}{,} \PYG{n}{check}\PYG{p}{)}
+
+				\PYG{k}{if} \PYG{n}{check}\PYG{p}{:}
+					\PYG{c+c1}{\PYGZsh{} Check for cut vertex.}
+					\PYG{c+c1}{\PYGZsh{} The situation in which there is no path from w to an}
+					\PYG{c+c1}{\PYGZsh{} ancestor of v : we have identified a cut vertex}
+					\PYG{k}{if} \PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]} \PYG{o}{\PYGZgt{}=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{dfs\PYGZus{}number}\PYG{p}{[}\PYG{n}{v}\PYG{p}{])} \PYG{o+ow}{and} \PYG{p}{(}\PYG{n}{w} \PYG{o}{!=} \PYG{n}{first\PYGZus{}son} \PYG{o+ow}{or} \PYG{n}{u} \PYG{o}{!=} \PYG{k+kc}{None}\PYG{p}{):}
+						\PYG{n}{s1} \PYG{o}{=} \PYG{n}{v}
+
+				\PYG{c+c1}{\PYGZsh{} Calculate the `lowpt1` and `lowpt2` values.}
+				\PYG{c+c1}{\PYGZsh{} `lowpt1` is the smallest vertex (the vertex x with smallest}
+				\PYG{c+c1}{\PYGZsh{} dfs\PYGZus{}number[x]) that can be reached from v.}
+				\PYG{c+c1}{\PYGZsh{} `lowpt2` is the next smallest vertex that can be reached from v.}
+				\PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]} \PYG{o}{\PYGZlt{}} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]:}
+					\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt2}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb}{min}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{v}\PYG{p}{],} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt2}\PYG{p}{[}\PYG{n}{w}\PYG{p}{])}
+					\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]}
+
+				\PYG{k}{elif} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]} \PYG{o}{==} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]:}
+					\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt2}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb}{min}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt2}\PYG{p}{[}\PYG{n}{v}\PYG{p}{],} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt2}\PYG{p}{[}\PYG{n}{w}\PYG{p}{])}
+
+				\PYG{k}{else}\PYG{p}{:}
+					\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt2}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb}{min}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt2}\PYG{p}{[}\PYG{n}{v}\PYG{p}{],} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{w}\PYG{p}{])}
+
+				\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{nd}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{+=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{nd}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]}
+
+			\PYG{k}{else}\PYG{p}{:}
+				\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{edge\PYGZus{}status}\PYG{p}{[}\PYG{n}{e}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{2} \PYG{c+c1}{\PYGZsh{} frond}
+				\PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{dfs\PYGZus{}number}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]} \PYG{o}{\PYGZlt{}} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]:}
+					\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt2}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]}
+					\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{dfs\PYGZus{}number}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]}
+				\PYG{k}{elif} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{dfs\PYGZus{}number}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]} \PYG{o}{\PYGZgt{}} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]:}
+					\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt2}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb}{min}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt2}\PYG{p}{[}\PYG{n}{v}\PYG{p}{],} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{dfs\PYGZus{}number}\PYG{p}{[}\PYG{n}{w}\PYG{p}{])}
+
+		\PYG{k}{return} \PYG{n}{s1} \PYG{c+c1}{\PYGZsh{} s1 is None if graph does not have a cut vertex}
+
+
+	\PYG{k}{def} \PYG{n+nf}{\PYGZus{}\PYGZus{}build\PYGZus{}acceptable\PYGZus{}adj\PYGZus{}struct}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+
+		\PYG{n}{max\PYGZus{}size} \PYG{o}{=} \PYG{l+m+mi}{3}\PYG{o}{*}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{n} \PYG{o}{+} \PYG{l+m+mi}{2}
+		\PYG{n}{bucket} \PYG{o}{=} \PYG{p}{[[]} \PYG{k}{for} \PYG{n}{\PYGZus{}} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{max\PYGZus{}size} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{)]}
+
+		\PYG{k}{for} \PYG{n}{e} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{graph\PYGZus{}copy}\PYG{o}{.}\PYG{n}{edge\PYGZus{}iterator}\PYG{p}{():}
+			\PYG{n}{edge\PYGZus{}type} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{edge\PYGZus{}status}\PYG{p}{[}\PYG{n}{e}\PYG{p}{]}
+
+			\PYG{c+c1}{\PYGZsh{} compute phi value}
+			\PYG{c+c1}{\PYGZsh{} bucket sort adjacency list by phi values}
+			\PYG{k}{if} \PYG{n}{e} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{reverse\PYGZus{}edges}\PYG{p}{:}
+				\PYG{k}{if} \PYG{n}{edge\PYGZus{}type} \PYG{o}{==} \PYG{l+m+mi}{1}\PYG{p}{:} \PYG{c+c1}{\PYGZsh{} tree arc}
+					\PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt2}\PYG{p}{[}\PYG{n}{e}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]]} \PYG{o}{\PYGZlt{}} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{dfs\PYGZus{}number}\PYG{p}{[}\PYG{n}{e}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]]:}
+						\PYG{n}{phi} \PYG{o}{=} \PYG{l+m+mi}{3}\PYG{o}{*}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{e}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]]}
+					\PYG{k}{else}\PYG{p}{:}
+						\PYG{n}{phi} \PYG{o}{=} \PYG{l+m+mi}{3}\PYG{o}{*}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{e}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]]} \PYG{o}{+} \PYG{l+m+mi}{2}
+				\PYG{k}{else}\PYG{p}{:} \PYG{c+c1}{\PYGZsh{} tree frond}
+					\PYG{n}{phi} \PYG{o}{=} \PYG{l+m+mi}{3}\PYG{o}{*}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{dfs\PYGZus{}number}\PYG{p}{[}\PYG{n}{e}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]]}\PYG{o}{+}\PYG{l+m+mi}{1}
+			\PYG{k}{else}\PYG{p}{:}
+				\PYG{k}{if} \PYG{n}{edge\PYGZus{}type} \PYG{o}{==} \PYG{l+m+mi}{1}\PYG{p}{:} \PYG{c+c1}{\PYGZsh{} tree arc}
+					\PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt2}\PYG{p}{[}\PYG{n}{e}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]]} \PYG{o}{\PYGZlt{}} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{dfs\PYGZus{}number}\PYG{p}{[}\PYG{n}{e}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]]:}
+						\PYG{n}{phi} \PYG{o}{=} \PYG{l+m+mi}{3}\PYG{o}{*}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{e}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]]}
+					\PYG{k}{else}\PYG{p}{:}
+						\PYG{n}{phi} \PYG{o}{=} \PYG{l+m+mi}{3}\PYG{o}{*}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{e}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]]} \PYG{o}{+} \PYG{l+m+mi}{2}
+				\PYG{k}{else}\PYG{p}{:} \PYG{c+c1}{\PYGZsh{} tree frond}
+					\PYG{n}{phi} \PYG{o}{=} \PYG{l+m+mi}{3}\PYG{o}{*}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{dfs\PYGZus{}number}\PYG{p}{[}\PYG{n}{e}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]]}\PYG{o}{+}\PYG{l+m+mi}{1}
+
+			\PYG{n}{bucket}\PYG{p}{[}\PYG{n}{phi}\PYG{p}{]}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{e}\PYG{p}{)}
+
+		\PYG{c+c1}{\PYGZsh{} Populate `adj` and `in\PYGZus{}adj` with the sorted edges}
+		\PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{max\PYGZus{}size} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{):}
+			\PYG{k}{for} \PYG{n}{e} \PYG{o+ow}{in} \PYG{n}{bucket}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]:}
+				\PYG{n}{node} \PYG{o}{=} \PYG{n}{\PYGZus{}LinkedListNode}\PYG{p}{(}\PYG{n}{e}\PYG{p}{)}
+				\PYG{k}{if} \PYG{n}{e} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{reverse\PYGZus{}edges}\PYG{p}{:}
+					\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{adj}\PYG{p}{[}\PYG{n}{e}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]]}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{node}\PYG{p}{)}
+					\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{in\PYGZus{}adj}\PYG{p}{[}\PYG{n}{e}\PYG{p}{]} \PYG{o}{=} \PYG{n}{node}
+				\PYG{k}{else}\PYG{p}{:}
+					\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{adj}\PYG{p}{[}\PYG{n}{e}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]]}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{node}\PYG{p}{)}
+					\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{in\PYGZus{}adj}\PYG{p}{[}\PYG{n}{e}\PYG{p}{]} \PYG{o}{=} \PYG{n}{node}
+
+	\PYG{k}{def} \PYG{n+nf}{\PYGZus{}\PYGZus{}path\PYGZus{}finder}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{v}\PYG{p}{):}
+
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{newnum}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{dfs\PYGZus{}counter} \PYG{o}{\PYGZhy{}} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{nd}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{+} \PYG{l+m+mi}{1}
+		\PYG{n}{e\PYGZus{}node} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{adj}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]}\PYG{o}{.}\PYG{n}{get\PYGZus{}head}\PYG{p}{()}
+		\PYG{k}{while} \PYG{n}{e\PYGZus{}node}\PYG{p}{:}
+			\PYG{n}{e} \PYG{o}{=} \PYG{n}{e\PYGZus{}node}\PYG{o}{.}\PYG{n}{get\PYGZus{}data}\PYG{p}{()}
+			\PYG{n}{e\PYGZus{}node} \PYG{o}{=} \PYG{n}{e\PYGZus{}node}\PYG{o}{.}\PYG{n}{next}
+			\PYG{n}{w} \PYG{o}{=} \PYG{n}{e}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]} \PYG{k}{if} \PYG{n}{e}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{==} \PYG{n}{v} \PYG{k}{else} \PYG{n}{e}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{c+c1}{\PYGZsh{} opposite vertex of e}
+			\PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{new\PYGZus{}path}\PYG{p}{:}
+				\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{new\PYGZus{}path} \PYG{o}{=} \PYG{k+kc}{False}
+				\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{starts\PYGZus{}path}\PYG{p}{[}\PYG{n}{e}\PYG{p}{]} \PYG{o}{=} \PYG{k+kc}{True}
+			\PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{edge\PYGZus{}status}\PYG{p}{[}\PYG{n}{e}\PYG{p}{]} \PYG{o}{==} \PYG{l+m+mi}{1}\PYG{p}{:} \PYG{c+c1}{\PYGZsh{} tree arc}
+				\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}path\PYGZus{}finder}\PYG{p}{(}\PYG{n}{w}\PYG{p}{)}
+				\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{dfs\PYGZus{}counter} \PYG{o}{\PYGZhy{}=} \PYG{l+m+mi}{1}
+			\PYG{k}{else}\PYG{p}{:}
+				\PYG{c+c1}{\PYGZsh{} Identified a new frond that enters `w`. Add to `highpt[w]`.}
+				\PYG{n}{highpt\PYGZus{}node} \PYG{o}{=} \PYG{n}{\PYGZus{}LinkedListNode}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{newnum}\PYG{p}{[}\PYG{n}{v}\PYG{p}{])}
+				\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{highpt}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{highpt\PYGZus{}node}\PYG{p}{)}
+				\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{in\PYGZus{}high}\PYG{p}{[}\PYG{n}{e}\PYG{p}{]} \PYG{o}{=} \PYG{n}{highpt\PYGZus{}node}
+				\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{new\PYGZus{}path} \PYG{o}{=} \PYG{k+kc}{True}
+
+
+	\PYG{k}{def} \PYG{n+nf}{\PYGZus{}\PYGZus{}dfs2}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{in\PYGZus{}high} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{n}{e}\PYG{p}{:}\PYG{k+kc}{None} \PYG{k}{for} \PYG{n}{e} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{graph\PYGZus{}copy}\PYG{o}{.}\PYG{n}{edge\PYGZus{}iterator}\PYG{p}{()\PYGZcb{}}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{dfs\PYGZus{}counter} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{n}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{newnum} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{0} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{n}\PYG{p}{)]}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{starts\PYGZus{}path} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{n}{e}\PYG{p}{:}\PYG{k+kc}{False} \PYG{k}{for} \PYG{n}{e} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{graph\PYGZus{}copy}\PYG{o}{.}\PYG{n}{edge\PYGZus{}iterator}\PYG{p}{()\PYGZcb{}}
+
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{new\PYGZus{}path} \PYG{o}{=} \PYG{k+kc}{True}
+
+		\PYG{c+c1}{\PYGZsh{} We call the pathFinder function with the start vertex}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}path\PYGZus{}finder}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{start\PYGZus{}vertex}\PYG{p}{)}
+
+		\PYG{c+c1}{\PYGZsh{} Update `old\PYGZus{}to\PYGZus{}new` values with the calculated `newnum` values}
+		\PYG{k}{for} \PYG{n}{v} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{graph\PYGZus{}copy}\PYG{o}{.}\PYG{n}{vertex\PYGZus{}iterator}\PYG{p}{():}
+			\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{old\PYGZus{}to\PYGZus{}new}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{dfs\PYGZus{}number}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]]} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{newnum}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]}
+
+		\PYG{c+c1}{\PYGZsh{} Update lowpt values according to `newnum` values.}
+		\PYG{k}{for} \PYG{n}{v} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{graph\PYGZus{}copy}\PYG{o}{.}\PYG{n}{vertex\PYGZus{}iterator}\PYG{p}{():}
+			\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{node\PYGZus{}at}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{newnum}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]]} \PYG{o}{=} \PYG{n}{v}
+			\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{old\PYGZus{}to\PYGZus{}new}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]]}
+			\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt2}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{old\PYGZus{}to\PYGZus{}new}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt2}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]]}
+
+	\PYG{k}{def} \PYG{n+nf}{\PYGZus{}\PYGZus{}path\PYGZus{}search}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{v}\PYG{p}{):}
+
+		\PYG{n}{y} \PYG{o}{=} \PYG{l+m+mi}{0}
+		\PYG{n}{vnum} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{newnum}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]}
+		\PYG{n}{outv} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{adj}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]}\PYG{o}{.}\PYG{n}{get\PYGZus{}length}\PYG{p}{()}
+		\PYG{n}{e\PYGZus{}node} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{adj}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]}\PYG{o}{.}\PYG{n}{get\PYGZus{}head}\PYG{p}{()}
+		\PYG{k}{while} \PYG{n}{e\PYGZus{}node}\PYG{p}{:}
+			\PYG{n}{e} \PYG{o}{=} \PYG{n}{e\PYGZus{}node}\PYG{o}{.}\PYG{n}{get\PYGZus{}data}\PYG{p}{()}
+			\PYG{n}{it} \PYG{o}{=} \PYG{n}{e\PYGZus{}node}
+
+			\PYG{k}{if} \PYG{n}{e} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{reverse\PYGZus{}edges}\PYG{p}{:}
+				\PYG{n}{w} \PYG{o}{=} \PYG{n}{e}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{c+c1}{\PYGZsh{} target}
+			\PYG{k}{else}\PYG{p}{:}
+				\PYG{n}{w} \PYG{o}{=} \PYG{n}{e}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}
+			\PYG{n}{wnum} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{newnum}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]}
+			\PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{edge\PYGZus{}status}\PYG{p}{[}\PYG{n}{e}\PYG{p}{]} \PYG{o}{==} \PYG{l+m+mi}{1}\PYG{p}{:} \PYG{c+c1}{\PYGZsh{} e is a tree arc}
+				\PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{starts\PYGZus{}path}\PYG{p}{[}\PYG{n}{e}\PYG{p}{]:} \PYG{c+c1}{\PYGZsh{} if a new path starts at edge e}
+					\PYG{n}{y} \PYG{o}{=} \PYG{l+m+mi}{0}
+					\PYG{c+c1}{\PYGZsh{} Pop all (h,a,b) from tstack where a \PYGZgt{} lowpt1[w]}
+					\PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}a}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}top}\PYG{p}{]} \PYG{o}{\PYGZgt{}} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]:}
+						\PYG{k}{while} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}a}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}top}\PYG{p}{]} \PYG{o}{\PYGZgt{}} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]:}
+							\PYG{n}{y} \PYG{o}{=} \PYG{n+nb}{max}\PYG{p}{(}\PYG{n}{y}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}h}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}top}\PYG{p}{])}
+							\PYG{n}{b} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}b}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}top}\PYG{p}{]}
+							\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}top} \PYG{o}{\PYGZhy{}=} \PYG{l+m+mi}{1}
+						\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}tstack\PYGZus{}push}\PYG{p}{(}\PYG{n}{y}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{w}\PYG{p}{],} \PYG{n}{b}\PYG{p}{)}
+
+					\PYG{k}{else}\PYG{p}{:}
+						\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}tstack\PYGZus{}push}\PYG{p}{(}\PYG{n}{wnum} \PYG{o}{+} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{nd}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{w}\PYG{p}{],} \PYG{n}{vnum}\PYG{p}{)}
+					\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}tstack\PYGZus{}push\PYGZus{}eos}\PYG{p}{()}
+
+				\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}path\PYGZus{}search}\PYG{p}{(}\PYG{n}{w}\PYG{p}{)}
+
+				\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{e\PYGZus{}stack}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{tree\PYGZus{}arc}\PYG{p}{[}\PYG{n}{w}\PYG{p}{])}
+				\PYG{n}{temp\PYGZus{}node} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{adj}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]}\PYG{o}{.}\PYG{n}{get\PYGZus{}head}\PYG{p}{()}
+				\PYG{n}{temp} \PYG{o}{=} \PYG{n}{temp\PYGZus{}node}\PYG{o}{.}\PYG{n}{get\PYGZus{}data}\PYG{p}{()}
+				\PYG{k}{if} \PYG{n}{temp} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{reverse\PYGZus{}edges}\PYG{p}{:}
+					\PYG{n}{temp\PYGZus{}target} \PYG{o}{=} \PYG{n}{temp}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+				\PYG{k}{else}\PYG{p}{:}
+					\PYG{n}{temp\PYGZus{}target} \PYG{o}{=} \PYG{n}{temp}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}
+
+				\PYG{c+c1}{\PYGZsh{} Type\PYGZhy{}2 separation pair check}
+				\PYG{c+c1}{\PYGZsh{} while v is not the start\PYGZus{}vertex}
+				\PYG{k}{while} \PYG{n}{vnum} \PYG{o}{!=} \PYG{l+m+mi}{1} \PYG{o+ow}{and} \PYG{p}{((}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}a}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}top}\PYG{p}{]} \PYG{o}{==} \PYG{n}{vnum}\PYG{p}{)} \PYG{o+ow}{or}
+									 \PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{degree}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]} \PYG{o}{==} \PYG{l+m+mi}{2} \PYG{o+ow}{and} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{newnum}\PYG{p}{[}\PYG{n}{temp\PYGZus{}target}\PYG{p}{]} \PYG{o}{\PYGZgt{}} \PYG{n}{wnum}\PYG{p}{)):}
+
+					\PYG{n}{a} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}a}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}top}\PYG{p}{]}
+					\PYG{n}{b} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}b}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}top}\PYG{p}{]}
+					\PYG{n}{e\PYGZus{}virt} \PYG{o}{=} \PYG{k+kc}{None}
+					\PYG{k}{if} \PYG{n}{a} \PYG{o}{==} \PYG{n}{vnum} \PYG{o+ow}{and} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{parent}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{node\PYGZus{}at}\PYG{p}{[}\PYG{n}{b}\PYG{p}{]]} \PYG{o}{==} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{node\PYGZus{}at}\PYG{p}{[}\PYG{n}{a}\PYG{p}{]:}
+						\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}top} \PYG{o}{\PYGZhy{}=} \PYG{l+m+mi}{1}
+
+					\PYG{k}{else}\PYG{p}{:}
+						\PYG{n}{e\PYGZus{}ab} \PYG{o}{=} \PYG{k+kc}{None}
+						\PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{degree}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]} \PYG{o}{==} \PYG{l+m+mi}{2} \PYG{o+ow}{and} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{newnum}\PYG{p}{[}\PYG{n}{temp\PYGZus{}target}\PYG{p}{]} \PYG{o}{\PYGZgt{}} \PYG{n}{wnum}\PYG{p}{:}
+							\PYG{c+c1}{\PYGZsh{} found type\PYGZhy{}2 separation pair \PYGZhy{} (v, temp\PYGZus{}target)}
+							\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{type2}\PYG{o}{.}\PYG{n}{append}\PYG{p}{((}\PYG{n}{v}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{temp\PYGZus{}target}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{))}
+							\PYG{n}{e1} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}estack\PYGZus{}pop}\PYG{p}{()}
+							\PYG{n}{e2} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}estack\PYGZus{}pop}\PYG{p}{()}
+							\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{adj}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]}\PYG{o}{.}\PYG{n}{remove}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{in\PYGZus{}adj}\PYG{p}{[}\PYG{n}{e2}\PYG{p}{])}
+
+							\PYG{k}{if} \PYG{n}{e2} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{reverse\PYGZus{}edges}\PYG{p}{:}
+								\PYG{n}{x} \PYG{o}{=} \PYG{n}{e2}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{c+c1}{\PYGZsh{} target}
+							\PYG{k}{else}\PYG{p}{:}
+								\PYG{n}{x} \PYG{o}{=} \PYG{n}{e2}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]} \PYG{c+c1}{\PYGZsh{} target}
+
+							\PYG{n}{e\PYGZus{}virt} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}new\PYGZus{}virtual\PYGZus{}edge}\PYG{p}{(}\PYG{n}{v}\PYG{p}{,} \PYG{n}{x}\PYG{p}{)}
+							\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{graph\PYGZus{}copy}\PYG{o}{.}\PYG{n}{add\PYGZus{}edge}\PYG{p}{(}\PYG{n}{e\PYGZus{}virt}\PYG{p}{)}
+							\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{degree}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{\PYGZhy{}=} \PYG{l+m+mi}{1}
+							\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{degree}\PYG{p}{[}\PYG{n}{x}\PYG{p}{]} \PYG{o}{\PYGZhy{}=} \PYG{l+m+mi}{1}
+
+							\PYG{k}{if} \PYG{n}{e2} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{reverse\PYGZus{}edges}\PYG{p}{:}
+								\PYG{n}{e2\PYGZus{}source} \PYG{o}{=} \PYG{n}{e2}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]} \PYG{c+c1}{\PYGZsh{} target}
+							\PYG{k}{else}\PYG{p}{:}
+								\PYG{n}{e2\PYGZus{}source} \PYG{o}{=} \PYG{n}{e2}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+							\PYG{k}{if} \PYG{n}{e2\PYGZus{}source} \PYG{o}{!=} \PYG{n}{w}\PYG{p}{:}
+								\PYG{k}{raise} \PYG{n+ne}{ValueError}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Graph is not biconnected\PYGZdq{}}\PYG{p}{)}
+
+							\PYG{n}{comp} \PYG{o}{=} \PYG{n}{\PYGZus{}Component}\PYG{p}{([}\PYG{n}{e1}\PYG{p}{,} \PYG{n}{e2}\PYG{p}{,} \PYG{n}{e\PYGZus{}virt}\PYG{p}{],} \PYG{l+m+mi}{1}\PYG{p}{)}
+							\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{components\PYGZus{}list}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{comp}\PYG{p}{)}
+							\PYG{n}{comp} \PYG{o}{=} \PYG{k+kc}{None}
+
+							\PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{e\PYGZus{}stack}\PYG{p}{:}
+								\PYG{n}{e1} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{e\PYGZus{}stack}\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]}
+								\PYG{k}{if} \PYG{n}{e1} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{reverse\PYGZus{}edges}\PYG{p}{:}
+									\PYG{k}{if} \PYG{n}{e1}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{==} \PYG{n}{x} \PYG{o+ow}{and} \PYG{n}{e1}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{==} \PYG{n}{v}\PYG{p}{:}
+										\PYG{n}{e\PYGZus{}ab} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}estack\PYGZus{}pop}\PYG{p}{()}
+										\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{adj}\PYG{p}{[}\PYG{n}{x}\PYG{p}{]}\PYG{o}{.}\PYG{n}{remove}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{in\PYGZus{}adj}\PYG{p}{[}\PYG{n}{e\PYGZus{}ab}\PYG{p}{])}
+										\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}del\PYGZus{}high}\PYG{p}{(}\PYG{n}{e\PYGZus{}ab}\PYG{p}{)}
+								\PYG{k}{else}\PYG{p}{:}
+									\PYG{k}{if} \PYG{n}{e1}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{==} \PYG{n}{x} \PYG{o+ow}{and} \PYG{n}{e1}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{==} \PYG{n}{v}\PYG{p}{:}
+										\PYG{n}{e\PYGZus{}ab} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}estack\PYGZus{}pop}\PYG{p}{()}
+										\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{adj}\PYG{p}{[}\PYG{n}{x}\PYG{p}{]}\PYG{o}{.}\PYG{n}{remove}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{in\PYGZus{}adj}\PYG{p}{[}\PYG{n}{e\PYGZus{}ab}\PYG{p}{])}
+										\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}del\PYGZus{}high}\PYG{p}{(}\PYG{n}{e\PYGZus{}ab}\PYG{p}{)}
+
+						\PYG{k}{else}\PYG{p}{:} \PYG{c+c1}{\PYGZsh{} found type\PYGZhy{}2 separation pair \PYGZhy{} (self.node\PYGZus{}at[a], self.node\PYGZus{}at[b])}
+							\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{type2}\PYG{o}{.}\PYG{n}{append}\PYG{p}{((}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{node\PYGZus{}at}\PYG{p}{[}\PYG{n}{a}\PYG{p}{]}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{node\PYGZus{}at}\PYG{p}{[}\PYG{n}{b}\PYG{p}{]}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{))}
+							\PYG{n}{h} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}h}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}top}\PYG{p}{]}
+							\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}top} \PYG{o}{\PYGZhy{}=} \PYG{l+m+mi}{1}
+
+							\PYG{n}{comp} \PYG{o}{=} \PYG{n}{\PYGZus{}Component}\PYG{p}{([],}\PYG{l+m+mi}{0}\PYG{p}{)}
+							\PYG{k}{while} \PYG{k+kc}{True}\PYG{p}{:}
+								\PYG{n}{xy} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{e\PYGZus{}stack}\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]}
+								\PYG{k}{if} \PYG{n}{xy} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{reverse\PYGZus{}edges}\PYG{p}{:}
+									\PYG{n}{x} \PYG{o}{=} \PYG{n}{xy}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}
+									\PYG{n}{xy\PYGZus{}target} \PYG{o}{=} \PYG{n}{xy}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+								\PYG{k}{else}\PYG{p}{:}
+									\PYG{n}{x} \PYG{o}{=} \PYG{n}{xy}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+									\PYG{n}{xy\PYGZus{}target} \PYG{o}{=} \PYG{n}{xy}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}
+								\PYG{k}{if} \PYG{o+ow}{not} \PYG{p}{(}\PYG{n}{a} \PYG{o}{\PYGZlt{}=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{newnum}\PYG{p}{[}\PYG{n}{x}\PYG{p}{]} \PYG{o}{\PYGZlt{}=} \PYG{n}{h} \PYG{o+ow}{and} \PYG{n}{a} \PYG{o}{\PYGZlt{}=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{newnum}\PYG{p}{[}\PYG{n}{xy\PYGZus{}target}\PYG{p}{]} \PYG{o}{\PYGZlt{}=} \PYG{n}{h}\PYG{p}{):}
+									\PYG{k}{break}
+								\PYG{k}{if} \PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{newnum}\PYG{p}{[}\PYG{n}{x}\PYG{p}{]} \PYG{o}{==} \PYG{n}{a} \PYG{o+ow}{and} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{newnum}\PYG{p}{[}\PYG{n}{xy\PYGZus{}target}\PYG{p}{]} \PYG{o}{==} \PYG{n}{b}\PYG{p}{)} \PYG{o+ow}{or} \PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{newnum}\PYG{p}{[}\PYG{n}{xy\PYGZus{}target}\PYG{p}{]} \PYG{o}{==} \PYG{n}{a} \PYG{o+ow}{and} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{newnum}\PYG{p}{[}\PYG{n}{x}\PYG{p}{]} \PYG{o}{==} \PYG{n}{b}\PYG{p}{):}
+									\PYG{n}{e\PYGZus{}ab} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}estack\PYGZus{}pop}\PYG{p}{()}
+									\PYG{k}{if} \PYG{n}{e\PYGZus{}ab} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{reverse\PYGZus{}edges}\PYG{p}{:}
+										\PYG{n}{e\PYGZus{}ab\PYGZus{}source} \PYG{o}{=} \PYG{n}{e\PYGZus{}ab}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]} \PYG{c+c1}{\PYGZsh{} source}
+									\PYG{k}{else}\PYG{p}{:}
+										\PYG{n}{e\PYGZus{}ab\PYGZus{}source} \PYG{o}{=} \PYG{n}{e\PYGZus{}ab}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{c+c1}{\PYGZsh{} source}
+									\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{adj}\PYG{p}{[}\PYG{n}{e\PYGZus{}ab\PYGZus{}source}\PYG{p}{]}\PYG{o}{.}\PYG{n}{remove}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{in\PYGZus{}adj}\PYG{p}{[}\PYG{n}{e\PYGZus{}ab}\PYG{p}{])}
+									\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}del\PYGZus{}high}\PYG{p}{(}\PYG{n}{e\PYGZus{}ab}\PYG{p}{)}
+
+								\PYG{k}{else}\PYG{p}{:}
+									\PYG{n}{eh} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}estack\PYGZus{}pop}\PYG{p}{()}
+									\PYG{k}{if} \PYG{n}{eh} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{reverse\PYGZus{}edges}\PYG{p}{:}
+										\PYG{n}{eh\PYGZus{}source} \PYG{o}{=} \PYG{n}{eh}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}
+									\PYG{k}{else}\PYG{p}{:}
+										\PYG{n}{eh\PYGZus{}source} \PYG{o}{=} \PYG{n}{eh}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+									\PYG{k}{if} \PYG{n}{it} \PYG{o}{!=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{in\PYGZus{}adj}\PYG{p}{[}\PYG{n}{eh}\PYG{p}{]:}
+										\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{adj}\PYG{p}{[}\PYG{n}{eh\PYGZus{}source}\PYG{p}{]}\PYG{o}{.}\PYG{n}{remove}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{in\PYGZus{}adj}\PYG{p}{[}\PYG{n}{eh}\PYG{p}{])}
+										\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}del\PYGZus{}high}\PYG{p}{(}\PYG{n}{eh}\PYG{p}{)}
+
+									\PYG{n}{comp}\PYG{o}{.}\PYG{n}{add\PYGZus{}edge}\PYG{p}{(}\PYG{n}{eh}\PYG{p}{)}
+									\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{degree}\PYG{p}{[}\PYG{n}{x}\PYG{p}{]} \PYG{o}{\PYGZhy{}=} \PYG{l+m+mi}{1}
+									\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{degree}\PYG{p}{[}\PYG{n}{xy\PYGZus{}target}\PYG{p}{]} \PYG{o}{\PYGZhy{}=} \PYG{l+m+mi}{1}
+
+							\PYG{n}{e\PYGZus{}virt} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}new\PYGZus{}virtual\PYGZus{}edge}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{node\PYGZus{}at}\PYG{p}{[}\PYG{n}{a}\PYG{p}{],} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{node\PYGZus{}at}\PYG{p}{[}\PYG{n}{b}\PYG{p}{])}
+							\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{graph\PYGZus{}copy}\PYG{o}{.}\PYG{n}{add\PYGZus{}edge}\PYG{p}{(}\PYG{n}{e\PYGZus{}virt}\PYG{p}{)}
+							\PYG{n}{comp}\PYG{o}{.}\PYG{n}{finish\PYGZus{}tric\PYGZus{}or\PYGZus{}poly}\PYG{p}{(}\PYG{n}{e\PYGZus{}virt}\PYG{p}{)}
+							\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{components\PYGZus{}list}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{comp}\PYG{p}{)}
+							\PYG{n}{comp} \PYG{o}{=} \PYG{k+kc}{None}
+							\PYG{n}{x} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{node\PYGZus{}at}\PYG{p}{[}\PYG{n}{b}\PYG{p}{]}
+
+						\PYG{k}{if} \PYG{n}{e\PYGZus{}ab} \PYG{o+ow}{is} \PYG{o+ow}{not} \PYG{k+kc}{None}\PYG{p}{:}
+							\PYG{n}{comp} \PYG{o}{=} \PYG{n}{\PYGZus{}Component}\PYG{p}{([}\PYG{n}{e\PYGZus{}ab}\PYG{p}{,} \PYG{n}{e\PYGZus{}virt}\PYG{p}{],} \PYG{n}{type\PYGZus{}c}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{)}
+							\PYG{n}{e\PYGZus{}virt} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}new\PYGZus{}virtual\PYGZus{}edge}\PYG{p}{(}\PYG{n}{v}\PYG{p}{,} \PYG{n}{x}\PYG{p}{)}
+							\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{graph\PYGZus{}copy}\PYG{o}{.}\PYG{n}{add\PYGZus{}edge}\PYG{p}{(}\PYG{n}{e\PYGZus{}virt}\PYG{p}{)}
+							\PYG{n}{comp}\PYG{o}{.}\PYG{n}{add\PYGZus{}edge}\PYG{p}{(}\PYG{n}{e\PYGZus{}virt}\PYG{p}{)}
+							\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{degree}\PYG{p}{[}\PYG{n}{x}\PYG{p}{]} \PYG{o}{\PYGZhy{}=} \PYG{l+m+mi}{1}
+							\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{degree}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{\PYGZhy{}=} \PYG{l+m+mi}{1}
+							\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{components\PYGZus{}list}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{comp}\PYG{p}{)}
+							\PYG{n}{comp} \PYG{o}{=} \PYG{k+kc}{None}
+
+						\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{e\PYGZus{}stack}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{e\PYGZus{}virt}\PYG{p}{)}
+						\PYG{c+c1}{\PYGZsh{} Replace the edge `it` with `e\PYGZus{}virt`}
+						\PYG{n}{it}\PYG{o}{.}\PYG{n}{set\PYGZus{}data}\PYG{p}{(}\PYG{n}{e\PYGZus{}virt}\PYG{p}{)}
+
+						\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{in\PYGZus{}adj}\PYG{p}{[}\PYG{n}{e\PYGZus{}virt}\PYG{p}{]} \PYG{o}{=} \PYG{n}{it}
+						\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{degree}\PYG{p}{[}\PYG{n}{x}\PYG{p}{]} \PYG{o}{+=} \PYG{l+m+mi}{1}
+						\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{degree}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{+=} \PYG{l+m+mi}{1}
+						\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{parent}\PYG{p}{[}\PYG{n}{x}\PYG{p}{]} \PYG{o}{=} \PYG{n}{v}
+						\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{tree\PYGZus{}arc}\PYG{p}{[}\PYG{n}{x}\PYG{p}{]} \PYG{o}{=} \PYG{n}{e\PYGZus{}virt}
+						\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{edge\PYGZus{}status}\PYG{p}{[}\PYG{n}{e\PYGZus{}virt}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{1}
+						\PYG{n}{w} \PYG{o}{=} \PYG{n}{x}
+						\PYG{n}{wnum} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{newnum}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]}
+
+					\PYG{c+c1}{\PYGZsh{} update the values used in the while loop check}
+					\PYG{n}{temp\PYGZus{}node} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{adj}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]}\PYG{o}{.}\PYG{n}{get\PYGZus{}head}\PYG{p}{()}
+					\PYG{n}{temp} \PYG{o}{=} \PYG{n}{temp\PYGZus{}node}\PYG{o}{.}\PYG{n}{get\PYGZus{}data}\PYG{p}{()}
+					\PYG{k}{if} \PYG{n}{temp} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{reverse\PYGZus{}edges}\PYG{p}{:}
+						\PYG{n}{temp\PYGZus{}target} \PYG{o}{=} \PYG{n}{temp}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+					\PYG{k}{else}\PYG{p}{:}
+						\PYG{n}{temp\PYGZus{}target} \PYG{o}{=} \PYG{n}{temp}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}
+
+				\PYG{c+c1}{\PYGZsh{} start type\PYGZhy{}1 check}
+				\PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt2}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]} \PYG{o}{\PYGZgt{}=} \PYG{n}{vnum} \PYG{o+ow}{and} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]} \PYG{o}{\PYGZlt{}} \PYG{n}{vnum} \PYG{o+ow}{and} \PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{parent}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{!=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{start\PYGZus{}vertex} \PYG{o+ow}{or} \PYG{n}{outv} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{2}\PYG{p}{):}
+					\PYG{c+c1}{\PYGZsh{} type\PYGZhy{}1 separation pair \PYGZhy{} (self.node\PYGZus{}at[self.lowpt1[w]], v)}
+					\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{type1}\PYG{o}{.}\PYG{n}{append}\PYG{p}{((}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{node\PYGZus{}at}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]]}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{v}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{))}
+					\PYG{c+c1}{\PYGZsh{} Create a new component and add edges to it}
+					\PYG{n}{comp} \PYG{o}{=} \PYG{n}{\PYGZus{}Component}\PYG{p}{([],} \PYG{l+m+mi}{0}\PYG{p}{)}
+					\PYG{k}{if} \PYG{o+ow}{not} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{e\PYGZus{}stack}\PYG{p}{:}
+						\PYG{k}{raise} \PYG{n+ne}{ValueError}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}stack is empty\PYGZdq{}}\PYG{p}{)}
+					\PYG{k}{while} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{e\PYGZus{}stack}\PYG{p}{:}
+						\PYG{n}{xy} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{e\PYGZus{}stack}\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]}
+						\PYG{k}{if} \PYG{n}{xy} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{reverse\PYGZus{}edges}\PYG{p}{:}
+							\PYG{n}{xx} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{newnum}\PYG{p}{[}\PYG{n}{xy}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]]} \PYG{c+c1}{\PYGZsh{}source}
+							\PYG{n}{y} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{newnum}\PYG{p}{[}\PYG{n}{xy}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]]} \PYG{c+c1}{\PYGZsh{}target}
+						\PYG{k}{else}\PYG{p}{:}
+							\PYG{n}{xx} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{newnum}\PYG{p}{[}\PYG{n}{xy}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]]} \PYG{c+c1}{\PYGZsh{}source}
+							\PYG{n}{y} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{newnum}\PYG{p}{[}\PYG{n}{xy}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]]} \PYG{c+c1}{\PYGZsh{}target}
+
+						\PYG{k}{if} \PYG{o+ow}{not} \PYG{p}{((}\PYG{n}{wnum} \PYG{o}{\PYGZlt{}=} \PYG{n}{xx} \PYG{o+ow}{and}  \PYG{n}{xx} \PYG{o}{\PYGZlt{}} \PYG{n}{wnum} \PYG{o}{+} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{nd}\PYG{p}{[}\PYG{n}{w}\PYG{p}{])} \PYG{o+ow}{or}
+								\PYG{p}{(}\PYG{n}{wnum} \PYG{o}{\PYGZlt{}=} \PYG{n}{y} \PYG{o+ow}{and} \PYG{n}{y} \PYG{o}{\PYGZlt{}} \PYG{n}{wnum} \PYG{o}{+} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{nd}\PYG{p}{[}\PYG{n}{w}\PYG{p}{])):}
+							\PYG{k}{break}
+
+						\PYG{n}{comp}\PYG{o}{.}\PYG{n}{add\PYGZus{}edge}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}estack\PYGZus{}pop}\PYG{p}{())}
+						\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}del\PYGZus{}high}\PYG{p}{(}\PYG{n}{xy}\PYG{p}{)}
+						\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{degree}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{node\PYGZus{}at}\PYG{p}{[}\PYG{n}{xx}\PYG{p}{]]} \PYG{o}{\PYGZhy{}=} \PYG{l+m+mi}{1}
+						\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{degree}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{node\PYGZus{}at}\PYG{p}{[}\PYG{n}{y}\PYG{p}{]]} \PYG{o}{\PYGZhy{}=} \PYG{l+m+mi}{1}
+
+					\PYG{n}{e\PYGZus{}virt} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}new\PYGZus{}virtual\PYGZus{}edge}\PYG{p}{(}\PYG{n}{v}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{node\PYGZus{}at}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]])}
+					\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{graph\PYGZus{}copy}\PYG{o}{.}\PYG{n}{add\PYGZus{}edge}\PYG{p}{(}\PYG{n}{e\PYGZus{}virt}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} Add virtual edge to graph}
+					\PYG{n}{comp}\PYG{o}{.}\PYG{n}{finish\PYGZus{}tric\PYGZus{}or\PYGZus{}poly}\PYG{p}{(}\PYG{n}{e\PYGZus{}virt}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} Add virtual edge to component}
+					\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{components\PYGZus{}list}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{comp}\PYG{p}{)}
+					\PYG{n}{comp} \PYG{o}{=} \PYG{k+kc}{None}
+
+					\PYG{k}{if} \PYG{p}{(}\PYG{n}{xx} \PYG{o}{==} \PYG{n}{vnum} \PYG{o+ow}{and} \PYG{n}{y} \PYG{o}{==} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{w}\PYG{p}{])} \PYG{o+ow}{or} \PYG{p}{(}\PYG{n}{y} \PYG{o}{==} \PYG{n}{vnum} \PYG{o+ow}{and} \PYG{n}{xx} \PYG{o}{==} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]):}
+						\PYG{n}{comp\PYGZus{}bond} \PYG{o}{=} \PYG{n}{\PYGZus{}Component}\PYG{p}{([],} \PYG{n}{type\PYGZus{}c}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} new triple bond}
+						\PYG{n}{eh} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}estack\PYGZus{}pop}\PYG{p}{()}
+						\PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{in\PYGZus{}adj}\PYG{p}{[}\PYG{n}{eh}\PYG{p}{]} \PYG{o}{!=} \PYG{n}{it}\PYG{p}{:}
+							\PYG{k}{if} \PYG{n}{eh} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{reverse\PYGZus{}edges}\PYG{p}{:}
+								\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{adj}\PYG{p}{[}\PYG{n}{eh}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]]}\PYG{o}{.}\PYG{n}{remove}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{in\PYGZus{}adj}\PYG{p}{[}\PYG{n}{eh}\PYG{p}{])}
+							\PYG{k}{else}\PYG{p}{:}
+								\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{adj}\PYG{p}{[}\PYG{n}{eh}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]]}\PYG{o}{.}\PYG{n}{remove}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{in\PYGZus{}adj}\PYG{p}{[}\PYG{n}{eh}\PYG{p}{])}
+
+						\PYG{n}{comp\PYGZus{}bond}\PYG{o}{.}\PYG{n}{add\PYGZus{}edge}\PYG{p}{(}\PYG{n}{eh}\PYG{p}{)}
+						\PYG{n}{comp\PYGZus{}bond}\PYG{o}{.}\PYG{n}{add\PYGZus{}edge}\PYG{p}{(}\PYG{n}{e\PYGZus{}virt}\PYG{p}{)}
+						\PYG{n}{e\PYGZus{}virt} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}new\PYGZus{}virtual\PYGZus{}edge}\PYG{p}{(}\PYG{n}{v}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{node\PYGZus{}at}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]])}
+						\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{graph\PYGZus{}copy}\PYG{o}{.}\PYG{n}{add\PYGZus{}edge}\PYG{p}{(}\PYG{n}{e\PYGZus{}virt}\PYG{p}{)}
+						\PYG{n}{comp\PYGZus{}bond}\PYG{o}{.}\PYG{n}{add\PYGZus{}edge}\PYG{p}{(}\PYG{n}{e\PYGZus{}virt}\PYG{p}{)}
+						\PYG{k}{if} \PYG{n}{eh} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{in\PYGZus{}high}\PYG{p}{:}
+							\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{in\PYGZus{}high}\PYG{p}{[}\PYG{n}{e\PYGZus{}virt}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{in\PYGZus{}high}\PYG{p}{[}\PYG{n}{eh}\PYG{p}{]}
+						\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{degree}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{\PYGZhy{}=} \PYG{l+m+mi}{1}
+						\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{degree}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{node\PYGZus{}at}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]]]} \PYG{o}{\PYGZhy{}=} \PYG{l+m+mi}{1}
+						\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{components\PYGZus{}list}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{comp\PYGZus{}bond}\PYG{p}{)}
+						\PYG{n}{comp\PYGZus{}bond} \PYG{o}{=} \PYG{k+kc}{None}
+
+					\PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{node\PYGZus{}at}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]]} \PYG{o}{!=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{parent}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]:}
+						\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{e\PYGZus{}stack}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{e\PYGZus{}virt}\PYG{p}{)}
+
+						\PYG{c+c1}{\PYGZsh{} replace edge `it` with `e\PYGZus{}virt`}
+						\PYG{n}{it}\PYG{o}{.}\PYG{n}{set\PYGZus{}data}\PYG{p}{(}\PYG{n}{e\PYGZus{}virt}\PYG{p}{)}
+
+						\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{in\PYGZus{}adj}\PYG{p}{[}\PYG{n}{e\PYGZus{}virt}\PYG{p}{]} \PYG{o}{=} \PYG{n}{it}
+						\PYG{k}{if} \PYG{o+ow}{not} \PYG{n}{e\PYGZus{}virt} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{in\PYGZus{}high} \PYG{o+ow}{and} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}high}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{node\PYGZus{}at}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]])} \PYG{o}{\PYGZlt{}} \PYG{n}{vnum}\PYG{p}{:}
+							\PYG{n}{vnum\PYGZus{}node} \PYG{o}{=} \PYG{n}{\PYGZus{}LinkedListNode}\PYG{p}{(}\PYG{n}{vnum}\PYG{p}{)}
+							\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{highpt}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{node\PYGZus{}at}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]]]}\PYG{o}{.}\PYG{n}{push\PYGZus{}front}\PYG{p}{(}\PYG{n}{vnum\PYGZus{}node}\PYG{p}{)}
+							\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{in\PYGZus{}high}\PYG{p}{[}\PYG{n}{e\PYGZus{}virt}\PYG{p}{]} \PYG{o}{=} \PYG{n}{vnum\PYGZus{}node}
+
+						\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{degree}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{+=} \PYG{l+m+mi}{1}
+						\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{degree}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{node\PYGZus{}at}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]]]} \PYG{o}{+=} \PYG{l+m+mi}{1}
+
+					\PYG{k}{else}\PYG{p}{:}
+						\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{adj}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]}\PYG{o}{.}\PYG{n}{remove}\PYG{p}{(}\PYG{n}{it}\PYG{p}{)}
+						\PYG{n}{comp\PYGZus{}bond} \PYG{o}{=} \PYG{n}{\PYGZus{}Component}\PYG{p}{([}\PYG{n}{e\PYGZus{}virt}\PYG{p}{],} \PYG{n}{type\PYGZus{}c}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{)}
+						\PYG{n}{e\PYGZus{}virt} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}new\PYGZus{}virtual\PYGZus{}edge}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{node\PYGZus{}at}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lowpt1}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]],} \PYG{n}{v}\PYG{p}{)}
+						\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{graph\PYGZus{}copy}\PYG{o}{.}\PYG{n}{add\PYGZus{}edge}\PYG{p}{(}\PYG{n}{e\PYGZus{}virt}\PYG{p}{)}
+						\PYG{n}{comp\PYGZus{}bond}\PYG{o}{.}\PYG{n}{add\PYGZus{}edge}\PYG{p}{(}\PYG{n}{e\PYGZus{}virt}\PYG{p}{)}
+
+						\PYG{n}{eh} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{tree\PYGZus{}arc}\PYG{p}{[}\PYG{n}{v}\PYG{p}{];}
+						\PYG{n}{comp\PYGZus{}bond}\PYG{o}{.}\PYG{n}{add\PYGZus{}edge}\PYG{p}{(}\PYG{n}{eh}\PYG{p}{)}
+						\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{components\PYGZus{}list}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{comp\PYGZus{}bond}\PYG{p}{)}
+						\PYG{n}{comp\PYGZus{}bond} \PYG{o}{=} \PYG{k+kc}{None}
+
+						\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{tree\PYGZus{}arc}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{=} \PYG{n}{e\PYGZus{}virt}
+						\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{edge\PYGZus{}status}\PYG{p}{[}\PYG{n}{e\PYGZus{}virt}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{1}
+						\PYG{k}{if} \PYG{n}{eh} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{in\PYGZus{}adj}\PYG{p}{:}
+							\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{in\PYGZus{}adj}\PYG{p}{[}\PYG{n}{e\PYGZus{}virt}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{in\PYGZus{}adj}\PYG{p}{[}\PYG{n}{eh}\PYG{p}{]}
+						\PYG{n}{e\PYGZus{}virt\PYGZus{}node} \PYG{o}{=} \PYG{n}{\PYGZus{}LinkedListNode}\PYG{p}{(}\PYG{n}{e\PYGZus{}virt}\PYG{p}{)}
+						\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{in\PYGZus{}adj}\PYG{p}{[}\PYG{n}{eh}\PYG{p}{]} \PYG{o}{=} \PYG{n}{e\PYGZus{}virt\PYGZus{}node}
+					\PYG{c+c1}{\PYGZsh{} end type\PYGZhy{}1 search}
+
+				\PYG{c+c1}{\PYGZsh{} if an path starts at edge e, empty the tstack.}
+				\PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{starts\PYGZus{}path}\PYG{p}{[}\PYG{n}{e}\PYG{p}{]:}
+					\PYG{k}{while} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}tstack\PYGZus{}not\PYGZus{}eos}\PYG{p}{():}
+						\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}top} \PYG{o}{\PYGZhy{}=} \PYG{l+m+mi}{1}
+					\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}top} \PYG{o}{\PYGZhy{}=} \PYG{l+m+mi}{1}
+
+				\PYG{k}{while} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}tstack\PYGZus{}not\PYGZus{}eos}\PYG{p}{()} \PYG{o+ow}{and} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}b}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}top}\PYG{p}{]} \PYG{o}{!=} \PYG{n}{vnum} \PYG{o+ow}{and} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}high}\PYG{p}{(}\PYG{n}{v}\PYG{p}{)} \PYG{o}{\PYGZgt{}} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}h}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}top}\PYG{p}{]:}
+					\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}top} \PYG{o}{\PYGZhy{}=} \PYG{l+m+mi}{1}
+
+				\PYG{n}{outv} \PYG{o}{\PYGZhy{}=} \PYG{l+m+mi}{1}
+			\PYG{k}{else}\PYG{p}{:} \PYG{c+c1}{\PYGZsh{} e is a frond}
+				\PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{starts\PYGZus{}path}\PYG{p}{[}\PYG{n}{e}\PYG{p}{]:}
+					\PYG{n}{y} \PYG{o}{=} \PYG{l+m+mi}{0}
+					\PYG{c+c1}{\PYGZsh{} pop all (h,a,b) from tstack where a \PYGZgt{} w}
+					\PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}a}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}top}\PYG{p}{]} \PYG{o}{\PYGZgt{}} \PYG{n}{wnum}\PYG{p}{:}
+						\PYG{k}{while} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}a}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}top}\PYG{p}{]} \PYG{o}{\PYGZgt{}} \PYG{n}{wnum}\PYG{p}{:}
+							\PYG{n}{y} \PYG{o}{=} \PYG{n+nb}{max}\PYG{p}{(}\PYG{n}{y}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}h}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}top}\PYG{p}{])}
+							\PYG{n}{b} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}b}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}top}\PYG{p}{]}
+							\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{t\PYGZus{}stack\PYGZus{}top} \PYG{o}{\PYGZhy{}=} \PYG{l+m+mi}{1}
+						\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}tstack\PYGZus{}push}\PYG{p}{(}\PYG{n}{y}\PYG{p}{,} \PYG{n}{wnum}\PYG{p}{,} \PYG{n}{b}\PYG{p}{)}
+
+					\PYG{k}{else}\PYG{p}{:}
+						\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}tstack\PYGZus{}push}\PYG{p}{(}\PYG{n}{vnum}\PYG{p}{,} \PYG{n}{wnum}\PYG{p}{,} \PYG{n}{vnum}\PYG{p}{)}
+				\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{e\PYGZus{}stack}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{e}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} add (v,w) to ESTACK}
+			\PYG{c+c1}{\PYGZsh{} Go to next edge in adjacency list}
+			\PYG{n}{e\PYGZus{}node} \PYG{o}{=} \PYG{n}{e\PYGZus{}node}\PYG{o}{.}\PYG{n}{next}
+
+	\PYG{k}{def} \PYG{n+nf}{\PYGZus{}\PYGZus{}print\PYGZus{}split}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{comp\PYGZus{}list\PYGZus{}new1} \PYG{o}{=} \PYG{p}{[]}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{comp\PYGZus{}type1} \PYG{o}{=} \PYG{p}{[]}
+		\PYG{k}{for} \PYG{n}{comp} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{components\PYGZus{}list}\PYG{p}{:}
+			\PYG{k}{if} \PYG{n}{comp}\PYG{o}{.}\PYG{n}{edge\PYGZus{}list}\PYG{o}{.}\PYG{n}{get\PYGZus{}length}\PYG{p}{()} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0}\PYG{p}{:}
+				\PYG{n}{e\PYGZus{}list} \PYG{o}{=} \PYG{n}{comp}\PYG{o}{.}\PYG{n}{get\PYGZus{}edge\PYGZus{}list}\PYG{p}{()}
+				\PYG{n}{e\PYGZus{}list\PYGZus{}new} \PYG{o}{=} \PYG{p}{[]}
+				\PYG{c+c1}{\PYGZsh{} For each edge, get the original source, target and label}
+				\PYG{k}{for} \PYG{n}{u}\PYG{p}{,}\PYG{n}{v}\PYG{p}{,}\PYG{n}{l} \PYG{o+ow}{in} \PYG{n}{e\PYGZus{}list}\PYG{p}{:}
+					\PYG{n}{source} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{int\PYGZus{}to\PYGZus{}vertex}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]}
+					\PYG{n}{target} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{int\PYGZus{}to\PYGZus{}vertex}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]}
+					\PYG{k}{if} \PYG{n+nb}{isinstance}\PYG{p}{(}\PYG{n}{l}\PYG{p}{,} \PYG{n+nb}{str}\PYG{p}{):}
+						\PYG{n}{label} \PYG{o}{=} \PYG{n}{l}
+					\PYG{k}{else}\PYG{p}{:}
+						\PYG{n}{label} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{int\PYGZus{}to\PYGZus{}original\PYGZus{}edge\PYGZus{}label}\PYG{p}{[}\PYG{n}{l}\PYG{p}{]}
+					\PYG{n}{e\PYGZus{}list\PYGZus{}new}\PYG{o}{.}\PYG{n}{append}\PYG{p}{((}\PYG{n}{source}\PYG{p}{,} \PYG{n}{target}\PYG{p}{,} \PYG{n}{label}\PYG{p}{))}
+				\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{comp\PYGZus{}list\PYGZus{}new1}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{e\PYGZus{}list\PYGZus{}new}\PYG{p}{)}
+		\PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{comp\PYGZus{}list\PYGZus{}new1}
+
+	\PYG{k}{def} \PYG{n+nf}{\PYGZus{}\PYGZus{}assemble\PYGZus{}triconnected\PYGZus{}components}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+
+		\PYG{n}{comp1} \PYG{o}{=} \PYG{p}{\PYGZob{}\PYGZcb{}} \PYG{c+c1}{\PYGZsh{} The index of first component that an edge belongs to}
+		\PYG{n}{comp2} \PYG{o}{=} \PYG{p}{\PYGZob{}\PYGZcb{}} \PYG{c+c1}{\PYGZsh{} The index of second component that an edge belongs to}
+		\PYG{n}{item1} \PYG{o}{=} \PYG{p}{\PYGZob{}\PYGZcb{}} \PYG{c+c1}{\PYGZsh{} Pointer to the edge node in component1}
+		\PYG{n}{item2} \PYG{o}{=} \PYG{p}{\PYGZob{}\PYGZcb{}} \PYG{c+c1}{\PYGZsh{} Pointer to the edge node in component2}
+		\PYG{n}{num\PYGZus{}components} \PYG{o}{=} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{components\PYGZus{}list}\PYG{p}{)}
+		\PYG{n}{visited} \PYG{o}{=} \PYG{p}{[}\PYG{k+kc}{False} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{num\PYGZus{}components}\PYG{p}{)]}
+
+		\PYG{c+c1}{\PYGZsh{} For each edge, we populate the comp1, comp2, item1 and item2 values}
+		\PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{num\PYGZus{}components}\PYG{p}{):} \PYG{c+c1}{\PYGZsh{} for each component}
+			\PYG{n}{e\PYGZus{}node} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{components\PYGZus{}list}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{o}{.}\PYG{n}{edge\PYGZus{}list}\PYG{o}{.}\PYG{n}{get\PYGZus{}head}\PYG{p}{()}
+			\PYG{k}{while} \PYG{n}{e\PYGZus{}node}\PYG{p}{:} \PYG{c+c1}{\PYGZsh{} for each edge}
+				\PYG{n}{e} \PYG{o}{=} \PYG{n}{e\PYGZus{}node}\PYG{o}{.}\PYG{n}{get\PYGZus{}data}\PYG{p}{()}
+				\PYG{k}{if} \PYG{n}{e} \PYG{o+ow}{not} \PYG{o+ow}{in} \PYG{n}{item1}\PYG{p}{:}
+					\PYG{n}{comp1}\PYG{p}{[}\PYG{n}{e}\PYG{p}{]} \PYG{o}{=} \PYG{n}{i}
+					\PYG{n}{item1}\PYG{p}{[}\PYG{n}{e}\PYG{p}{]} \PYG{o}{=} \PYG{n}{e\PYGZus{}node}
+				\PYG{k}{else}\PYG{p}{:}
+					\PYG{n}{comp2}\PYG{p}{[}\PYG{n}{e}\PYG{p}{]} \PYG{o}{=} \PYG{n}{i}
+					\PYG{n}{item2}\PYG{p}{[}\PYG{n}{e}\PYG{p}{]} \PYG{o}{=} \PYG{n}{e\PYGZus{}node}
+
+				\PYG{n}{e\PYGZus{}node} \PYG{o}{=} \PYG{n}{e\PYGZus{}node}\PYG{o}{.}\PYG{n}{next}
+
+		\PYG{c+c1}{\PYGZsh{} For each edge in a component, if the edge is a virtual edge, merge}
+		\PYG{c+c1}{\PYGZsh{} the two components the edge belongs to}
+		\PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{num\PYGZus{}components}\PYG{p}{):}
+			\PYG{n}{c1} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{components\PYGZus{}list}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}
+			\PYG{n}{c1\PYGZus{}type} \PYG{o}{=} \PYG{n}{c1}\PYG{o}{.}\PYG{n}{component\PYGZus{}type}
+			\PYG{n}{l1} \PYG{o}{=} \PYG{n}{c1}\PYG{o}{.}\PYG{n}{edge\PYGZus{}list}
+			\PYG{n}{visited}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{k+kc}{True}
+
+			\PYG{k}{if} \PYG{n}{l1}\PYG{o}{.}\PYG{n}{get\PYGZus{}length}\PYG{p}{()} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{:}
+				\PYG{k}{continue}
+
+			\PYG{k}{if} \PYG{n}{c1\PYGZus{}type} \PYG{o}{==} \PYG{l+m+mi}{0} \PYG{o+ow}{or} \PYG{n}{c1\PYGZus{}type} \PYG{o}{==} \PYG{l+m+mi}{1}\PYG{p}{:}
+				\PYG{n}{e\PYGZus{}node} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{components\PYGZus{}list}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{o}{.}\PYG{n}{edge\PYGZus{}list}\PYG{o}{.}\PYG{n}{get\PYGZus{}head}\PYG{p}{()}
+				\PYG{c+c1}{\PYGZsh{} Iterate through each edge in the component}
+				\PYG{k}{while} \PYG{n}{e\PYGZus{}node}\PYG{p}{:}
+					\PYG{n}{e} \PYG{o}{=} \PYG{n}{e\PYGZus{}node}\PYG{o}{.}\PYG{n}{get\PYGZus{}data}\PYG{p}{()}
+					\PYG{n}{e\PYGZus{}node\PYGZus{}next} \PYG{o}{=} \PYG{n}{e\PYGZus{}node}\PYG{o}{.}\PYG{n}{next}
+					\PYG{c+c1}{\PYGZsh{} The label of a virtual edge is a string}
+					\PYG{k}{if} \PYG{o+ow}{not} \PYG{n+nb}{isinstance}\PYG{p}{(}\PYG{n}{e}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{],} \PYG{n+nb}{str}\PYG{p}{):}
+						\PYG{n}{e\PYGZus{}node} \PYG{o}{=} \PYG{n}{e\PYGZus{}node\PYGZus{}next}
+						\PYG{k}{continue}
+
+					\PYG{n}{j} \PYG{o}{=} \PYG{n}{comp1}\PYG{p}{[}\PYG{n}{e}\PYG{p}{]}
+					\PYG{k}{if} \PYG{n}{visited}\PYG{p}{[}\PYG{n}{j}\PYG{p}{]:}
+						\PYG{n}{j} \PYG{o}{=} \PYG{n}{comp2}\PYG{p}{[}\PYG{n}{e}\PYG{p}{]}
+						\PYG{k}{if} \PYG{n}{visited}\PYG{p}{[}\PYG{n}{j}\PYG{p}{]:}
+							\PYG{n}{e\PYGZus{}node} \PYG{o}{=} \PYG{n}{e\PYGZus{}node\PYGZus{}next}
+							\PYG{k}{continue}
+						\PYG{n}{e\PYGZus{}node2} \PYG{o}{=} \PYG{n}{item2}\PYG{p}{[}\PYG{n}{e}\PYG{p}{]}
+					\PYG{k}{else}\PYG{p}{:}
+						\PYG{n}{e\PYGZus{}node2} \PYG{o}{=} \PYG{n}{item1}\PYG{p}{[}\PYG{n}{e}\PYG{p}{]}
+
+					\PYG{n}{c2} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{components\PYGZus{}list}\PYG{p}{[}\PYG{n}{j}\PYG{p}{]}
+
+					\PYG{c+c1}{\PYGZsh{} If the two components are not the same type, do not merge}
+					\PYG{k}{if} \PYG{p}{(}\PYG{n}{c1\PYGZus{}type} \PYG{o}{!=} \PYG{n}{c2}\PYG{o}{.}\PYG{n}{component\PYGZus{}type}\PYG{p}{):}
+						\PYG{n}{e\PYGZus{}node} \PYG{o}{=} \PYG{n}{e\PYGZus{}node\PYGZus{}next} \PYG{c+c1}{\PYGZsh{} Go to next edge}
+						\PYG{k}{continue}
+
+					\PYG{n}{visited}\PYG{p}{[}\PYG{n}{j}\PYG{p}{]} \PYG{o}{=} \PYG{k+kc}{True}
+					\PYG{n}{l2} \PYG{o}{=} \PYG{n}{c2}\PYG{o}{.}\PYG{n}{edge\PYGZus{}list}
+
+					\PYG{c+c1}{\PYGZsh{} Remove the corresponding virtual edges in both the components}
+					\PYG{c+c1}{\PYGZsh{} and merge the components}
+					\PYG{n}{l2}\PYG{o}{.}\PYG{n}{remove}\PYG{p}{(}\PYG{n}{e\PYGZus{}node2}\PYG{p}{)}
+					\PYG{n}{l1}\PYG{o}{.}\PYG{n}{concatenate}\PYG{p}{(}\PYG{n}{l2}\PYG{p}{)}
+
+					\PYG{c+c1}{\PYGZsh{} if `e\PYGZus{}node\PYGZus{}next` was empty, after merging two components,}
+					\PYG{c+c1}{\PYGZsh{} more edges are added to the component.}
+					\PYG{k}{if} \PYG{o+ow}{not} \PYG{n}{e\PYGZus{}node\PYGZus{}next}\PYG{p}{:}
+						\PYG{n}{e\PYGZus{}node\PYGZus{}next} \PYG{o}{=} \PYG{n}{e\PYGZus{}node}\PYG{o}{.}\PYG{n}{next} \PYG{c+c1}{\PYGZsh{} Go to next edge}
+
+					\PYG{n}{l1}\PYG{o}{.}\PYG{n}{remove}\PYG{p}{(}\PYG{n}{e\PYGZus{}node}\PYG{p}{)}
+
+					\PYG{n}{e\PYGZus{}node} \PYG{o}{=} \PYG{n}{e\PYGZus{}node\PYGZus{}next}
+
+		\PYG{c+c1}{\PYGZsh{} Convert connected components into original graph vertices and edges}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{comp\PYGZus{}list\PYGZus{}new} \PYG{o}{=} \PYG{p}{[]}
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{comp\PYGZus{}type} \PYG{o}{=} \PYG{p}{[]}
+		\PYG{k}{for} \PYG{n}{comp} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{components\PYGZus{}list}\PYG{p}{:}
+			\PYG{k}{if} \PYG{n}{comp}\PYG{o}{.}\PYG{n}{edge\PYGZus{}list}\PYG{o}{.}\PYG{n}{get\PYGZus{}length}\PYG{p}{()} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0}\PYG{p}{:}
+				\PYG{n}{e\PYGZus{}list} \PYG{o}{=} \PYG{n}{comp}\PYG{o}{.}\PYG{n}{get\PYGZus{}edge\PYGZus{}list}\PYG{p}{()}
+				\PYG{n}{e\PYGZus{}list\PYGZus{}new} \PYG{o}{=} \PYG{p}{[]}
+				\PYG{c+c1}{\PYGZsh{} For each edge, get the original source, target and label}
+				\PYG{k}{for} \PYG{n}{u}\PYG{p}{,}\PYG{n}{v}\PYG{p}{,}\PYG{n}{l} \PYG{o+ow}{in} \PYG{n}{e\PYGZus{}list}\PYG{p}{:}
+					\PYG{n}{source} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{int\PYGZus{}to\PYGZus{}vertex}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]}
+					\PYG{n}{target} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{int\PYGZus{}to\PYGZus{}vertex}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]}
+					\PYG{k}{if} \PYG{n+nb}{isinstance}\PYG{p}{(}\PYG{n}{l}\PYG{p}{,} \PYG{n+nb}{str}\PYG{p}{):}
+						\PYG{n}{label} \PYG{o}{=} \PYG{n}{l}
+					\PYG{k}{else}\PYG{p}{:}
+						\PYG{n}{label} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{int\PYGZus{}to\PYGZus{}original\PYGZus{}edge\PYGZus{}label}\PYG{p}{[}\PYG{n}{l}\PYG{p}{]}
+					\PYG{n}{e\PYGZus{}list\PYGZus{}new}\PYG{o}{.}\PYG{n}{append}\PYG{p}{((}\PYG{n}{source}\PYG{p}{,} \PYG{n}{target}\PYG{p}{,} \PYG{n}{label}\PYG{p}{))}
+				\PYG{c+c1}{\PYGZsh{} Add the component data to `comp\PYGZus{}list\PYGZus{}new` and `comp\PYGZus{}type`}
+				\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{comp\PYGZus{}type}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{comp}\PYG{o}{.}\PYG{n}{component\PYGZus{}type}\PYG{p}{)}
+				\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{comp\PYGZus{}list\PYGZus{}new}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{e\PYGZus{}list\PYGZus{}new}\PYG{p}{)}
+	\PYG{c+c1}{\PYGZsh{}print(self.comp\PYGZus{}list\PYGZus{}new)}
+
+	\PYG{k}{def} \PYG{n+nf}{\PYGZus{}\PYGZus{}build\PYGZus{}spqr\PYGZus{}tree}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+
+		\PYG{c+c1}{\PYGZsh{} Types of components 0: \PYGZdq{}P\PYGZdq{}, 1: \PYGZdq{}S\PYGZdq{}, 2: \PYGZdq{}R\PYGZdq{}}
+		\PYG{n}{component\PYGZus{}type} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}P\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}S\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}R\PYGZdq{}}\PYG{p}{]}
+
+		\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{spqr\PYGZus{}tree} \PYG{o}{=} \PYG{n}{Graph}\PYG{p}{(}\PYG{n}{multiedges}\PYG{o}{=}\PYG{k+kc}{False}\PYG{p}{,} \PYG{n}{name}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}SPQR\PYGZhy{}tree of }\PYG{l+s+si}{\PYGZob{}\PYGZcb{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{o}{.}\PYG{n}{format}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{graph\PYGZus{}name}\PYG{p}{))}
+
+		\PYG{k}{if} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{comp\PYGZus{}list\PYGZus{}new}\PYG{p}{)} \PYG{o}{==} \PYG{l+m+mi}{1} \PYG{o+ow}{and} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{comp\PYGZus{}type}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{:}
+			\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{spqr\PYGZus{}tree}\PYG{o}{.}\PYG{n}{add\PYGZus{}vertex}\PYG{p}{((}\PYG{l+s+s1}{\PYGZsq{}Q\PYGZsq{}} \PYG{k}{if} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{comp\PYGZus{}list\PYGZus{}new}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{])} \PYG{o}{==} \PYG{l+m+mi}{1} \PYG{k}{else} \PYG{l+s+s1}{\PYGZsq{}P\PYGZsq{}}\PYG{p}{,}
+									   \PYG{n}{Graph}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{comp\PYGZus{}list\PYGZus{}new}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{],} \PYG{n}{immutable}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,} \PYG{n}{multiedges}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)))}
+			\PYG{k}{return}
+
+		\PYG{n}{int\PYGZus{}to\PYGZus{}vertex} \PYG{o}{=} \PYG{p}{[]}
+		\PYG{n}{partner\PYGZus{}nodes} \PYG{o}{=} \PYG{p}{\PYGZob{}\PYGZcb{}}
+
+		\PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{comp\PYGZus{}list\PYGZus{}new}\PYG{p}{)):}
+			\PYG{c+c1}{\PYGZsh{} Create a new tree vertex}
+			\PYG{n}{u} \PYG{o}{=} \PYG{p}{(}\PYG{n}{component\PYGZus{}type}\PYG{p}{[}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{comp\PYGZus{}type}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]],}
+				 \PYG{n}{Graph}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{comp\PYGZus{}list\PYGZus{}new}\PYG{p}{[}\PYG{n}{i}\PYG{p}{],} \PYG{n}{immutable}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,} \PYG{n}{multiedges}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{))}
+			\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{spqr\PYGZus{}tree}\PYG{o}{.}\PYG{n}{add\PYGZus{}vertex}\PYG{p}{(}\PYG{n}{u}\PYG{p}{)}
+			\PYG{n}{int\PYGZus{}to\PYGZus{}vertex}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{u}\PYG{p}{)}
+
+			\PYG{c+c1}{\PYGZsh{} Add an edge to each node containing the same virtual edge}
+			\PYG{k}{for} \PYG{n}{e} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{comp\PYGZus{}list\PYGZus{}new}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]:}
+				\PYG{k}{if} \PYG{n}{e} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{virtual\PYGZus{}edges}\PYG{p}{:}
+					\PYG{k}{if} \PYG{n}{e} \PYG{o+ow}{in} \PYG{n}{partner\PYGZus{}nodes}\PYG{p}{:}
+						\PYG{k}{for} \PYG{n}{j} \PYG{o+ow}{in} \PYG{n}{partner\PYGZus{}nodes}\PYG{p}{[}\PYG{n}{e}\PYG{p}{]:}
+							\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{spqr\PYGZus{}tree}\PYG{o}{.}\PYG{n}{add\PYGZus{}edge}\PYG{p}{(}\PYG{n}{int\PYGZus{}to\PYGZus{}vertex}\PYG{p}{[}\PYG{n}{i}\PYG{p}{],} \PYG{n}{int\PYGZus{}to\PYGZus{}vertex}\PYG{p}{[}\PYG{n}{j}\PYG{p}{])}
+						\PYG{n}{partner\PYGZus{}nodes}\PYG{p}{[}\PYG{n}{e}\PYG{p}{]}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{i}\PYG{p}{)}
+					\PYG{k}{else}\PYG{p}{:}
+						\PYG{n}{partner\PYGZus{}nodes}\PYG{p}{[}\PYG{n}{e}\PYG{p}{]} \PYG{o}{=} \PYG{p}{[}\PYG{n}{i}\PYG{p}{]}
+\end{Verbatim}
