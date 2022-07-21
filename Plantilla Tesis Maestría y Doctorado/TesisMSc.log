@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2022.1.19)  20 JUL 2022 18:12
+This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2022.1.19)  21 JUL 2022 11:55
  restricted system commands enabled.
 **TesisMSc.tex
 (./TesisMSc.tex
@@ -1470,15 +1470,12 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 12.0pt
 (typearea)              \footskip       = 50.75pt
 (typearea)              \baselineskip   = 14.5pt
-(typearea)              on input line 95.
+(typearea)              on input line 124.
 \c@definition=\count367
 \c@theorem=\count368
 \c@example=\count369
- (./Befehle.sty) (./pythonhighlight.sty
-Package: pythonhighlight 2011/09/19 python code highlighting; provided by Olivie
-r Verdier <olivier.verdier@gmail.com>
-)
-Package hyperref Info: Option `colorlinks' set `true' on input line 167.
+ (./Befehle.sty)
+Package hyperref Info: Option `colorlinks' set `true' on input line 196.
 ) (./simbolos.tex
 \pgf@layerbox@bg=\box137
 \pgf@layerboxsaved@bg=\box138
@@ -1676,7 +1673,7 @@ LaTeX Warning: Label `sub@fig:f1' multiply defined.
 
 LaTeX Warning: Label `figura:componentesTriconexas1' multiply defined.
 
-) (./Kap5/Kap5.aux))
+) (./Kap5/Kap5.aux) (./Anexos/Anexos.aux))
 \openout1 = TesisMSc.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
@@ -1690,7 +1687,8 @@ LaTeX Font Info:    ... okay on input line 4.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 4.
 
- (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 4.
@@ -1934,7 +1932,34 @@ LaTeX Font Info:    Trying to load font information for T1+lmss on input line 17
 .
  (/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) (./TesisMSc.toc)
+) (./TesisMSc.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+LaTeX Info: Redefining \. on input line 2.
+LaTeX Info: Redefining \% on input line 2.
+Package tocbasic Info: Using my definition of `\numberline' on input line 3.
+Package tocbasic Info: Using my definition of `\numberline' on input line 4.
+Package tocbasic Info: Using my definition of `\numberline' on input line 5.
+Package tocbasic Info: Using my definition of `\numberline' on input line 6.
+Package tocbasic Info: Using my definition of `\numberline' on input line 7.
+Package tocbasic Info: Using my definition of `\numberline' on input line 8.
+Package tocbasic Info: Using my definition of `\numberline' on input line 9.
+Package tocbasic Info: Using my definition of `\numberline' on input line 10.
+Package tocbasic Info: Using my definition of `\numberline' on input line 11.
+Package tocbasic Info: Using my definition of `\numberline' on input line 12.
+Package tocbasic Info: Using my definition of `\numberline' on input line 13.
+Package tocbasic Info: Using my definition of `\numberline' on input line 14.
+Package tocbasic Info: Using my definition of `\numberline' on input line 15.
+Package tocbasic Info: Using my definition of `\numberline' on input line 16.
+Package tocbasic Info: Using my definition of `\numberline' on input line 20.
+Package tocbasic Info: Using my definition of `\numberline' on input line 21.
+Package tocbasic Info: Using my definition of `\numberline' on input line 22.
+Package tocbasic Info: Using my definition of `\numberline' on input line 23.
+Package tocbasic Info: Using my definition of `\numberline' on input line 24.
+Package tocbasic Info: Using my definition of `\numberline' on input line 25.
+Package tocbasic Info: Using my definition of `\numberline' on input line 26.
+Package tocbasic Info: Using my definition of `\numberline' on input line 27.
+)
 \tf@toc=\write5
 
 \openout5 = TesisMSc.toc
@@ -1964,10 +1989,6 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
  []
 
 
-Package natbib Warning: Citation `LayDavidC2001Alys' on page 1 undefined on inpu
-t line 10.
-
-
 warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
 [1
 
@@ -1994,25 +2015,12 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.4'
 LaTeX Info: Redefining \. on input line 273.
 LaTeX Info: Redefining \% on input line 273.
  [5]
-
-Package natbib Warning: Citation `Ringel1985TameAA' on page 6 undefined on input
- line 303.
-
-
-Package natbib Warning: Citation `alma991031505829703276' on page 6 undefined on
- input line 303.
-
 LaTeX Info: Redefining \. on input line 311.
 LaTeX Info: Redefining \% on input line 311.
-[6]
+ [6]
 LaTeX Info: Redefining \. on input line 430.
 LaTeX Info: Redefining \% on input line 430.
  [7]
-
-Package natbib Warning: Citation `AbarcaSoteloMarioAlberto2011Apds' on page 8 un
-defined on input line 442.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 447--448
 
  []
@@ -2095,18 +2103,6 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
  []
 
 
-Package natbib Warning: Citation `alma991031505829703276' on page 15 undefined o
-n input line 3.
-
-
-Package natbib Warning: Citation `Barot1999ACO' on page 15 undefined on input li
-ne 3.
-
-
-Package natbib Warning: Citation `alma991031505829703276' on page 15 undefined o
-n input line 9.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 12--13
 
  []
@@ -2144,10 +2140,6 @@ Overfull \hbox (57.40746pt too wide) in paragraph at lines 188--203
 Overfull \hbox (2.61105pt too wide) in paragraph at lines 206--240
 [][] [] 
  []
-
-
-Package natbib Warning: Citation `alma991031505829703276' on page 18 undefined o
-n input line 247.
 
 LaTeX Info: Redefining \. on input line 298.
 LaTeX Info: Redefining \% on input line 298.
@@ -2192,18 +2184,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 524.
 
 
-Package natbib Warning: Citation `Barot1999ACO' on page 24 undefined on input li
-ne 526.
-
-
-Package natbib Warning: Citation `AbarcaSoteloMarioAlberto2011Apds' on page 24 u
-ndefined on input line 526.
-
-
-Package natbib Warning: Citation `Barot1999ACO' on page 24 undefined on input li
-ne 526.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 525--527
 
  []
@@ -2241,22 +2221,22 @@ Overfull \hbox (57.40746pt too wide) in paragraph at lines 590--605
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Figuras/A-bloque1.pdf, id=336, 104.39pt x 110.011pt>
+<Figuras/A-bloque1.pdf, id=394, 104.39pt x 110.011pt>
 File: Figuras/A-bloque1.pdf Graphic file (type pdf)
 <use Figuras/A-bloque1.pdf>
 Package luatex.def Info: Figuras/A-bloque1.pdf  used on input line 633.
 (luatex.def)             Requested size: 113.39894pt x 119.50278pt.
-<Figuras/A-bloque2.pdf, id=337, 104.39pt x 110.011pt>
+<Figuras/A-bloque2.pdf, id=395, 104.39pt x 110.011pt>
 File: Figuras/A-bloque2.pdf Graphic file (type pdf)
 <use Figuras/A-bloque2.pdf>
 Package luatex.def Info: Figuras/A-bloque2.pdf  used on input line 639.
 (luatex.def)             Requested size: 113.39894pt x 119.50278pt.
-<Figuras/A-bloque3.pdf, id=338, 104.39pt x 110.011pt>
+<Figuras/A-bloque3.pdf, id=396, 104.39pt x 110.011pt>
 File: Figuras/A-bloque3.pdf Graphic file (type pdf)
 <use Figuras/A-bloque3.pdf>
 Package luatex.def Info: Figuras/A-bloque3.pdf  used on input line 645.
 (luatex.def)             Requested size: 113.39894pt x 119.50278pt.
-<Figuras/A-bloque.pdf, id=339, 104.39pt x 110.011pt>
+<Figuras/A-bloque.pdf, id=397, 104.39pt x 110.011pt>
 File: Figuras/A-bloque.pdf Graphic file (type pdf)
 <use Figuras/A-bloque.pdf>
 Package luatex.def Info: Figuras/A-bloque.pdf  used on input line 651.
@@ -2277,34 +2257,26 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 657.
 LaTeX Info: Redefining \% on input line 657.
  [24]
-
-Package natbib Warning: Citation `Barot1999ACO' on page 25 undefined on input li
-ne 658.
-
-<Figuras/graph.png, id=347, 906.38625pt x 300.3722pt>
+<Figuras/graph.png, id=405, 906.38625pt x 300.3722pt>
 File: Figuras/graph.png Graphic file (type png)
 <use Figuras/graph.png>
 Package luatex.def Info: Figuras/graph.png  used on input line 664.
 (luatex.def)             Requested size: 285.16742pt x 94.50548pt.
 LaTeX Info: Redefining \. on input line 666.
 LaTeX Info: Redefining \% on input line 666.
+
 [25<./Figuras/A-bloque1.pdf><./Figuras/A-bloque2.pdf><./Figuras/A-bloque3.pdf><.
 /Figuras/A-bloque.pdf>]
-<Figuras/graph1.png, id=355, 934.24031pt x 313.9228pt>
+<Figuras/graph1.png, id=414, 934.24031pt x 313.9228pt>
 File: Figuras/graph1.png Graphic file (type png)
 <use Figuras/graph1.png>
 Package luatex.def Info: Figuras/graph1.png  used on input line 669.
 (luatex.def)             Requested size: 281.24362pt x 94.50548pt.
-<Figuras/graph3.png, id=356, 736.25063pt x 249.93375pt>
+<Figuras/graph3.png, id=415, 736.25063pt x 249.93375pt>
 File: Figuras/graph3.png Graphic file (type png)
 <use Figuras/graph3.png>
 Package luatex.def Info: Figuras/graph3.png  used on input line 674.
 (luatex.def)             Requested size: 278.39633pt x 94.50548pt.
-
-
-Package natbib Warning: Citation `article123' on page 26 undefined on input line
- 682.
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 687--688
 
@@ -2321,7 +2293,7 @@ LaTeX Info: Redefining \% on input line 690.
 Missing character: There is no “ (U+201C) in font ec-lmr12!
 Missing character: There is no ” (U+201D) in font ec-lmr12!
 <./Figuras/graph.PNG><./Figuras/graph1.PNG><./Figuras/graph3.PNG>]
-<Figuras/graph4.png, id=371, 213.04594pt x 207.77625pt>
+<Figuras/graph4.png, id=433, 213.04594pt x 207.77625pt>
 File: Figuras/graph4.png Graphic file (type png)
 <use Figuras/graph4.png>
 Package luatex.def Info: Figuras/graph4.png  used on input line 695.
@@ -2331,7 +2303,7 @@ Overfull \hbox (57.40746pt too wide) in paragraph at lines 693--697
 []$[]$ 
  []
 
-<Figuras/graph5.png, id=372, 197.23688pt x 200.24812pt>
+<Figuras/graph5.png, id=434, 197.23688pt x 200.24812pt>
 File: Figuras/graph5.png Graphic file (type png)
 <use Figuras/graph5.png>
 Package luatex.def Info: Figuras/graph5.png  used on input line 702.
@@ -2341,7 +2313,7 @@ Overfull \hbox (57.40746pt too wide) in paragraph at lines 700--704
 []$[]$ 
  []
 
-<Figuras/graph6.png, id=373, 202.50656pt x 212.29312pt>
+<Figuras/graph6.png, id=435, 202.50656pt x 212.29312pt>
 File: Figuras/graph6.png Graphic file (type png)
 <use Figuras/graph6.png>
 Package luatex.def Info: Figuras/graph6.png  used on input line 709.
@@ -2351,7 +2323,7 @@ Overfull \hbox (57.40746pt too wide) in paragraph at lines 707--711
 []$[]$ 
  []
 
-<Figuras/graph7.png, id=374, 163.3603pt x 145.29282pt>
+<Figuras/graph7.png, id=436, 163.3603pt x 145.29282pt>
 File: Figuras/graph7.png Graphic file (type png)
 <use Figuras/graph7.png>
 Package luatex.def Info: Figuras/graph7.png  used on input line 721.
@@ -2394,7 +2366,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 783--784
 
  []
 
-<Figuras/graph8.png, id=407, 185.94469pt x 178.41656pt>
+<Figuras/graph8.png, id=468, 185.94469pt x 178.41656pt>
 File: Figuras/graph8.png Graphic file (type png)
 <use Figuras/graph8.png>
 Package luatex.def Info: Figuras/graph8.png  used on input line 799.
@@ -2404,7 +2376,7 @@ Overfull \hbox (57.40746pt too wide) in paragraph at lines 797--801
 []$[]$ 
  []
 
-<Figuras/graph9.png, id=408, 206.27063pt x 189.70876pt>
+<Figuras/graph9.png, id=469, 206.27063pt x 189.70876pt>
 File: Figuras/graph9.png Graphic file (type png)
 <use Figuras/graph9.png>
 Package luatex.def Info: Figuras/graph9.png  used on input line 806.
@@ -2414,7 +2386,7 @@ Overfull \hbox (57.40746pt too wide) in paragraph at lines 804--808
 []$[]$ 
  []
 
-<Figuras/graph10.png, id=409, 173.89969pt x 170.13562pt>
+<Figuras/graph10.png, id=470, 173.89969pt x 170.13562pt>
 File: Figuras/graph10.png Graphic file (type png)
 <use Figuras/graph10.png>
 Package luatex.def Info: Figuras/graph10.png  used on input line 813.
@@ -2424,7 +2396,7 @@ Overfull \hbox (57.40746pt too wide) in paragraph at lines 811--815
 []$[]$ 
  []
 
-<Figuras/graph11.png, id=410, 173.14688pt x 168.63pt>
+<Figuras/graph11.png, id=471, 173.14688pt x 168.63pt>
 File: Figuras/graph11.png Graphic file (type png)
 <use Figuras/graph11.png>
 Package luatex.def Info: Figuras/graph11.png  used on input line 820.
@@ -2434,7 +2406,7 @@ Overfull \hbox (57.40746pt too wide) in paragraph at lines 818--822
 []$[]$ 
  []
 
-<Figuras/graph12.png, id=411, 167.12437pt x 173.14688pt>
+<Figuras/graph12.png, id=472, 167.12437pt x 173.14688pt>
 File: Figuras/graph12.png Graphic file (type png)
 <use Figuras/graph12.png>
 Package luatex.def Info: Figuras/graph12.png  used on input line 827.
@@ -2444,7 +2416,7 @@ Overfull \hbox (57.40746pt too wide) in paragraph at lines 825--829
 []$[]$ 
  []
 
-<Figuras/graph13.png, id=412, 179.16937pt x 178.41656pt>
+<Figuras/graph13.png, id=473, 179.16937pt x 178.41656pt>
 File: Figuras/graph13.png Graphic file (type png)
 <use Figuras/graph13.png>
 Package luatex.def Info: Figuras/graph13.png  used on input line 834.
@@ -2472,7 +2444,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 850--851
 
  []
 
-<Figuras/graph20.png, id=429, 171.64125pt x 292.84406pt>
+<Figuras/graph20.png, id=490, 171.64125pt x 292.84406pt>
 File: Figuras/graph20.png Graphic file (type png)
 <use Figuras/graph20.png>
 Package luatex.def Info: Figuras/graph20.png  used on input line 858.
@@ -2482,7 +2454,7 @@ Overfull \hbox (19.30554pt too wide) in paragraph at lines 856--860
 []$[]$ 
  []
 
-<Figuras/graph21.png, id=430, 150.5625pt x 234.8775pt>
+<Figuras/graph21.png, id=491, 150.5625pt x 234.8775pt>
 File: Figuras/graph21.png Graphic file (type png)
 <use Figuras/graph21.png>
 Package luatex.def Info: Figuras/graph21.png  used on input line 865.
@@ -2492,7 +2464,7 @@ Overfull \hbox (19.30554pt too wide) in paragraph at lines 863--867
 []$[]$ 
  []
 
-<Figuras/graph22.png, id=431, 184.43906pt x 279.29344pt>
+<Figuras/graph22.png, id=492, 184.43906pt x 279.29344pt>
 File: Figuras/graph22.png Graphic file (type png)
 <use Figuras/graph22.png>
 Package luatex.def Info: Figuras/graph22.png  used on input line 872.
@@ -2502,7 +2474,7 @@ Overfull \hbox (19.30554pt too wide) in paragraph at lines 870--874
 []$[]$ 
  []
 
-<Figuras/graph23.png, id=432, 212.29312pt x 193.47281pt>
+<Figuras/graph23.png, id=493, 212.29312pt x 193.47281pt>
 File: Figuras/graph23.png Graphic file (type png)
 <use Figuras/graph23.png>
 Package luatex.def Info: Figuras/graph23.png  used on input line 879.
@@ -2517,7 +2489,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 891--892
 
  []
 
-<Figuras/graph14.png, id=433, 139.27031pt x 207.77625pt>
+<Figuras/graph14.png, id=494, 139.27031pt x 207.77625pt>
 File: Figuras/graph14.png Graphic file (type png)
 <use Figuras/graph14.png>
 Package luatex.def Info: Figuras/graph14.png  used on input line 899.
@@ -2527,7 +2499,7 @@ Overfull \hbox (19.30554pt too wide) in paragraph at lines 897--901
 []$[]$ 
  []
 
-<Figuras/graph15.png, id=434, 138.5175pt x 202.50656pt>
+<Figuras/graph15.png, id=495, 138.5175pt x 202.50656pt>
 File: Figuras/graph15.png Graphic file (type png)
 <use Figuras/graph15.png>
 Package luatex.def Info: Figuras/graph15.png  used on input line 906.
@@ -2537,7 +2509,7 @@ Overfull \hbox (19.30554pt too wide) in paragraph at lines 904--908
 []$[]$ 
  []
 
-<Figuras/graph16.png, id=435, 152.82094pt x 202.50656pt>
+<Figuras/graph16.png, id=496, 152.82094pt x 202.50656pt>
 File: Figuras/graph16.png Graphic file (type png)
 <use Figuras/graph16.png>
 Package luatex.def Info: Figuras/graph16.png  used on input line 913.
@@ -2547,7 +2519,7 @@ Overfull \hbox (19.30554pt too wide) in paragraph at lines 911--915
 []$[]$ 
  []
 
-<Figuras/graph17.png, id=436, 161.85469pt x 167.87718pt>
+<Figuras/graph17.png, id=497, 161.85469pt x 167.87718pt>
 File: Figuras/graph17.png Graphic file (type png)
 <use Figuras/graph17.png>
 Package luatex.def Info: Figuras/graph17.png  used on input line 920.
@@ -2572,12 +2544,12 @@ Missing character: There is no ” (U+201D) in font ec-lmr12!
 <./Figuras/graph20.PNG><./Figuras/graph21.PNG><./Figuras/graph22.PNG><./Figuras/
 graph23.PNG><./Figuras/graph14.PNG><./Figuras/graph15.PNG><./Figuras/graph16.PNG
 ><./Figuras/graph17.PNG>]
-<Figuras/graph18.png, id=454, 389.20406pt x 402.75468pt>
+<Figuras/graph18.png, id=515, 389.20406pt x 402.75468pt>
 File: Figuras/graph18.png Graphic file (type png)
 <use Figuras/graph18.png>
 Package luatex.def Info: Figuras/graph18.png  used on input line 939.
 (luatex.def)             Requested size: 96.2318pt x 99.58464pt.
-<Figuras/graph19.png, id=455, 519.44063pt x 513.41812pt>
+<Figuras/graph19.png, id=516, 519.44063pt x 513.41812pt>
 File: Figuras/graph19.png Graphic file (type png)
 <use Figuras/graph19.png>
 Package luatex.def Info: Figuras/graph19.png  used on input line 946.
@@ -2622,72 +2594,9 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 1--1
  []
 
 
-Package natbib Warning: Citation `hopcroft1973' on page 33 undefined on input li
-ne 3.
-
-
-Package natbib Warning: Citation `Gutwenger2000ALT' on page 33 undefined on inpu
-t line 3.
-
-
-Package natbib Warning: Citation `hopcroft1973' on page 33 undefined on input li
-ne 10.
-
-
-Package natbib Warning: Citation `1083313' on page 33 undefined on input line 10
-.
-
-
-Package natbib Warning: Citation `10893101' on page 33 undefined on input line 1
-0.
-
-
-Package natbib Warning: Citation `Hopcroft1972' on page 33 undefined on input li
-ne 10.
-
-
-Package natbib Warning: Citation `Lederberg1964DENDRAL64AS' on page 33 undefined
- on input line 10.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
-
-
-Package natbib Warning: Citation `4569669' on page 33 undefined on input line 12
-.
-
-
-Package natbib Warning: Citation `efalgm' on page 33 undefined on input line 12.
-
-
-
-Package natbib Warning: Citation `tarjan1971efficient' on page 33 undefined on i
-nput line 12.
-
-
-Package natbib Warning: Citation `ept' on page 33 undefined on input line 12.
-
-
-Package natbib Warning: Citation `Tarjan1974FindingDI' on page 33 undefined on i
-nput line 12.
-
-
-Package natbib Warning: Citation `1083313' on page 33 undefined on input line 12
-.
-
-
-Package natbib Warning: Citation `1082941' on page 33 undefined on input line 12
-.
-
-
-Package natbib Warning: Citation `hopcroft1973' on page 33 undefined on input li
-ne 12.
-
-
-Package natbib Warning: Citation `Gutwenger2000ALT' on page 33 undefined on inpu
-t line 12.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 12--13
@@ -2704,19 +2613,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
 
 ]
-
-Package natbib Warning: Citation `busacker1965finite' on page 34 undefined on in
-put line 18.
-
-
-Package natbib Warning: Citation `harary1971graph' on page 34 undefined on input
- line 18.
-
-
-Package natbib Warning: Citation `mac-lane-1937' on page 34 undefined on input l
-ine 18.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
@@ -2750,23 +2646,12 @@ Overfull \hbox (0.50195pt too wide) in paragraph at lines 132--153
 LaTeX Info: Redefining \. on input line 165.
 LaTeX Info: Redefining \% on input line 165.
 [36]
-
-Package natbib Warning: Citation `mac-lane-1937' on page 37 undefined on input l
-ine 195.
-
-
-Package natbib Warning: Citation `jEdmonds' on page 37 undefined on input line 1
-95.
-
-
-Package natbib Warning: Citation `tarjan-1972' on page 37 undefined on input lin
-e 195.
-
-<Figuras/plotgraph.png, id=524, 447.8331pt x 303.2931pt>
+<Figuras/plotgraph.png, id=621, 447.8331pt x 303.2931pt>
 File: Figuras/plotgraph.png Graphic file (type png)
 <use Figuras/plotgraph.png>
 Package luatex.def Info: Figuras/plotgraph.png  used on input line 201.
 (luatex.def)             Requested size: 284.52756pt x 192.70004pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -2838,27 +2723,15 @@ Overfull \hbox (2.61105pt too wide) in paragraph at lines 207--439
 LaTeX Info: Redefining \. on input line 442.
 LaTeX Info: Redefining \% on input line 442.
 [37]
-
-Package natbib Warning: Citation `hopcroft1973' on page 38 undefined on input li
-ne 444.
-
 LaTeX Info: Redefining \. on input line 445.
 LaTeX Info: Redefining \% on input line 445.
-[38<./Figuras/plotgraph.png>]
-
-Package natbib Warning: Citation `4569669' on page 39 undefined on input line 45
-5.
-
-
-Package natbib Warning: Citation `4569669' on page 39 undefined on input line 46
-2.
-
+ [38<./Figuras/plotgraph.png>]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 46
 7.
-(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+ (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<Figuras/G2.png, id=550, 420.57124pt x 830.10126pt>
+<Figuras/G2.png, id=652, 420.57124pt x 830.10126pt>
 File: Figuras/G2.png Graphic file (type png)
 <use Figuras/G2.png>
 Package luatex.def Info: Figuras/G2.png  used on input line 497.
@@ -2875,54 +2748,12 @@ LaTeX Info: Redefining \. on input line 501.
 LaTeX Info: Redefining \% on input line 501.
 
 [40<./Figuras/G2.png>]
-
-Package natbib Warning: Citation `auslander-1961' on page 41 undefined on input 
-line 505.
-
-
-Package natbib Warning: Citation `goldstein1963efficient' on page 41 undefined o
-n input line 505.
-
-
-Package natbib Warning: Citation `efalgm' on page 41 undefined on input line 505
-.
-
-
-Package natbib Warning: Citation `ept' on page 41 undefined on input line 505.
-
-
-Package natbib Warning: Citation `auslander-1961' on page 41 undefined on input 
-line 508.
-
-
-Package natbib Warning: Citation `efalgm' on page 41 undefined on input line 513
-.
-
-
-Package natbib Warning: Citation `ept' on page 41 undefined on input line 513.
-
 LaTeX Info: Redefining \. on input line 535.
 LaTeX Info: Redefining \% on input line 535.
-[41]
-
-Package natbib Warning: Citation `4569669' on page 42 undefined on input line 54
-0.
-
-
-Package natbib Warning: Citation `efalgm' on page 42 undefined on input line 540
-.
-
-
-Package natbib Warning: Citation `Gutwenger2000ALT' on page 42 undefined on inpu
-t line 540.
-
-
-Package natbib Warning: Citation `4569669' on page 42 undefined on input line 55
-5.
-
+ [41]
 LaTeX Info: Redefining \. on input line 556.
 LaTeX Info: Redefining \% on input line 556.
-[42]
+ [42]
 LaTeX Info: Redefining \. on input line 584.
 LaTeX Info: Redefining \% on input line 584.
  [43]
@@ -2933,30 +2764,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 610--611
 LaTeX Info: Redefining \. on input line 635.
 LaTeX Info: Redefining \% on input line 635.
 [44]
-
-Package natbib Warning: Citation `ept' on page 45 undefined on input line 664.
-
-
-Package natbib Warning: Citation `tarjan-1972' on page 45 undefined on input lin
-e 664.
-
-
-Package natbib Warning: Citation `4569669' on page 45 undefined on input line 66
-4.
-
 LaTeX Info: Redefining \. on input line 692.
 LaTeX Info: Redefining \% on input line 692.
-[45]
+ [45]
 Underfull \hbox (badness 10000) in paragraph at lines 713--714
 
  []
-
-
-Package natbib Warning: Citation `ept' on page 46 undefined on input line 716.
-
-
-Package natbib Warning: Citation `tarjan1971efficient' on page 46 undefined on i
-nput line 716.
 
 LaTeX Info: Redefining \. on input line 723.
 LaTeX Info: Redefining \% on input line 723.
@@ -3027,10 +2840,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 810--811
 Underfull \hbox (badness 10000) in paragraph at lines 817--818
 
  []
-
-
-Package natbib Warning: Citation `Gutwenger2000ALT' on page 51 undefined on inpu
-t line 823.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 822--824
@@ -3174,20 +2983,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 93.
 
 
-Package natbib Warning: Citation `TricLinTimAlg' on page 57 undefined on input l
-ine 94.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 95.
 LaTeX Info: Redefining \% on input line 95.
  [57]
-
-Package natbib Warning: Citation `TricLinTimAlg' on page 58 undefined on input l
-ine 102.
-
-
 Overfull \hbox (2.61105pt too wide) in paragraph at lines 107--168
 [][]  [] 
  []
@@ -3207,7 +3007,7 @@ Overfull \hbox (57.40746pt too wide) in paragraph at lines 215--226
 []$[]$ 
  []
 
-<Figuras/G3.png, id=807, 357.335pt x 348.30125pt>
+<Figuras/G3.png, id=925, 357.335pt x 348.30125pt>
 File: Figuras/G3.png Graphic file (type png)
 <use Figuras/G3.png>
 Package luatex.def Info: Figuras/G3.png  used on input line 237.
@@ -3215,7 +3015,7 @@ Package luatex.def Info: Figuras/G3.png  used on input line 237.
 LaTeX Info: Redefining \. on input line 240.
 LaTeX Info: Redefining \% on input line 240.
 [58]
-<Figuras/G4.png, id=816, 181.67876pt x 541.02126pt>
+<Figuras/G4.png, id=935, 181.67876pt x 541.02126pt>
 File: Figuras/G4.png Graphic file (type png)
 <use Figuras/G4.png>
 Package luatex.def Info: Figuras/G4.png  used on input line 244.
@@ -3363,45 +3163,114 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 3.
 
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2019/09/10 1.8c listings language file
+
+! LaTeX Error: Environment pyverbatim undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \begin{pyverbatim}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{document} ended by \end{pyverbatim}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 \end{pyverbatim}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+) [63
+
+
+
+Missing character: There is no “ (U+201C) in font ec-lmr12!
+Missing character: There is no ” (U+201D) in font ec-lmr12!
+]
+\openout2 = Anexos/Anexos.aux
+ (./Anexos/Anexos.tex)
+
+(./TesisMSc.bbl [64
+
+
+
+
+])
+LaTeX Info: Redefining \. on input line 32.
+LaTeX Info: Redefining \% on input line 32.
+ [65
+Missing character: There is no – (U+2013) in font ec-lmr12!
+Missing character: There is no – (U+2013) in font ec-lmr12!
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 32.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 32.
+ (./TesisMSc.aux (./HojaTitulo/HojaTituloMSc.aux)
+LaTeX Info: Redefining \. on input line 27.
+LaTeX Info: Redefining \% on input line 27.
+LaTeX Info: Redefining \. on input line 29.
+LaTeX Info: Redefining \% on input line 29.
+
+(./Tab_Simbolos/TabSimbolosMSc.aux) (./Kap1/Kap1.aux) (./Kap2/Kap2.aux)
+(./Kap3/Kap3.aux) (./Kap4/Kap4.aux) (./Kap5/Kap5.aux) (./Anexos/Anexos.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 32.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 32.
+Package rerunfilecheck Info: File `TesisMSc.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 32.
 )
-! Improper alphabetic constant.
-<to be read again> 
-\x@protect 
-l.5 \begin{python}
-                
-A one-character control sequence belongs after a ` mark.
-So I'm essentially inserting \0 here.
-
-! Improper alphabetic constant.
-<to be read again> 
-\relax 
-l.5 \begin{python}
-                
-A one-character control sequence belongs after a ` mark.
-So I'm essentially inserting \0 here.
-
-! TeX capacity exceeded, sorry [save size=100000].
-\lst@GFM@ ...fx \csname \lst@freemacro \endcsname 
-                                                  \relax \edef \lst@freemacr...
-l.5 \begin{python}
-                
-If you really absolutely need more capacity,
-you can ask a wizard to enlarge me.
-
-
 
 Here is how much of LuaTeX's memory you used:
- 137788 strings out of 481365
- 100000,1648299 words of node,token memory allocated 4478 words of node memory still in use:
-   59 hlist, 3 vlist, 23 rule, 2 mark, 23 disc, 6 local_par, 1 dir, 4 math, 62 g
-lue, 29 kern, 19 penalty, 126 glyph, 351 attribute, 109 glue_spec, 177 attribute
-_list, 2 if_stack, 9 write, 1 special, 3 pdf_dest, 1 pdf_action, 34 pdf_colorsta
-ck nodes
-   avail lists: 1:6,2:12085,3:2729,4:292,5:396,6:59,7:5474,8:100,9:1104,10:33,11
-:582
- 152632 multiletter control sequences out of 65536+600000
+ 38582 strings out of 481365
+ 100000,1373583 words of node,token memory allocated
+ 1242 words of node memory still in use:
+   8 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 171 attribute, 98 glue_spe
+c, 87 attribute_list, 2 write, 1 special, 2 pdf_action nodes
+   avail lists: 1:6,2:12357,3:2757,4:326,5:438,6:64,7:5664,8:135,9:1177,10:33,11
+:605
+ 53306 multiletter control sequences out of 65536+600000
  108 fonts using 9005147 bytes
- 67i,28n,107p,10165b,99999s stack positions out of 5000i,500n,10000p,200000b,100000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 67i,28n,83p,10165b,1533s stack positions out of 5000i,500n,10000p,200000b,100000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips
+/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/tex
+mf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvi
+ps/base/8r.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/te
+xmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmb
+x8.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fon
+ts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb
+></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type
+1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/sh
+are/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/l
+m/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/
+fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb>
+</usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1
+/public/lm/lmro12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr
+/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/publ
+ic/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/te
+xmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmt
+t12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam1
+0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
+Output written on TesisMSc.pdf (69 pages, 1167165 bytes).
+
+PDF statistics: 1150 PDF objects out of 1200 (max. 8388607)
+ 980 compressed objects within 10 object streams
+ 441 named destinations out of 1000 (max. 131072)
+ 192 words of extra memory for PDF output out of 10000 (max. 100000000)
+
