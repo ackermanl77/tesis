@@ -1,5 +1,5 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2022.1.19)  21 JUL 2022 11:55
- restricted system commands enabled.
+This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2022.1.19)  21 JUL 2022 14:36
+ system commands enabled.
 **TesisMSc.tex
 (./TesisMSc.tex
 LaTeX2e <2020-02-02> patch level 2
@@ -810,29 +810,6 @@ Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
 )
 Class scrbook Info: longtable captions redefined on input line 29.
 
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrhack.sty
-Package: scrhack 2020/01/24 v3.29 KOMA-Script package (hacking other packages)
-Package scrhack Info: hyperref hack deactivated because of
-(scrhack)             detection of hyperref version, that doesn't
-(scrhack)             need that hack, on input line 162.
-Package scrhack Info: loading float hack on input line 169.
-
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/float.hak
-File: float.hak 2020/01/24 v3.29 KOMA-Script scrhack part (hacking package float
-)
-Package scrhack Info: redefining \newfloat on input line 163.
-Package scrhack Info: redefining \listof on input line 163.
-Package scrhack Info: undefining \float@addtolists on input line 163.
-)
-Package scrhack Info: loading lscape hack on input line 205.
-
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/lscape.hak
-File: lscape.hak 2020/01/24 v3.29 KOMA-Script scrhack part (hacking package lsca
-pe)
-Package scrhack Info: \landscape patched to make \textheight change optional on 
-input line 90.
-\scrh@LT@textheight=\skip88
-))
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
@@ -1207,14 +1184,6 @@ File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2019/09/10 1.8c listings configuration
 ))
-Package scrhack Info: loading listings hack on input line 39.
-
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/listings.hak
-File: listings.hak 2020/01/24 v3.29 KOMA-Script scrhack part (hacking package li
-stings)
-Package tocbasic Info: setting babel extension for `lol' on input line 137.
-Package scrhack Info: redefining \lstlistoflistings on input line 137.
-)
 Package: listings 2019/09/10 1.8c (Carsten Heinz)
 
 (/usr/share/texlive/texmf-dist/tex/latex/textgreek/textgreek.sty
@@ -1253,9 +1222,9 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
-\multirow@colwidth=\skip89
+\multirow@colwidth=\skip88
 \multirow@cntb=\count343
-\multirow@dima=\skip90
+\multirow@dima=\skip89
 \bigstrutjot=\dimen311
 )
 (/usr/share/texlive/texmf-dist/tex/latex/stackengine/stackengine.sty
@@ -1276,18 +1245,18 @@ Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Bcount=\count347
 \calc@Adimen=\dimen312
 \calc@Bdimen=\dimen313
-\calc@Askip=\skip91
-\calc@Bskip=\skip92
+\calc@Askip=\skip90
+\calc@Bskip=\skip91
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count348
-\calc@Cskip=\skip93
+\calc@Cskip=\skip92
 )
 \c@@stackindex=\count349
-\@boxshift=\skip94
-\stack@tmplength=\skip95
-\temp@stkl=\skip96
-\@stackedboxwidth=\skip97
+\@boxshift=\skip93
+\stack@tmplength=\skip94
+\temp@stkl=\skip95
+\@stackedboxwidth=\skip96
 \@addedbox=\box78
 \@anchorbox=\box79
 \stackedbox=\box80
@@ -1308,8 +1277,8 @@ Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
 \page@free=\dimen316
 \premulticols=\dimen317
 \postmulticols=\dimen318
-\multicolsep=\skip98
-\multicolbaselineskip=\skip99
+\multicolsep=\skip97
+\multicolbaselineskip=\skip98
 \partial@page=\box83
 \last@line=\box84
 \maxbalancingoverflow=\dimen319
@@ -1364,17 +1333,120 @@ Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
 \colbreak@box=\box127
 \mc@col@check@num=\count360
 )
+(/usr/share/texlive/texmf-dist/tex/latex/minted/minted.sty
+Package: minted 2017/07/19 v2.5 Yet another Pygments shim for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/fvextra/fvextra.sty
+Package: fvextra 2019/02/04 v1.4 fvextra - extensions and patches for fancyvrb
+
+(/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2020/01/13 v3.5 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count361
+\FV@InFile=\read5
+\FV@TabBox=\box128
+\c@FancyVerbLine=\count362
+\FV@StepNumber=\count363
+\FV@OutFile=\write4
+)
+(/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbat
+im
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+))
+(/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count364
+\output=\toks52
+\linenoprevgraf=\count365
+\linenumbersep=\dimen323
+\linenumberwidth=\dimen324
+\c@linenumber=\count366
+\c@pagewiselinenumber=\count367
+\c@LN@truepage=\count368
+\c@internallinenumber=\count369
+\c@internallinenumbers=\count370
+\quotelinenumbersep=\dimen325
+\bframerule=\dimen326
+\bframesep=\dimen327
+\bframebox=\box129
+LaTeX Info: Redefining \\ on input line 3056.
+)
+\c@FV@TrueTabGroupLevel=\count371
+\c@FV@TrueTabCounter=\count372
+\FV@TabBox@Group=\box130
+\FV@TmpLength=\skip99
+\c@FV@HighlightLinesStart=\count373
+\c@FV@HighlightLinesStop=\count374
+\FV@LoopCount=\count375
+\FV@NCharsBox=\box131
+\FV@BreakIndent=\dimen328
+\FV@BreakIndentNChars=\count376
+\FV@BreakSymbolSepLeft=\dimen329
+\FV@BreakSymbolSepLeftNChars=\count377
+\FV@BreakSymbolSepRight=\dimen330
+\FV@BreakSymbolSepRightNChars=\count378
+\FV@BreakSymbolIndentLeft=\dimen331
+\FV@BreakSymbolIndentLeftNChars=\count379
+\FV@BreakSymbolIndentRight=\dimen332
+\FV@BreakSymbolIndentRightNChars=\count380
+\c@FancyVerbLineBreakLast=\count381
+\FV@LineBox=\box132
+\FV@LineIndentBox=\box133
+\FV@LineWidth=\dimen333
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
+
+(/usr/share/texlive/texmf-dist/tex/generic/catchfile/catchfile.sty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+runsystem(uname -s > "TesisMSc.w18")...executed
+ (./TesisMSc.w18)
+runsystem(rm -- "TesisMSc.w18")...executed
+) (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
+\integerpart=\count382
+\decimalpart=\count383
+)
+Package: xstring 2019/02/06 v1.83 String manipulations (CT)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip100
+\fb@frw=\dimen334
+\fb@frh=\dimen335
+\FrameRule=\dimen336
+\FrameSep=\dimen337
+)
+\minted@appexistsfile=\read6
+\minted@bgbox=\box134
+\minted@code=\write5
+\c@minted@FancyVerbLineTemp=\count384
+\c@minted@pygmentizecounter=\count385
+\@float@every@listing=\toks53
+\c@listing=\count386
+)
+runsystem(mkdir -p _minted-TesisMSc)...executed
 LaTeX Info: Redefining \. on input line 49.
 LaTeX Info: Redefining \% on input line 49.
 
 (/usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
 Package: algorithm2e 2017/07/18 v5.2 algorithms environments
-\c@AlgoLine=\count361
-\algocf@hangindent=\skip100
+\c@AlgoLine=\count387
+\algocf@hangindent=\skip101
 
 (/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count362
+\c@checkoddpage=\count388
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
@@ -1382,49 +1454,49 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 (/usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
 )
-\skiptotal=\skip101
-\skiplinenumber=\skip102
-\skiprule=\skip103
-\skiphlne=\skip104
-\skiptext=\skip105
-\skiplength=\skip106
-\algomargin=\skip107
-\skipalgocfslide=\skip108
-\algowidth=\dimen323
-\inoutsize=\dimen324
-\inoutindent=\dimen325
-\interspacetitleruled=\dimen326
-\interspacealgoruled=\dimen327
-\interspacetitleboxruled=\dimen328
-\algocf@ruledwidth=\skip109
-\algocf@inoutbox=\box128
-\algocf@inputbox=\box129
-\AlCapSkip=\skip110
-\AlCapHSkip=\skip111
-\algoskipindent=\skip112
-\algocf@nlbox=\box130
-\algocf@hangingbox=\box131
-\algocf@untilbox=\box132
-\algocf@skipuntil=\skip113
-\algocf@capbox=\box133
-\algocf@lcaptionbox=\skip114
-\algoheightruledefault=\skip115
-\algoheightrule=\skip116
-\algotitleheightruledefault=\skip117
-\algotitleheightrule=\skip118
-\c@algocfline=\count363
-\c@algocfproc=\count364
-\c@algocf=\count365
-\algocf@algoframe=\box134
-\algocf@algobox=\box135
+\skiptotal=\skip102
+\skiplinenumber=\skip103
+\skiprule=\skip104
+\skiphlne=\skip105
+\skiptext=\skip106
+\skiplength=\skip107
+\algomargin=\skip108
+\skipalgocfslide=\skip109
+\algowidth=\dimen338
+\inoutsize=\dimen339
+\inoutindent=\dimen340
+\interspacetitleruled=\dimen341
+\interspacealgoruled=\dimen342
+\interspacetitleboxruled=\dimen343
+\algocf@ruledwidth=\skip110
+\algocf@inoutbox=\box135
+\algocf@inputbox=\box136
+\AlCapSkip=\skip111
+\AlCapHSkip=\skip112
+\algoskipindent=\skip113
+\algocf@nlbox=\box137
+\algocf@hangingbox=\box138
+\algocf@untilbox=\box139
+\algocf@skipuntil=\skip114
+\algocf@capbox=\box140
+\algocf@lcaptionbox=\skip115
+\algoheightruledefault=\skip116
+\algoheightrule=\skip117
+\algotitleheightruledefault=\skip118
+\algotitleheightrule=\skip119
+\c@algocfline=\count389
+\c@algocfproc=\count390
+\c@algocf=\count391
+\algocf@algoframe=\box141
+\algocf@algobox=\box142
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/rotating.sty
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
-\c@r@tfl@t=\count366
-\rotFPtop=\skip119
-\rotFPbot=\skip120
-\rot@float@box=\box136
-\rot@mess@toks=\toks52
+\c@r@tfl@t=\count392
+\rotFPtop=\skip120
+\rotFPbot=\skip121
+\rot@float@box=\box143
+\rot@mess@toks=\toks54
 )
 (/usr/share/texlive/texmf-dist/tex/latex/doclicense/doclicense.sty
 Package: doclicense 2019/06/05 v1.10.0 Support for putting documents under a lic
@@ -1435,24 +1507,24 @@ Package: xifthen 2015/11/05 v1.4.0 Extended ifthen features
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2019/11/10 v1.5r LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks53
-\verbatim@line=\toks54
-\verbatim@in@stream=\read5
+\every@verbatim=\toks55
+\verbatim@line=\toks56
+\verbatim@in@stream=\read7
 )
-\doclicense@hsize=\skip121
+\doclicense@hsize=\skip122
 
 (/usr/share/texlive/texmf-dist/tex/latex/doclicense/doclicense-spanish.ldf
 File: doclicense-spanish.ldf 
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/fncychap/fncychap.sty
 Package: fncychap 2007/07/30 v1.34 LaTeX package (Revised chapters)
-\RW=\skip122
-\mylen=\skip123
-\myhi=\skip124
-\px=\skip125
-\py=\skip126
-\pyy=\skip127
-\pxx=\skip128
+\RW=\skip123
+\mylen=\skip124
+\myhi=\skip125
+\px=\skip126
+\py=\skip127
+\pyy=\skip128
+\pxx=\skip129
 )
 Package typearea Info: These are the values describing the layout:
 (typearea)             DIV  = 13
@@ -1470,25 +1542,28 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 12.0pt
 (typearea)              \footskip       = 50.75pt
 (typearea)              \baselineskip   = 14.5pt
-(typearea)              on input line 124.
-\c@definition=\count367
-\c@theorem=\count368
-\c@example=\count369
+(typearea)              on input line 96.
+\c@definition=\count393
+\c@theorem=\count394
+\c@example=\count395
  (./Befehle.sty)
-Package hyperref Info: Option `colorlinks' set `true' on input line 196.
+Package hyperref Info: Option `colorlinks' set `true' on input line 168.
 ) (./simbolos.tex
-\pgf@layerbox@bg=\box137
-\pgf@layerboxsaved@bg=\box138
+\pgf@layerbox@bg=\box144
+\pgf@layerboxsaved@bg=\box145
 )
+runsystem(which pygmentize && touch TesisMSc.aex)...executed
+runsystem(rm TesisMSc.aex)...executed
+
 (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2019-12-06 v5.2j context-sensitive quotations (JAW)
-\csq@reset=\count370
-\csq@gtype=\count371
-\csq@glevel=\count372
-\csq@qlevel=\count373
-\csq@maxlvl=\count374
-\csq@tshold=\count375
-\csq@ltx@everypar=\toks55
+\csq@reset=\count396
+\csq@gtype=\count397
+\csq@glevel=\count398
+\csq@qlevel=\count399
+\csq@maxlvl=\count400
+\csq@tshold=\count401
+\csq@ltx@everypar=\toks57
 
 (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def
 File: csquotes.def 2019-12-06 v5.2j csquotes generic definitions (JAW)
@@ -1710,7 +1785,7 @@ LaTeX Font Info:    Trying to load font information for LGR+cmr on input line 4.
 File: lgrcmr.fd 2017/07/29 v1.2 Greek European Computer Regular
 )
 LaTeX Font Info:    ... okay on input line 4.
-\AtBeginShipoutBox=\box139
+\AtBeginShipoutBox=\box146
 Package hyperref Info: Link coloring ON on input line 4.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -1722,16 +1797,16 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count376
+\c@section@level=\count402
 )
 LaTeX Info: Redefining \ref on input line 4.
 LaTeX Info: Redefining \pageref on input line 4.
 LaTeX Info: Redefining \nameref on input line 4.
 
 (./TesisMSc.out) (./TesisMSc.out)
-\@outlinefile=\write4
+\@outlinefile=\write6
 
-\openout4 = TesisMSc.out
+\openout6 = TesisMSc.out
 Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           Using `bookmark' together with `hyperref' is recommended,
 (scrbook)           because of handling of possible bookmark level gaps.
@@ -1749,24 +1824,24 @@ File: bkm-pdftex.def 2019/12/03 v1.28 bookmark driver for pdfTeX (HO)
 Package auxhook Info: \AddLineBeginMainAux comes a little late,
 (auxhook)             because the main .aux file is already opened on input line
  168.
-\BKM@id=\count377
+\BKM@id=\count403
 ))
 LaTeX Info: Redefining \. on input line 4.
 LaTeX Info: Redefining \% on input line 4.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count378
-\scratchdimen=\dimen329
-\scratchbox=\box140
-\nofMPsegments=\count379
-\nofMParguments=\count380
-\everyMPshowfont=\toks56
-\MPscratchCnt=\count381
-\MPscratchDim=\dimen330
-\MPnumerator=\count382
-\makeMPintoPDFobject=\count383
-\everyMPtoPDFconversion=\toks57
+\scratchcounter=\count404
+\scratchdimen=\dimen344
+\scratchbox=\box147
+\nofMPsegments=\count405
+\nofMParguments=\count406
+\everyMPshowfont=\toks58
+\MPscratchCnt=\count407
+\MPscratchDim=\dimen345
+\MPnumerator=\count408
+\makeMPintoPDFobject=\count409
+\everyMPtoPDFconversion=\toks59
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
@@ -1787,8 +1862,7 @@ Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 ABD: EveryShipout initializing macros
-\c@lstlisting=\count384
-Package scrhack Info: undefining \float@addtolists on input line 4.
+\c@lstlisting=\count410
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -1960,9 +2034,9 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 25.
 Package tocbasic Info: Using my definition of `\numberline' on input line 26.
 Package tocbasic Info: Using my definition of `\numberline' on input line 27.
 )
-\tf@toc=\write5
+\tf@toc=\write7
 
-\openout5 = TesisMSc.toc
+\openout7 = TesisMSc.toc
  [3
 
 
@@ -1976,6 +2050,21 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 27.
 \openout2 = Kap1/Kap1.aux
  (./Kap1/Kap1.tex
 chapter 1.
+
+Class scrbook Warning: \float@addtolists detected!
+(scrbook)              Implementation of \float@addtolist became
+(scrbook)              deprecated in KOMA-Script v3.01 2008/11/14 and
+(scrbook)              has been replaced by several more flexible
+(scrbook)              features of package `tocbasic`.
+(scrbook)              Since Version 3.12 support for deprecated
+(scrbook)              \float@addtolist interface has been
+(scrbook)              restricted to only some of the KOMA-Script
+(scrbook)              features and been removed from others.
+(scrbook)              Loading of package `scrhack' may help to
+(scrbook)              avoid this warning, if you are using a
+(scrbook)              a package that still implements the
+(scrbook)              deprecated \float@addtolist interface .
+
 LaTeX Font Info:    Trying to load font information for OT1+pzc on input line 1.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pzc.fd
@@ -3164,50 +3253,160 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 3.
 
 
-! LaTeX Error: Environment pyverbatim undefined.
+\openout4 = TesisMSc.pyg
+(./_minted-TesisMSc/default-pyg-prefix.pygstyle)
+(./_minted-TesisMSc/default.pygstyle)
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P ma
+thescape=True -o _minted-TesisMSc/6E3AF74722F57B631B44370A25C790845456219C2E98EA
+95603918BA94A98153.pygtex TesisMSc.pyg)...executed
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 \begin{pyverbatim}
-                    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+(./_minted-TesisMSc/6E3AF74722F57B631B44370A25C790845456219C2E98EA95603918BA94A
+98153.pygtex
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 2.
+)
+\openout4 = TesisMSc.pyg
 
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P ma
+thescape=True -o _minted-TesisMSc/74C2BBC999306AB2CE694450993DE6E85456219C2E98EA
+95603918BA94A98153.pygtex TesisMSc.pyg)...executed
 
-! LaTeX Error: \begin{document} ended by \end{pyverbatim}.
+(./_minted-TesisMSc/74C2BBC999306AB2CE694450993DE6E85456219C2E98EA95603918BA94A
+98153.pygtex
+Underfull \vbox (badness 2057) has occurred while \output is active []
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.7 \end{pyverbatim}
-                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-) [63
+ [63
 
 
 
-Missing character: There is no “ (U+201C) in font ec-lmr12!
-Missing character: There is no ” (U+201D) in font ec-lmr12!
 ]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 71.
+LaTeX Info: Redefining \% on input line 71.
+ [64])
+\openout4 = TesisMSc.pyg
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P ma
+thescape=True -o _minted-TesisMSc/B92250A2A2078F84E9BBAC9FC149AED55456219C2E98EA
+95603918BA94A98153.pygtex TesisMSc.pyg)...executed
+
+(./_minted-TesisMSc/B92250A2A2078F84E9BBAC9FC149AED55456219C2E98EA95603918BA94A
+98153.pygtex)
+\openout4 = TesisMSc.pyg
+
+(./_minted-TesisMSc/6E3AF74722F57B631B44370A25C790845456219C2E98EA95603918BA94A
+98153.pygtex
+LaTeX Info: Redefining \. on input line 11.
+LaTeX Info: Redefining \% on input line 11.
+ [65])
+\openout4 = TesisMSc.pyg
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P ma
+thescape=True -o _minted-TesisMSc/E23CF36508F8FC5F823575865754250E5456219C2E98EA
+95603918BA94A98153.pygtex TesisMSc.pyg)...executed
+
+(./_minted-TesisMSc/E23CF36508F8FC5F823575865754250E5456219C2E98EA95603918BA94A
+98153.pygtex
+Underfull \vbox (badness 1558) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 49.
+LaTeX Info: Redefining \% on input line 49.
+ [66]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 102.
+LaTeX Info: Redefining \% on input line 102.
+ [67]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 155.
+LaTeX Info: Redefining \% on input line 155.
+ [68]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 208.
+LaTeX Info: Redefining \% on input line 208.
+ [69]
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 2
+25.
+
+(/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
+File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 261.
+LaTeX Info: Redefining \% on input line 261.
+ [70]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 314.
+LaTeX Info: Redefining \% on input line 314.
+ [71]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 367.
+LaTeX Info: Redefining \% on input line 367.
+ [72]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 420.
+LaTeX Info: Redefining \% on input line 420.
+ [73]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 473.
+LaTeX Info: Redefining \% on input line 473.
+ [74]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 526.
+LaTeX Info: Redefining \% on input line 526.
+ [75]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 579.
+LaTeX Info: Redefining \% on input line 579.
+ [76]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 632.
+LaTeX Info: Redefining \% on input line 632.
+ [77]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 685.
+LaTeX Info: Redefining \% on input line 685.
+ [78]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 738.
+LaTeX Info: Redefining \% on input line 738.
+ [79]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 791.
+LaTeX Info: Redefining \% on input line 791.
+ [80]))
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
+
+[81]
 \openout2 = Anexos/Anexos.aux
  (./Anexos/Anexos.tex)
 
-(./TesisMSc.bbl [64
+(./TesisMSc.bbl [82
 
 
 
 
 ])
+runsystem(rm _minted-TesisMSc/B1FF80B9349DB57CFA59C5FE326B1DF55456219C2E98EA9560
+3918BA94A98153.pygtex)...executed
 LaTeX Info: Redefining \. on input line 32.
 LaTeX Info: Redefining \% on input line 32.
- [65
+ [83
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
 ]
@@ -3232,45 +3431,48 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
+runsystem(rm TesisMSc.pyg)...executed
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 32.
 )
 
 Here is how much of LuaTeX's memory you used:
- 38582 strings out of 481365
+ 41431 strings out of 481365
  100000,1373583 words of node,token memory allocated
- 1242 words of node memory still in use:
-   8 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 171 attribute, 98 glue_spe
-c, 87 attribute_list, 2 write, 1 special, 2 pdf_action nodes
-   avail lists: 1:6,2:12357,3:2757,4:326,5:438,6:64,7:5664,8:135,9:1177,10:33,11
+ 1253 words of node memory still in use:
+   8 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 173 attribute, 99 glue_spe
+c, 88 attribute_list, 2 write, 1 special, 2 pdf_action nodes
+   avail lists: 1:6,2:12358,3:2757,4:454,5:438,6:64,7:5664,8:135,9:1177,10:33,11
 :605
- 53306 multiletter control sequences out of 65536+600000
- 108 fonts using 9005147 bytes
- 67i,28n,83p,10165b,1533s stack positions out of 5000i,500n,10000p,200000b,100000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips
-/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/tex
-mf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvi
-ps/base/8r.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/te
-xmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmb
-x8.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fon
-ts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb
-></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type
-1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/sh
-are/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/l
-m/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/
-fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb>
-</usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1
-/public/lm/lmro12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr
-/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/te
-xmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmt
-t12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam1
-0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on TesisMSc.pdf (69 pages, 1167165 bytes).
+ 55925 multiletter control sequences out of 65536+600000
+ 112 fonts using 9292803 bytes
+ 67i,28n,83p,10165b,1535s stack positions out of 5000i,500n,10000p,200000b,100000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvip
+s/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/
+fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.
+enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf
+/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12
+.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx8.pfb></usr/share/texmf/fonts/t
+ype1/public/lm/lmbxi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></
+usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/p
+ublic/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/shar
+e/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/
+lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fo
+nts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb><
+/usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/pu
+blic/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmro12.pfb></usr/shar
+e/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/
+lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texm
+f/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10
+.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/
+type1/public/lm/lmtt12.pfb></usr/share/texmf/fonts/type1/public/lm/lmtti10.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
+Output written on TesisMSc.pdf (87 pages, 1278412 bytes).
 
-PDF statistics: 1150 PDF objects out of 1200 (max. 8388607)
- 980 compressed objects within 10 object streams
- 441 named destinations out of 1000 (max. 131072)
+PDF statistics: 1241 PDF objects out of 1440 (max. 8388607)
+ 1050 compressed objects within 11 object streams
+ 459 named destinations out of 1000 (max. 131072)
  192 words of extra memory for PDF output out of 10000 (max. 100000000)
 
