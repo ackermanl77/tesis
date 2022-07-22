@@ -2,7 +2,7 @@
 
 \section{Componentes triconexas en gráficas de tipo $\DynD_{n}$}
 
-Antes de entrar en detalle con el tema de nuestro interes se definen dos conceptos que nos ayudaran a hacer la clasificación.
+Antes de entrar en detalle con el tema de nuestro interés se definen dos conceptos que nos ayudaran a hacer la clasificación.
 
 \begin{definition}
 Una bigráfica cumple la \textbf{condición de ciclo} si todo ciclo tiene un número impar de aristas punteadas.
@@ -66,16 +66,16 @@ Su diagrama se obtiene reemplazando aristas punteadas por sólidas.
         \end{tikzpicture}
 \end{example}
 
-\subsection{Idea general de la clasificación algoritmica de $\DynD_{n}$}
+\subsection{Idea general de la clasificación algorítmica de $\DynD_{n}$}
 Aquí daremos la idea general de el algoritmo de clasificación cuando tenemos un ciclo $>2$:
 \begin{enumerate}
- \item Descomponemos la bigrafica en sus componentes biconexas.
+ \item Descomponemos la bigráfica en sus componentes biconexas.
  \item Si todas excepto una son componentes biconexas entonces:
  \begin{enumerate}
   \item A la componente que no es biconexa aplicamos el algoritmo de componentes triconexas a el marco de la bigráfica.
  \item Ya que obtengamos las componentes triconexas finales regresamos las aristas a su forma original.
  \item a los enlaces les quitamos las aristas paralelas y hacemos que la arista sea solida.
- \item y para las aristas virtuales de los poligonos o componentes triconexas con la misma etiqueta hacemos lo siguiente:
+ \item y para las aristas virtuales de los polígonos o componentes triconexas con la misma etiqueta hacemos lo siguiente:
  \begin{enumerate}
   \item Calculamos el camino mas corto hacia la arista virtual si el numero de aristas punteadas es par la arista virtual la hacemos punteada si el número es impar la arista virtual la hacemos solida.
  \end{enumerate}
@@ -83,14 +83,14 @@ Aquí daremos la idea general de el algoritmo de clasificación cuando tenemos u
  \item Si tenemos que todas las componentes triconexas finales excepto una son $\DynA_{n}$ entonces:
  \begin{enumerate}
   \item Verificamos que la componente triconexa que no es un $\DynA$-bloque cumpla la condición de ciclo(si el ciclo es $>2$).
-  \item Si lo cumple entonces podemos decir que la bigrafica es de tipo $\DynD_{n}$ comn $n = \left|V\right|$
+  \item Si lo cumple entonces podemos decir que la bigráfica es de tipo $\DynD_{n}$ con $n = \left|V\right|$
  \end{enumerate}
  \end{enumerate}
 \end{enumerate}
 
 Si tenemos un ciclo $=2$ entonces nuestras componentes triconexas van a ser necesariamente $\DynA$-bloques.
 
-\subsection{Clasificación algoritmica de $\DynD_{n}$}
+\subsection{Clasificación algorítmica de $\DynD_{n}$}
 En \citep{TricLinTimAlg} existe una implementación de el algoritmo de componentes triconexas en el lenguaje Python la cual verifica si es una gráfica triconexa y te devuelve las componentes triconexas finales de la gráfica ingresada solo funciona con gráficas por lo cual utilizaremos el marco de la bigráfica para poder utilizar este algoritmo y ya que tengamos las componentes finales volvemos las aristas a su forma original a las aristas virtuales si son punteadas o solidas lo definiremos conforme a la idea general.
 
 Hay dos casos principales que ver en este problema de clasificación:
@@ -99,9 +99,9 @@ Hay dos casos principales que ver en este problema de clasificación:
  \item con ciclo $=2$
 \end{itemize}
 
-Las bigráficas con ciclo $> 2$ son mas faciles de ver que las bigráficas con ciclo $= 2$ A continuación veremos unos ejemplos de estos casos y como \citep{TricLinTimAlg} lo descompone en sus componentes triconexas.
+Las bigráficas con ciclo $> 2$ son mas fáciles de ver que las bigráficas con ciclo $= 2$ A continuación veremos unos ejemplos de estos casos y como \citep{TricLinTimAlg} lo descompone en sus componentes triconexas.
 
-Vamos a describir el proceso de clasificación en los siquientes ejemplos:
+Vamos a describir el proceso de clasificación en los siguientes ejemplos:
 
 \begin{figure}[H]
      \begin{subfigure}[b]{0.5\textwidth}
@@ -235,14 +235,14 @@ Arboles generados de el recorrido en profundidad de la componente biconexa que n
 \begin{figure}[H]
 \centering
 \includegraphics[width=6cm]{Figuras/G3.png}
-\caption{Árbol generado en el recorrido primero en profundida en $G_{1, 1}$}
+\caption{Árbol generado en el recorrido primero en profundidad en $G_{1, 1}$}
 \label{figura:recorridoG1}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=3cm]{Figuras/G4.png}
-\caption{Árbol generado en el recorrido primero en profundida en $G_{2}$}
+\caption{Árbol generado en el recorrido primero en profundidad en $G_{2}$}
 \label{figura:recorridoG2}
 \end{figure}
 
@@ -262,7 +262,7 @@ vertice & lowpt1 & lowpt2 \\
       7 &      3 &      5 \\
 \bottomrule
 \end{tabular}
-\caption{Calculos de lowpt1 y lowpt2 en $G_{1,1}$}
+\caption{Cálculos de lowpt1 y lowpt2 en $G_{1,1}$}
 \end{center}
 \end{table}
 
@@ -280,7 +280,7 @@ vertice & lowpt1 & lowpt2 \\
       6 &      3 &      4 \\
 \bottomrule
 \end{tabular}
-\caption{Calculos de lowpt1 y lowpt2 en $G_{2}$}
+\caption{Cálculos de lowpt1 y lowpt2 en $G_{2}$}
 \end{center}
 \end{table}
 

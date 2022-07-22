@@ -20,9 +20,9 @@
 \contentsline {subsection}{\numberline {3.2.2}Encontrando componentes de separación}{50}{subsection.3.2.2}%
 \contentsline {chapter}{\numberline {4}Clasificación $\ensuremath {\mathbb {D}}_{n}$}{56}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Componentes triconexas en gráficas de tipo $\ensuremath {\mathbb {D}}_{n}$}{56}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Idea general de la clasificación algoritmica de $\ensuremath {\mathbb {D}}_{n}$}{57}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Clasificación algoritmica de $\ensuremath {\mathbb {D}}_{n}$}{58}{subsection.4.1.2}%
-\contentsline {chapter}{\numberline {5}Componentes triconexas en un bigrafo $\ensuremath {\mathbb {D}}_{n}$.}{63}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Algoritmo para encontrar componentes triconexas de un bigrafo de tipo $\ensuremath {\mathbb {D}}_{n}$}{63}{section.5.1}%
+\contentsline {subsection}{\numberline {4.1.1}Idea general de la clasificación algorítmica de $\ensuremath {\mathbb {D}}_{n}$}{57}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Clasificación algorítmica de $\ensuremath {\mathbb {D}}_{n}$}{57}{subsection.4.1.2}%
+\contentsline {chapter}{\numberline {5}Componentes triconexas en un bigráfo $\ensuremath {\mathbb {D}}_{n}$.}{63}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Algoritmo para encontrar componentes triconexas de un bigráfo de tipo $\ensuremath {\mathbb {D}}_{n}$}{63}{section.5.1}%
 \contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliograf\'{\i }a}{83}{section.5.1}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

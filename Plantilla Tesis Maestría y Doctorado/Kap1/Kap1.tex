@@ -118,14 +118,14 @@ Un \textbf{cambio de variable} es una ecuación de la forma
 \end{equation}
 
 \paragraph*{}
-donde $P$ es una matriz invertible y $\overrightarrow{y}$ es un nuevo vector variable en $\mathrm{R}^{n}$. Si se aplica el cambio de variable \ref{ecuacion:1.3} sobre una forma cuadrática $q(\overrightarrow{x}) = \frac{1}{2}\overrightarrow{x}^{T}A\overrightarrow{x}$ se obitene una matriz cuadrática $q'(\overrightarrow{y})$ cuya matriz asociada es $P^{T} ~ A ~ P$:
+donde $P$ es una matriz invertible y $\overrightarrow{y}$ es un nuevo vector variable en $\mathrm{R}^{n}$. Si se aplica el cambio de variable \ref{ecuacion:1.3} sobre una forma cuadrática $q(\overrightarrow{x}) = \frac{1}{2}\overrightarrow{x}^{T}A\overrightarrow{x}$ se obtiene una matriz cuadrática $q'(\overrightarrow{y})$ cuya matriz asociada es $P^{T} ~ A ~ P$:
 
 \begin{equation*}
     \frac{1}{2}\overrightarrow{x}^{T}\overrightarrow{x} = \frac{1}{2}\left(P\overrightarrow{y}\right)^{T}~A~\left(P\overrightarrow{y}\right) = \frac{1}{2}\left(\overrightarrow{y}^{T} P^{T}\right)~A~\left(P\overrightarrow{y}\right) = \frac{1}{2}\overrightarrow{y}^{T}\left(P^{T}~A~P\right)\overrightarrow{y}
 \end{equation*}.
 
 \paragraph*{}
-Gatantizamos que $P^{T}~A~P$ es una matriz simétrica (y por tanto que en verdad corresponde a otra forma cuadrática) porque
+Garantizamos que $P^{T}~A~P$ es una matriz simétrica (y por tanto que en verdad corresponde a otra forma cuadrática) porque
 
 \begin{eqnarray*}
 \left(P^{T}~A~P\right)^{T}&=&P^{T}~A^{T}~\left(P^{T}\right)^{T}\\
@@ -202,7 +202,7 @@ x & \leftarrow & \frac{2z + w}{\sqrt(5)}\\
 y & \leftarrow & \frac{-z + 2w}{\sqrt(5)}
 \end{eqnarray*}
 
-sobre la expresion $x^{2} - 5y^{2} - 8xy$.
+sobre la expresión $x^{2} - 5y^{2} - 8xy$.
 \end{example}
 
 \paragraph*{}
@@ -218,7 +218,7 @@ Toda matriz es ortogonalmente diagonizable si y solo si es simétrica
 \end{theorem}
 
 \paragraph*{}
-El teorema \ref{teorema:1.1} se dejara sin demostración. Lo importante es que, a partir de este teorema, y dado que las matrices asociadas a las formas cuadráticas son simétricas, se sigue el siguente resultado:
+El teorema \ref{teorema:1.1} se dejara sin demostración. Lo importante es que, a partir de este teorema, y dado que las matrices asociadas a las formas cuadráticas son simétricas, se sigue el siguiente resultado:
 
 \begin{theorem}(de los ejes principales).
 Toda forma cuadrática $q(\overrightarrow{x})$ es equivalente mediante una matriz ortogonal $P$ a una forma cuadrática 
@@ -247,12 +247,12 @@ Haciendo $\overrightarrow{x} = P\overrightarrow{y}$ y se obtiene $q'(\overrighta
 Como se vera, esta representación es muy útil para clasificar formas cuadráticas. Diremos que una forma cuadrática $q$ es \textbf{definida positiva} si $q(\overrightarrow{x}) > 0, ~\forall~ \overrightarrow{x} \neq \overrightarrow{0}$ 
 
 \begin{lemma}
-Si dos formas cuadráticas $q(\overrightarrow{x})$ y $q'(\overrightarrow{y})$ son equivalentes mediante el cabio de variable $\overrightarrow{y} = P\overrightarrow{x}$ y si una de ellas es definada positiva entonces la otra también lo es.
+Si dos formas cuadráticas $q(\overrightarrow{x})$ y $q'(\overrightarrow{y})$ son equivalentes mediante el cambio de variable $\overrightarrow{y} = P\overrightarrow{x}$ y si una de ellas es definida positiva entonces la otra también lo es.
 \label{lema:1.3}
 \end{lemma}
 
 \begin{proof}
-Supongamos que $q(\overrightarrow{x})$ es definida positiva y definimos la transformación lineal $L(\overrightarrow{x}) = P\overrightarrow{x}$, entonces $L(\overrightarrow{0}) = L(\overrightarrow{0}+ \overrightarrow{0}) = L(\overrightarrow{0}) + L(\overrightarrow{0})$, de donde $L(\overrightarrow{0}) = \overrightarrow{0}$. Como $P$ es una matriz invertible entonces $L^{-1}(\overrightarrow{x}) = P^{-1}x$. En particular $L$ debe ser inyectiva y por lo tanto $L(\overrightarrow{x})=\overrightarrow{0}$ implica que $\overrightarrow{x}=\overrightarrow{0}$. Si $q$ es definida positiva entonces $q(\overrightarrow{x}) = q'(\overrightarrow{y}) > 0$ para todo $\overrightarrow{y} \neq \overrightarrow{0}$ y se cumple que $\overrightarrow{x} \neq \overrightarrow{0} \Leftrightarrow \overrightarrow{y} = P^{-1}\overrightarrow{x} \neq \overrightarrow{0}$; por lo tanto $q'$ es definida positiva , entonces aplicando el mismo razonamiento con $L(\overrightarrow{y}) = P^{-1}\overrightarrow{y}$ se llega a la conclusión de que $q$ tambien es definida positiva. 
+Supongamos que $q(\overrightarrow{x})$ es definida positiva y definimos la transformación lineal $L(\overrightarrow{x}) = P\overrightarrow{x}$, entonces $L(\overrightarrow{0}) = L(\overrightarrow{0}+ \overrightarrow{0}) = L(\overrightarrow{0}) + L(\overrightarrow{0})$, de donde $L(\overrightarrow{0}) = \overrightarrow{0}$. Como $P$ es una matriz invertible entonces $L^{-1}(\overrightarrow{x}) = P^{-1}x$. En particular $L$ debe ser inyectiva y por lo tanto $L(\overrightarrow{x})=\overrightarrow{0}$ implica que $\overrightarrow{x}=\overrightarrow{0}$. Si $q$ es definida positiva entonces $q(\overrightarrow{x}) = q'(\overrightarrow{y}) > 0$ para todo $\overrightarrow{y} \neq \overrightarrow{0}$ y se cumple que $\overrightarrow{x} \neq \overrightarrow{0} \Leftrightarrow \overrightarrow{y} = P^{-1}\overrightarrow{x} \neq \overrightarrow{0}$; por lo tanto $q'$ es definida positiva , entonces aplicando el mismo razonamiento con $L(\overrightarrow{y}) = P^{-1}\overrightarrow{y}$ se llega a la conclusión de que $q$ también es definida positiva. 
 \end{proof}
 
 \begin{theorem}
@@ -345,7 +345,7 @@ Si $q$ es una forma unitaria entonces le asociaremos una bigráfica \textbf{$B$}
 
 \paragraph*{}
 Este proceso se puede revertir y asociar a toda bigráfica $G$ (posiblemente con aristas punteadas) una forma unitaria que denotaremos por \textbf{$q_{G}$}. Ahora, toda la información de $q_{G}$ está codificada en $G$: La existencia de un vértice $x$ nos dice que la forma cuadrática está definida sobre alguna variable $x$ y que contiene el término $x^{2}$ (porque $q$ es una forma cuadrática unitaria). El coeficiente del monomio $xy$ es $c = a_{p} - a_{s}$ donde $a_{p}$ es la cantidad de aristas punteadas entre $x$ y $y$, y $a_{s}$ es la cantidad de aristas sólidas entre estos mismos vértices. Más aún cabe recalcar que nosotros estamos descartando gráficas con lazos, por lo que cualquier gráfica en verdad define a una forma cuadrática unitaria.\\
-Las gráficas de Dynkin se presentan en la figura \ref{figura:1.2}. Hay que resaltar que las gráficas $\DynD_{n}$ están definidas para $n \geq 4$ mientras que las gráficas $\DynE_{n}$ solo se definen para $n = 6, 7, 8$. Lo impotante de estas gráficas radica en que permite dar una caracterización elegante de las formas unitarias que son definidas positivas tal como se explica a continuación.
+Las gráficas de Dynkin se presentan en la figura \ref{figura:1.2}. Hay que resaltar que las gráficas $\DynD_{n}$ están definidas para $n \geq 4$ mientras que las gráficas $\DynE_{n}$ solo se definen para $n = 6, 7, 8$. Lo importante de estas gráficas radica en que permite dar una caracterización elegante de las formas unitarias que son definidas positivas tal como se explica a continuación.
 
 \begin{figure}[H]
 \begin{center}
@@ -555,7 +555,7 @@ Esta gráfica es isomorfa a $\mathbb{A}_{4}$, por lo tanto ese el tipo Dynkin es
 Para demostrar el teorema \ref{teorema:1.6} lo dividiremos en dos partes:
 
 \begin{enumerate}
-    \item Demostramos que las gráficas de Dynkin son las únicas gráficas conexas de aristas sólidas que definen formas unitarias que son definidas positivas (las aristas multiples las consideraremos como aristas con peso, ver corolario \ref{corolario:1.9}) .
+    \item Demostramos que las gráficas de Dynkin son las únicas gráficas conexas de aristas sólidas que definen formas unitarias que son definidas positivas (las aristas múltiples las consideraremos como aristas con peso, ver corolario \ref{corolario:1.9}) .
     \item Demostramos que siempre es posible hacer cambios de variable enteros de tal manera que la gráfica resultante no contenga aristas solidas.
 \end{enumerate}
 
@@ -603,7 +603,7 @@ de tal forma que
 \end{eqnarray*}
 
 \paragraph{}
-Para las gráficas $\DynE_{6}$, $\DynE_{7}$ y $\DynE_{8}$ usaremos el siguente razonamiento:\\
+Para las gráficas $\DynE_{6}$, $\DynE_{7}$ y $\DynE_{8}$ usaremos el siguiente razonamiento:\\
 Supongamos que $A_{\Delta}$ es la matriz asociada a la gráfica $\Delta$ (con $\Delta = \DynE_{6},\DynE_{7},\DynE_{8}$); si existe una matriz $R_{\Delta}$ triangular superior, con entradas positivas en la diagonal principal tal que $A_{\Delta} = R_{\Delta}^{T}R_{\Delta}$ entonces por teorema \ref{teorema:1.5} se sigue que $\Delta$ define una forma unitaria definida positiva.\\
 En efecto tenemos que:
 \begin{align*}
@@ -793,7 +793,7 @@ Ahora que hemos descartado a las bigráficas de aristas con peso mayor que uno e
 \end{figure}
 
 \paragraph{}
-Hasta ahora hemos asociado vértices con variables(\begin{tikzpicture}\node (v1) at (-0.0, 0.56) {x}; \end{tikzpicture} con x). Ahora a cada variable $x_{i}$ le asignamos el vértice $i$, convenimos que le asignamos un orden a las variables y que el vértice $i$ representa el lugar de la variable $x_{i}$ en el ordemn dado.
+Hasta ahora hemos asociado vértices con variables(\begin{tikzpicture}\node (v1) at (-0.0, 0.56) {x}; \end{tikzpicture} con x). Ahora a cada variable $x_{i}$ le asignamos el vértice $i$, convenimos que le asignamos un orden a las variables y que el vértice $i$ representa el lugar de la variable $x_{i}$ en el orden dado.
 
 \begin{center}
 \begin{tikzpicture}[scale=1.7]
@@ -942,6 +942,6 @@ Solamente falta demostrar que toda gráfica que no sea de Dynkin necesariamente 
 \end{enumerate}
 
 \paragraph{}
- Ahora ya que habiamos supuesto que $G \neq \DynE_{6}$, por tanto $n > 6$. Eneste caso $G$ debe contener a $\widetilde{\DynE}_{6}$ o $\DynE_{7}$. Si tenemos que $G \neq \DynE_{7}$ entonces $n > 8$., de donde obtenemos que $G$ contiene a $\widetilde{\DynE}_{7}$ o $\DynE_{8}$, pero si $G \neq \DynE_{8}$ entonces $n > 8$ y por lo tanto $G$ contiene a $\widetilde{\DynE}_{8}$.\\
-Resumiendo, las gráficas de Dynkin definen formas unitarias positivas, y cualquier otra gráfica conexa y de aristas solidas que no sea un diagrama de Dynkin necesariamente contiene una gráfica Euclidiana que la vuelve no positiva: por lo tanto las gráficas de Dynkin son las únicas gráficas conexas de aristas sólidas que definen formas unitarias definidas positivas. Esto conluye la demostración del lema \ref{lema:1.7}.\\
+ Ahora ya que habíamos supuesto que $G \neq \DynE_{6}$, por tanto $n > 6$. En este caso $G$ debe contener a $\widetilde{\DynE}_{6}$ o $\DynE_{7}$. Si tenemos que $G \neq \DynE_{7}$ entonces $n > 8$., de donde obtenemos que $G$ contiene a $\widetilde{\DynE}_{7}$ o $\DynE_{8}$, pero si $G \neq \DynE_{8}$ entonces $n > 8$ y por lo tanto $G$ contiene a $\widetilde{\DynE}_{8}$.\\
+Resumiendo, las gráficas de Dynkin definen formas unitarias positivas, y cualquier otra gráfica conexa y de aristas solidas que no sea un diagrama de Dynkin necesariamente contiene una gráfica Euclidiana que la vuelve no positiva: por lo tanto las gráficas de Dynkin son las únicas gráficas conexas de aristas sólidas que definen formas unitarias definidas positivas. Esto concluye la demostración del lema \ref{lema:1.7}.\\
 En la sección \ref{sec:2.1} se dará termino a la demostración del teorema \ref{teorema:1.6}
