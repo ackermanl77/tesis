@@ -24,5 +24,5 @@
 \contentsline {subsection}{\numberline {4.1.2}Clasificación algorítmica de $\ensuremath {\mathbb {D}}_{n}$}{57}{subsection.4.1.2}%
 \contentsline {chapter}{\numberline {5}Componentes triconexas en un bigráfo $\ensuremath {\mathbb {D}}_{n}$.}{63}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Algoritmo para encontrar componentes triconexas de un bigráfo de tipo $\ensuremath {\mathbb {D}}_{n}$}{63}{section.5.1}%
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliograf\'{\i }a}{83}{section.5.1}%
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliograf\'{\i }a}{64}{section.5.1}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

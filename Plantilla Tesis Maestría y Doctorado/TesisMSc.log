@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2022.7.21)  22 JUL 2022 13:30
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2022.7.21)  22 JUL 2022 17:37
  system commands enabled.
 **TesisMSc.tex
 (./TesisMSc.tex
@@ -2159,37 +2159,37 @@ LaTeX Info: Redefining \% on input line 670.
 LaTeX Info: Redefining \. on input line 798.
 LaTeX Info: Redefining \% on input line 798.
  [12]
-Underfull \hbox (badness 10000) in paragraph at lines 816--817
+Underfull \hbox (badness 10000) in paragraph at lines 814--815
 
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 840.
+(Font)              <10.95> on input line 837.
 
-Overfull \hbox (1.67493pt too wide) in paragraph at lines 861--862
+Overfull \hbox (1.67493pt too wide) in paragraph at lines 858--859
  [][] 
  []
 
 
-Overfull \hbox (32.97269pt too wide) in paragraph at lines 907--908
+Overfull \hbox (32.97269pt too wide) in paragraph at lines 904--905
  [][] 
  []
 
 
-Overfull \hbox (2.61105pt too wide) in paragraph at lines 820--911
+Overfull \hbox (2.61105pt too wide) in paragraph at lines 817--908
 [][] []
  []
 
 
-Overfull \hbox (2.61105pt too wide) in paragraph at lines 820--911
+Overfull \hbox (2.61105pt too wide) in paragraph at lines 817--908
 [] [] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Info: Redefining \. on input line 940.
-LaTeX Info: Redefining \% on input line 940.
+LaTeX Info: Redefining \. on input line 938.
+LaTeX Info: Redefining \% on input line 938.
 [13])
 LaTeX Info: Redefining \. on input line 21.
 LaTeX Info: Redefining \% on input line 21.
@@ -3264,190 +3264,16 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 3.
 
-
-\openout4 = TesisMSc.pyg
-(./_minted-TesisMSc/default.pygstyle)
-(./_minted-TesisMSc/6E3AF74722F57B631B44370A25C79084B2085B1F2DEFA44DAB15CE67BC0
-D6B48.pygtex
-LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 3.
-)
-\openout4 = TesisMSc.pyg
-
-(./_minted-TesisMSc/74C2BBC999306AB2CE694450993DE6E8B2085B1F2DEFA44DAB15CE67BC0
-D6B48.pygtex
-Underfull \vbox (badness 2057) has occurred while \output is active []
-
- [63
+) [63
 
 
 
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 69.
-LaTeX Info: Redefining \% on input line 69.
- [64])
-\openout4 = TesisMSc.pyg
-
-(./_minted-TesisMSc/B92250A2A2078F84E9BBAC9FC149AED5B2085B1F2DEFA44DAB15CE67BC0
-D6B48.pygtex)
-\openout4 = TesisMSc.pyg
-
-(./_minted-TesisMSc/6E3AF74722F57B631B44370A25C79084B2085B1F2DEFA44DAB15CE67BC0
-D6B48.pygtex
-LaTeX Info: Redefining \. on input line 5.
-LaTeX Info: Redefining \% on input line 5.
-
-Overfull \hbox (91.9376pt too wide) has occurred while \output is active
-[] |\T1/lmr/m/sl/12 5.1.  AL-GO-RIT-MO PA-RA EN-CON-TRAR COM-PO-NEN-TES TRI-CO-N
-E-XAS DE UN BI-GRÁ-FO DE TI-PO $\U/msb/m/n/12 D[]$[]
- []
-
-[65])
-\openout4 = TesisMSc.pyg
-
-(./_minted-TesisMSc/E23CF36508F8FC5F823575865754250EB2085B1F2DEFA44DAB15CE67BC0
-D6B48.pygtex
-LaTeX Info: Redefining \. on input line 41.
-LaTeX Info: Redefining \% on input line 41.
- [66]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 94.
-LaTeX Info: Redefining \% on input line 94.
-
-Overfull \hbox (91.9376pt too wide) has occurred while \output is active
-[] |\T1/lmr/m/sl/12 5.1.  AL-GO-RIT-MO PA-RA EN-CON-TRAR COM-PO-NEN-TES TRI-CO-N
-E-XAS DE UN BI-GRÁ-FO DE TI-PO $\U/msb/m/n/12 D[]$[]
- []
-
-[67]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 147.
-LaTeX Info: Redefining \% on input line 147.
- [68]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 200.
-LaTeX Info: Redefining \% on input line 200.
-
-Overfull \hbox (91.9376pt too wide) has occurred while \output is active
-[] |\T1/lmr/m/sl/12 5.1.  AL-GO-RIT-MO PA-RA EN-CON-TRAR COM-PO-NEN-TES TRI-CO-N
-E-XAS DE UN BI-GRÁ-FO DE TI-PO $\U/msb/m/n/12 D[]$[]
- []
-
-[69]
-LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-226.
- (/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
-File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 253.
-LaTeX Info: Redefining \% on input line 253.
- [70]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 306.
-LaTeX Info: Redefining \% on input line 306.
-
-Overfull \hbox (91.9376pt too wide) has occurred while \output is active
-[] |\T1/lmr/m/sl/12 5.1.  AL-GO-RIT-MO PA-RA EN-CON-TRAR COM-PO-NEN-TES TRI-CO-N
-E-XAS DE UN BI-GRÁ-FO DE TI-PO $\U/msb/m/n/12 D[]$[]
- []
-
-[71]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 359.
-LaTeX Info: Redefining \% on input line 359.
- [72]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 412.
-LaTeX Info: Redefining \% on input line 412.
-
-Overfull \hbox (91.9376pt too wide) has occurred while \output is active
-[] |\T1/lmr/m/sl/12 5.1.  AL-GO-RIT-MO PA-RA EN-CON-TRAR COM-PO-NEN-TES TRI-CO-N
-E-XAS DE UN BI-GRÁ-FO DE TI-PO $\U/msb/m/n/12 D[]$[]
- []
-
-[73]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 465.
-LaTeX Info: Redefining \% on input line 465.
- [74]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 518.
-LaTeX Info: Redefining \% on input line 518.
-
-Overfull \hbox (91.9376pt too wide) has occurred while \output is active
-[] |\T1/lmr/m/sl/12 5.1.  AL-GO-RIT-MO PA-RA EN-CON-TRAR COM-PO-NEN-TES TRI-CO-N
-E-XAS DE UN BI-GRÁ-FO DE TI-PO $\U/msb/m/n/12 D[]$[]
- []
-
-[75]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 571.
-LaTeX Info: Redefining \% on input line 571.
- [76]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 624.
-LaTeX Info: Redefining \% on input line 624.
-
-Overfull \hbox (91.9376pt too wide) has occurred while \output is active
-[] |\T1/lmr/m/sl/12 5.1.  AL-GO-RIT-MO PA-RA EN-CON-TRAR COM-PO-NEN-TES TRI-CO-N
-E-XAS DE UN BI-GRÁ-FO DE TI-PO $\U/msb/m/n/12 D[]$[]
- []
-
-[77]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 677.
-LaTeX Info: Redefining \% on input line 677.
- [78]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 730.
-LaTeX Info: Redefining \% on input line 730.
-
-Overfull \hbox (91.9376pt too wide) has occurred while \output is active
-[] |\T1/lmr/m/sl/12 5.1.  AL-GO-RIT-MO PA-RA EN-CON-TRAR COM-PO-NEN-TES TRI-CO-N
-E-XAS DE UN BI-GRÁ-FO DE TI-PO $\U/msb/m/n/12 D[]$[]
- []
-
-[79]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 783.
-LaTeX Info: Redefining \% on input line 783.
- [80]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 836.
-LaTeX Info: Redefining \% on input line 836.
-
-Overfull \hbox (91.9376pt too wide) has occurred while \output is active
-[] |\T1/lmr/m/sl/12 5.1.  AL-GO-RIT-MO PA-RA EN-CON-TRAR COM-PO-NEN-TES TRI-CO-N
-E-XAS DE UN BI-GRÁ-FO DE TI-PO $\U/msb/m/n/12 D[]$[]
- []
-
-[81]))
-LaTeX Info: Redefining \. on input line 25.
-LaTeX Info: Redefining \% on input line 25.
- [82]
 \openout2 = Anexos/Anexos.aux
  (./Anexos/Anexos.tex)
 
-(./TesisMSc.bbl [83
+(./TesisMSc.bbl [64
 
 
 
@@ -3462,7 +3288,7 @@ Package babel Info: Importing font and identification data for spanish
 LaTeX Info: Redefining \. on input line 32.
 LaTeX Info: Redefining \% on input line 32.
 
-[84
+[65
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
 ] (/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
@@ -3487,47 +3313,44 @@ LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `TesisMSc.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-runsystem(rm TesisMSc.pyg)...executed
 )
 
 Here is how much of LuaTeX's memory you used:
- 43775 strings out of 477805
- 195339,1648299 words of node,token memory allocated
- 1262 words of node memory still in use:
-   8 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 175 attribute, 99 glue_spe
-c, 89 attribute_list, 3 write, 1 special, 2 pdf_action nodes
-   avail lists: 1:11,2:12236,3:5005,4:952,5:786,6:118,7:10658,8:135,9:2028,10:33
+ 43494 strings out of 477805
+ 156268,1648299 words of node,token memory allocated
+ 1256 words of node memory still in use:
+   8 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 173 attribute, 99 glue_spe
+c, 88 attribute_list, 3 write, 1 special, 2 pdf_action nodes
+   avail lists: 1:11,2:12239,3:5004,4:586,5:786,6:118,7:10658,8:135,9:2028,10:33
 ,11:1196
- 61564 multiletter control sequences out of 65536+600000
- 102 fonts using 6755783 bytes
+ 61406 multiletter control sequences out of 65536+600000
+ 98 fonts using 6468263 bytes
  113i,28n,103p,10665b,1540s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvip
-s/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/
-fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.
-enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf
-/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12
-.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx8.pfb></usr/share/texmf/fonts/t
-ype1/public/lm/lmbxi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></
-usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/p
-ublic/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/shar
-e/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/
-lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fo
-nts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb><
-/usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/pu
-blic/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmro12.pfb></usr/shar
-e/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/
-lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texm
-f/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10
-.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/
-type1/public/lm/lmtt12.pfb></usr/share/texmf/fonts/type1/public/lm/lmtti10.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on TesisMSc.pdf (88 pages, 1345270 bytes).
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips
+/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/tex
+mf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvi
+ps/base/8r.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/te
+xmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmb
+x8.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fon
+ts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb
+></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type
+1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/sh
+are/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/l
+m/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/
+fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb>
+</usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1
+/public/lm/lmro12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr
+/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/publ
+ic/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/te
+xmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmt
+t12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam1
+0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
+Output written on TesisMSc.pdf (69 pages, 1228451 bytes).
 
-PDF statistics: 1323 PDF objects out of 1440 (max. 8388607)
- 933 compressed objects within 10 object streams
- 537 named destinations out of 1000 (max. 131072)
+PDF statistics: 1229 PDF objects out of 1440 (max. 8388607)
+ 876 compressed objects within 9 object streams
+ 518 named destinations out of 1000 (max. 131072)
  197 words of extra memory for PDF output out of 10000 (max. 100000000)
 
