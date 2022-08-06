@@ -24,6 +24,10 @@ Barot, M. and de~la Pena, J. (1999).
 \newblock The dynkin type of a non-negative unit form.
 \newblock {\em Expositiones Mathematicae}, 17.
 
+\bibitem[Barot et~al., 2019]{BarotMichaelJesusJose}
+Barot, M., Jiménez~González, J., and Peña, J.-A. (2019).
+\newblock {\em Quadratic Forms: Combinatorics and Numerical Results}.
+
 \bibitem[Bruno et~al., 1970]{10893101}
 Bruno, J., Steiglitz, K., and Weinberg, L. (1970).
 \newblock A new planarity test based on 3-connectivity.
@@ -109,6 +113,12 @@ Meghana M~Reddy, Sai Harsh~Tondomker, D.~C. (2018).
 \newblock Triconnectivity linear time algorithm.
 \newblock
   \url{https://doc.sagemath.org/html/en/reference/graphs/sage/graphs/connectivity.html#sage.graphs.connectivity.TriconnectivitySPQR}.
+
+\bibitem[P\'{e}rez et~al., 2018]{10.3233/FI-2018-1653}
+P\'{e}rez, C., Abarca, M., and Rivera, D. (2018).
+\newblock Cubic algorithm to compute the dynkin type of a positive definite
+  quasi-cartan matrix.
+\newblock {\em Fundam. Inf.}, 158(4):369–384.
 
 \bibitem[Ringel, 1985]{Ringel1985TameAA}
 Ringel, C.~M. (1985).

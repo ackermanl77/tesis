@@ -14,7 +14,7 @@ La idea intuitiva es pasar mediante cambios de variable enteros de la forma unit
 \textbf{INFLACIONES Y DEFLACIONES}
 
 \paragraph{}
-Tomemos matrices elementales $E_{sr}^{d}$, cuya transformación lineal 
+Sea $E_{sr}^{d} = I + d~e_{s}~e_{r}^{d}$ donde los vectores $e_{s}$ y $e_{r}$ son vectores columna la matriz elemental, cuya transformación lineal 
 \begin{equation*}
     T_{sr}^{d}\left(A\right) = E_{sr}^{d}A
 \end{equation*}
@@ -52,7 +52,7 @@ y por tanto podemos concluir que $T_{sr}^{d}$ como cambio de variable tiene el m
     q'(\overrightarrow{x}) = \frac{1}{2}\left(E_{rs}^{d}\right)^{T} A E_{sr}^{d}
 \end{equation*}
 
-Dado que $E_{sr}^{d}$ es la matriz identidad salvo por la d en la posición $(s, r)$-ésima, entonces $\left(E_{sr}^{d}\right)^{T} = E_{sr}^{d}$. Por lo tanto $\left(E_{sr}^{d}\right)^{T}$ tiene el efecto de sumar $d$ veces el renglón $r$ al renglón $s$. Por otra parte $E_{sr}^{d}$ multiplicado por la derecha tiene el efecto de sumar $d$ veces la columna $r$ a la columna $s$, por lo tanto la matriz $C = \left(E_{sr}^{d}\right)^{T} A E_{sr}^{d}$ está dada por
+Dado que $E_{sr}^{d}$ es la matriz identidad salvo por la d en la posición $(s, r)$, entonces $\left(E_{sr}^{d}\right)^{T} = E_{sr}^{d}$. Por lo tanto $\left(E_{sr}^{d}\right)^{T}$ tiene el efecto de sumar $d$ veces el renglón $r$ al renglón $s$. Por otra parte $E_{sr}^{d}$ multiplicado por la derecha tiene el efecto de sumar $d$ veces la columna $r$ a la columna $s$, por lo tanto la matriz $C = \left(E_{sr}^{d}\right)^{T} A E_{sr}^{d}$ está dada por
 
 \begin{equation}
 c_{ij} = \left \{ 
@@ -65,7 +65,7 @@ c_{ij} = \left \{
     \label{ecuacion:2.1}
 \end{equation}
 
-$E_{rs}^{d}$ define un cambio de variable entero, por lo que $C$ es la matriz asociada a alguna forma cuadrática entera, aunque no necesariamente unitaria. Para que $q'(\overrightarrow{x}) = \frac{1}{2}\overrightarrow{x}^{T}C\overrightarrow{x}$ sea una forma unitaria es necesario que $c_{ss} = 2$, o lo que es lo mismo (con $a_{rr} = a_{ss} = 2$ y $a_{rs} = a_{sr}$:
+$E_{sr}^{d}$ define un cambio de variable entero, por lo que $C$ es la matriz asociada a alguna forma cuadrática entera, aunque no necesariamente unitaria. Para que $q'(\overrightarrow{x}) = \frac{1}{2}\overrightarrow{x}^{T}C\overrightarrow{x}$ sea una forma unitaria es necesario que $c_{ss} = 2$, o lo que es lo mismo (con $a_{rr} = a_{ss} = 2$ y $a_{rs} = a_{sr}$:
 
 \begin{equation*}
     2d^{2} + 2da_{rs} + 2 = 2.
@@ -149,7 +149,7 @@ La matriz resultante nos describe la misma forma cuadrática que se hubiera obte
 x^{2} + (y - z)^{2} + z^{2} + w^{2} - x(y - z) + (y - z)z  - (y - z)w - zw = x^{2} + y^{2} + z^{2} + w^{2} -xy +xz - yz -yw
 \end{equation*}
 
-Tambien se puede hacer el cambio de variable de manera gráfica como se ilustra a continuación en la figura (\ref{figura:2.1})
+También se puede hacer el cambio de variable de manera gráfica como se ilustra a continuación en la figura (\ref{figura:2.1})
 
 \begin{figure}[h]
     \begin{subfigure}[b]{0.3\textwidth}
@@ -243,12 +243,22 @@ Tambien se puede hacer el cambio de variable de manera gráfica como se ilustra 
 
 \textbf{DESCRIPCIÓN Y JUSTIFICACIÓN}
 
+Sea $|\mathcal{R}^{+}(q)|$ el número de raíces positivas de la forma cuadrática $q$ de acuerdo al teorema 2.7 de  \citep{10.3233/FI-2018-1653} la siguiente tabla muestra el número de raíces positivas asociado a cada forma de Dynkin que nos interesa.
+
+\begin{tabular}{|c|c|c|c|c|c|}
+	Diagrama de Dynkin & $\DynA_{n}$ & $\DynD_{n}$ & $\DynE_{6}$ & $\DynE_{7}$ & $\DynE_{8}$ \\ \hline
+	$|\mathcal{R}^{+}(q)|$ & $\frac{n}{2}$ ($n + 1$) & $n$($n-1$) & $36$ & $63$ & $120$ \\ 
+\end{tabular}
+
+
 \paragraph{}
 El método que aparece en \citep{alma991031505829703276} consiste en aplicar sucesivamente inflaciones como se indica en el algoritmo \ref{alg:algoritmoInflaciones} tanto como sea posible, es decir, hasta que no haya más aristas punteadas.
 
 \begin{algorithm}[!ht]
 \DontPrintSemicolon
-  \While{exista una arista punteada $x_{r} \tikz[baseline=-0.1ex]\draw [dotted] (0,0.05) -- (1,0.05); x_{s}$ con $r \le s$ en $\textbf{B}_{q}$:}
+  m = número de vértices de $\textbf{B}_{q}$\\
+  t = máximo($\frac{m}{2}$ ($m + 1$), $m$($m-1$), $36$, $63$, $120$)\\
+  \While{exista una arista punteada $x_{r} \tikz[baseline=-0.1ex]\draw [dotted] (0,0.05) -- (1,0.05); x_{s}$ con $r \le s$ en $\textbf{B}_{q}$ y $|\mathcal{R}^{+}(q)|$ < t:}
    {
    		$q = q \circ T_{rs}^{-}$\;
    		\If{para algun coeficiente $q_{ij}$ se tiene $\left|q_{ij}\right| \ge 1:$}{
@@ -399,7 +409,7 @@ q\left(x_{1}, x_{2}, x_{3}\right) & = x_{1}^{2} - 4x_{1}x_{2} + 8x_{1}x_{3} +  \
 \end{split}
 \end{equation*}
 
-La segunda iteracíon funciona sobre $q'\left(x_{2}, x_{3} \right) = -2x_{2}^{2} - 23x_{3}^{2} + 16x_{2}x_{3}$:
+La segunda iteración funciona sobre $q'\left(x_{2}, x_{3} \right) = -2x_{2}^{2} - 23x_{3}^{2} + 16x_{2}x_{3}$:
 
 \begin{equation*}
 \begin{split}
@@ -409,7 +419,7 @@ q'\left(x_{2}, x_{3}\right) & = \underbrace{-2}_{a}x_{2}^{2} + x_{2}\underbrace{
 \end{split}
 \end{equation*}
 
-Finalmente en la tercera iteracíon opera sobre $q''\left(x_{3}\right) = 9x_{3}^{2}$, que es una forma cuadrática en una sola variable, por tanto $\lambda_{3} = 9$ y $y_{3} = x_{3}$. Así hemos reescrito a $q$ como 
+Finalmente en la tercera iteración opera sobre $q''\left(x_{3}\right) = 9x_{3}^{2}$, que es una forma cuadrática en una sola variable, por tanto $\lambda_{3} = 9$ y $y_{3} = x_{3}$. Así hemos reescrito a $q$ como 
 \begin{equation*}
 \begin{split}
 q\left(x_{1}, x_{2}, x_{3}\right) & = y_{1}^{2} - 2y_{2}^{2} + 9y_{3}^{2}
@@ -521,9 +531,10 @@ Finalmente, si denotamos por $q_{1}, q_{2},q_{3},\ldots$ a la sucesión de valor
 \end{equation*}
 Si estas sucesiones fuesen infinitas entonces eventualmente contradecimos que $R\left(q_{i}\right) \subseteq S\left(q_{i}\right)$, por lo tanto el algoritmo \ref{alg:algoritmoInflaciones} solamente puede hacer un número finito de iteraciones de ciclo \textbf{mientras}. Una breve vista al pseudocodigo nos muestra que esto ocurre cuando $\textbf{B}_{q}$ ya no contiene aristas punteadas, por lo tanto al término de este ciclo $\textbf{B}_{q}$ contiene solamente aristas sólidas. Como habíamos supuesto que $q$ es positiva y como cada $q_{i}$ es $\mathbb{Z}$-equivalente a $q$, entonces el lema \ref{lema:1.7} nos garantiza que cada componente conexa de $\textbf{B}_{q}$ es una gráfica de Dynkin.\\
 Con esto concluye la demostración de el teorema \ref{teorema:1.6}.
+
 \section{ENSAMBLAJE POR $\DynA$-BLOQUES}
 \textbf{VISIÓN GENERAL DEL ENSAMBLE}
-En \citep{Barot1999ACO} se aborda el problema de caracterizar las formas de tipo $\DynA_{n}$; pero en lugar de basarse en transformaciones, se basa en la construcción de las gráficas $\Delta$ tales que $q_{\Delta}$ es de tipo  $\DynA_{n}$. La idea es ir ``pegando'' ciertas gráficas como si fueran bloques de construcción. La estructura de estos bloques es muy sencilla: Se parte de dos conjuntos de vértices $V_{0}$ y $V_{1}$; entre los vértices $\left(u, v\right)$ hay una arista punteada $u\tikz[baseline=-0.1ex]\draw [dotted] (0,0.05) -- (1,0.05); v$ si ambos $u, v \in V_{0}$ o ambos $u, v \in V_{1}$, y una arista sólida $u \tikz[baseline=-0.1ex]\draw (0,0.05) -- (1,0.05); v$ en otro caso. A las gráficas así obtenidas les llamaremos $\DynA$-bloques y las denotaremos por $F_{m,m^{'}}$ donde $m = |V_{0}|$ y $m^{'} = |V_{1}|$ (pero acostumbramos a escribir $m \geq m^{'}$). La figura \ref{figura:2.3} muestra cómo dibujar un $\DynA$-bloque.\citep{AbarcaSoteloMarioAlberto2011Apds}\citep{Barot1999ACO}\\
+En \citep{Barot1999ACO} se aborda el problema de caracterizar las formas de tipo $\DynA_{n}$; pero en lugar de basarse en transformaciones, se basa en la construcción de las gráficas $\Delta$ tales que $q_{\Delta}$ es de tipo  $\DynA_{n}$. La idea es ir ``pegando'' ciertas gráficas como si fueran bloques de construcción. La estructura de estos bloques es muy sencilla: Se parte de dos conjuntos de vértices $V_{0}$ y $V_{1}$; entre los vértices $\left(u, v\right)$ hay una arista punteada $u\tikz[baseline=-0.1ex]\draw [dotted] (0,0.05) -- (1,0.05); v$ si ambos $u, v \in V_{0}$ o ambos $u, v \in V_{1}$, y una arista sólida $u \tikz[baseline=-0.1ex]\draw (0,0.05) -- (1,0.05); v$ en otro caso. A las gráficas así obtenidas les llamaremos $\DynA$-bloques y las denotaremos por $F_{m,m^{'}}$ donde $m = |V_{0}|$ y $m^{'} = |V_{1}|$ (pero acostumbramos a escribir $m \geq m^{'}$). La figura \ref{figura:2.3} muestra cómo dibujar un $\DynA$-bloque. \citep{AbarcaSoteloMarioAlberto2011Apds}\citep{Barot1999ACO}\\
 
 \begin{figure}[h]
     \begin{subfigure}[b]{0.3\textwidth}
@@ -685,6 +696,7 @@ Si $q_{G}$ es de tipo $\DynA_{n}$, y si $H$ es una subgráfica conexa inducida p
 \label{teorema:2.5}
 \end{theorem}
 Comencemos con un caso especial de gráficas: las gráficas circulares son aquellas en los que cada vértice está conectado con exactamente otros dos vértices. Nos interesa saber cuáles gráficas circulares definen formas cuadráticas de tipo $\DynA_{n}$. Ciertamente $F_{3,0}$ y $F_{2,1}$ son unas de estas (lo podemos comprobar usando el algoritmo \ref{alg:algoritmoInflaciones})\\
+\textquestiondown existen mas?\\
 
 Trataremos de simplificar un poco el problema. Las gráficas circulares de la figura 2.5 definen formas $\mathbb{Z}$-equivalentes: podemos pasar de una a otra mediante las matrices elementales $E_{i}^{-1}$ de tamaño $n$. No es difícil comprobar que estas matrices tienen el efecto de intercambiar aristas sólidas con punteadas siempre que estas incidan en el vértice $x_{i}$. De hecho, este mismo razonamiento muestra que toda gráfica circular es equivalente a otra gráfica circular “estandarizada”, que consiste de aristas sólidas y posiblemente una sola arista punteada.\\
 

@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: TesisMSc.aux
 A level-1 auxiliary file: HojaTitulo/HojaTituloMSc.aux
@@ -12,49 +12,50 @@ A level-1 auxiliary file: Anexos/Anexos.aux
 The style file: apalike.bst
 Database file #1: BibliMSC.bib
 Warning--empty booktitle in Barot1999ACO
+Warning--empty publisher in BarotMichaelJesusJose
 Warning--empty booktitle in jEdmonds
 Warning--can't use both author and editor fields in Hopcroft1972
 Warning--empty booktitle in Lederberg1964DENDRAL64AS
 Warning--empty booktitle in Ringel1985TameAA
-You've used 26 entries,
+You've used 28 entries,
             1935 wiz_defined-function locations,
-            630 strings with 7755 characters,
-and the built_in function-call counts, 9150 in all, are:
-= -- 896
-> -- 274
+            644 strings with 8139 characters,
+and the built_in function-call counts, 9921 in all, are:
+= -- 965
+> -- 310
 < -- 28
-+ -- 100
-- -- 84
-* -- 684
-:= -- 1578
-add.period$ -- 75
-call.type$ -- 26
-change.case$ -- 169
-chr.to.int$ -- 24
-cite$ -- 31
-duplicate$ -- 410
-empty$ -- 708
-format.name$ -- 128
-if$ -- 1837
++ -- 112
+- -- 96
+* -- 756
+:= -- 1714
+add.period$ -- 80
+call.type$ -- 28
+change.case$ -- 184
+chr.to.int$ -- 26
+cite$ -- 34
+duplicate$ -- 438
+empty$ -- 763
+format.name$ -- 142
+if$ -- 1984
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 28
-newline$ -- 128
-num.names$ -- 78
-pop$ -- 173
+missing$ -- 31
+newline$ -- 137
+num.names$ -- 84
+pop$ -- 191
 preamble$ -- 1
-purify$ -- 172
+purify$ -- 188
 quote$ -- 0
-skip$ -- 307
+skip$ -- 326
 stack$ -- 0
-substring$ -- 602
-swap$ -- 55
+substring$ -- 653
+swap$ -- 57
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 146
-warning$ -- 5
-while$ -- 71
+type$ -- 156
+warning$ -- 6
+while$ -- 76
 width$ -- 0
-write$ -- 324
-(There were 5 warnings)
+write$ -- 347
+(There were 6 warnings)

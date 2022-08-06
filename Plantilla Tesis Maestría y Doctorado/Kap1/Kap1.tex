@@ -338,7 +338,7 @@ Si $q$ es una forma unitaria entonces le asociaremos una bigráfica \textbf{$B$}
   \draw (v2) -- (v3);
   \draw (v3) -- (v2);
 \end{tikzpicture}
-\caption{Bigráfica asociada a  $2wx -2yz - xz - xy - wz + wy$}
+\caption{Bigráfica asociada a  $wx -yz - xz - xy - wz + wy$}
 \label{figura:1.1}
 \end{center}
 \end{figure}
@@ -350,8 +350,8 @@ Las gráficas de Dynkin se presentan en la figura \ref{figura:1.2}. Hay que resa
 \begin{figure}[H]
 \begin{center}
     \begin{tabular}{ll}
-    \hline
-    Notación \vline & Diagrama de Dynkin\\ 
+    \hline 
+     Notación \vline & Diagrama de Dynkin \\ 
     \hline
     $\DynA_{n}$, $n\ge1$ &
     \begin{tikzpicture}
@@ -548,7 +548,7 @@ con gráfica asociada
 \end{tikzpicture}
 \end{center}
 
-Esta gráfica es isomorfa a $\mathbb{A}_{4}$, por lo tanto ese el tipo Dynkin es $\mathbb{A}_{4}$.
+Esta gráfica es isomorfa a $\mathbb{A}_{4}$, por lo tanto ese el tipo Dynkin es $q_{\mathbb{A}_{4}}$.
 \end{example}
 
 \paragraph{}
@@ -670,7 +670,7 @@ En efecto tenemos que:
 \end{align*}
 
 \paragraph{}
-Aun no hemos terminado la demostración del lema \ref{lema:1.7} . Falta demostrar que los diagramas de Dynkin son las únicas bigráficas de aristas sólidas que definen formas unitarias definidas positivas. Comenzaremos con el siguiente lema, el cual muestra que toda bigráfica que tenga aristas con mayor peso no corresponde a ninguna forma unitaria definida positiva.
+Aun no hemos terminado la demostración del lema \ref{lema:1.7} . Falta demostrar que los diagramas de Dynkin son las únicas bigráficas de aristas sólidas que definen formas unitarias definidas positivas. Comenzaremos con el siguiente lema, el cual muestra que toda bigráfica que tenga aristas con peso mayor que uno no corresponde a ninguna forma unitaria definida positiva.
 
 \begin{lemma}
 Si la forma unitaria $q(\overrightarrow{x})$ es definida positiva entonces $q_{ij} \in \{-1,0,1\}$ para todo $1\leq i \le j \leq n$.
@@ -695,7 +695,7 @@ Ahora que hemos descartado a las bigráficas de aristas con peso mayor que uno e
 
 \begin{enumerate}
     \item Demostraremos que toda gráfica que contenga a un diagrama Euclidiano (Figura \ref{figura:1.3}) no define a una forma unitaria definida positiva
-    \item Demostraremos que toda gráfica conexa que no sea un diagrama de Dynkin necesariamente contiene una sub-gráfica Euclidiana(bigráfica con sólo aristas solidas).
+    \item Demostraremos que toda bigráfica con sólo aristas solidas que no sea un diagrama de Dynkin necesariamente contiene una sub-bigráfica Euclidiana.
 \end{enumerate}
 
 \begin{figure}
@@ -788,7 +788,7 @@ Ahora que hemos descartado a las bigráficas de aristas con peso mayor que uno e
     \draw (v9) -- (v8);
     \end{tikzpicture}
     \end{tabular} 
-    \caption{Diagramas Extendidos de Dynkin. La cantidad de vértices que tiene cada gráfica es $n = m + 1$.}
+    \caption{Diagramas Extendidos de Dynkin\citep{BarotMichaelJesusJose}. La cantidad de vértices que tiene cada gráfica es $n = m + 1$.}
     \label{figura:1.3}
 \end{figure}
 
@@ -797,10 +797,10 @@ Hasta ahora hemos asociado vértices con variables(\begin{tikzpicture}\node (v1)
 
 \begin{center}
 \begin{tikzpicture}[scale=1.7]
-  \node (v0) at (-0.56, 0.0) {$x_{1}$};
-  \node (v1) at (-0.0, 0.56) {$x_{2}$};
-  \node (v2) at (0.56, 0.0) {$x_{3}$};
-  \node (v3) at (-0.0, -0.56) {$x_{4}$};
+  \node (v0) at (-0.56, 0.0) {$x$};
+  \node (v1) at (-0.0, 0.56) {$y$};
+  \node (v2) at (0.56, 0.0) {$z$};
+  \node (v3) at (-0.0, -0.56) {$w$};
   \draw[dotted] (v0) -- (v3);
   \draw (v0) -- (v1);
   \draw (v0) -- (v2);
@@ -809,6 +809,8 @@ Hasta ahora hemos asociado vértices con variables(\begin{tikzpicture}\node (v1)
   \draw (v2) -- (v3);
 \end{tikzpicture}
 \end{center}
+
+representa el orden $x_{1} = x$, $x_{2} = y$, $x_{3} = z$, $x_{4} = w$.
 
 \paragraph{}
 Mostraremos que si $\textbf{B}_{q}$ contiene una subgráfica Euclidiana entonces existe un vector $\overrightarrow{x} \neq 0$ tal que $q\left(\overrightarrow{x}\right) = 0$, mostrando así que $q(\overrightarrow{x})$ no es definida positiva. Un simple cálculo nos muestra que esta evaluación produce un vector $\overrightarrow{x} \neq \overrightarrow{0}$ tal que $q\left(\overrightarrow{x}\right) = 0$.\\
@@ -926,7 +928,7 @@ Mostraremos que si $\textbf{B}_{q}$ contiene una subgráfica Euclidiana entonces
         \caption{$\widetilde{\DynE}_{8}$}
       \end{subfigure}
      \end{center}
-     \caption{Formas hipercríticas no negativas asociadas a los Diagramas Extendidos de Dynkin.}
+     \caption{Formas hipercríticas no negativas asociadas a los Diagramas Extendidos de Dynkin.\citep{BarotMichaelJesusJose}}
     \label{figura:1.4}
 \end{figure}
 

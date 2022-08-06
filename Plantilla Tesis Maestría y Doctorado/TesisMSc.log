@@ -1,5 +1,5 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2022.7.21)  22 JUL 2022 17:54
- system commands enabled.
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2022.7.26)  6 AUG 2022 14:39
+ restricted system commands enabled.
 **TesisMSc.tex
 (./TesisMSc.tex
 LaTeX2e <2021-11-15> patch level 1
@@ -386,90 +386,90 @@ Package: babel 2022/01/26 3.70 The Babel package
 \l@dumylang=\language2
 Package babel Info: Non-standard hyphenation setup on input line 118.
 \l@nohyphenation=\language3
-\l@telugu=\language4
-\l@marathi=\language5
-\l@macedonian=\language6
-\l@croatian=\language7
-\l@kurmanji=\language8
-\l@classiclatin=\language9
-\l@occitan=\language10
-\l@assamese=\language11
-\l@portuguese=\language12
-\l@romanian=\language13
-\l@uppersorbian=\language14
-\l@serbian=\language15
-\l@slovak=\language16
-\l@georgian=\language17
-\l@bulgarian=\language18
-\l@danish=\language19
-\l@romansh=\language20
-\l@serbianc=\language21
-\l@esperanto=\language22
+\l@belarusian=\language4
+\l@italian=\language5
+\l@latvian=\language6
+\l@romanian=\language7
+\l@indonesian=\language8
+\l@esperanto=\language9
+\l@armenian=\language10
+\l@arabic=\language11
+\l@assamese=\language12
+\l@coptic=\language13
+\l@mongolianlmc=\language14
+\l@serbianc=\language15
+\l@latin=\language16
+\l@welsh=\language17
+\l@interlingua=\language18
+\l@french=\language19
+\l@uppersorbian=\language20
+\l@turkmen=\language21
+\l@slovenian=\language22
 \l@ukenglish=\language23
-\l@lithuanian=\language24
-\l@nynorsk=\language25
-\l@turkish=\language26
-\l@sanskrit=\language27
-\l@friulan=\language28
-\l@kannada=\language29
-\l@swissgerman=\language30
-\l@russian=\language31
-\l@welsh=\language32
-\l@hungarian=\language33
-\l@ethiopic=\language34
-\l@afrikaans=\language35
-\l@coptic=\language36
-\l@tamil=\language37
-\l@belarusian=\language38
-\l@mongolian=\language39
-\l@irish=\language40
-\l@latin=\language41
-\l@catalan=\language42
-\l@ibycus=\language43
-\l@oriya=\language44
+\l@dutch=\language24
+\l@croatian=\language25
+\l@serbian=\language26
+\l@monogreek=\language27
+\l@greek=\language28
+\l@mongolian=\language29
+\l@pali=\language30
+\l@piedmontese=\language31
+\l@hindi=\language32
+\l@polish=\language33
+\l@catalan=\language34
+\l@ethiopic=\language35
+\l@panjabi=\language36
+\l@irish=\language37
+\l@lithuanian=\language38
+\l@macedonian=\language39
+\l@friulan=\language40
+\l@malayalam=\language41
+\l@bengali=\language42
+\l@afrikaans=\language43
+\l@farsi=\language44
 \l@finnish=\language45
-\l@malayalam=\language46
-\l@ancientgreek=\language47
-\l@piedmontese=\language48
-\l@arabic=\language49
-\l@pinyin=\language50
-\l@galician=\language51
-\l@usenglishmax=\language52
-\l@polish=\language53
-\l@churchslavonic=\language54
-\l@german=\language55
-\l@pali=\language56
-\l@basque=\language57
-\l@interlingua=\language58
-\l@liturgicallatin=\language59
-\l@panjabi=\language60
-\l@ngerman=\language61
-\l@monogreek=\language62
-\l@bokmal=\language63
-\l@greek=\language64
-\l@indonesian=\language65
-\l@italian=\language66
-\l@mongolianlmc=\language67
-\l@gujarati=\language68
-\l@latvian=\language69
-\l@german-x-2021-02-26=\language70
-\l@estonian=\language71
-\l@ukrainian=\language72
-\l@bengali=\language73
-\l@swedish=\language74
-\l@icelandic=\language75
-\l@spanish=\language76
-\l@dutch=\language77
-\l@ngerman-x-2021-02-26=\language78
-\l@farsi=\language79
-\l@czech=\language80
-\l@schoolfinnish=\language81
-\l@slovenian=\language82
-\l@armenian=\language83
-\l@turkmen=\language84
-\l@hindi=\language85
-\l@french=\language86
-\l@thai=\language87
+\l@georgian=\language46
+\l@portuguese=\language47
+\l@czech=\language48
+\l@icelandic=\language49
+\l@slovak=\language50
+\l@telugu=\language51
+\l@hungarian=\language52
+\l@churchslavonic=\language53
+\l@galician=\language54
+\l@basque=\language55
+\l@ukrainian=\language56
+\l@liturgicallatin=\language57
+\l@sanskrit=\language58
+\l@thai=\language59
+\l@bokmal=\language60
+\l@ancientgreek=\language61
+\l@oriya=\language62
+\l@marathi=\language63
+\l@romansh=\language64
+\l@classiclatin=\language65
+\l@turkish=\language66
+\l@danish=\language67
+\l@spanish=\language68
+\l@gujarati=\language69
+\l@kurmanji=\language70
+\l@schoolfinnish=\language71
+\l@kannada=\language72
+\l@estonian=\language73
+\l@ngerman=\language74
+\l@tamil=\language75
+\l@german=\language76
+\l@pinyin=\language77
+\l@swedish=\language78
+\l@german-x-2021-02-26=\language79
+\l@usenglishmax=\language80
+\l@ibycus=\language81
+\l@ngerman-x-2021-02-26=\language82
+\l@occitan=\language83
+\l@russian=\language84
+\l@nynorsk=\language85
+\l@swissgerman=\language86
+\l@bulgarian=\language87
 \babelcatcodetablenum=\catcodetable12
 \bbl@pattcodes=\catcodetable13
 )
@@ -1329,120 +1329,17 @@ Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
 \colbreak@box=\box134
 \mc@col@check@num=\count376
 )
-(/usr/share/texlive/texmf-dist/tex/latex/minted/minted.sty
-Package: minted 2021/12/24 v2.6 Yet another Pygments shim for LaTeX
-
-(/usr/share/texlive/texmf-dist/tex/latex/fvextra/fvextra.sty
-Package: fvextra 2019/02/04 v1.4 fvextra - extensions and patches for fancyvrb
-
-(/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
-Package: fancyvrb 2021/12/21 4.1b verbatim text (tvz,hv)
-\FV@CodeLineNo=\count377
-\FV@InFile=\read5
-\FV@TabBox=\box135
-\c@FancyVerbLine=\count378
-\FV@StepNumber=\count379
-\FV@OutFile=\write4
-)
-(/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
-Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
-tim
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
-Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
-))
-(/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
-Package: lineno 2005/11/02 line numbers on paragraphs v4.41
-\linenopenalty=\count380
-\output=\toks54
-\linenoprevgraf=\count381
-\linenumbersep=\dimen326
-\linenumberwidth=\dimen327
-\c@linenumber=\count382
-\c@pagewiselinenumber=\count383
-\c@LN@truepage=\count384
-\c@internallinenumber=\count385
-\c@internallinenumbers=\count386
-\quotelinenumbersep=\dimen328
-\bframerule=\dimen329
-\bframesep=\dimen330
-\bframebox=\box136
-LaTeX Info: Redefining \\ on input line 3056.
-)
-\c@FV@TrueTabGroupLevel=\count387
-\c@FV@TrueTabCounter=\count388
-\FV@TabBox@Group=\box137
-\FV@TmpLength=\skip99
-\c@FV@HighlightLinesStart=\count389
-\c@FV@HighlightLinesStop=\count390
-\FV@LoopCount=\count391
-\FV@NCharsBox=\box138
-\FV@BreakIndent=\dimen331
-\FV@BreakIndentNChars=\count392
-\FV@BreakSymbolSepLeft=\dimen332
-\FV@BreakSymbolSepLeftNChars=\count393
-\FV@BreakSymbolSepRight=\dimen333
-\FV@BreakSymbolSepRightNChars=\count394
-\FV@BreakSymbolIndentLeft=\dimen334
-\FV@BreakSymbolIndentLeftNChars=\count395
-\FV@BreakSymbolIndentRight=\dimen335
-\FV@BreakSymbolIndentRightNChars=\count396
-\c@FancyVerbLineBreakLast=\count397
-\FV@LineBox=\box139
-\FV@LineIndentBox=\box140
-\FV@LineWidth=\dimen336
-)
-(/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
-Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
-Package shellesc Info: Unrestricted shell escape enabled on input line 75.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/ifplatform/ifplatform.sty
-Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
-
-(/usr/share/texlive/texmf-dist/tex/generic/catchfile/catchfile.sty
-Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
-Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
-)
-runsystem(uname -s > "TesisMSc.w18")...executed
- (./TesisMSc.w18)
-runsystem(rm -- "TesisMSc.w18")...executed
-) (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
-(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
-\integerpart=\count398
-\decimalpart=\count399
-)
-Package: xstring 2021/07/21 v1.84 String manipulations (CT)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
-Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
-\OuterFrameSep=\skip100
-\fb@frw=\dimen337
-\fb@frh=\dimen338
-\FrameRule=\dimen339
-\FrameSep=\dimen340
-)
-\minted@appexistsfile=\read6
-\minted@bgbox=\box141
-\minted@code=\write5
-\c@minted@FancyVerbLineTemp=\count400
-\c@minted@pygmentizecounter=\count401
-\@float@every@listing=\toks55
-\c@listing=\count402
-)
-runsystem(mkdir -p _minted-TesisMSc)...executed
-LaTeX Info: Redefining \. on input line 49.
-LaTeX Info: Redefining \% on input line 49.
+LaTeX Info: Redefining \. on input line 48.
+LaTeX Info: Redefining \% on input line 48.
 
 (/usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
 Package: algorithm2e 2017/07/18 v5.2 algorithms environments
-\c@AlgoLine=\count403
-\algocf@hangindent=\skip101
+\c@AlgoLine=\count377
+\algocf@hangindent=\skip99
 
 (/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count404
+\c@checkoddpage=\count378
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
@@ -1450,49 +1347,49 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 (/usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
 )
-\skiptotal=\skip102
-\skiplinenumber=\skip103
-\skiprule=\skip104
-\skiphlne=\skip105
-\skiptext=\skip106
-\skiplength=\skip107
-\algomargin=\skip108
-\skipalgocfslide=\skip109
-\algowidth=\dimen341
-\inoutsize=\dimen342
-\inoutindent=\dimen343
-\interspacetitleruled=\dimen344
-\interspacealgoruled=\dimen345
-\interspacetitleboxruled=\dimen346
-\algocf@ruledwidth=\skip110
-\algocf@inoutbox=\box142
-\algocf@inputbox=\box143
-\AlCapSkip=\skip111
-\AlCapHSkip=\skip112
-\algoskipindent=\skip113
-\algocf@nlbox=\box144
-\algocf@hangingbox=\box145
-\algocf@untilbox=\box146
-\algocf@skipuntil=\skip114
-\algocf@capbox=\box147
-\algocf@lcaptionbox=\skip115
-\algoheightruledefault=\skip116
-\algoheightrule=\skip117
-\algotitleheightruledefault=\skip118
-\algotitleheightrule=\skip119
-\c@algocfline=\count405
-\c@algocfproc=\count406
-\c@algocf=\count407
-\algocf@algoframe=\box148
-\algocf@algobox=\box149
+\skiptotal=\skip100
+\skiplinenumber=\skip101
+\skiprule=\skip102
+\skiphlne=\skip103
+\skiptext=\skip104
+\skiplength=\skip105
+\algomargin=\skip106
+\skipalgocfslide=\skip107
+\algowidth=\dimen326
+\inoutsize=\dimen327
+\inoutindent=\dimen328
+\interspacetitleruled=\dimen329
+\interspacealgoruled=\dimen330
+\interspacetitleboxruled=\dimen331
+\algocf@ruledwidth=\skip108
+\algocf@inoutbox=\box135
+\algocf@inputbox=\box136
+\AlCapSkip=\skip109
+\AlCapHSkip=\skip110
+\algoskipindent=\skip111
+\algocf@nlbox=\box137
+\algocf@hangingbox=\box138
+\algocf@untilbox=\box139
+\algocf@skipuntil=\skip112
+\algocf@capbox=\box140
+\algocf@lcaptionbox=\skip113
+\algoheightruledefault=\skip114
+\algoheightrule=\skip115
+\algotitleheightruledefault=\skip116
+\algotitleheightrule=\skip117
+\c@algocfline=\count379
+\c@algocfproc=\count380
+\c@algocf=\count381
+\algocf@algoframe=\box141
+\algocf@algobox=\box142
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/rotating.sty
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
-\c@r@tfl@t=\count408
-\rotFPtop=\skip120
-\rotFPbot=\skip121
-\rot@float@box=\box150
-\rot@mess@toks=\toks56
+\c@r@tfl@t=\count382
+\rotFPtop=\skip118
+\rotFPbot=\skip119
+\rot@float@box=\box143
+\rot@mess@toks=\toks54
 )
 (/usr/share/texlive/texmf-dist/tex/latex/doclicense/doclicense.sty
 Package: doclicense 2021/07/11 v3.0.0 Support for putting documents under a lic
@@ -1501,30 +1398,40 @@ ense
 (/usr/share/texlive/texmf-dist/tex/latex/xifthen/xifthen.sty
 Package: xifthen 2015/11/05 v1.4.0 Extended ifthen features
 )
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
+\integerpart=\count383
+\decimalpart=\count384
+)
+Package: xstring 2021/07/21 v1.84 String manipulations (CT)
+)
 (/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks57
-\verbatim@line=\toks58
-\verbatim@in@stream=\read7
+\every@verbatim=\toks55
+\verbatim@line=\toks56
+\verbatim@in@stream=\read5
 )
 (/usr/share/texlive/texmf-dist/tex/latex/hyperxmp/hyperxmp.sty
 Package: hyperxmp 2020/11/22 v5.9 Store hyperref metadata in XMP format
-\hyxmp@aep@toks=\toks59
+\hyxmp@aep@toks=\toks57
 
 (/usr/share/texlive/texmf-dist/tex/lualatex/luacode/luacode.sty
 Package: luacode 2012/01/23 v1.2a lua-in-tex helpers (mpg)
 
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
 (/usr/share/texlive/texmf-dist/tex/luatex/luatexbase/luatexbase.sty
 Package: luatexbase 2015/10/04 v1.3 luatexbase interface to LuaTeX 
 
 (/usr/share/texlive/texmf-dist/tex/luatex/ctablestack/ctablestack.sty
 Package: ctablestack 2015/10/01 v1.0 Catcode table stable support
-\@catcodetablestackcnt=\count409
+\@catcodetablestackcnt=\count385
 )
 \CatcodeTableOther=\catcodetable14
 \CatcodeTableExpl=\catcodetable15
 )
-\luacode@lines=\toks60
+\luacode@lines=\toks58
 \luacode@table@soft=\catcodetable16
 )
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/ifdraft.sty
@@ -1532,20 +1439,20 @@ Package: ifdraft 2016/05/16 v1.4 Detect class options draft and final (HO)
 )
 \hyxmp@cct=\catcodetable17
 )
-\doclicense@hsize=\skip122
+\doclicense@hsize=\skip120
 
 (/usr/share/texlive/texmf-dist/tex/latex/doclicense/doclicense-spanish.ldf
 File: doclicense-spanish.ldf 
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/fncychap/fncychap.sty
 Package: fncychap 2007/07/30 v1.34 LaTeX package (Revised chapters)
-\RW=\skip123
-\mylen=\skip124
-\myhi=\skip125
-\px=\skip126
-\py=\skip127
-\pyy=\skip128
-\pxx=\skip129
+\RW=\skip121
+\mylen=\skip122
+\myhi=\skip123
+\px=\skip124
+\py=\skip125
+\pyy=\skip126
+\pxx=\skip127
 )
 Package typearea Info: These are the values describing the layout:
 (typearea)             DIV  = 13
@@ -1563,29 +1470,26 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 12.0pt
 (typearea)              \footskip       = 50.75pt
 (typearea)              \baselineskip   = 14.5pt
-(typearea)              on input line 96.
-\c@definition=\count410
-\c@theorem=\count411
-\c@example=\count412
+(typearea)              on input line 95.
+\c@definition=\count386
+\c@theorem=\count387
+\c@example=\count388
  (./Befehle.sty)
-Package hyperref Info: Option `colorlinks' set `true' on input line 168.
+Package hyperref Info: Option `colorlinks' set `true' on input line 167.
 ) (./simbolos.tex
-\pgf@layerbox@bg=\box151
-\pgf@layerboxsaved@bg=\box152
-)
-runsystem(which pygmentize && touch TesisMSc.aex)...executed
-runsystem(rm TesisMSc.aex)...executed
- (/usr/share/texlive/texmf-dist/tex/latex/ccicons/ccicons.sty
+\pgf@layerbox@bg=\box144
+\pgf@layerboxsaved@bg=\box145
+) (/usr/share/texlive/texmf-dist/tex/latex/ccicons/ccicons.sty
 Package: ccicons 2017/10/30 v1.6 LaTeX support for Creative Commons icons
 ) (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2021-02-22 v5.2l context-sensitive quotations (JAW)
-\csq@reset=\count413
-\csq@gtype=\count414
-\csq@glevel=\count415
-\csq@qlevel=\count416
-\csq@maxlvl=\count417
-\csq@tshold=\count418
-\csq@ltx@everypar=\toks61
+\csq@reset=\count389
+\csq@gtype=\count390
+\csq@glevel=\count391
+\csq@qlevel=\count392
+\csq@maxlvl=\count393
+\csq@tshold=\count394
+\csq@ltx@everypar=\toks59
 
 (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def
 File: csquotes.def 2021-02-22 v5.2l csquotes generic definitions (JAW)
@@ -1815,16 +1719,16 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count419
+\c@section@level=\count395
 )
 LaTeX Info: Redefining \ref on input line 4.
 LaTeX Info: Redefining \pageref on input line 4.
 LaTeX Info: Redefining \nameref on input line 4.
 
 (./TesisMSc.out) (./TesisMSc.out)
-\@outlinefile=\write6
+\@outlinefile=\write4
 
-\openout6 = TesisMSc.out
+\openout4 = TesisMSc.out
 Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           Using `bookmark' together with `hyperref' is recommended,
 (scrbook)           because of handling of possible bookmark level gaps.
@@ -1841,7 +1745,7 @@ Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
 
 (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
-\BKM@id=\count420
+\BKM@id=\count396
 ))
 Class scrbook Info: reactivation of babel-spanish quoting  on input line 4.
 LaTeX Info: Redefining \. on input line 4.
@@ -1849,17 +1753,17 @@ LaTeX Info: Redefining \% on input line 4.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count421
-\scratchdimen=\dimen347
-\scratchbox=\box153
-\nofMPsegments=\count422
-\nofMParguments=\count423
-\everyMPshowfont=\toks62
-\MPscratchCnt=\count424
-\MPscratchDim=\dimen348
-\MPnumerator=\count425
-\makeMPintoPDFobject=\count426
-\everyMPtoPDFconversion=\toks63
+\scratchcounter=\count397
+\scratchdimen=\dimen332
+\scratchbox=\box146
+\nofMPsegments=\count398
+\nofMParguments=\count399
+\everyMPshowfont=\toks60
+\MPscratchCnt=\count400
+\MPscratchDim=\dimen333
+\MPnumerator=\count401
+\makeMPintoPDFobject=\count402
+\everyMPtoPDFconversion=\toks61
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1878,7 +1782,7 @@ Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
 )
 Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count427
+\c@lstlisting=\count403
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -2045,9 +1949,9 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 25.
 Package tocbasic Info: Using my definition of `\numberline' on input line 26.
 Package tocbasic Info: Using my definition of `\numberline' on input line 27.
 )
-\tf@toc=\write7
+\tf@toc=\write5
 
-\openout7 = TesisMSc.toc
+\openout5 = TesisMSc.toc
 
 [3
 
@@ -2159,37 +2063,37 @@ LaTeX Info: Redefining \% on input line 670.
 LaTeX Info: Redefining \. on input line 798.
 LaTeX Info: Redefining \% on input line 798.
  [12]
-Underfull \hbox (badness 10000) in paragraph at lines 814--815
+Underfull \hbox (badness 10000) in paragraph at lines 816--817
 
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 837.
+(Font)              <10.95> on input line 839.
 
-Overfull \hbox (1.67493pt too wide) in paragraph at lines 858--859
+Overfull \hbox (1.67493pt too wide) in paragraph at lines 860--861
  [][] 
  []
 
 
-Overfull \hbox (32.97269pt too wide) in paragraph at lines 904--905
+Overfull \hbox (32.97269pt too wide) in paragraph at lines 906--907
  [][] 
  []
 
 
-Overfull \hbox (2.61105pt too wide) in paragraph at lines 817--908
+Overfull \hbox (2.61105pt too wide) in paragraph at lines 819--910
 [][] []
  []
 
 
-Overfull \hbox (2.61105pt too wide) in paragraph at lines 817--908
+Overfull \hbox (2.61105pt too wide) in paragraph at lines 819--910
 [] [] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Info: Redefining \. on input line 938.
-LaTeX Info: Redefining \% on input line 938.
+LaTeX Info: Redefining \. on input line 939.
+LaTeX Info: Redefining \% on input line 939.
 [13])
 LaTeX Info: Redefining \. on input line 21.
 LaTeX Info: Redefining \% on input line 21.
@@ -2242,299 +2146,294 @@ Overfull \hbox (2.61105pt too wide) in paragraph at lines 206--240
 [][] [] 
  []
 
-LaTeX Info: Redefining \. on input line 298.
-LaTeX Info: Redefining \% on input line 298.
+LaTeX Info: Redefining \. on input line 294.
+LaTeX Info: Redefining \% on input line 294.
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 317--318
+Underfull \hbox (badness 10000) in paragraph at lines 327--328
 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 338.
-LaTeX Info: Redefining \% on input line 338.
- [19]
-LaTeX Info: Redefining \. on input line 373.
-LaTeX Info: Redefining \% on input line 373.
-
-[20]
-LaTeX Info: Redefining \. on input line 438.
-LaTeX Info: Redefining \% on input line 438.
+LaTeX Info: Redefining \. on input line 341.
+LaTeX Info: Redefining \% on input line 341.
+[19]
+LaTeX Info: Redefining \. on input line 381.
+LaTeX Info: Redefining \% on input line 381.
+ [20]
+LaTeX Info: Redefining \. on input line 437.
+LaTeX Info: Redefining \% on input line 437.
  [21]
-LaTeX Info: Redefining \. on input line 475.
-LaTeX Info: Redefining \% on input line 475.
+LaTeX Info: Redefining \. on input line 480.
+LaTeX Info: Redefining \% on input line 480.
  [22]
-Underfull \hbox (badness 10000) in paragraph at lines 512--513
+Underfull \hbox (badness 10000) in paragraph at lines 522--523
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 514--515
-
- []
-
-LaTeX Info: Redefining \. on input line 521.
-LaTeX Info: Redefining \% on input line 521.
+LaTeX Info: Redefining \. on input line 523.
+LaTeX Info: Redefining \% on input line 523.
 [23]
+Underfull \hbox (badness 10000) in paragraph at lines 524--525
+
+ []
+
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 524.
+(hyperref)                removing `math shift' on input line 535.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 524.
+(hyperref)                removing `math shift' on input line 535.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 525--527
+Underfull \hbox (badness 10000) in paragraph at lines 536--538
 
  []
 
 
-Overfull \hbox (57.40746pt too wide) in paragraph at lines 530--536
+Overfull \hbox (57.40746pt too wide) in paragraph at lines 541--547
 []$[]$ 
  []
 
 
-Overfull \hbox (57.40746pt too wide) in paragraph at lines 539--550
+Overfull \hbox (57.40746pt too wide) in paragraph at lines 550--561
 []$[]$ 
  []
 
 
-Overfull \hbox (57.40746pt too wide) in paragraph at lines 553--561
+Overfull \hbox (57.40746pt too wide) in paragraph at lines 564--572
 []$[]$ 
  []
 
 
-Overfull \hbox (57.40746pt too wide) in paragraph at lines 565--573
+Overfull \hbox (57.40746pt too wide) in paragraph at lines 576--584
 []$[]$ 
  []
 
 
-Overfull \hbox (57.40746pt too wide) in paragraph at lines 576--587
+Overfull \hbox (57.40746pt too wide) in paragraph at lines 587--598
 []$[]$ 
  []
 
 
-Overfull \hbox (57.40746pt too wide) in paragraph at lines 590--605
+Overfull \hbox (57.40746pt too wide) in paragraph at lines 601--616
 []$[]$ 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Figuras/A-bloque1.pdf, id=427, 104.39pt x 110.011pt>
+<Figuras/A-bloque1.pdf, id=437, 104.39pt x 110.011pt>
 File: Figuras/A-bloque1.pdf Graphic file (type pdf)
 <use Figuras/A-bloque1.pdf>
-Package luatex.def Info: Figuras/A-bloque1.pdf  used on input line 633.
+Package luatex.def Info: Figuras/A-bloque1.pdf  used on input line 644.
 (luatex.def)             Requested size: 113.39894pt x 119.50278pt.
-<Figuras/A-bloque2.pdf, id=428, 104.39pt x 110.011pt>
+<Figuras/A-bloque2.pdf, id=438, 104.39pt x 110.011pt>
 File: Figuras/A-bloque2.pdf Graphic file (type pdf)
 <use Figuras/A-bloque2.pdf>
-Package luatex.def Info: Figuras/A-bloque2.pdf  used on input line 639.
+Package luatex.def Info: Figuras/A-bloque2.pdf  used on input line 650.
 (luatex.def)             Requested size: 113.39894pt x 119.50278pt.
-<Figuras/A-bloque3.pdf, id=429, 104.39pt x 110.011pt>
+<Figuras/A-bloque3.pdf, id=439, 104.39pt x 110.011pt>
 File: Figuras/A-bloque3.pdf Graphic file (type pdf)
 <use Figuras/A-bloque3.pdf>
-Package luatex.def Info: Figuras/A-bloque3.pdf  used on input line 645.
+Package luatex.def Info: Figuras/A-bloque3.pdf  used on input line 656.
 (luatex.def)             Requested size: 113.39894pt x 119.50278pt.
-<Figuras/A-bloque.pdf, id=430, 104.39pt x 110.011pt>
+<Figuras/A-bloque.pdf, id=440, 104.39pt x 110.011pt>
 File: Figuras/A-bloque.pdf Graphic file (type pdf)
 <use Figuras/A-bloque.pdf>
-Package luatex.def Info: Figuras/A-bloque.pdf  used on input line 651.
+Package luatex.def Info: Figuras/A-bloque.pdf  used on input line 662.
 (luatex.def)             Requested size: 113.39894pt x 119.50278pt.
 
-Overfull \hbox (2.61105pt too wide) in paragraph at lines 630--654
+Overfull \hbox (2.61105pt too wide) in paragraph at lines 641--665
 [][] []
  []
 
 
-Overfull \hbox (2.61105pt too wide) in paragraph at lines 630--654
+Overfull \hbox (2.61105pt too wide) in paragraph at lines 641--665
 [] [] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 657.
-LaTeX Info: Redefining \% on input line 657.
+LaTeX Info: Redefining \. on input line 668.
+LaTeX Info: Redefining \% on input line 668.
  [24]
-<Figuras/graph.png, id=438, 906.38625pt x 300.3722pt>
+<Figuras/graph.png, id=448, 906.38625pt x 300.3722pt>
 File: Figuras/graph.png Graphic file (type png)
 <use Figuras/graph.png>
-Package luatex.def Info: Figuras/graph.png  used on input line 664.
+Package luatex.def Info: Figuras/graph.png  used on input line 675.
 (luatex.def)             Requested size: 285.16742pt x 94.50548pt.
-LaTeX Info: Redefining \. on input line 666.
-LaTeX Info: Redefining \% on input line 666.
+LaTeX Info: Redefining \. on input line 677.
+LaTeX Info: Redefining \% on input line 677.
 
 [25<./Figuras/A-bloque1.pdf><./Figuras/A-bloque2.pdf><./Figuras/A-bloque3.pdf><.
 /Figuras/A-bloque.pdf>]
-<Figuras/graph1.png, id=447, 934.24031pt x 313.9228pt>
+<Figuras/graph1.png, id=457, 934.24031pt x 313.9228pt>
 File: Figuras/graph1.png Graphic file (type png)
 <use Figuras/graph1.png>
-Package luatex.def Info: Figuras/graph1.png  used on input line 669.
+Package luatex.def Info: Figuras/graph1.png  used on input line 680.
 (luatex.def)             Requested size: 281.24362pt x 94.50548pt.
-<Figuras/graph3.png, id=448, 736.25063pt x 249.93375pt>
+<Figuras/graph3.png, id=458, 736.25063pt x 249.93375pt>
 File: Figuras/graph3.png Graphic file (type png)
 <use Figuras/graph3.png>
-Package luatex.def Info: Figuras/graph3.png  used on input line 674.
+Package luatex.def Info: Figuras/graph3.png  used on input line 685.
 (luatex.def)             Requested size: 278.39633pt x 94.50548pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 687--688
+Underfull \hbox (badness 10000) in paragraph at lines 698--700
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 689--690
+Underfull \hbox (badness 10000) in paragraph at lines 701--702
 
  []
 
-LaTeX Info: Redefining \. on input line 690.
-LaTeX Info: Redefining \% on input line 690.
+LaTeX Info: Redefining \. on input line 702.
+LaTeX Info: Redefining \% on input line 702.
 [26
 Missing character: There is no “ (U+201C) in font ec-lmr12!
 Missing character: There is no ” (U+201D) in font ec-lmr12!
 <./Figuras/graph.PNG><./Figuras/graph1.PNG><./Figuras/graph3.PNG>]
-<Figuras/graph4.png, id=466, 213.04594pt x 207.77625pt>
+<Figuras/graph4.png, id=476, 213.04594pt x 207.77625pt>
 File: Figuras/graph4.png Graphic file (type png)
 <use Figuras/graph4.png>
-Package luatex.def Info: Figuras/graph4.png  used on input line 695.
+Package luatex.def Info: Figuras/graph4.png  used on input line 707.
 (luatex.def)             Requested size: 40.84323pt x 39.83324pt.
 
-Overfull \hbox (57.40746pt too wide) in paragraph at lines 693--697
+Overfull \hbox (57.40746pt too wide) in paragraph at lines 705--709
 []$[]$ 
  []
 
-<Figuras/graph5.png, id=467, 197.23688pt x 200.24812pt>
+<Figuras/graph5.png, id=477, 197.23688pt x 200.24812pt>
 File: Figuras/graph5.png Graphic file (type png)
 <use Figuras/graph5.png>
-Package luatex.def Info: Figuras/graph5.png  used on input line 702.
+Package luatex.def Info: Figuras/graph5.png  used on input line 714.
 (luatex.def)             Requested size: 39.23299pt x 39.83324pt.
 
-Overfull \hbox (57.40746pt too wide) in paragraph at lines 700--704
+Overfull \hbox (57.40746pt too wide) in paragraph at lines 712--716
 []$[]$ 
  []
 
-<Figuras/graph6.png, id=468, 202.50656pt x 212.29312pt>
+<Figuras/graph6.png, id=478, 202.50656pt x 212.29312pt>
 File: Figuras/graph6.png Graphic file (type png)
 <use Figuras/graph6.png>
-Package luatex.def Info: Figuras/graph6.png  used on input line 709.
+Package luatex.def Info: Figuras/graph6.png  used on input line 721.
 (luatex.def)             Requested size: 37.9946pt x 39.83324pt.
 
-Overfull \hbox (57.40746pt too wide) in paragraph at lines 707--711
+Overfull \hbox (57.40746pt too wide) in paragraph at lines 719--723
 []$[]$ 
  []
 
-<Figuras/graph7.png, id=469, 163.3603pt x 145.29282pt>
+<Figuras/graph7.png, id=479, 163.3603pt x 145.29282pt>
 File: Figuras/graph7.png Graphic file (type png)
 <use Figuras/graph7.png>
-Package luatex.def Info: Figuras/graph7.png  used on input line 721.
+Package luatex.def Info: Figuras/graph7.png  used on input line 733.
 (luatex.def)             Requested size: 56.9055pt x 50.61159pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 724--725
+Underfull \hbox (badness 10000) in paragraph at lines 736--737
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 731--732
+Underfull \hbox (badness 10000) in paragraph at lines 743--744
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 733--734
+Underfull \hbox (badness 10000) in paragraph at lines 745--746
 
  []
 
-LaTeX Info: Redefining \. on input line 734.
-LaTeX Info: Redefining \% on input line 734.
+LaTeX Info: Redefining \. on input line 746.
+LaTeX Info: Redefining \% on input line 746.
 [27
 Missing character: There is no “ (U+201C) in font ec-lmr12!
 Missing character: There is no ” (U+201D) in font ec-lmr12!
 <./Figuras/graph4.PNG><./Figuras/graph5.PNG><./Figuras/graph6.PNG><./Figuras/gra
 ph7.PNG>]
-Underfull \hbox (badness 10000) in paragraph at lines 750--751
+Underfull \hbox (badness 10000) in paragraph at lines 762--763
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 775--776
+Underfull \hbox (badness 10000) in paragraph at lines 787--788
 
  []
 
-LaTeX Info: Redefining \. on input line 779.
-LaTeX Info: Redefining \% on input line 779.
+LaTeX Info: Redefining \. on input line 791.
+LaTeX Info: Redefining \% on input line 791.
 [28]
-Underfull \hbox (badness 10000) in paragraph at lines 783--784
+Underfull \hbox (badness 10000) in paragraph at lines 795--796
 
  []
 
-<Figuras/graph8.png, id=501, 185.94469pt x 178.41656pt>
+<Figuras/graph8.png, id=511, 185.94469pt x 178.41656pt>
 File: Figuras/graph8.png Graphic file (type png)
 <use Figuras/graph8.png>
-Package luatex.def Info: Figuras/graph8.png  used on input line 799.
+Package luatex.def Info: Figuras/graph8.png  used on input line 811.
 (luatex.def)             Requested size: 41.51228pt x 39.83324pt.
 
-Overfull \hbox (57.40746pt too wide) in paragraph at lines 797--801
+Overfull \hbox (57.40746pt too wide) in paragraph at lines 809--813
 []$[]$ 
  []
 
-<Figuras/graph9.png, id=502, 206.27063pt x 189.70876pt>
+<Figuras/graph9.png, id=512, 206.27063pt x 189.70876pt>
 File: Figuras/graph9.png Graphic file (type png)
 <use Figuras/graph9.png>
-Package luatex.def Info: Figuras/graph9.png  used on input line 806.
+Package luatex.def Info: Figuras/graph9.png  used on input line 818.
 (luatex.def)             Requested size: 43.30865pt x 39.83324pt.
 
-Overfull \hbox (57.40746pt too wide) in paragraph at lines 804--808
+Overfull \hbox (57.40746pt too wide) in paragraph at lines 816--820
 []$[]$ 
  []
 
-<Figuras/graph10.png, id=503, 173.89969pt x 170.13562pt>
+<Figuras/graph10.png, id=513, 173.89969pt x 170.13562pt>
 File: Figuras/graph10.png Graphic file (type png)
 <use Figuras/graph10.png>
-Package luatex.def Info: Figuras/graph10.png  used on input line 813.
+Package luatex.def Info: Figuras/graph10.png  used on input line 825.
 (luatex.def)             Requested size: 40.71252pt x 39.83324pt.
 
-Overfull \hbox (57.40746pt too wide) in paragraph at lines 811--815
+Overfull \hbox (57.40746pt too wide) in paragraph at lines 823--827
 []$[]$ 
  []
 
-<Figuras/graph11.png, id=504, 173.14688pt x 168.63pt>
+<Figuras/graph11.png, id=514, 173.14688pt x 168.63pt>
 File: Figuras/graph11.png Graphic file (type png)
 <use Figuras/graph11.png>
-Package luatex.def Info: Figuras/graph11.png  used on input line 820.
+Package luatex.def Info: Figuras/graph11.png  used on input line 832.
 (luatex.def)             Requested size: 40.89824pt x 39.83324pt.
 
-Overfull \hbox (57.40746pt too wide) in paragraph at lines 818--822
+Overfull \hbox (57.40746pt too wide) in paragraph at lines 830--834
 []$[]$ 
  []
 
-<Figuras/graph12.png, id=505, 167.12437pt x 173.14688pt>
+<Figuras/graph12.png, id=515, 167.12437pt x 173.14688pt>
 File: Figuras/graph12.png Graphic file (type png)
 <use Figuras/graph12.png>
-Package luatex.def Info: Figuras/graph12.png  used on input line 827.
+Package luatex.def Info: Figuras/graph12.png  used on input line 839.
 (luatex.def)             Requested size: 38.44798pt x 39.83324pt.
 
-Overfull \hbox (57.40746pt too wide) in paragraph at lines 825--829
+Overfull \hbox (57.40746pt too wide) in paragraph at lines 837--841
 []$[]$ 
  []
 
-<Figuras/graph13.png, id=506, 179.16937pt x 178.41656pt>
+<Figuras/graph13.png, id=516, 179.16937pt x 178.41656pt>
 File: Figuras/graph13.png Graphic file (type png)
 <use Figuras/graph13.png>
-Package luatex.def Info: Figuras/graph13.png  used on input line 834.
+Package luatex.def Info: Figuras/graph13.png  used on input line 846.
 (luatex.def)             Requested size: 39.9997pt x 39.83324pt.
 
-Overfull \hbox (57.40746pt too wide) in paragraph at lines 832--836
+Overfull \hbox (57.40746pt too wide) in paragraph at lines 844--848
 []$[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 796--838
+Underfull \hbox (badness 10000) in paragraph at lines 808--850
 [][] [] []
  []
 
-LaTeX Info: Redefining \. on input line 846.
-LaTeX Info: Redefining \% on input line 846.
+LaTeX Info: Redefining \. on input line 858.
+LaTeX Info: Redefining \% on input line 858.
 [29
 Missing character: There is no “ (U+201C) in font ec-lmr12!
 Missing character: There is no ” (U+201D) in font ec-lmr12!
@@ -2542,102 +2441,102 @@ Missing character: There is no “ (U+201C) in font ec-lmr12!
 Missing character: There is no ” (U+201D) in font ec-lmr12!
 <./Figuras/graph8.PNG><./Figuras/graph9.PNG><./Figuras/graph10.PNG><./Figuras/gr
 aph11.PNG><./Figuras/graph12.PNG><./Figuras/graph13.PNG>]
-Underfull \hbox (badness 10000) in paragraph at lines 850--851
+Underfull \hbox (badness 10000) in paragraph at lines 862--863
 
  []
 
-<Figuras/graph20.png, id=523, 171.64125pt x 292.84406pt>
+<Figuras/graph20.png, id=534, 171.64125pt x 292.84406pt>
 File: Figuras/graph20.png Graphic file (type png)
 <use Figuras/graph20.png>
-Package luatex.def Info: Figuras/graph20.png  used on input line 858.
+Package luatex.def Info: Figuras/graph20.png  used on input line 870.
 (luatex.def)             Requested size: 26.68005pt x 45.52371pt.
 
-Overfull \hbox (19.30554pt too wide) in paragraph at lines 856--860
+Overfull \hbox (19.30554pt too wide) in paragraph at lines 868--872
 []$[]$ 
  []
 
-<Figuras/graph21.png, id=524, 150.5625pt x 234.8775pt>
+<Figuras/graph21.png, id=535, 150.5625pt x 234.8775pt>
 File: Figuras/graph21.png Graphic file (type png)
 <use Figuras/graph21.png>
-Package luatex.def Info: Figuras/graph21.png  used on input line 865.
+Package luatex.def Info: Figuras/graph21.png  used on input line 877.
 (luatex.def)             Requested size: 29.18152pt x 45.52371pt.
 
-Overfull \hbox (19.30554pt too wide) in paragraph at lines 863--867
+Overfull \hbox (19.30554pt too wide) in paragraph at lines 875--879
 []$[]$ 
  []
 
-<Figuras/graph22.png, id=525, 184.43906pt x 279.29344pt>
+<Figuras/graph22.png, id=536, 184.43906pt x 279.29344pt>
 File: Figuras/graph22.png Graphic file (type png)
 <use Figuras/graph22.png>
-Package luatex.def Info: Figuras/graph22.png  used on input line 872.
+Package luatex.def Info: Figuras/graph22.png  used on input line 884.
 (luatex.def)             Requested size: 30.06245pt x 45.52371pt.
 
-Overfull \hbox (19.30554pt too wide) in paragraph at lines 870--874
+Overfull \hbox (19.30554pt too wide) in paragraph at lines 882--886
 []$[]$ 
  []
 
-<Figuras/graph23.png, id=526, 212.29312pt x 193.47281pt>
+<Figuras/graph23.png, id=537, 212.29312pt x 193.47281pt>
 File: Figuras/graph23.png Graphic file (type png)
 <use Figuras/graph23.png>
-Package luatex.def Info: Figuras/graph23.png  used on input line 879.
+Package luatex.def Info: Figuras/graph23.png  used on input line 891.
 (luatex.def)             Requested size: 49.95042pt x 45.52371pt.
 
-Overfull \hbox (19.30554pt too wide) in paragraph at lines 877--881
+Overfull \hbox (19.30554pt too wide) in paragraph at lines 889--893
 []$[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 891--892
+Underfull \hbox (badness 10000) in paragraph at lines 903--904
 
  []
 
-<Figuras/graph14.png, id=527, 139.27031pt x 207.77625pt>
+<Figuras/graph14.png, id=538, 139.27031pt x 207.77625pt>
 File: Figuras/graph14.png Graphic file (type png)
 <use Figuras/graph14.png>
-Package luatex.def Info: Figuras/graph14.png  used on input line 899.
+Package luatex.def Info: Figuras/graph14.png  used on input line 911.
 (luatex.def)             Requested size: 30.51418pt x 45.52371pt.
 
-Overfull \hbox (19.30554pt too wide) in paragraph at lines 897--901
+Overfull \hbox (19.30554pt too wide) in paragraph at lines 909--913
 []$[]$ 
  []
 
-<Figuras/graph15.png, id=528, 138.5175pt x 202.50656pt>
+<Figuras/graph15.png, id=539, 138.5175pt x 202.50656pt>
 File: Figuras/graph15.png Graphic file (type png)
 <use Figuras/graph15.png>
-Package luatex.def Info: Figuras/graph15.png  used on input line 906.
+Package luatex.def Info: Figuras/graph15.png  used on input line 918.
 (luatex.def)             Requested size: 31.1376pt x 45.52371pt.
 
-Overfull \hbox (19.30554pt too wide) in paragraph at lines 904--908
+Overfull \hbox (19.30554pt too wide) in paragraph at lines 916--920
 []$[]$ 
  []
 
-<Figuras/graph16.png, id=529, 152.82094pt x 202.50656pt>
+<Figuras/graph16.png, id=540, 152.82094pt x 202.50656pt>
 File: Figuras/graph16.png Graphic file (type png)
 <use Figuras/graph16.png>
-Package luatex.def Info: Figuras/graph16.png  used on input line 913.
+Package luatex.def Info: Figuras/graph16.png  used on input line 925.
 (luatex.def)             Requested size: 34.3529pt x 45.52371pt.
 
-Overfull \hbox (19.30554pt too wide) in paragraph at lines 911--915
+Overfull \hbox (19.30554pt too wide) in paragraph at lines 923--927
 []$[]$ 
  []
 
-<Figuras/graph17.png, id=530, 161.85469pt x 167.87718pt>
+<Figuras/graph17.png, id=541, 161.85469pt x 167.87718pt>
 File: Figuras/graph17.png Graphic file (type png)
 <use Figuras/graph17.png>
-Package luatex.def Info: Figuras/graph17.png  used on input line 920.
+Package luatex.def Info: Figuras/graph17.png  used on input line 932.
 (luatex.def)             Requested size: 43.88904pt x 45.52371pt.
 
-Overfull \hbox (19.30554pt too wide) in paragraph at lines 918--922
+Overfull \hbox (19.30554pt too wide) in paragraph at lines 930--934
 []$[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 933--934
+Underfull \hbox (badness 10000) in paragraph at lines 945--946
 
  []
 
-LaTeX Info: Redefining \. on input line 934.
-LaTeX Info: Redefining \% on input line 934.
+LaTeX Info: Redefining \. on input line 946.
+LaTeX Info: Redefining \% on input line 946.
 [30
 Missing character: There is no “ (U+201C) in font ec-lmr12!
 Missing character: There is no ” (U+201D) in font ec-lmr12!
@@ -2646,40 +2545,40 @@ Missing character: There is no ” (U+201D) in font ec-lmr12!
 <./Figuras/graph20.PNG><./Figuras/graph21.PNG><./Figuras/graph22.PNG><./Figuras/
 graph23.PNG><./Figuras/graph14.PNG><./Figuras/graph15.PNG><./Figuras/graph16.PNG
 ><./Figuras/graph17.PNG>]
-<Figuras/graph18.png, id=549, 389.20406pt x 402.75468pt>
+<Figuras/graph18.png, id=559, 389.20406pt x 402.75468pt>
 File: Figuras/graph18.png Graphic file (type png)
 <use Figuras/graph18.png>
-Package luatex.def Info: Figuras/graph18.png  used on input line 939.
+Package luatex.def Info: Figuras/graph18.png  used on input line 951.
 (luatex.def)             Requested size: 96.2318pt x 99.58464pt.
-<Figuras/graph19.png, id=550, 519.44063pt x 513.41812pt>
+<Figuras/graph19.png, id=560, 519.44063pt x 513.41812pt>
 File: Figuras/graph19.png Graphic file (type png)
 <use Figuras/graph19.png>
-Package luatex.def Info: Figuras/graph19.png  used on input line 946.
+Package luatex.def Info: Figuras/graph19.png  used on input line 958.
 (luatex.def)             Requested size: 100.74757pt x 99.58464pt.
 
-Overfull \hbox (2.61105pt too wide) in paragraph at lines 936--950
+Overfull \hbox (2.61105pt too wide) in paragraph at lines 948--962
 [][] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 963--964
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 965--966
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 973--974
-
- []
-
-LaTeX Info: Redefining \. on input line 974.
-LaTeX Info: Redefining \% on input line 974.
-[31<./Figuras/graph18.PNG><./Figuras/graph19.PNG>]
 Underfull \hbox (badness 10000) in paragraph at lines 975--976
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 977--978
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 985--986
+
+ []
+
+LaTeX Info: Redefining \. on input line 986.
+LaTeX Info: Redefining \% on input line 986.
+[31<./Figuras/graph18.PNG><./Figuras/graph19.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 987--988
 
  []
 
@@ -2749,7 +2648,7 @@ Overfull \hbox (0.50195pt too wide) in paragraph at lines 132--153
 LaTeX Info: Redefining \. on input line 165.
 LaTeX Info: Redefining \% on input line 165.
 [36]
-<Figuras/plotgraph.png, id=663, 447.8331pt x 303.2931pt>
+<Figuras/plotgraph.png, id=674, 447.8331pt x 303.2931pt>
 File: Figuras/plotgraph.png Graphic file (type png)
 <use Figuras/plotgraph.png>
 Package luatex.def Info: Figuras/plotgraph.png  used on input line 201.
@@ -2834,7 +2733,7 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 4
  (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<Figuras/G2.png, id=699, 420.57124pt x 830.10126pt>
+<Figuras/G2.png, id=709, 420.57124pt x 830.10126pt>
 File: Figuras/G2.png Graphic file (type png)
 <use Figuras/G2.png>
 Package luatex.def Info: Figuras/G2.png  used on input line 497.
@@ -3108,7 +3007,7 @@ Overfull \hbox (57.40746pt too wide) in paragraph at lines 215--226
 []$[]$ 
  []
 
-<Figuras/G3.png, id=1003, 357.335pt x 348.30125pt>
+<Figuras/G3.png, id=1013, 357.335pt x 348.30125pt>
 File: Figuras/G3.png Graphic file (type png)
 <use Figuras/G3.png>
 Package luatex.def Info: Figuras/G3.png  used on input line 237.
@@ -3116,7 +3015,7 @@ Package luatex.def Info: Figuras/G3.png  used on input line 237.
 LaTeX Info: Redefining \. on input line 241.
 LaTeX Info: Redefining \% on input line 241.
 [58]
-<Figuras/G4.png, id=1012, 181.67876pt x 541.02126pt>
+<Figuras/G4.png, id=1022, 181.67876pt x 541.02126pt>
 File: Figuras/G4.png Graphic file (type png)
 <use Figuras/G4.png>
 Package luatex.def Info: Figuras/G4.png  used on input line 244.
@@ -3291,6 +3190,7 @@ LaTeX Info: Redefining \% on input line 32.
 [65
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
+Missing character: There is no – (U+2013) in font ec-lmr12!
 ] (/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
 )
@@ -3316,16 +3216,16 @@ Package rerunfilecheck Info: File `TesisMSc.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 43494 strings out of 477805
- 156268,1648299 words of node,token memory allocated
- 1256 words of node memory still in use:
-   8 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 173 attribute, 99 glue_spe
+ 41089 strings out of 477805
+ 156272,1373583 words of node,token memory allocated
+ 1251 words of node memory still in use:
+   8 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 173 attribute, 98 glue_spe
 c, 88 attribute_list, 3 write, 1 special, 2 pdf_action nodes
-   avail lists: 1:11,2:12239,3:5004,4:586,5:786,6:118,7:10658,8:135,9:2028,10:33
+   avail lists: 1:11,2:12235,3:5004,4:586,5:786,6:118,7:10658,8:136,9:2028,10:33
 ,11:1196
- 61406 multiletter control sequences out of 65536+600000
+ 59108 multiletter control sequences out of 65536+600000
  98 fonts using 6468263 bytes
- 113i,28n,103p,10665b,1540s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 113i,28n,103p,10665b,1538s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips
 /lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/tex
 mf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvi
@@ -3347,10 +3247,10 @@ t12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam1
 0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on TesisMSc.pdf (69 pages, 1228451 bytes).
+Output written on TesisMSc.pdf (69 pages, 1231277 bytes).
 
-PDF statistics: 1229 PDF objects out of 1440 (max. 8388607)
- 876 compressed objects within 9 object streams
- 518 named destinations out of 1000 (max. 131072)
+PDF statistics: 1239 PDF objects out of 1440 (max. 8388607)
+ 884 compressed objects within 9 object streams
+ 522 named destinations out of 1000 (max. 131072)
  197 words of extra memory for PDF output out of 10000 (max. 100000000)
 
