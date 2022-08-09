@@ -324,6 +324,21 @@ $x^{2} + y^{2} + z^{2} + w^{2} - xy - xz - wy$
 \item Esta gráfica es isomorfa a $\DynA_{4}$, por lo tanto es el tipo Dynkin de la forma cuadrática (\ref{ecuacion:1.5}).
 \end{enumerate}
 
+\begin{tikzpicture}[scale = 1.7, every node/.style={circle, inner sep=1pt}]
+	\node (v0) at (0.07981945226679141, -0.04185872132454332) {x};
+	\node (v1) at (0.9824730473377072, -0.5779473776035224) {y};
+	\node (v2) at (0.034426492041470344, -1.0267090723768084) {z};
+	\node (v3) at (-0.8110138755428558, -0.4924172756610101) {w};
+	\foreach \from/\to in {v1/v0, v2/v0, v2/v1, v3/v2}
+	\draw (\from) -- (\to);
+	\foreach \from/\to in {}
+	\draw[->] (\from) -- (\to);
+	\foreach \from/\to in {v3/v0}
+	\draw[dotted] (\from) -- (\to);
+	\foreach \from/\to in {}
+	\draw[->, dotted] (\from) -- (\to);
+\end{tikzpicture}
+
 \paragraph{}
 Para terminar la demostración del teorema \ref{teorema:1.6} es necesario mostrar que si $q$ es una forma unitaria definida positiva entonces este algoritmo termina. Esto lo podemos resumir de la siguiente manera.\\
 \begin{itemize}
