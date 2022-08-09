@@ -1,7 +1,7 @@
 \chapter{Antecedentes}
-\begin{center}
+
+\paragraph{}
 Este capitulo está dedicado a presentar los resultados principales de \citep{alma991031505829703276} \& \citep{Barot1999ACO} que permiten caracterizar a las formas $\DynA_{n}$
-\end{center}
 
 \section{EL MÉTODO DE LAS INFLACIONES}\label{sec:2.1}
 
@@ -14,7 +14,7 @@ La idea intuitiva es pasar mediante cambios de variable enteros de la forma unit
 \textbf{INFLACIONES Y DEFLACIONES}
 
 \paragraph{}
-Sea $E_{sr}^{d} = I + d~e_{s}~e_{r}^{d}$ donde los vectores $e_{s}$ y $e_{r}$ son vectores columna la matriz elemental, cuya transformación lineal 
+Sea $E_{sr}^{d} = I + d~e_{s}~e_{r}^{d}$ donde los vectores $e_{s}$ y $e_{r}$ son vectores columna. La matriz elemental cuya transformación lineal 
 \begin{equation*}
     T_{sr}^{d}\left(A\right) = E_{sr}^{d}A
 \end{equation*}
@@ -72,7 +72,7 @@ $E_{sr}^{d}$ define un cambio de variable entero, por lo que $C$ es la matriz as
 \end{equation*}
 
 \paragraph{}
-Esta ecuación tiene dos soluciones: $d = 0$y $d = -a_{rs}$. Estas soluciones se resumen en el siguiente lema:
+Esta ecuación tiene dos soluciones: $d = 0$ lo que implica que $E_{sr}^{0}$ es la identidad o que $d = -a_{rs}$. Estas soluciones se resumen en el siguiente lema:
 
 \begin{lemma}
 Si $q$ es una forma unitaria entonces $q \circ T_{rs}^{d}$ es una forma unitaria si y solo si $q_{rs} = q_{sr} = -d$.
@@ -256,15 +256,16 @@ El método que aparece en \citep{alma991031505829703276} consiste en aplicar suc
 
 \begin{algorithm}[!ht]
 \DontPrintSemicolon
-  m = número de vértices de $\textbf{B}_{q}$\\
-  t = máximo($\frac{m}{2}$ ($m + 1$), $m$($m-1$), $36$, $63$, $120$)\\
-  \While{exista una arista punteada $x_{r} \tikz[baseline=-0.1ex]\draw [dotted] (0,0.05) -- (1,0.05); x_{s}$ con $r \le s$ en $\textbf{B}_{q}$ y $|\mathcal{R}^{+}(q)|$ < t:}
+  $m =$ número de vértices de $\textbf{B}_{q}$\\
+  $t =$ máximo($\frac{m}{2}$ ($m + 1$), $m$($m-1$), $36$, $63$, $120$)\\
+  $k = 0$\\
+  \While{exista una arista punteada $x_{r} \tikz[baseline=-0.1ex]\draw [dotted] (0,0.05) -- (1,0.05); x_{s}$ con $r \le s$ en $\textbf{B}_{q}$ y $k < t$:}
    {
    		$q = q \circ T_{rs}^{-}$\;
    		\If{para algun coeficiente $q_{ij}$ se tiene $\left|q_{ij}\right| \ge 1:$}{
    			\Return no es positiva\;
    		}
-   		
+   		$k = k + 1$
    		
    }
    \For{cada componente conexa $\mathcal{C}$ de $\textbf{B}_{q}$}{

@@ -14,9 +14,9 @@
 \contentsline {subsection}{\numberline {3.1.3}La idea de el algoritmo de triconectividad}{41}{subsection.3.1.3}%
 \contentsline {section}{\numberline {3.2}El algoritmo para encontrar componentes triconexas}{42}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Encontrando pares de separación}{43}{subsection.3.2.1}%
-\contentsline {paragraph}{\nonumberline Paso 1}{43}{paragraph*.169}%
-\contentsline {paragraph}{\nonumberline Paso 2}{43}{paragraph*.171}%
-\contentsline {paragraph}{\nonumberline Paso 3}{43}{paragraph*.173}%
+\contentsline {paragraph}{\nonumberline Paso 1}{43}{paragraph*.170}%
+\contentsline {paragraph}{\nonumberline Paso 2}{43}{paragraph*.172}%
+\contentsline {paragraph}{\nonumberline Paso 3}{43}{paragraph*.174}%
 \contentsline {subsection}{\numberline {3.2.2}Encontrando componentes de separación}{50}{subsection.3.2.2}%
 \contentsline {chapter}{\numberline {4}Clasificación $\ensuremath {\mathbb {D}}_{n}$}{56}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Componentes triconexas en gráficas de tipo $\ensuremath {\mathbb {D}}_{n}$}{56}{section.4.1}%
