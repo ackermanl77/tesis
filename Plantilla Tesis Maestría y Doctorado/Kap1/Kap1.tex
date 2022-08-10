@@ -780,7 +780,69 @@ Ahora que hemos descartado a las bigráficas de aristas con peso mayor que uno e
 \end{figure}
 
 \paragraph{}
-Hasta ahora hemos asociado vértices con variables(\begin{tikzpicture}\node (v1) at (-0.0, 0.56) {x}; \end{tikzpicture} con x). Ahora a cada variable $x_{i}$ le asignamos el vértice $i$, convenimos que le asignamos un orden a las variables y que el vértice $i$ representa el lugar de la variable $x_{i}$ en el orden dado.
+Los elementos de $z \in \mathbb{Z}^{n}$ que satisfacen $q(z) = 0$ son llamados vectores radicales, el conjunto compuesto por todos los vectores radicales forma un subgrupo de $\mathbb{Z}^{n}$, es llamado el radical de $q$ y es denotado por $\textit{rad}(q)$. En el caso de una forma unitaria $q_\Delta$ asociada a un diagrama de Dynkin extendido $\Delta$, es sencillo encontrar un vector radical $z$ para $q_\Delta$. Una forma de representar un vector radical $z \in \mathbb{Z}^{n}$ en el diagrama de Dynkin extendido es como sigue: Si tenemos la forma unitaria $q_\Delta$ asociada al diagrama 
+
+\begin{center}
+	\begin{tikzpicture}[scale = 1.0, every node/.style={circle, inner sep=1pt}]
+		\node (v0) at (-0.044839085221793896, 0.4632272127228023) {$x_1$};
+		\node (v1) at (-0.08006171038491386, 1.6090752405056135) {$x_2$};
+		\node (v2) at (1.0646815899500133, 1.6090752405056135) {$x_3$};
+		\node (v3) at (1.099903772464685, 0.4632272127228023) {$x_4$};
+		\foreach \from/\to in {v1/v0, v3/v0, v2/v1, v3/v2}
+		\draw (\from) -- (\to);
+		\foreach \from/\to in {}
+		\draw[->] (\from) -- (\to);
+		\foreach \from/\to in {}
+		\draw[dotted] (\from) -- (\to);
+		\foreach \from/\to in {}
+		\draw[->, dotted] (\from) -- (\to);
+	\end{tikzpicture}
+\end{center}
+
+\paragraph{}
+sabemos que $q_{0}(1, 1, 1, 1) = 0$, es decir, $q_{\Delta}(x_{1}, x_{2}, x_{3}, x_{4})$ donde $x_{1} = 1$, $x_{2} = 1$, $x_{3} = 1$, $x_{4} = 1$. Representamos este vector en el diagrama $\Delta$ como sigue:
+
+\begin{center}
+	\begin{tikzpicture}[scale = 1.0, every node/.style={circle, inner sep=1pt}]
+		\node (v0) at (-0.044839085221793896, 0.4632272127228023) {$1$};
+		\node (v1) at (-0.08006171038491386, 1.6090752405056135) {$1$};
+		\node (v2) at (1.0646815899500133, 1.6090752405056135) {$1$};
+		\node (v3) at (1.099903772464685, 0.4632272127228023) {$1$};
+		\foreach \from/\to in {v1/v0, v3/v0, v2/v1, v3/v2}
+		\draw (\from) -- (\to);
+		\foreach \from/\to in {}
+		\draw[->] (\from) -- (\to);
+		\foreach \from/\to in {}
+		\draw[dotted] (\from) -- (\to);
+		\foreach \from/\to in {}
+		\draw[->, dotted] (\from) -- (\to);
+	\end{tikzpicture}
+\end{center}
+
+\begin{example}
+Si $B_{q}$ contiene el diagrama de Dynkin Extendido $\widetilde{\DynE}_6$
+\begin{center}
+	\begin{tikzpicture}
+		\node (v0) at (3.47,  1.93) {$x_5$};
+		\node (v1) at (1.27, -0.93) {$x_1$};
+		\node (v2) at (2.37, -0.93) {$x_2$};
+		\node (v3) at (3.47, -0.93) {$x_3$};
+		\node (v4) at (3.47, 0.43) {$x_4$};
+		\node (v5) at (4.57, -0.93) {$x_6$};
+		\node (v6) at (5.67, -0.93) {$x_7$};
+		\draw (v0) -- (v4);
+		\draw (v1) -- (v2);
+		\draw (v2) -- (v3);
+		\draw (v3) -- (v4);
+		\draw (v3) -- (v5);
+		\draw (v5) -- (v6);
+	\end{tikzpicture}
+\end{center}
+
+ entonces el vector $z = (z_{1}, z_{2}, z_{3}, \ldots, z_{n})$ definido por $z_{1} = 2$, $z_{2} = 3$, $z_{3} = 4$, $z_{4} = 5$, $z_{5} = 1$, $z_{6} = 6$ , $z_{7} = 7$ y $z_{k} = 0$ para todo $z_{k} \geq 8$ es un vector radical de $q$.
+\end{example}
+
+En la figura \ref{figura:1.4} se muestran los vectores radicales para cada uno de los diagramas de Dynkin extendidos.
 
 \begin{center}
 \begin{tikzpicture}[scale=1.7]
@@ -797,34 +859,77 @@ Hasta ahora hemos asociado vértices con variables(\begin{tikzpicture}\node (v1)
 \end{tikzpicture}
 \end{center}
 
-representa el orden $x_{1} = x$, $x_{2} = y$, $x_{3} = z$, $x_{4} = w$.
-
-\paragraph{}
-Mostraremos que si $\textbf{B}_{q}$ contiene una subgráfica Euclidiana entonces existe un vector $\overrightarrow{x} \neq 0$ tal que $q\left(\overrightarrow{x}\right) = 0$, mostrando así que $q(\overrightarrow{x})$ no es definida positiva. Un simple cálculo nos muestra que esta evaluación produce un vector $\overrightarrow{x} \neq \overrightarrow{0}$ tal que $q\left(\overrightarrow{x}\right) = 0$.\\
-
 \begin{figure}[h]
     \begin{subfigure}[b]{0.5\textwidth}
         \begin{minipage}{7cm}
         \centering% El subgrafo está centrado
         \begin{tikzpicture}
         \node (v0) at (1.56, 0.14) {1};
-        \node (v1) at (1.02, 1.11) {1};
-        \node (v2) at (-0.07, 1.31) {1};
-        \node (v3) at (-0.91, 0.58) {1};
-        \node (v4) at (-0.89, -0.54) {1};
-        \node (v5) at (0.01, -1.16) {1};
-        \node (v6) at (1.07, -0.86) {1};
+        \node (v1) at (1.02, 1.11) {2};
+        \node (v2) at (-0.07, 1.31) {3};
+        \node (v3) at (-0.91, 0.58) {4};
+        \node (v4) at (-0.89, -0.54) {5};
+        \node (v5) at (0.01, -1.16) {6};
+        \node (v6) at (1.07, -0.86) {7};
         \draw (v0) -- (v1);
         \draw (v1) -- (v2);
         \draw (v3) -- (v2);
         \draw (v3) -- (v4);
         \draw (v4) -- (v5);
         \draw (v5) -- (v6);
-        \draw[dotted] (v6) -- (v0);
+        \draw (v6) -- (1.24, -0.51);
+        \draw[dotted] (1.36, -0.20) -- (1.24, -0.51);
+        \draw (v0) -- (1.34, -0.25);
         \end{tikzpicture}
         \end{minipage}
         \caption{$\widetilde{\DynA}_{m}$}
      \end{subfigure}
+	 \begin{subfigure}[b]{0.5\textwidth}
+	 	\begin{minipage}{7cm}
+	 		\centering% El subgrafo está centrado
+	 		\begin{tikzpicture}
+	 			\node (v0) at (7.87, -0.93) {1};
+	 			\node (v1) at (1.27, -0.93) {2};
+	 			\node (v2) at (2.37, -0.93) {3};
+	 			\node (v3) at (3.47, -0.93) {4};
+	 			\node (v4) at (3.47, 0.73) {5};
+	 			\node (v5) at (4.57, -0.93) {6};
+	 			\node (v6) at (5.67, -0.93) {7};
+	 			\node (v7) at (6.77, -0.93) {8};
+	 			\node (v8) at (8.97, -0.93) {9};
+	 			\draw (v0) -- (v7);
+	 			\draw (v1) -- (v2);
+	 			\draw (v2) -- (v3);
+	 			\draw (v3) -- (v4);
+	 			\draw (v3) -- (v5);
+	 			\draw (v6) -- (v7);
+	 			\draw (v5) -- (v6);
+	 			\draw (v0) -- (v8);
+	 		\end{tikzpicture}
+	 	\end{minipage}
+	 	\caption{$\widetilde{\DynD}_{m}$}
+	 \end{subfigure}
+	 \begin{subfigure}[b]{0.5\textwidth}
+	 	\begin{minipage}{7cm}
+	 		\centering% El subgrafo está centrado
+	 		\begin{tikzpicture}
+	 			\node (v0) at (3.47,  1.93) {1};
+	 			\node (v1) at (1.27, -0.93) {2};
+	 			\node (v2) at (2.37, -0.93) {3};
+	 			\node (v3) at (3.47, -0.93) {4};
+	 			\node (v4) at (3.47, 0.43) {5};
+	 			\node (v5) at (4.57, -0.93) {6};
+	 			\node (v6) at (5.67, -0.93) {7};
+	 			\draw (v0) -- (v4);
+	 			\draw (v1) -- (v2);
+	 			\draw (v2) -- (v3);
+	 			\draw (v3) -- (v4);
+	 			\draw (v3) -- (v5);
+	 			\draw (v5) -- (v6);
+	 		\end{tikzpicture}
+	 	\end{minipage}
+	 	\caption{$\widetilde{\DynE}_{6}$}
+	 \end{subfigure}
      \begin{subfigure}[b]{0.5\textwidth}
         \begin{minipage}{7cm}
         \centering% El subgrafo está centrado
@@ -848,52 +953,6 @@ Mostraremos que si $\textbf{B}_{q}$ contiene una subgráfica Euclidiana entonces
         \end{minipage}
         \caption{$\widetilde{\DynE}_{7}$}
      \end{subfigure}
-     \begin{subfigure}[b]{0.5\textwidth}
-        \begin{minipage}{7cm}
-        \centering% El subgrafo está centrado
-        \begin{tikzpicture}
-        \node (v0) at (3.47,  1.93) {1};
-        \node (v1) at (1.27, -0.93) {2};
-        \node (v2) at (2.37, -0.93) {3};
-        \node (v3) at (3.47, -0.93) {4};
-        \node (v4) at (3.47, 0.43) {5};
-        \node (v5) at (4.57, -0.93) {6};
-        \node (v6) at (5.67, -0.93) {7};
-        \draw (v0) -- (v4);
-        \draw (v1) -- (v2);
-        \draw (v2) -- (v3);
-        \draw (v3) -- (v4);
-        \draw (v3) -- (v5);
-        \draw (v5) -- (v6);
-        \end{tikzpicture}
-        \end{minipage}
-        \caption{$\widetilde{\DynE}_{6}$}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.5\textwidth}
-        \begin{minipage}{7cm}
-        \centering% El subgrafo está centrado
-        \begin{tikzpicture}
-        \node (v0) at (7.87, -0.93) {1};
-        \node (v1) at (1.27, -0.93) {2};
-        \node (v2) at (2.37, -0.93) {3};
-        \node (v3) at (3.47, -0.93) {4};
-        \node (v4) at (3.47, 0.73) {5};
-        \node (v5) at (4.57, -0.93) {6};
-        \node (v6) at (5.67, -0.93) {7};
-        \node (v7) at (6.77, -0.93) {8};
-        \node (v8) at (8.97, -0.93) {9};
-        \draw (v0) -- (v7);
-        \draw (v1) -- (v2);
-        \draw (v2) -- (v3);
-        \draw (v3) -- (v4);
-        \draw (v3) -- (v5);
-        \draw (v6) -- (v7);
-        \draw (v5) -- (v6);
-        \draw (v0) -- (v8);
-        \end{tikzpicture}
-        \end{minipage}
-        \caption{$\widetilde{\DynD}_{m}$}
-     \end{subfigure}
      \begin{center}
       \begin{subfigure}[b]{0.8\textwidth}
         \centering% El subgrafo está centrado
@@ -915,7 +974,7 @@ Mostraremos que si $\textbf{B}_{q}$ contiene una subgráfica Euclidiana entonces
         \caption{$\widetilde{\DynE}_{8}$}
       \end{subfigure}
      \end{center}
-     \caption{Formas hipercríticas no negativas asociadas a los Diagramas Extendidos de Dynkin.\citep{BarotMichaelJesusJose}}
+     \caption{Vectores radicales asociados a los Diagramas Extendidos de Dynkin.\citep{BarotMichaelJesusJose}}
     \label{figura:1.4}
 \end{figure}
 
