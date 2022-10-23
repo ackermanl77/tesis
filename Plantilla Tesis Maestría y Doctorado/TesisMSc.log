@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2022.7.26)  9 AUG 2022 21:48
+This is LuaHBTeX, Version 1.14.0 (MiKTeX 22.1) (format=lualatex 2022.3.3)  5 SEP 2022 10:30
  restricted system commands enabled.
 **TesisMSc.tex
 (./TesisMSc.tex
@@ -7,11 +7,11 @@ Lua module: luaotfload 2021-05-21 3.18 Lua based OpenType font support
 Lua module: lualibs 2021-05-20 2.74 ConTeXt Lua standard libraries.
 Lua module: lualibs-extended 2021-05-20 2.74 ConTeXt Lua libraries -- extended c
 ollection.
-luaotfload | conf : Root cache directory is "/home/acker/.texlive2021/texmf-var/
-luatex-cache/generic/names".
+luaotfload | conf : Root cache directory is "C:/Users/Acker/AppData/Local/MiKTeX
+/luatex-cache/generic/names".
 luaotfload | init : Loading fontloader "fontloader-2021-05-20.lua" from kpse-res
-olved path "/usr/share/texlive/texmf-dist/tex/luatex/luaotfload/fontloader-2021-
-05-20.lua".
+olved path "C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/luatex/luaotfload/f
+ontloader-2021-05-20.lua".
 Lua-only attribute luaotfload@noligature = 1
 Lua-only attribute luaotfload@syllabe = 2
 luaotfload | init : Context OpenType loader version 3.116
@@ -20,8 +20,8 @@ Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
 Inserting `luaotfload.glyph_stream' at position 1 in `glyph_stream_provider'.
 Inserting `luaotfload.define_font' at position 1 in `define_font'.
 Lua-only attribute luaotfload_color_attribute = 3
-luaotfload | conf : Root cache directory is "/home/acker/.texlive2021/texmf-var/
-luatex-cache/generic/names".
+luaotfload | conf : Root cache directory is "C:/Users/Acker/AppData/Local/MiKTeX
+/luatex-cache/generic/names".
 Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_opentype_file'.
 Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_truetype_file'.
 Inserting `luaotfload.harf.finalize_vlist' at position 1 in `post_linebreak_filt
@@ -43,30 +43,33 @@ Inserting `luaotfload.aux.set_capheight' at position 4 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.aux.set_xheight' at position 5 in `luaotfload.patch_font'.
 Inserting `luaotfload.rewrite_fontname' at position 6 in `luaotfload.patch_font'
-. L3 programming layer <2022-01-21>
+. L3 programming layer <2021-11-22>
 Inserting `tracingstacklevels' at position 1 in `input_level_string'. (./Encabe
 zadoTesisMSc.tex
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrbook.cls
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/koma-script/scrbook.cls
 Document Class: scrbook 2021/11/13 v3.35 KOMA-Script document class (book)
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrkbase.sty
+
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/koma-script/scrkbase.st
+y
 Package: scrkbase 2021/11/13 v3.35 KOMA-Script package (KOMA-Script-dependent b
 asics and keyval usage)
 
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrbase.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/koma-script/scrbase.sty
 Package: scrbase 2021/11/13 v3.35 KOMA-Script package (KOMA-Script-independent 
 basics and keyval usage)
 
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlfile.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/koma-script/scrlfile.st
+y
 Package: scrlfile 2021/11/13 v3.35 KOMA-Script package (file load hooks)
 
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/koma-script/scrlfile-ho
+ok.sty
 Package: scrlfile-hook 2021/11/13 v3.35 KOMA-Script package (using LaTeX hooks)
 
 
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlogo.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/koma-script/scrlogo.sty
 Package: scrlogo 2021/11/13 v3.35 KOMA-Script package (logo)
-)))
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+))) (C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
 )
@@ -74,7 +77,8 @@ Applying: [2021/05/01] Usage of raw or classic option list on input line 252.
 Already applied: [0000/00/00] Usage of raw or classic option list on input line
  368.
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/tocbasic.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/koma-script/tocbasic.st
+y
 Package: tocbasic 2021/11/13 v3.35 KOMA-Script package (handling toc-files)
 \scr@dte@tocline@numberwidth=\skip47
 \scr@dte@tocline@numbox=\box50
@@ -96,15 +100,17 @@ Class scrbook Info: You've used standard option `openany'.
 Class scrbook Info: File `scrsize12pt.clo' used to setup font sizes on input li
 ne 2490.
 
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrsize12pt.clo
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/koma-script/scrsize12pt
+.clo
 File: scrsize12pt.clo 2021/11/13 v3.35 KOMA-Script font size class option (12pt
 )
-luaotfload | db : Font names database loaded from /home/acker/.texlive2021/texmf
--var/luatex-cache/generic/names/luaotfload-names.luc)
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/typearea.sty
+luaotfload | db : Font names database loaded from C:/Users/Acker/AppData/Local/M
+iKTeX/luatex-cache/generic/names/luaotfload-names.luc)
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/koma-script/typearea.st
+y
 Package: typearea 2021/11/13 v3.35 KOMA-Script package (type area)
 \ta@bcor=\skip48
-\ta@div=\count183
+\ta@div=\count181
 Package typearea Info: You've used standard option `letterpaper'.
 (typearea)             This is correct!
 (typearea)             Internally I'm using `paper=letter'.
@@ -138,13 +144,13 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \baselineskip   = 14.5pt
 (typearea)              on input line 1743.
 )
-\c@part=\count184
-\c@chapter=\count185
-\c@section=\count186
-\c@subsection=\count187
-\c@subsubsection=\count188
-\c@paragraph=\count189
-\c@subparagraph=\count190
+\c@part=\count182
+\c@chapter=\count183
+\c@section=\count184
+\c@subsection=\count185
+\c@subsubsection=\count186
+\c@paragraph=\count187
+\c@subparagraph=\count188
 \scr@dte@chapter@maxnumwidth=\skip53
 Class scrbook Info: using compatibility default `afterindent=bysign'
 (scrbook)           for `\chapter on input line 5715.
@@ -183,15 +189,15 @@ Package tocbasic Info: babel extension for `lof' omitted
 (tocbasic)             because of missing \bbl@set@language on input line 6962.
 
 \scr@dte@figure@maxnumwidth=\skip62
-\c@figure=\count191
+\c@figure=\count189
 Package tocbasic Info: babel extension for `lot' omitted
 (tocbasic)             because of missing \bbl@set@language on input line 6978.
 
 \scr@dte@table@maxnumwidth=\skip63
-\c@table=\count192
+\c@table=\count190
 Class scrbook Info: Redefining `\numberline' on input line 7146.
 \bibindent=\dimen137
-) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+) (C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
@@ -199,7 +205,7 @@ Package: inputenc 2021/02/14 v1.3d Input encoding file
 
 Package inputenc Warning: inputenc package ignored with utf8 based engines.
 
-) (/usr/share/texmf/tex/latex/lm/lmodern.sty
+) (C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/lm/lmodern.sty
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
@@ -234,20 +240,22 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
 
-(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/iftex/iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pdftexcmds/pdftexcmds
+.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/infwarerr/infwarerr.s
+ty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -255,47 +263,49 @@ Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 \pdftexcmds@toks=\toks19
 )
-(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/kvsetkeys/kvsetkeys.s
+ty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/kvdefinekeys/kvdefine
+keys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pdfescape/pdfescape.s
+ty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+) (C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/letltxmacro/letltxmacro
+.sty
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
 \@linkdim=\dimen138
-\Hy@linkcounter=\count193
-\Hy@pagecounter=\count194
-
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+\Hy@linkcounter=\count191
+\Hy@pagecounter=\count192
+ (C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/hyperref-langp
+atches.def
 File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel la
 nguages
 )
-(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count195
-
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+\Hy@SavedSpaceFactor=\count193
+ (C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/puenc.def
 File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
 )
 Package hyperref Info: Hyper figures OFF on input line 4192.
@@ -305,23 +315,24 @@ Package hyperref Info: Plain pages OFF on input line 4207.
 Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4445.
-\c@Hy@tempcnt=\count196
+\c@Hy@tempcnt=\count194
 
-(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4804.
 \XeTeXLinkMargin=\dimen139
 
-(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/bigintcalc/bigintcalc
+.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count197
+\Fld@menulength=\count195
 \Field@Width=\dimen140
 \Fld@charsize=\dimen141
 Package hyperref Info: Hyper figures OFF on input line 6076.
@@ -334,35 +345,37 @@ Package hyperref Info: PDF/A mode OFF on input line 6106.
 LaTeX Info: Redefining \ref on input line 6146.
 LaTeX Info: Redefining \pageref on input line 6150.
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count198
-\c@Item=\count199
-\c@Hfootnote=\count266
+\Hy@abspage=\count196
+\c@Item=\count197
+\c@Hfootnote=\count198
 )
 Package hyperref Info: Driver (autodetected): hluatex.
-
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hluatex.def
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/hluatex.def
 File: hluatex.def 2021-06-07 v7.00m Hyperref driver for luaTeX
 
-(/usr/share/texlive/texmf-dist/tex/generic/stringenc/stringenc.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/stringenc/stringenc.s
+ty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/base/atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\Fld@listcount=\count267
-\c@bookmark@seq@number=\count268
+\Fld@listcount=\count199
+\c@bookmark@seq@number=\count266
 
-(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfil
+echeck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/uniquecounter/uniquec
+ounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
@@ -370,146 +383,147 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip64
 )
-(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
 2.
 
-(/usr/share/texmf/tex/latex/lm/t1lmr.fd
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ))
-(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2022/01/26 3.70 The Babel package
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/babel/babel.sty
+Package: babel 2021/12/30 3.69 The Babel package
 
-(/usr/share/texlive/texmf-dist/tex/generic/babel/luababel.def
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/babel/luababel.def
 \bbl@readstream=\read2
-\l@dumylang=\language2
+\l@afrikaans=\language2
 Package babel Info: Non-standard hyphenation setup on input line 118.
-\l@nohyphenation=\language3
-\l@belarusian=\language4
-\l@italian=\language5
-\l@latvian=\language6
-\l@romanian=\language7
-\l@indonesian=\language8
-\l@esperanto=\language9
-\l@armenian=\language10
-\l@arabic=\language11
-\l@assamese=\language12
-\l@coptic=\language13
-\l@mongolianlmc=\language14
-\l@serbianc=\language15
-\l@latin=\language16
-\l@welsh=\language17
-\l@interlingua=\language18
-\l@french=\language19
-\l@uppersorbian=\language20
-\l@turkmen=\language21
-\l@slovenian=\language22
-\l@ukenglish=\language23
-\l@dutch=\language24
-\l@croatian=\language25
-\l@serbian=\language26
-\l@monogreek=\language27
+\l@ancientgreek=\language3
+\l@armenian=\language4
+\l@assamese=\language5
+\l@basque=\language6
+\l@belarusian=\language7
+\l@bengali=\language8
+\l@bokmal=\language9
+\l@bulgarian=\language10
+\l@catalan=\language11
+\l@churchslavonic=\language12
+\l@classiclatin=\language13
+\l@coptic=\language14
+\l@croatian=\language15
+\l@czech=\language16
+\l@danish=\language17
+\l@dutch=\language18
+\l@esperanto=\language19
+\l@estonian=\language20
+\l@ethiopic=\language21
+\l@finnish=\language22
+\l@french=\language23
+\l@friulan=\language24
+\l@galician=\language25
+\l@georgian=\language26
+\l@german=\language27
 \l@greek=\language28
-\l@mongolian=\language29
-\l@pali=\language30
-\l@piedmontese=\language31
-\l@hindi=\language32
-\l@polish=\language33
-\l@catalan=\language34
-\l@ethiopic=\language35
-\l@panjabi=\language36
-\l@irish=\language37
-\l@lithuanian=\language38
-\l@macedonian=\language39
-\l@friulan=\language40
-\l@malayalam=\language41
-\l@bengali=\language42
-\l@afrikaans=\language43
-\l@farsi=\language44
-\l@finnish=\language45
-\l@georgian=\language46
-\l@portuguese=\language47
-\l@czech=\language48
-\l@icelandic=\language49
-\l@slovak=\language50
-\l@telugu=\language51
-\l@hungarian=\language52
-\l@churchslavonic=\language53
-\l@galician=\language54
-\l@basque=\language55
-\l@ukrainian=\language56
-\l@liturgicallatin=\language57
-\l@sanskrit=\language58
-\l@thai=\language59
-\l@bokmal=\language60
-\l@ancientgreek=\language61
-\l@oriya=\language62
-\l@marathi=\language63
-\l@romansh=\language64
-\l@classiclatin=\language65
-\l@turkish=\language66
-\l@danish=\language67
-\l@spanish=\language68
-\l@gujarati=\language69
-\l@kurmanji=\language70
-\l@schoolfinnish=\language71
-\l@kannada=\language72
-\l@estonian=\language73
-\l@ngerman=\language74
-\l@tamil=\language75
-\l@german=\language76
-\l@pinyin=\language77
-\l@swedish=\language78
-\l@german-x-2021-02-26=\language79
-\l@usenglishmax=\language80
-\l@ibycus=\language81
-\l@ngerman-x-2021-02-26=\language82
-\l@occitan=\language83
-\l@russian=\language84
-\l@nynorsk=\language85
-\l@swissgerman=\language86
-\l@bulgarian=\language87
+\l@gujarati=\language29
+\l@hindi=\language30
+\l@hungarian=\language31
+\l@icelandic=\language32
+\l@indonesian=\language33
+\l@interlingua=\language34
+\l@irish=\language35
+\l@italian=\language36
+\l@kannada=\language37
+\l@kurmanji=\language38
+\l@latin=\language39
+\l@latvian=\language40
+\l@lithuanian=\language41
+\l@liturgicallatin=\language42
+\l@macedonian=\language43
+\l@malayalam=\language44
+\l@marathi=\language45
+\l@mongolian=\language46
+\l@mongolianlmc=\language47
+\l@monogreek=\language48
+\l@ngerman=\language49
+\l@nynorsk=\language50
+\l@occitan=\language51
+\l@oriya=\language52
+\l@pali=\language53
+\l@panjabi=\language54
+\l@piedmontese=\language55
+\l@polish=\language56
+\l@portuguese=\language57
+\l@romanian=\language58
+\l@romansh=\language59
+\l@russian=\language60
+\l@sanskrit=\language61
+\l@serbian=\language62
+\l@serbianc=\language63
+\l@slovak=\language64
+\l@slovenian=\language65
+\l@spanish=\language66
+\l@swedish=\language67
+\l@swissgerman=\language68
+\l@tamil=\language69
+\l@telugu=\language70
+\l@thai=\language71
+\l@turkish=\language72
+\l@turkmen=\language73
+\l@ukenglish=\language74
+\l@ukrainian=\language75
+\l@uppersorbian=\language76
+\l@usenglishmax=\language77
+\l@welsh=\language78
 \babelcatcodetablenum=\catcodetable12
 \bbl@pattcodes=\catcodetable13
 )
-\babel@savecnt=\count269
+\babel@savecnt=\count267
 \U@D=\dimen142
-\l@unhyphenated=\language88
+\l@unhyphenated=\language79
 
-(/usr/share/texlive/texmf-dist/tex/generic/babel/luababel.def
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/babel/luababel.def
 \bbl@attr@locale=\attribute5
 )
-(/usr/share/texlive/texmf-dist/tex/generic/babel-spanish/spanish.ldf
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/arabi/bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/babel-spanish/spanish.l
+df
 Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
 \es@quottoks=\toks20
-\es@quotdepth=\count270
+\es@quotdepth=\count268
 Package babel Info: Making " an active character on input line 570.
 Package babel Info: Making . an active character on input line 675.
 Package babel Info: Making < an active character on input line 722.
 Package babel Info: Making > an active character on input line 722.
 
-(/usr/share/texlive/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-es.tex
-UTF-8 Spanish hyphenation patterns
-(/usr/share/texlive/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-es.tex)))
-) (/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/hyph-utf8/loadhyph/lo
+adhyph-es.tex UTF-8 Spanish hyphenation patterns
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/hyph-utf8/patterns/te
+x/hyph-es.tex))))
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/graphics/epsfig.sty
 Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphics.sty
 Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/graphics/trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/graphics.c
+fg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: luatex.def on input line 107.
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/luatex.def
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/graphics-def/luatex.def
 File: luatex.def 2021/06/01 v1.2c Graphics/color driver for luatex
 ))
 \Gin@req@height=\dimen143
@@ -517,66 +531,65 @@ File: luatex.def 2021/06/01 v1.2c Graphics/color driver for luatex
 )
 \epsfxsize=\dimen145
 \epsfysize=\dimen146
-)
-(/usr/share/texlive/texmf-dist/tex/latex/eepic/epic.sty
+) (C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/eepic/epic.sty
 Enhancements to Picture Environment. Version 1.2 - Released June 1, 1986
-\@@multicnt=\count271
-\d@lta=\count272
+\@@multicnt=\count269
+\d@lta=\count270
 \@delta=\dimen147
 \@@delta=\dimen148
-\@gridcnt=\count273
-\@joinkind=\count274
+\@gridcnt=\count271
+\@joinkind=\count272
 \@dotgap=\dimen149
 \@ddotgap=\dimen150
-\@x@diff=\count275
-\@y@diff=\count276
+\@x@diff=\count273
+\@y@diff=\count274
 \x@diff=\dimen151
 \y@diff=\dimen152
 \@dotbox=\box52
-\num@segments=\count277
-\num@segmentsi=\count278
+\num@segments=\count275
+\num@segmentsi=\count276
 \@datafile=\read3
-) (/usr/share/texlive/texmf-dist/tex/latex/eepic/eepic.sty
+) (C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/eepic/eepic.sty
 Extension to Epic and LaTeX. Version 1.1e - Released Dec 21, 1999
-\@gphlinewidth=\count279
-\@eepictcnt=\count280
+\@gphlinewidth=\count277
+\@eepictcnt=\count278
 \@tempdimc=\dimen153
 \maxovaldiam=\dimen154
 \@filltype=\box53
-) (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+) (C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip65
 \bibsep=\skip66
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count281
+\c@NAT@ctr=\count279
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2021/10/15 v2.17l AMS math features
 \@mathmargin=\skip67
 
 For additional information on amsmath, use the `?' option.
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amstext.sty
 Package: amstext 2021/08/26 v2.01 AMS text
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks21
 \ex@=\dimen155
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen156
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2021/08/26 v2.02 operator names
 )
-\inf@bad=\count282
+\inf@bad=\count280
 LaTeX Info: Redefining \frac on input line 236.
-\uproot@=\count283
-\leftroot@=\count284
+\uproot@=\count281
+\leftroot@=\count282
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count285
-\DOTSCASE@=\count286
+\classnum@=\count283
+\DOTSCASE@=\count284
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -585,15 +598,15 @@ LaTeX Info: Redefining \cdots on input line 620.
 \big@size=\dimen157
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count287
-\c@MaxMatrixCols=\count288
+\macc@depth=\count285
+\c@MaxMatrixCols=\count286
 \dotsspace@=\muskip17
-\c@parentequation=\count289
-\dspbrk@lvl=\count290
+\c@parentequation=\count287
+\dspbrk@lvl=\count288
 \tag@help=\toks22
-\row@=\count291
-\column@=\count292
-\maxfields@=\count293
+\row@=\count289
+\column@=\count290
+\maxfields@=\count291
 \andhelp@=\toks23
 \eqnshift@=\dimen158
 \alignsep@=\dimen159
@@ -608,18 +621,17 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 LaTeX Info: Redefining \[ on input line 2938.
 LaTeX Info: Redefining \] on input line 2939.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-))
-(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+)) (C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/amscls/amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
 \thm@style=\toks26
 \thm@bodyfont=\toks27
@@ -631,27 +643,28 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@headsep=\skip72
 \dth@everypar=\toks31
 )
-(/usr/share/texlive/texmf-dist/tex/latex/xpatch/xpatch.sty
-(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2022-01-21 L3 programming layer (loader) 
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/xpatch/xpatch.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/l3kernel/expl3.sty
+Package: expl3 2021-11-22 L3 programming layer (loader) 
 
-(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-luatex.def
-File: l3backend-luatex.def 2022-01-12 L3 backend support: PDF output (LuaTeX)
-\l__color_backend_stack_int=\count294
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-lua
+tex.def
+File: l3backend-luatex.def 2021-12-14 L3 backend support: PDF output (LuaTeX)
+\l__color_backend_stack_int=\count292
 \l__pdf_internal_box=\box56
 ))
 Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
 
-(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-Package: xparse 2022-01-12 L3 Experimental document command parser
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/l3packages/xparse/xpars
+e.sty
+Package: xparse 2021-11-12 L3 Experimental document command parser
 )
-(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count295
+\etb@tempcnta=\count293
 ))
 Class scrbook Info: amsthm's \deferred@thm@head patched.
-
-(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen164
 \lightrulewidth=\dimen165
@@ -663,27 +676,29 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen171
 \cmidrulekern=\dimen172
 \defaultaddspace=\dimen173
-\@cmidla=\count296
-\@cmidlb=\count297
+\@cmidla=\count294
+\@cmidlb=\count295
 \@aboverulesep=\dimen174
 \@belowrulesep=\dimen175
-\@thisruleclass=\count298
-\@lastruleclass=\count299
+\@thisruleclass=\count296
+\@lastruleclass=\count297
 \@thisrulewidth=\dimen176
 )
-(/usr/share/texlive/texmf-dist/tex/latex/dashrule/dashrule.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/dashrule/dashrule.sty
 Package: dashrule 2013/03/28 v1.3 Dashed rules
 
-(/usr/share/texlive/texmf-dist/tex/latex/ifmtarg/ifmtarg.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/ifmtarg/ifmtarg.sty
 Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
 )
-\c@hdr@segments=\count300
+\c@hdr@segments=\count298
 )
-(/usr/share/texlive/texmf-dist/tex/latex/marginnote/marginnote.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/marginnote/marginnote.s
+ty
 Package: marginnote 2018/08/09 v1.4b non floating margin notes for LaTeX
-\c@mn@abspage=\count301
+\c@mn@abspage=\count299
 )
-(/usr/share/texlive/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/threeparttable/threepar
+ttable.sty
 Package: threeparttable 2003/06/13  v 3.0
 \@tempboxb=\box57
 )
@@ -701,7 +716,7 @@ Class scrbook Warning: Usage of package `fancyhdr' together
 (scrbook)              Nevertheless, using requested
 (scrbook)              package `fancyhdr' on input line 22.
 
-(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
 rs
 \f@nch@headwidth=\skip73
@@ -714,33 +729,33 @@ rs
 \f@nch@O@olf=\skip80
 \f@nch@O@orf=\skip81
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amscd.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amscd.sty
 Package: amscd 2017/04/14 v2.1 AMS Commutative Diagrams
 \athelp@=\toks32
 \minaw@=\dimen177
 \bigaw@=\dimen178
 \minCDarrowwidth=\dimen179
 )
-(/usr/share/texlive/texmf-dist/tex/latex/here/here.sty)
-(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/here/here.sty)
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count302
+\c@float@type=\count300
 \float@exts=\toks33
 \float@box=\box58
 \@float@everytoks=\toks34
 \@floatcapt=\box59
 )
-(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/jknappen/mathrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup6
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/graphics/lscape.sty
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/tools/tabularx.sty
 Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 
-(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty
 Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
 \col@sep=\dimen180
 \ar@mcellbox=\box60
@@ -755,16 +770,16 @@ Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
 \TX@old@col=\dimen184
 \TX@target=\dimen185
 \TX@delta=\dimen186
-\TX@cols=\count303
+\TX@cols=\count301
 \TX@ftn=\toks36
 )
-(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/caption/subcaption.sty
 Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption.sty
 Package: caption 2020/10/26 v3.5g Customizing captions (AR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption3.sty
 Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
 \captionmargin=\dimen187
 \captionmargin@=\dimen188
@@ -775,68 +790,80 @@ Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
 \caption@hangindent=\dimen193
 Package caption Info: KOMA-Script document class detected.
 
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption-koma.sto
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption-koma.st
+o
 File: caption-koma.sto 2020/09/21 v2.0b Adaption of the caption package to the 
 KOMA-Script document classes (AR)
 ))
-\c@caption@flags=\count304
-\c@continuedfloat=\count305
+\c@caption@flags=\count302
+\c@continuedfloat=\count303
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: threeparttable package is loaded.
 )
-\c@subfigure=\count306
-\c@subtable=\count307
+\c@subfigure=\count304
+\c@subtable=\count305
 )
-(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/tools/longtable.sty
 Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
 \LTleft=\skip84
 \LTright=\skip85
 \LTpre=\skip86
 \LTpost=\skip87
-\LTchunksize=\count308
+\LTchunksize=\count306
 \LTcapwidth=\dimen194
 \LT@head=\box62
 \LT@firsthead=\box63
 \LT@foot=\box64
 \LT@lastfoot=\box65
 \LT@gbox=\box66
-\LT@cols=\count309
-\LT@rows=\count310
-\c@LT@tables=\count311
-\c@LT@chunks=\count312
+\LT@cols=\count307
+\LT@rows=\count308
+\c@LT@tables=\count309
+\c@LT@chunks=\count310
 \LT@p@ftn=\toks37
 )
 Class scrbook Info: longtable captions redefined on input line 29.
 
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/pgf/frontendlayer/tikz.
+sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/pgf/basiclayer/pgf.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgfrcs.st
+y
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfutil
+-common.tex
 \pgfutil@everybye=\toks38
 \pgfutil@tempdima=\dimen195
 \pgfutil@tempdimb=\dimen196
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
-ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfutil
+-common-lists.tex))
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfutil
+-latex.def
 \pgfutil@abb=\box67
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+)
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfrcs.
+code.tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/pgf.revision.tex)
 Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
 ))
 Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
 
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/pgf/basiclayer/pgfcore.
+sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/pgf/systemlayer/pgfsys.
+sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgfsy
+s.code.tex
 Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfkeys
+.code.tex
 \pgfkeys@pathtoks=\toks39
 \pgfkeys@temptoks=\toks40
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
-ex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfkeys
+filtered.code.tex
 \pgfkeys@tmptoks=\toks41
 ))
 \pgf@x=\dimen197
@@ -851,39 +878,43 @@ ex
 \pgf@yd=\dimen262
 \w@pgf@writea=\write3
 \r@pgf@reada=\read4
-\c@pgf@counta=\count313
-\c@pgf@countb=\count314
-\c@pgf@countc=\count315
-\c@pgf@countd=\count316
+\c@pgf@counta=\count311
+\c@pgf@countb=\count312
+\c@pgf@countc=\count313
+\c@pgf@countd=\count314
 \t@pgf@toka=\toks42
 \t@pgf@tokb=\toks43
 \t@pgf@tokc=\toks44
-\pgf@sys@id@count=\count317
- (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+\pgf@sys@id@count=\count315
+
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgf.c
+fg
 File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
 )
 Driver file for pgf: pgfsys-luatex.def
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-luatex.def
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgfsy
+s-luatex.def
 File: pgfsys-luatex.def 2021/05/15 v3.1.9a (3.1.9a)
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
-f
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgfsy
+s-common-pdf.def
 File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
 )))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
-tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgfsy
+ssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfsyssoftpath@smallbuffer@items=\count318
-\pgfsyssoftpath@bigbuffer@items=\count319
+\pgfsyssoftpath@smallbuffer@items=\count316
+\pgfsyssoftpath@bigbuffer@items=\count317
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
-tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgfsy
+sprotocol.code.tex
 File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-)) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+))
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: luatex.def on input line 227.
@@ -897,43 +928,51 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
+e.code.tex
 Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmath.code
+.tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathcalc.
+code.tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathutil.
+code.tex)
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathparse
+r.code.tex
 \pgfmath@dimen=\dimen263
-\pgfmath@count=\count320
+\pgfmath@count=\count318
 \pgfmath@box=\box68
 \pgfmath@toks=\toks45
 \pgfmath@stack@operand=\toks46
 \pgfmath@stack@operation=\toks47
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
-.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
-ric.code.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
-e.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
-.code.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
-tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
-.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
-tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
-thmetics.code.tex)))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count321
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
+ions.code.tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
+ions.basic.code.tex)
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
+ions.trigonometric.code.tex)
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
+ions.random.code.tex)
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
+ions.comparison.code.tex)
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
+ions.base.code.tex)
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
+ions.round.code.tex)
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
+ions.misc.code.tex)
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
+ions.integerarithmetics.code.tex)))
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfloat
+.code.tex
+\c@pgfmathroundto@lastzeros=\count319
 ))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
-x
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfint.code.
+tex)
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
+epoints.code.tex
 File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@picminx=\dimen264
 \pgf@picmaxx=\dimen265
@@ -950,119 +989,134 @@ File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@zx=\dimen276
 \pgf@zy=\dimen277
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
-code.tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
+epathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@path@lastx=\dimen278
 \pgf@path@lasty=\dimen279
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
-.tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
+epathusage.code.tex
 File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@shorten@end@additional=\dimen280
 \pgf@shorten@start@additional=\dimen281
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
-x
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
+escopes.code.tex
 File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfpic=\box69
 \pgf@hbox=\box70
 \pgf@layerbox@main=\box71
-\pgf@picture@serial@count=\count322
+\pgf@picture@serial@count=\count320
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
-ode.tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
+egraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgflinewidth=\dimen282
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
-s.code.tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
+etransformations.code.tex
 File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@pt@x=\dimen283
 \pgf@pt@y=\dimen284
 \pgf@pt@temp=\dimen285
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
+equick.code.tex
 File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
-ex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
+eobjects.code.tex
 File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
-.code.tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
+epathprocessing.code.tex
 File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
-x
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
+earrows.code.tex
 File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfarrowsep=\dimen286
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
+eshade.code.tex
 File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@max=\dimen287
-\pgf@sys@shading@range@num=\count323
-\pgf@shadingcount=\count324
+\pgf@sys@shading@range@num=\count321
+\pgf@shadingcount=\count322
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
+eimage.code.tex
 File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
-tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
+eexternal.code.tex
 File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfexternal@startupbox=\box72
 ))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
-x
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
+elayers.code.tex
 File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
-ode.tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
+etransparency.code.tex
 File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
-tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
+epatterns.code.tex
 File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
+erdf.code.tex
 File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodule
+shapes.code.tex
 File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfnodeparttextbox=\box73
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+)
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodule
+plot.code.tex
 File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
-.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/pgf/compatibility/pgfco
+mp-version-0-65.sty
 Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@nodesepstart=\dimen288
 \pgf@nodesepend=\dimen289
 )
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
-.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/pgf/compatibility/pgfco
+mp-version-1-18.sty
 Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
-)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+))
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgffor.st
+y
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgfkeys.s
+ty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfkeys
+.code.tex))
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/pgf/math/pgfmath.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmath.code
+.tex))
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgffor.
+code.tex
 Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmath.code
+.tex)
 \pgffor@iter=\dimen290
 \pgffor@skip=\dimen291
 \pgffor@stack=\toks48
 \pgffor@toks=\toks49
 ))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
+z/tikz.code.tex
 Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
-.code.tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgflibr
+aryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@plot@mark@count=\count325
+\pgf@plot@mark@count=\count323
 \pgfplotmarksize=\dimen292
 )
 \tikz@lastx=\dimen293
@@ -1077,134 +1131,138 @@ File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \tikz@figbox@bg=\box75
 \tikz@tempbox=\box76
 \tikz@tempbox@bg=\box77
-\tikztreelevel=\count326
-\tikznumberofchildren=\count327
-\tikznumberofcurrentchild=\count328
-\tikz@fig@count=\count329
+\tikztreelevel=\count324
+\tikznumberofchildren=\count325
+\tikznumberofcurrentchild=\count326
+\tikz@fig@count=\count327
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodule
+matrix.code.tex
 File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfmatrixcurrentrow=\count330
-\pgfmatrixcurrentcolumn=\count331
-\pgf@matrix@numberofcolumns=\count332
+\pgfmatrixcurrentrow=\count328
+\pgfmatrixcurrentcolumn=\count329
+\pgf@matrix@numberofcolumns=\count330
 )
-\tikz@expandcount=\count333
+\tikz@expandcount=\count331
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibrarytopaths.code.tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
+z/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )))
-(/usr/share/texlive/texmf-dist/tex/latex/tkz-graph/tkz-graph.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/tkz-graph/tkz-graph.sty
 2021/01/20 v 2.00 tkz-graph.sty
 Package: tkz-graph 2021/01/20 2.00 base for graphs
-(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/base/ifthen.sty
 Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 
-(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/xkeyval/xkeyval.tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks50
 \XKV@tempa@toks=\toks51
 )
-\XKV@depth=\count334
+\XKV@depth=\count332
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibraryarrows.code.tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
+z/libraries/tikzlibraryarrows.code.tex
 File: tikzlibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.
-tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgflibr
+aryarrows.code.tex
 File: pgflibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \arrowsize=\dimen301
 ))
-\c@tkz@gr@a=\count335
-\c@tkz@gr@b=\count336
-\c@tkz@gr@c=\count337
-\c@tkz@gr@e=\count338
-\c@tkz@gr@d=\count339
-\c@tkz@gr@p=\count340
-\c@tkz@gr@i=\count341
-\c@tkz@gr@n=\count342
-\c@tkz@gr@ta=\count343
-\c@tkz@gr@tb=\count344
+\c@tkz@gr@a=\count333
+\c@tkz@gr@b=\count334
+\c@tkz@gr@c=\count335
+\c@tkz@gr@e=\count336
+\c@tkz@gr@d=\count337
+\c@tkz@gr@p=\count338
+\c@tkz@gr@i=\count339
+\c@tkz@gr@n=\count340
+\c@tkz@gr@ta=\count341
+\c@tkz@gr@tb=\count342
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/graphdrawing/tex/tikzlibrarygrap
-hdrawing.code.tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/graphdrawing/tex/
+tikzlibrarygraphdrawing.code.tex
 File: tikzlibrarygraphdrawing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/graphdrawing/tex/pgflibrarygraph
-drawing.code.tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/graphdrawing/tex/
+pgflibrarygraphdrawing.code.tex
 File: pgflibrarygraphdrawing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@gd@parameter@stack@height=\count345
+\pgf@gd@parameter@stack@height=\count343
 \pgf@gd@node@box=\box78
 \pgf@gd@edge@box=\box79
 \pgf@gd@prekind@box=\box80
 \pgf@gd@postkind@box=\box81
 ))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibrarypositioning.code.tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
+z/libraries/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/gra
-phs/tikzlibrarygraphs.code.tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
+z/libraries/graphs/tikzlibrarygraphs.code.tex
 File: tikzlibrarygraphs.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\tikz@lib@auto@number=\count346
-\tikz@qnode@count=\count347
+\tikz@lib@auto@number=\count344
+\tikz@qnode@count=\count345
 )
-(/usr/share/texlive/texmf-dist/tex/latex/anyfontsize/anyfontsize.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/anyfontsize/anyfontsize
+.sty
 Package: anyfontsize 2007/11/22 anyfontsize.sty by pts
 )
-(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count348
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/listings/listings.sty
+\lst@mode=\count346
 \lst@gtempboxa=\box82
 \lst@token=\toks52
-\lst@length=\count349
+\lst@length=\count347
 \lst@currlwidth=\dimen302
-\lst@column=\count350
-\lst@pos=\count351
+\lst@column=\count348
+\lst@pos=\count349
 \lst@lostspace=\dimen303
 \lst@width=\dimen304
-\lst@newlines=\count352
-\lst@lineno=\count353
+\lst@newlines=\count350
+\lst@lineno=\count351
 \lst@maxwidth=\dimen305
 
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count354
-\lst@skipnumbers=\count355
+\c@lstnumber=\count352
+\lst@skipnumbers=\count353
 \lst@framebox=\box83
 )
-(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/listings/listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
 
-(/usr/share/texlive/texmf-dist/tex/latex/textgreek/textgreek.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/textgreek/textgreek.sty
 Package: textgreek 2011/10/09 v0.7 Greek symbols in text
 Package textgreek Info: Loading the definitions for the Greek fontencoding. on 
 input line 39.
 
-(/usr/share/texlive/texmf-dist/tex/latex/greek-fontenc/lgrenc.def
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/greek-fontenc/lgrenc.de
+f
 File: lgrenc.def 2020/10/13 2.0 LGR Greek font encoding definitions
 
-(/usr/share/texlive/texmf-dist/tex/latex/greek-fontenc/greek-fontenc.def
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/greek-fontenc/greek-fon
+tenc.def
 File: greek-fontenc.def 2020/10/30 2.0 Common Greek font encoding definitions
 ))
 Package textgreek Info: Loaded fontmap: {eur/*/*}{U/eur/*/*} {phv/*/*}{U/psy/*/
 *}. on input line 69.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
-(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count356
-\Gm@cntv=\count357
-\c@Gm@tempcnt=\count358
+\Gm@cnth=\count354
+\Gm@cntv=\count355
+\c@Gm@tempcnt=\count356
 \Gm@bindingoffset=\dimen306
 \Gm@wd@mp=\dimen307
 \Gm@odd@mp=\dimen308
@@ -1214,40 +1272,42 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layouthoffset=\dimen312
 \Gm@layoutvoffset=\dimen313
 \Gm@dimlist=\toks53
-)
-(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.cfg)) (C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/multirow/multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip88
-\multirow@cntb=\count359
+\multirow@cntb=\count357
 \multirow@dima=\skip89
 \bigstrutjot=\dimen314
 )
-(/usr/share/texlive/texmf-dist/tex/latex/stackengine/stackengine.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/stackengine/stackengine
+.sty
 Package: stackengine 2021/07/22 v4.11\ Stacking text and objects in convenient 
 ways
 
-(/usr/share/texlive/texmf-dist/tex/generic/listofitems/listofitems.sty
-(/usr/share/texlive/texmf-dist/tex/generic/listofitems/listofitems.tex
-\loi_cnt_foreach_nest=\count360
-\loi_nestcnt=\count361
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/listofitems/listofitems
+.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/listofitems/listofite
+ms.tex
+\loi_cnt_foreach_nest=\count358
+\loi_nestcnt=\count359
 )
 Package: listofitems 2019/08/21 v1.63 Grab items in lists using user-specified 
 sep char (CT)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+) (C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count362
-\calc@Bcount=\count363
+\calc@Acount=\count360
+\calc@Bcount=\count361
 \calc@Adimen=\dimen315
 \calc@Bdimen=\dimen316
 \calc@Askip=\skip90
 \calc@Bskip=\skip91
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count364
+\calc@Ccount=\count362
 \calc@Cskip=\skip92
 )
-\c@@stackindex=\count365
+\c@@stackindex=\count363
 \@boxshift=\skip93
 \stack@tmplength=\skip94
 \temp@stkl=\skip95
@@ -1258,18 +1318,17 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \se@backgroundbox=\box87
 \stackedbox=\box88
 \@centerbox=\box89
-\c@ROWcellindex@=\count366
-)
-(/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+\c@ROWcellindex@=\count364
+) (C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/tools/multicol.sty
 Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
-\c@tracingmulticols=\count367
+\c@tracingmulticols=\count365
 \mult@box=\box90
 \multicol@leftmargin=\dimen317
-\c@unbalance=\count368
-\c@collectmore=\count369
-\doublecol@number=\count370
-\multicoltolerance=\count371
-\multicolpretolerance=\count372
+\c@unbalance=\count366
+\c@collectmore=\count367
+\doublecol@number=\count368
+\multicoltolerance=\count369
+\multicolpretolerance=\count370
 \full@width=\dimen318
 \page@free=\dimen319
 \premulticols=\dimen320
@@ -1319,32 +1378,32 @@ Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
 \@tempa=\box130
 \@tempa=\box131
 \@tempa=\box132
-\c@minrows=\count373
-\c@columnbadness=\count374
-\c@finalcolumnbadness=\count375
+\c@minrows=\count371
+\c@columnbadness=\count372
+\c@finalcolumnbadness=\count373
 \last@try=\dimen323
 \multicolovershoot=\dimen324
 \multicolundershoot=\dimen325
 \mult@nat@firstbox=\box133
 \colbreak@box=\box134
-\mc@col@check@num=\count376
+\mc@col@check@num=\count374
 )
 LaTeX Info: Redefining \. on input line 48.
 LaTeX Info: Redefining \% on input line 48.
 
-(/usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/algorithm2e/algorithm2e
+.sty
 Package: algorithm2e 2017/07/18 v5.2 algorithms environments
-\c@AlgoLine=\count377
+\c@AlgoLine=\count375
 \algocf@hangindent=\skip99
 
-(/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count378
-)
-(/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+\c@checkoddpage=\count376
+) (C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
 )
 \skiptotal=\skip100
@@ -1377,56 +1436,56 @@ Package: relsize 2013/03/29 ver 4.1
 \algoheightrule=\skip115
 \algotitleheightruledefault=\skip116
 \algotitleheightrule=\skip117
-\c@algocfline=\count379
-\c@algocfproc=\count380
-\c@algocf=\count381
+\c@algocfline=\count377
+\c@algocfproc=\count378
+\c@algocf=\count379
 \algocf@algoframe=\box141
 \algocf@algobox=\box142
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/rotating.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/graphics/rotating.sty
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
-\c@r@tfl@t=\count382
+\c@r@tfl@t=\count380
 \rotFPtop=\skip118
 \rotFPbot=\skip119
 \rot@float@box=\box143
 \rot@mess@toks=\toks54
 )
-(/usr/share/texlive/texmf-dist/tex/latex/doclicense/doclicense.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/doclicense/doclicense.s
+ty
 Package: doclicense 2021/07/11 v3.0.0 Support for putting documents under a lic
 ense
-
-(/usr/share/texlive/texmf-dist/tex/latex/xifthen/xifthen.sty
+ (C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/xifthen/xifthen.sty
 Package: xifthen 2015/11/05 v1.4.0 Extended ifthen features
-)
-(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
-(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
-\integerpart=\count383
-\decimalpart=\count384
+) (C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/xstring/xstring.tex
+\integerpart=\count381
+\decimalpart=\count382
 )
 Package: xstring 2021/07/21 v1.84 String manipulations (CT)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+) (C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/tools/verbatim.sty
 Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks55
 \verbatim@line=\toks56
 \verbatim@in@stream=\read5
 )
-(/usr/share/texlive/texmf-dist/tex/latex/hyperxmp/hyperxmp.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/hyperxmp/hyperxmp.sty
 Package: hyperxmp 2020/11/22 v5.9 Store hyperref metadata in XMP format
 \hyxmp@aep@toks=\toks57
 
-(/usr/share/texlive/texmf-dist/tex/lualatex/luacode/luacode.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/lualatex/luacode/luacode.sty
 Package: luacode 2012/01/23 v1.2a lua-in-tex helpers (mpg)
 
-(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/iftex/ifluatex.sty
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 )
-(/usr/share/texlive/texmf-dist/tex/luatex/luatexbase/luatexbase.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/luatex/luatexbase/luatexbase.
+sty
 Package: luatexbase 2015/10/04 v1.3 luatexbase interface to LuaTeX 
 
-(/usr/share/texlive/texmf-dist/tex/luatex/ctablestack/ctablestack.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/luatex/ctablestack/ctablestac
+k.sty
 Package: ctablestack 2015/10/01 v1.0 Catcode table stable support
-\@catcodetablestackcnt=\count385
+\@catcodetablestackcnt=\count383
 )
 \CatcodeTableOther=\catcodetable14
 \CatcodeTableExpl=\catcodetable15
@@ -1434,17 +1493,18 @@ Package: ctablestack 2015/10/01 v1.0 Catcode table stable support
 \luacode@lines=\toks58
 \luacode@table@soft=\catcodetable16
 )
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/ifdraft.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/oberdiek/ifdraft.sty
 Package: ifdraft 2016/05/16 v1.4 Detect class options draft and final (HO)
 )
 \hyxmp@cct=\catcodetable17
 )
 \doclicense@hsize=\skip120
 
-(/usr/share/texlive/texmf-dist/tex/latex/doclicense/doclicense-spanish.ldf
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/doclicense/doclicense-s
+panish.ldf
 File: doclicense-spanish.ldf 
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/fncychap/fncychap.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/fncychap/fncychap.sty
 Package: fncychap 2007/07/30 v1.34 LaTeX package (Revised chapters)
 \RW=\skip121
 \mylen=\skip122
@@ -1471,41 +1531,43 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \footskip       = 50.75pt
 (typearea)              \baselineskip   = 14.5pt
 (typearea)              on input line 95.
-\c@definition=\count386
-\c@theorem=\count387
-\c@example=\count388
- (./Befehle.sty)
+\c@definition=\count384
+\c@theorem=\count385
+\c@example=\count386
+
+(./Befehle.sty)
 Package hyperref Info: Option `colorlinks' set `true' on input line 167.
 ) (./simbolos.tex
 \pgf@layerbox@bg=\box144
 \pgf@layerboxsaved@bg=\box145
-) (/usr/share/texlive/texmf-dist/tex/latex/ccicons/ccicons.sty
+)
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/ccicons/ccicons.sty
 Package: ccicons 2017/10/30 v1.6 LaTeX support for Creative Commons icons
-) (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
+)
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2021-02-22 v5.2l context-sensitive quotations (JAW)
-\csq@reset=\count389
-\csq@gtype=\count390
-\csq@glevel=\count391
-\csq@qlevel=\count392
-\csq@maxlvl=\count393
-\csq@tshold=\count394
+\csq@reset=\count387
+\csq@gtype=\count388
+\csq@glevel=\count389
+\csq@qlevel=\count390
+\csq@maxlvl=\count391
+\csq@tshold=\count392
 \csq@ltx@everypar=\toks59
 
-(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/csquotes/csquotes.def
 File: csquotes.def 2021-02-22 v5.2l csquotes generic definitions (JAW)
 )
 Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
 Package csquotes Info: ... configuration file loaded successfully.
 
-(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.cfg
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/csquotes/csquotes.cfg
 File: csquotes.cfg 
-))
-(./TesisMSc.aux (./HojaTitulo/HojaTituloMSc.aux)
-LaTeX Info: Redefining \. on input line 28.
-LaTeX Info: Redefining \% on input line 28.
-LaTeX Info: Redefining \. on input line 30.
-LaTeX Info: Redefining \% on input line 30.
-
+)) (./TesisMSc.aux
+LaTeX Info: Redefining \. on input line 27.
+LaTeX Info: Redefining \% on input line 27.
+LaTeX Info: Redefining \. on input line 29.
+LaTeX Info: Redefining \% on input line 29.
+ (./HojaTitulo/HojaTituloMSc.aux)
 (./Tab_Simbolos/TabSimbolosMSc.aux) (./Kap1/Kap1.aux) (./Kap2/Kap2.aux)
 (./Kap3/Kap3.aux
 
@@ -1683,7 +1745,7 @@ LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 4
 .
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 4.
@@ -1701,28 +1763,28 @@ LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 4.
 LaTeX Font Info:    Trying to load font information for LGR+cmr on input line 4
 .
 
-(/usr/share/texlive/texmf-dist/tex/latex/cbfonts-fd/lgrcmr.fd
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/cbfonts-fd/lgrcmr.fd
 File: lgrcmr.fd 2017/07/29 v1.2 Greek European Computer Regular
 )
 LaTeX Font Info:    ... okay on input line 4.
 Package hyperref Info: Link coloring ON on input line 4.
 
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
-(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/gettitlestring/gettit
+lestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count395
+\c@section@level=\count393
 )
 LaTeX Info: Redefining \ref on input line 4.
 LaTeX Info: Redefining \pageref on input line 4.
 LaTeX Info: Redefining \nameref on input line 4.
-
-(./TesisMSc.out) (./TesisMSc.out)
+ (./TesisMSc.out) (./TesisMSc.out)
 \@outlinefile=\write4
 
 \openout4 = TesisMSc.out
@@ -1737,49 +1799,52 @@ Class scrbook Info: loading recommended package `bookmark'.
 Class scrbook Info: temporary deactivation of babel-spanish quoting  on input l
 ine 4.
 
-(/usr/share/texlive/texmf-dist/tex/latex/bookmark/bookmark.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
 
-(/usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
-\BKM@id=\count396
+\BKM@id=\count394
 ))
 Class scrbook Info: reactivation of babel-spanish quoting  on input line 4.
 LaTeX Info: Redefining \. on input line 4.
 LaTeX Info: Redefining \% on input line 4.
 
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mk
+ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count397
+\scratchcounter=\count395
 \scratchdimen=\dimen332
 \scratchbox=\box146
-\nofMPsegments=\count398
-\nofMParguments=\count399
+\nofMPsegments=\count396
+\nofMParguments=\count397
 \everyMPshowfont=\toks60
-\MPscratchCnt=\count400
+\MPscratchCnt=\count398
 \MPscratchDim=\dimen333
-\MPnumerator=\count401
-\makeMPintoPDFobject=\count402
+\MPnumerator=\count399
+\makeMPintoPDFobject=\count400
 \everyMPtoPDFconversion=\toks61
-) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+)
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-b
+ase.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/00miktex/epstopdf-sys.c
+fg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
 
-(/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
 )
 Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count403
+\c@lstlisting=\count401
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -1818,7 +1883,7 @@ Package caption Info: End \AtBeginDocument code.
 
 \openout2 = HojaTitulo/HojaTituloMSc.aux
 (./HojaTitulo/HojaTituloMSc.tex
-<uaem.jpeg, id=7, 388.45125pt x 248.93pt>
+<uaem.jpeg, id=6, 388.45125pt x 248.93pt>
 File: uaem.jpeg Graphic file (type jpg)
 <use uaem.jpeg>
 Package luatex.def Info: uaem.jpeg  used on input line 5.
@@ -1830,25 +1895,25 @@ Overfull \hbox (28.34927pt too wide) in paragraph at lines 5--5
 
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 7
 .
-(/usr/share/texmf/tex/latex/lm/ot1lmr.fd
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 7
 .
 
-(/usr/share/texmf/tex/latex/lm/omllmm.fd
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
 7.
 
-(/usr/share/texmf/tex/latex/lm/omslmsy.fd
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
 7.
 
-(/usr/share/texmf/tex/latex/lm/omxlmex.fd
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -1859,21 +1924,21 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 7.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 7.
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 7.
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 7.
 
 
-(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/jknappen/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-<iicba.png, id=8, 270.00874pt x 110.4125pt>
+<iicba.png, id=7, 270.00874pt x 110.4125pt>
 File: iicba.png Graphic file (type png)
 <use iicba.png>
 Package luatex.def Info: iicba.png  used on input line 11.
@@ -1892,7 +1957,8 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}<./uaem.jpeg><./iicba.png>]
+{C:/Users/Acker/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}<./uaem.jpeg><.
+/iicba.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 65--79
 
  []
@@ -1907,18 +1973,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--79
 
  []
 
-<doclicense-CC-by-sa-88x31.pdf, id=22, 90.3375pt x 31.61812pt>
+<doclicense-CC-by-sa-88x31.pdf, id=21, 90.3375pt x 31.61812pt>
 File: doclicense-CC-by-sa-88x31.pdf Graphic file (type pdf)
 <use doclicense-CC-by-sa-88x31.pdf>
 Package luatex.def Info: doclicense-CC-by-sa-88x31.pdf  used on input line 82.
 (luatex.def)             Requested size: 117.49832pt x 41.12476pt.
-) [2</usr/share/texlive/texmf-dist/tex/latex/doclicense/images/doclicense-CC-by-
-sa-88x31.pdf>]
+) [2<C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/doclicense/images/do
+clicense-CC-by-sa-88x31.pdf>]
 LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
 7.
- (/usr/share/texmf/tex/latex/lm/t1lmss.fd
+
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) (./TesisMSc.toc
+)
+(./TesisMSc.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Info: Redefining \. on input line 2.
@@ -1949,8 +2017,7 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 27.
 \tf@toc=\write5
 
 \openout5 = TesisMSc.toc
-
-[3
+ [3
 
 
 
@@ -1980,7 +2047,7 @@ Class scrbook Warning: \float@addtolists detected!
 
 LaTeX Font Info:    Trying to load font information for OT1+pzc on input line 1
 .
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pzc.fd
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/psnfss/ot1pzc.fd
 File: ot1pzc.fd 2020/03/25 font definitions for OT1/pzc.
 )
 LaTeX Font Info:    Font shape `OT1/pzc/m/n' in size <76> not available
@@ -2214,22 +2281,22 @@ Overfull \hbox (57.40746pt too wide) in paragraph at lines 617--632
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Figuras/A-bloque1.pdf, id=438, 104.39pt x 110.011pt>
+<Figuras/A-bloque1.pdf, id=434, 104.39pt x 110.011pt>
 File: Figuras/A-bloque1.pdf Graphic file (type pdf)
 <use Figuras/A-bloque1.pdf>
 Package luatex.def Info: Figuras/A-bloque1.pdf  used on input line 660.
 (luatex.def)             Requested size: 113.39894pt x 119.50278pt.
-<Figuras/A-bloque2.pdf, id=439, 104.39pt x 110.011pt>
+<Figuras/A-bloque2.pdf, id=435, 104.39pt x 110.011pt>
 File: Figuras/A-bloque2.pdf Graphic file (type pdf)
 <use Figuras/A-bloque2.pdf>
 Package luatex.def Info: Figuras/A-bloque2.pdf  used on input line 666.
 (luatex.def)             Requested size: 113.39894pt x 119.50278pt.
-<Figuras/A-bloque3.pdf, id=440, 104.39pt x 110.011pt>
+<Figuras/A-bloque3.pdf, id=436, 104.39pt x 110.011pt>
 File: Figuras/A-bloque3.pdf Graphic file (type pdf)
 <use Figuras/A-bloque3.pdf>
 Package luatex.def Info: Figuras/A-bloque3.pdf  used on input line 672.
 (luatex.def)             Requested size: 113.39894pt x 119.50278pt.
-<Figuras/A-bloque.pdf, id=441, 104.39pt x 110.011pt>
+<Figuras/A-bloque.pdf, id=437, 104.39pt x 110.011pt>
 File: Figuras/A-bloque.pdf Graphic file (type pdf)
 <use Figuras/A-bloque.pdf>
 Package luatex.def Info: Figuras/A-bloque.pdf  used on input line 678.
@@ -2250,7 +2317,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 684.
 LaTeX Info: Redefining \% on input line 684.
  [25]
-<Figuras/graph.png, id=451, 906.38625pt x 300.3722pt>
+<Figuras/graph.png, id=447, 906.38625pt x 300.3722pt>
 File: Figuras/graph.png Graphic file (type png)
 <use Figuras/graph.png>
 Package luatex.def Info: Figuras/graph.png  used on input line 691.
@@ -2260,12 +2327,12 @@ LaTeX Info: Redefining \% on input line 693.
 
 [26<./Figuras/A-bloque1.pdf><./Figuras/A-bloque2.pdf><./Figuras/A-bloque3.pdf><.
 /Figuras/A-bloque.pdf>]
-<Figuras/graph1.png, id=460, 934.24031pt x 313.9228pt>
+<Figuras/graph1.png, id=456, 934.24031pt x 313.9228pt>
 File: Figuras/graph1.png Graphic file (type png)
 <use Figuras/graph1.png>
 Package luatex.def Info: Figuras/graph1.png  used on input line 696.
 (luatex.def)             Requested size: 281.24362pt x 94.50548pt.
-<Figuras/graph3.png, id=461, 736.25063pt x 249.93375pt>
+<Figuras/graph3.png, id=457, 736.25063pt x 249.93375pt>
 File: Figuras/graph3.png Graphic file (type png)
 <use Figuras/graph3.png>
 Package luatex.def Info: Figuras/graph3.png  used on input line 701.
@@ -2285,8 +2352,8 @@ LaTeX Info: Redefining \% on input line 718.
 [27
 Missing character: There is no “ (U+201C) in font ec-lmr12!
 Missing character: There is no ” (U+201D) in font ec-lmr12!
-<./Figuras/graph.PNG><./Figuras/graph1.PNG><./Figuras/graph3.PNG>]
-<Figuras/graph4.png, id=480, 213.04594pt x 207.77625pt>
+<./Figuras/graph.png><./Figuras/graph1.png><./Figuras/graph3.png>]
+<Figuras/graph4.png, id=476, 213.04594pt x 207.77625pt>
 File: Figuras/graph4.png Graphic file (type png)
 <use Figuras/graph4.png>
 Package luatex.def Info: Figuras/graph4.png  used on input line 723.
@@ -2296,7 +2363,7 @@ Overfull \hbox (57.40746pt too wide) in paragraph at lines 721--725
 []$[]$ 
  []
 
-<Figuras/graph5.png, id=481, 197.23688pt x 200.24812pt>
+<Figuras/graph5.png, id=477, 197.23688pt x 200.24812pt>
 File: Figuras/graph5.png Graphic file (type png)
 <use Figuras/graph5.png>
 Package luatex.def Info: Figuras/graph5.png  used on input line 730.
@@ -2306,7 +2373,7 @@ Overfull \hbox (57.40746pt too wide) in paragraph at lines 728--732
 []$[]$ 
  []
 
-<Figuras/graph6.png, id=482, 202.50656pt x 212.29312pt>
+<Figuras/graph6.png, id=478, 202.50656pt x 212.29312pt>
 File: Figuras/graph6.png Graphic file (type png)
 <use Figuras/graph6.png>
 Package luatex.def Info: Figuras/graph6.png  used on input line 737.
@@ -2316,7 +2383,7 @@ Overfull \hbox (57.40746pt too wide) in paragraph at lines 735--739
 []$[]$ 
  []
 
-<Figuras/graph7.png, id=483, 163.3603pt x 145.29282pt>
+<Figuras/graph7.png, id=479, 163.3603pt x 145.29282pt>
 File: Figuras/graph7.png Graphic file (type png)
 <use Figuras/graph7.png>
 Package luatex.def Info: Figuras/graph7.png  used on input line 749.
@@ -2341,8 +2408,8 @@ LaTeX Info: Redefining \% on input line 762.
 [28
 Missing character: There is no “ (U+201C) in font ec-lmr12!
 Missing character: There is no ” (U+201D) in font ec-lmr12!
-<./Figuras/graph4.PNG><./Figuras/graph5.PNG><./Figuras/graph6.PNG><./Figuras/gra
-ph7.PNG>]
+<./Figuras/graph4.png><./Figuras/graph5.png><./Figuras/graph6.png><./Figuras/gra
+ph7.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 778--779
 
  []
@@ -2359,7 +2426,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 811--812
 
  []
 
-<Figuras/graph8.png, id=514, 185.94469pt x 178.41656pt>
+<Figuras/graph8.png, id=510, 185.94469pt x 178.41656pt>
 File: Figuras/graph8.png Graphic file (type png)
 <use Figuras/graph8.png>
 Package luatex.def Info: Figuras/graph8.png  used on input line 827.
@@ -2369,7 +2436,7 @@ Overfull \hbox (57.40746pt too wide) in paragraph at lines 825--829
 []$[]$ 
  []
 
-<Figuras/graph9.png, id=515, 206.27063pt x 189.70876pt>
+<Figuras/graph9.png, id=511, 206.27063pt x 189.70876pt>
 File: Figuras/graph9.png Graphic file (type png)
 <use Figuras/graph9.png>
 Package luatex.def Info: Figuras/graph9.png  used on input line 834.
@@ -2379,7 +2446,7 @@ Overfull \hbox (57.40746pt too wide) in paragraph at lines 832--836
 []$[]$ 
  []
 
-<Figuras/graph10.png, id=516, 173.89969pt x 170.13562pt>
+<Figuras/graph10.png, id=512, 173.89969pt x 170.13562pt>
 File: Figuras/graph10.png Graphic file (type png)
 <use Figuras/graph10.png>
 Package luatex.def Info: Figuras/graph10.png  used on input line 841.
@@ -2389,7 +2456,7 @@ Overfull \hbox (57.40746pt too wide) in paragraph at lines 839--843
 []$[]$ 
  []
 
-<Figuras/graph11.png, id=517, 173.14688pt x 168.63pt>
+<Figuras/graph11.png, id=513, 173.14688pt x 168.63pt>
 File: Figuras/graph11.png Graphic file (type png)
 <use Figuras/graph11.png>
 Package luatex.def Info: Figuras/graph11.png  used on input line 848.
@@ -2399,7 +2466,7 @@ Overfull \hbox (57.40746pt too wide) in paragraph at lines 846--850
 []$[]$ 
  []
 
-<Figuras/graph12.png, id=518, 167.12437pt x 173.14688pt>
+<Figuras/graph12.png, id=514, 167.12437pt x 173.14688pt>
 File: Figuras/graph12.png Graphic file (type png)
 <use Figuras/graph12.png>
 Package luatex.def Info: Figuras/graph12.png  used on input line 855.
@@ -2409,7 +2476,7 @@ Overfull \hbox (57.40746pt too wide) in paragraph at lines 853--857
 []$[]$ 
  []
 
-<Figuras/graph13.png, id=519, 179.16937pt x 178.41656pt>
+<Figuras/graph13.png, id=515, 179.16937pt x 178.41656pt>
 File: Figuras/graph13.png Graphic file (type png)
 <use Figuras/graph13.png>
 Package luatex.def Info: Figuras/graph13.png  used on input line 862.
@@ -2431,13 +2498,13 @@ Missing character: There is no “ (U+201C) in font ec-lmr12!
 Missing character: There is no ” (U+201D) in font ec-lmr12!
 Missing character: There is no “ (U+201C) in font ec-lmr12!
 Missing character: There is no ” (U+201D) in font ec-lmr12!
-<./Figuras/graph8.PNG><./Figuras/graph9.PNG><./Figuras/graph10.PNG><./Figuras/gr
-aph11.PNG><./Figuras/graph12.PNG><./Figuras/graph13.PNG>]
+<./Figuras/graph8.png><./Figuras/graph9.png><./Figuras/graph10.png><./Figuras/gr
+aph11.png><./Figuras/graph12.png><./Figuras/graph13.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 878--879
 
  []
 
-<Figuras/graph20.png, id=537, 171.64125pt x 292.84406pt>
+<Figuras/graph20.png, id=532, 171.64125pt x 292.84406pt>
 File: Figuras/graph20.png Graphic file (type png)
 <use Figuras/graph20.png>
 Package luatex.def Info: Figuras/graph20.png  used on input line 886.
@@ -2447,7 +2514,7 @@ Overfull \hbox (19.30554pt too wide) in paragraph at lines 884--888
 []$[]$ 
  []
 
-<Figuras/graph21.png, id=538, 150.5625pt x 234.8775pt>
+<Figuras/graph21.png, id=533, 150.5625pt x 234.8775pt>
 File: Figuras/graph21.png Graphic file (type png)
 <use Figuras/graph21.png>
 Package luatex.def Info: Figuras/graph21.png  used on input line 893.
@@ -2457,7 +2524,7 @@ Overfull \hbox (19.30554pt too wide) in paragraph at lines 891--895
 []$[]$ 
  []
 
-<Figuras/graph22.png, id=539, 184.43906pt x 279.29344pt>
+<Figuras/graph22.png, id=534, 184.43906pt x 279.29344pt>
 File: Figuras/graph22.png Graphic file (type png)
 <use Figuras/graph22.png>
 Package luatex.def Info: Figuras/graph22.png  used on input line 900.
@@ -2467,7 +2534,7 @@ Overfull \hbox (19.30554pt too wide) in paragraph at lines 898--902
 []$[]$ 
  []
 
-<Figuras/graph23.png, id=540, 212.29312pt x 193.47281pt>
+<Figuras/graph23.png, id=535, 212.29312pt x 193.47281pt>
 File: Figuras/graph23.png Graphic file (type png)
 <use Figuras/graph23.png>
 Package luatex.def Info: Figuras/graph23.png  used on input line 907.
@@ -2482,7 +2549,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 919--920
 
  []
 
-<Figuras/graph14.png, id=541, 139.27031pt x 207.77625pt>
+<Figuras/graph14.png, id=536, 139.27031pt x 207.77625pt>
 File: Figuras/graph14.png Graphic file (type png)
 <use Figuras/graph14.png>
 Package luatex.def Info: Figuras/graph14.png  used on input line 927.
@@ -2492,7 +2559,7 @@ Overfull \hbox (19.30554pt too wide) in paragraph at lines 925--929
 []$[]$ 
  []
 
-<Figuras/graph15.png, id=542, 138.5175pt x 202.50656pt>
+<Figuras/graph15.png, id=537, 138.5175pt x 202.50656pt>
 File: Figuras/graph15.png Graphic file (type png)
 <use Figuras/graph15.png>
 Package luatex.def Info: Figuras/graph15.png  used on input line 934.
@@ -2502,7 +2569,7 @@ Overfull \hbox (19.30554pt too wide) in paragraph at lines 932--936
 []$[]$ 
  []
 
-<Figuras/graph16.png, id=543, 152.82094pt x 202.50656pt>
+<Figuras/graph16.png, id=538, 152.82094pt x 202.50656pt>
 File: Figuras/graph16.png Graphic file (type png)
 <use Figuras/graph16.png>
 Package luatex.def Info: Figuras/graph16.png  used on input line 941.
@@ -2512,7 +2579,7 @@ Overfull \hbox (19.30554pt too wide) in paragraph at lines 939--943
 []$[]$ 
  []
 
-<Figuras/graph17.png, id=544, 161.85469pt x 167.87718pt>
+<Figuras/graph17.png, id=539, 161.85469pt x 167.87718pt>
 File: Figuras/graph17.png Graphic file (type png)
 <use Figuras/graph17.png>
 Package luatex.def Info: Figuras/graph17.png  used on input line 948.
@@ -2534,15 +2601,15 @@ Missing character: There is no “ (U+201C) in font ec-lmr12!
 Missing character: There is no ” (U+201D) in font ec-lmr12!
 Missing character: There is no “ (U+201C) in font ec-lmr12!
 Missing character: There is no ” (U+201D) in font ec-lmr12!
-<./Figuras/graph20.PNG><./Figuras/graph21.PNG><./Figuras/graph22.PNG><./Figuras/
-graph23.PNG><./Figuras/graph14.PNG><./Figuras/graph15.PNG><./Figuras/graph16.PNG
-><./Figuras/graph17.PNG>]
-<Figuras/graph18.png, id=562, 389.20406pt x 402.75468pt>
+<./Figuras/graph20.png><./Figuras/graph21.png><./Figuras/graph22.png><./Figuras/
+graph23.png><./Figuras/graph14.png><./Figuras/graph15.png><./Figuras/graph16.png
+><./Figuras/graph17.png>]
+<Figuras/graph18.png, id=557, 389.20406pt x 402.75468pt>
 File: Figuras/graph18.png Graphic file (type png)
 <use Figuras/graph18.png>
 Package luatex.def Info: Figuras/graph18.png  used on input line 967.
 (luatex.def)             Requested size: 96.2318pt x 99.58464pt.
-<Figuras/graph19.png, id=563, 519.44063pt x 513.41812pt>
+<Figuras/graph19.png, id=558, 519.44063pt x 513.41812pt>
 File: Figuras/graph19.png Graphic file (type png)
 <use Figuras/graph19.png>
 Package luatex.def Info: Figuras/graph19.png  used on input line 974.
@@ -2569,7 +2636,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1001--1002
 
 LaTeX Info: Redefining \. on input line 1002.
 LaTeX Info: Redefining \% on input line 1002.
-[32<./Figuras/graph18.PNG><./Figuras/graph19.PNG>]
+[32<./Figuras/graph18.png><./Figuras/graph19.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 1003--1004
 
  []
@@ -2640,7 +2707,7 @@ Overfull \hbox (0.50195pt too wide) in paragraph at lines 132--153
 LaTeX Info: Redefining \. on input line 165.
 LaTeX Info: Redefining \% on input line 165.
 [37]
-<Figuras/plotgraph.png, id=678, 447.8331pt x 303.2931pt>
+<Figuras/plotgraph.png, id=672, 447.8331pt x 303.2931pt>
 File: Figuras/plotgraph.png Graphic file (type png)
 <use Figuras/plotgraph.png>
 Package luatex.def Info: Figuras/plotgraph.png  used on input line 201.
@@ -2722,10 +2789,11 @@ LaTeX Info: Redefining \% on input line 445.
  [39<./Figuras/plotgraph.png>]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 4
 67.
- (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<Figuras/G2.png, id=712, 420.57124pt x 830.10126pt>
+<Figuras/G2.png, id=706, 420.57124pt x 830.10126pt>
 File: Figuras/G2.png Graphic file (type png)
 <use Figuras/G2.png>
 Package luatex.def Info: Figuras/G2.png  used on input line 497.
@@ -2999,7 +3067,7 @@ Overfull \hbox (57.40746pt too wide) in paragraph at lines 215--226
 []$[]$ 
  []
 
-<Figuras/G3.png, id=1016, 357.335pt x 348.30125pt>
+<Figuras/G3.png, id=1007, 357.335pt x 348.30125pt>
 File: Figuras/G3.png Graphic file (type png)
 <use Figuras/G3.png>
 Package luatex.def Info: Figuras/G3.png  used on input line 237.
@@ -3007,7 +3075,7 @@ Package luatex.def Info: Figuras/G3.png  used on input line 237.
 LaTeX Info: Redefining \. on input line 241.
 LaTeX Info: Redefining \% on input line 241.
 [59]
-<Figuras/G4.png, id=1025, 181.67876pt x 541.02126pt>
+<Figuras/G4.png, id=1016, 181.67876pt x 541.02126pt>
 File: Figuras/G4.png Graphic file (type png)
 <use Figuras/G4.png>
 Package luatex.def Info: Figuras/G4.png  used on input line 244.
@@ -3172,24 +3240,26 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 ])
-(/usr/share/texlive/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/babel/locale/es/babel
+-spanish.tex
 Package babel Info: Importing font and identification data for spanish
 (babel)             from babel-es.ini. Reported on input line 11.
 )
 LaTeX Info: Redefining \. on input line 32.
 LaTeX Info: Redefining \% on input line 32.
-
-[66
+ [66
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
 Missing character: There is no – (U+2013) in font ec-lmr12!
-] (/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
+]
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/stringenc/se-pdfdoc.d
+ef
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
 )
-(/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-utf32be.def
+(C:/Users/Acker/AppData/Local/Programs/MiKTeX/tex/generic/stringenc/se-utf32be.
+def
 File: se-utf32be.def 2019/11/29 v1.12 stringenc: UTF-32BE
-)
-(./TesisMSc.aux (./HojaTitulo/HojaTituloMSc.aux)
+) (./TesisMSc.aux (./HojaTitulo/HojaTituloMSc.aux)
 LaTeX Info: Redefining \. on input line 28.
 LaTeX Info: Redefining \% on input line 28.
 LaTeX Info: Redefining \. on input line 30.
@@ -3208,41 +3278,50 @@ Package rerunfilecheck Info: File `TesisMSc.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 41101 strings out of 477805
+ 41105 strings out of 477867
  156272,1373583 words of node,token memory allocated
  1245 words of node memory still in use:
    8 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 171 attribute, 98 glue_spe
 c, 87 attribute_list, 3 write, 1 special, 2 pdf_action nodes
-   avail lists: 1:11,2:12229,3:5004,4:586,5:793,6:118,7:10706,8:136,9:1986,10:33
-,11:1202
- 59119 multiletter control sequences out of 65536+600000
+   avail lists: 1:9,2:12229,3:5004,4:586,5:793,6:118,7:10706,8:136,9:1986,10:33,
+11:1202
+ 59045 multiletter control sequences out of 65536+600000
  98 fonts using 6468263 bytes
  113i,28n,103p,10665b,1538s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips
-/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/tex
-mf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvi
-ps/base/8r.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/te
-xmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmb
-x8.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fon
-ts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb
-></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type
-1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/sh
-are/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/l
-m/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/
-fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb>
-</usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1
-/public/lm/lmro12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr
-/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/te
-xmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmt
-t12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam1
-0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on TesisMSc.pdf (70 pages, 1231991 bytes).
+{C:/Users/Acker/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/U
+sers/Acker/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/
+Acker/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/A
+cker/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Users/Ac
+ker/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}{C:/Users/Acker/Ap
+pData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}<C:/Users/Acker/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Acker/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx8.pfb><C:/Users/Acker/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/Acker/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Acker/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Acker/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Acker/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/Acker/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Acker/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Acker/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Acker/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/Acker/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Acker/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Acker/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Acker/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/lm/lmro12.pfb><C:/Users/Acker/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Acker/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Acker/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/Acker/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Acker/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/lm/lmtt10.pfb><C:/Users/Acker/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/lm/lmtt12.pfb><C:/Users/Acker/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Acker/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Acker/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/Acker/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
+Output written on TesisMSc.pdf (70 pages, 1323179 bytes).
 
-PDF statistics: 1242 PDF objects out of 1440 (max. 8388607)
- 886 compressed objects within 9 object streams
+PDF statistics: 1232 PDF objects out of 1440 (max. 8388607)
  523 named destinations out of 1000 (max. 131072)
  197 words of extra memory for PDF output out of 10000 (max. 100000000)
 
