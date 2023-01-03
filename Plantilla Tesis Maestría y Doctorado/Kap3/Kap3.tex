@@ -1,10 +1,10 @@
-\chapter{COMPONENTES TRICONEXAS}
+\chapter{Componentes triconexas}
 
 Para esta parte se utilizan los conceptos generados por \citep{hopcroft1973} y mejorados por \citep{Gutwenger2000ALT}.
 
-\section{DIVIDIR UNA GRÁFICA EN COMPONENTES TRICONEXAS}
+\section{Dividir una gráfica en componentes triconexas}
 
-\subsection{INTRODUCCIÓN}
+\subsection{Introducción}
 
 \paragraph{}
 Las propiedades de conectividad de las gráficas forman una parte importante de la teoría de gráficas. En \citep{hopcroft1973} se considera el problema de separar una gráfica en sus componentes triconexas. Un algoritmo para esto es de utilidad para analizar circuitos eléctricos \citep{1083313} , para determinar si una gráfica es plana \citep{10893101} y para determinar cuando dos gráficas planas son isomorfas \citep{Hopcroft1972}. Un algoritmo para planaridad puede ser usado en el diseño de tablas de circuitos; un algoritmo para isomorfismo de gráficas planas puede ser usado para probar el isomorfismo estructural de compuestos químicos \citep{Lederberg1964DENDRAL64AS} y en nuestro caso para ayudar a clasificar gráficas de Dynkin de tipo $\DynD_{n}$.\\
@@ -1209,5 +1209,5 @@ El algoritmo de componentes triconexas procesa una gráfica $G$ con $V$ vértice
 \end{lemma}
 
 \begin{proof}
-El número de aristas en un conjunto de componentes de separación de $G$ está acotado por $3E - 6$, por el lema \ref{lema:3.1}. Todos los pasos, excepto encontrar componentes de separación, requiere un tiempo $\Theta\left(V+ E\right)$, por los resultados de las dos ultimas secciones.. Considérese la ejecución de algoritmo SPLIT. Cada arista se coloca en ESTACK una vez y se elimina una vez. La búsqueda en profundidad en sí misma requiere un tiempo $\Theta\left(V + E\right)$, incluidas las diversas pruebas. El número de tripletas agregadas a tstack es $\Theta\left(V + E\right)$. Cada tripleta sólo puede modificarse si está encima de la pila. Por lo tanto, el tiempo necesario para mantener tstack es también $\Theta\left(V + E\right)$ y SPLIT requiere de tiempo $\Theta\left(V + E\right)$.
+El número de aristas en un conjunto de componentes de separación de $G$ está acotado por $3E - 6$, por el lema \ref{lema:3.1}. Todos los pasos, excepto encontrar componentes de separación, requiere un tiempo $\Theta\left(V+ E\right)$, por los resultados de las dos ultimas secciones.. Considérese la ejecución de algoritmo SPLIT. Cada arista se coloca en estack una vez y se elimina una vez. La búsqueda en profundidad en sí misma requiere un tiempo $\Theta\left(V + E\right)$, incluidas las diversas pruebas. El número de tripletas agregadas a tstack es $\Theta\left(V + E\right)$. Cada tripleta sólo puede modificarse si está encima de la pila. Por lo tanto, el tiempo necesario para mantener tstack es también $\Theta\left(V + E\right)$ y SPLIT requiere de tiempo $\Theta\left(V + E\right)$.
 \end{proof}

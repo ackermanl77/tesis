@@ -3,12 +3,12 @@
 \paragraph*{}
 En este capítulo se presenta una introducción a las formas cuadráticas, sus representaciones y su clasificación.
 
-\section{FORMAS CUADRÁTICAS}
+\section{Formas cuadráticas}
 
 \paragraph*{}
 Esta sección fue adaptada de \citep{LayDavidC2001Alys}. Algunas demostraciones aquí omitidas pueden consultarse en dicha referencia.\\
-Fijamos un conjunto de variables $n$ variables $\{x_1, x_2, \ldots, x_n\}$. Un \textbf{monomio} es un producto de la forma $x_{1}^{e_{1}} \cdot x_{2}^{e_{2}} \cdots x_{n}^{e_{n}}$ donde cada $e_{i}$ es un número natural. Un \textbf{término} se forma al multiplicar a un monomio por una constante, a la cual llamamos \textbf{coeficiente} del término. Un \textbf{polinomio} es una suma finita de términos.\\
-Ejemplo: $7x^{2}y + 5x^z{4} - y$ es un polinomio sobre las variables $x$, $y$ y $z$ con tres monomios: $x^{2}y$, $xz^{4}$ y $y$ cuyos respectivos coeficientes son $2$, $4$, $1$ respectivamente.\\
+Fijamos un conjunto de $n$ variables $\{x_1, x_2, \ldots, x_n\}$. Un \textbf{monomio} es un producto de la forma $x_{1}^{e_{1}} \cdot x_{2}^{e_{2}} \cdots x_{n}^{e_{n}}$ donde cada $e_{i}$ es un número natural. Un \textbf{término} se forma al multiplicar a un monomio por una constante, a la cual llamamos \textbf{coeficiente} del término. Un \textbf{polinomio} es una suma finita de términos.\\
+Ejemplo: $7x^{2}y + 5x^z{4} - y$ es un polinomio en las variables $x$, $y$ y $z$ con tres monomios: $x^{2}y$, $xz^{4}$ y $y$ cuyos respectivos coeficientes son $2$, $4$, $1$ respectivamente.\\
 Una \textbf{forma cuadrática} es un polinomio $q$ en el que cada monomio del mismo es una variable al cuadrado o la multiplicación de dos variables. Esto es equivalente a decir que $q$ se puede expresar como
 
 \begin{equation*}
@@ -104,7 +104,7 @@ z\\
 \end{equation*}
 
 \paragraph*{}
-\textbf{CAMBIO DE VARIABLE}
+\textbf{Cambio de variable}
 
 \paragraph*{}
 Un \textbf{cambio de variable} es una ecuación de la forma
@@ -265,7 +265,7 @@ entonces $q$ es definida positiva si y solo si todos los $\lambda_{i} > 0$
 \end{theorem}
 
 \begin{proof}
-Por el lema anterior $q$ es definida positiva si y solo si $q'$ es definida positiva. Por contradicción, si $\lambda_{i} \leq 0$ entonces definimos $y' = (y_{1}, y_{2}, \ldots, y_{n})$ donde todos los $y_{k}=0$ excepto $y_{i} = 1$. Claramente $\overrightarrow{y} \neq \overrightarrow{0}$ pero $q(\overrightarrow{y}) = \lambda_{i} \leq 0$; por lo tanto $q$ no es definida positiva.
+Por el lema anterior $q$ es definida positiva si y solo si $q'$ es definida positiva. Por contradicción, supongamos que existe $i \in \{1, 2, \ldots, n\}$ tal que $\lambda_{i} \leq 0$ entonces definimos $y' = (y_{1}, y_{2}, \ldots, y_{n})$ donde todos los $y_{k}=0$ excepto $y_{i} = 1$. Claramente $\overrightarrow{y} \neq \overrightarrow{0}$ pero $q(\overrightarrow{y}) = \lambda_{i} \leq 0$; por lo tanto $q$ no es definida positiva.
 \end{proof}
 
 \paragraph{}
@@ -279,12 +279,12 @@ Una matriz $A$ es definida positiva si y solo si tiene \textbf{factorización de
 \label{teorema:1.5}
 \end{theorem}
 
-\section{FORMAS UNITARIAS}
+\section{Formas unitarias}
 \paragraph*{}
 Esta sección fue adaptada de \citep{Ringel1985TameAA} y \citep{alma991031505829703276}. Las \textbf{formas cuadráticas enteras} son un caso especial de las formas cuadráticas donde todos los coeficientes $q_{ij}$ son todos números enteros. Si además exigimos que $q_{ii} = 1$ para $i = 1, 2, \ldots, n$ entonces las llamamos \textbf{formas cuadráticas unitarias}. En el resto de este trabajo solo se trabaja con formas cuadráticas enteras que son unitarias por lo que  las llamaremos \textbf{formas unitarias}.
 
 \paragraph*{}
-\textbf{CAMBIO DE VARIABLE ENTERO}
+\textbf{Cambio de variable entero}
 
 \paragraph*{}
 Una \textbf{matriz entera $M$} es una matriz tal que todas sus entradas son números enteros, y es $\mathbb{Z}$\textbf{-invertible} si además su matriz inversa $M^{-1}$ también es una matriz entera. Un \textbf{cambio de variable entero} es un cambio de variable $\overrightarrow{y} = P\overrightarrow{x}$ donde $P$ es una matriz $\mathbb{Z}$-invertible. Los cambios de variables enteros tienen la propiedad de que transforman formas cuadráticas enteras en formas cuadráticas enteras(demostración: sean $A$ y $P$ matrices enteras, entonces $P^{T}~A~P$ es una matriz entera). Cuando $q(\overrightarrow{x}) = q'(\overrightarrow{y})$ mediante el cambio de variable entero $\overrightarrow{y} = P\overrightarrow{x}$ diremos que $q$ y $q'$ son $\mathbb{Z}$-\textbf{equivalentes} mediante la matriz $\mathbb{Z}$-invertible $P$.
@@ -316,7 +316,7 @@ Si $q$ es una forma unitaria entonces le asociaremos una bigráfica \textbf{$B$}
   \draw (v2) -- (v0);
   \draw (v2) -- (v3);
 \end{tikzpicture}
-\caption{Bigráfica asociada a  $wx -yz - xz - xy - wz + wy$}
+\caption{Bigráfica asociada a  $yz + wx - xz - xy - wz - wy$}
 \label{figura:1.1}
 \end{center}
 \end{figure}
@@ -410,7 +410,7 @@ Las gráficas de Dynkin se presentan en la figura \ref{figura:1.2}. Hay que resa
 Toda forma unitaria $q$ manejada en este trabajo es definida positiva.
 
 \begin{theorem}
-Sea $q$ una forma unitaria conexa. Entonces $q$ es definida positiva si y solo si $q$ es equivalente a una forma unitaria $q_\Delta$ asociada a un diagrama de Dynkin $\Delta$
+Sea $q$ una forma unitaria. Entonces $q$ es definida positiva si y solo si $q$ es equivalente a una forma unitaria $q_\Delta$ asociada a un diagrama de Dynkin $\Delta$
 \label{teorema:1.6}
 \end{theorem}
 
@@ -532,28 +532,28 @@ con gráfica asociada
 \end{tikzpicture}
 \end{center}
 
-Esta gráfica es isomorfa a $\mathbb{A}_{4}$, por lo tanto ese el tipo Dynkin es $q_{\mathbb{A}_{4}}$.
+Esta gráfica es isomorfa a $\mathbb{A}_{4}$, por lo tanto es el tipo Dynkin es $q_{\mathbb{q}_{(x, y, z, w)}}$.
 \end{example}
 
 \paragraph{}
 Para demostrar el teorema \ref{teorema:1.6} lo dividiremos en dos partes:
 
 \begin{enumerate}
-    \item Demostraremos que los diagramas de Dynkin son las únicas gráficas conexas de aristas sólidas que definen formas unitarias que son definidas positivas.
+    \item Demostraremos que los diagramas de Dynkin son las únicas gráficas conexas de aristas sólidas sin lazos que definen formas unitarias definidas positivas.
     \item Demostraremos que siempre es posible hacer cambios de variable enteros de tal manera que la gráfica resultante no contenga aristas solidas.
 \end{enumerate}
 
 La última afirmación será demostrada en \ref{sec:2.1}
 
 \begin{lemma}
-Los diagramas de Dynkin son las únicas gráficas conexas de aristas sólidas que tienen asociadas formas unitarias definidas positivas.
+Los diagramas de Dynkin son las únicas gráficas conexas de aristas sólidas sin lazos que tienen asociadas formas unitarias definidas positivas.
 \label{lema:1.7}
 \end{lemma}
 
 \paragraph{}
 Para comenzar necesitamos convencernos en verdad de que los diagramas de Dynkin definen formas unitarias definidas positivas. Comencemos con las gráficas de tipo $\DynA_{n}$:
 
-$$x_{1}\rule[1mm]{.1cm}{0.4pt} x_{2} \rule[1mm]{.1cm}{0.4pt}\cdots\rule[1mm]{.1cm}{0.4pt} x_{n}$$
+$$x_{1} \tikz[baseline=-0.1ex]\draw (0,0.05) -- (0.3,0.05); x_{2} \tikz[baseline=-0.1ex]\draw (0,0.05) -- (0.3,0.05); \cdots \tikz[baseline=-0.1ex]\draw (0,0.05) -- (0.3,0.05); x_{n}$$
 
 \paragraph{}
 Consideremos  la identidad:
