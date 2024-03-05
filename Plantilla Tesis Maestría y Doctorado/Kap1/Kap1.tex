@@ -54,7 +54,7 @@ x_{n}
 &=   \frac{1}{2} \sum_{i=1}^{n}\sum_{j=1}^{n} a_{ij}x_{i}x_{j}
 \end{align*}
 \paragraph*{}
-Al desarrollar esto se puede ver que el coeficiente de $x_{i}$ $x_{j}$ es $q_{ij} = \frac{1}{2} \left(a_{ij} + a_{ji} \right)$ porque $x_{i}$ $x_{j}$ = $x_{j}$ $x_{i}$, pero como dijimos que $A$ es simétrica $\left( a_{ij} = a_{ji}\right)$ entonces $q_{ij} = a_{ij}$. En particular cuando $i = j$ se tiene que el coeficiente de $x_{i}^{2}$ es $q_{ii} = \frac{1}{2}a_{ii}$. Por lo cuál tenemos la siguiente identidad:
+Al desarrollar esto se puede ver que el coeficiente de $x_{i}$ $x_{j}$ es $q_{ij} = \frac{1}{2} \left(a_{ij} + a_{ji} \right)$ porque $x_{i}$ $x_{j}$ = $x_{j}$ $x_{i}$, pero como dijimos que $A$ es simétrica $\left( a_{ij} = a_{ji}\right)$ entonces $q_{ij} = q_{ji}$. En particular cuando $i = j$ se tiene que el coeficiente de $x_{i}^{2}$ es $q_{ii} = \frac{1}{2}a_{ii}$. Por lo cuál tenemos la siguiente identidad:
 \begin{equation}
     \frac{1}{2} \overrightarrow{x}^{T} A \overrightarrow{x} = \sum_{i=1}^{n}\frac{1}{2} a_{ii}x_{i}^{2} + \sum_{j=2}^{n}\sum_{i=1}^{j-1} a_{ij}x_{i}x_{j}
     \label{ecuacion:1.1}
@@ -226,17 +226,17 @@ entonces $q$ es definida positiva si y solo si todos los $\lambda_{i} > 0$
 Por el lema anterior $q$ es definida positiva si y solo si $q'$ es definida positiva. Por contradicción, supongamos que existe $i \in \{1, 2, \ldots, n\}$ tal que $\lambda_{i} \leq 0$ entonces definimos $y' = (y_{1}, y_{2}, \ldots, y_{n})$ donde todos los $y_{k}=0$ excepto $y_{i} = 1$. Claramente $\overrightarrow{y} \neq \overrightarrow{0}$ pero $q(\overrightarrow{y}) = \lambda_{i} \leq 0$; por lo tanto $q$ no es definida positiva.
 \end{proof}
 \paragraph{}
-Como las formas cuadráticas se pueden representar mediante matrices entonces podemos decir que una matriz $A$ es definida positiva si su forma cuadrática asociada $q(\overrightarrow{x}) = \frac{1}{2}\overrightarrow{x}^{T}A\overrightarrow{x}$ es definida positiva.
+Como las matrices simétricas se pueden representar mediante formas cuadráticas entonces podemos decir que una matriz $A$ es definida positiva si su forma cuadrática asociada $q(\overrightarrow{x}) = \frac{1}{2}\overrightarrow{x}^{T}A\overrightarrow{x}$ es definida positiva.
 \paragraph{}
 El siguiente teorema típico de los cursos de análisis numérico nos da un criterio computacionalmente eficiente para decidir cuando una matriz simétrica es definida positiva(sin demostración).
 \begin{theorem}
-Una matriz $A$ es definida positiva si y solo si tiene \textbf{factorización de Cholesky}, es decir, se puede escribir como $A=R^{T}R$ donde $R$ es una matriz triangula superior con entradas positivas.
+Una matriz $A$ es definida positiva si y solo si tiene \textbf{factorización de Cholesky}, es decir, se puede escribir como $A=R^{T}R$ donde $R$ es una matriz triangular superior con entradas positivas.
 \label{teorema:1.5}
 \end{theorem}
 \section{Formas unitarias}
 \paragraph*{}
 Esta sección fue adaptada de \citep{Ringel1985TameAA} y \citep{alma991031505829703276}. Las \textbf{formas cuadráticas enteras} son un caso especial de las formas cuadráticas donde todos los coeficientes $q_{ij}$ son todos números enteros.\\
-Si además exigimos que $q_{ii} = 1$ para $i = 1, 2, \ldots, n$ entonces las llamamos \textbf{formas cuadráticas unitarias}. En el resto de este trabajo solo se trabaja con formas cuadráticas enteras que son unitarias por lo que  las llamaremos \textbf{formas unitarias}.
+Si además exigimos que $q_{ii} = 1$ para $i = 1, 2, \ldots, n$ entonces las llamamos \textbf{formas cuadráticas unitarias}. En el resto de este trabajo solo se trabaja con formas cuadráticas enteras que son unitarias por lo que  para abreviar las llamaremos \textbf{formas unitarias}.
 
 \newpage
 \textbf{Cambio de variable entero}
@@ -270,7 +270,7 @@ Si $q$ es una forma unitaria entonces le asociaremos una bigráfica \textbf{$B$}
 \end{center}
 \end{figure}
 \paragraph*{}
-Este proceso se puede revertir y asociar a toda bigráfica $G$ (posiblemente con aristas punteadas) una forma unitaria que denotaremos por \textbf{$q_{G}$}. Ahora, toda la información de $q_{G}$ está codificada en $G$: La existencia de $x_{1}^2 + x_{2}^2 + x_{3}^2 + x_{4}^2 + x_{1}x_{2} - x_{1}x_{3} - x_{1}x_{4} - x_{2}x_{3} - x_{2}x_{4} + x_{3}x_{4}$ nos dice que la forma cuadrática está definida sobre alguna variable $x$ y que contiene el término $x^{2}$ (porque $q$ es una forma cuadrática unitaria). Más aún cabe recalcar que nosotros estamos descartando gráficas con lazos, por lo que cualquier bigráfica en verdad define a una forma cuadrática unitaria.\\
+Este proceso se puede revertir y asociar a toda bigráfica $G$ (posiblemente con aristas punteadas) una forma unitaria que denotaremos por \textbf{$q_{G}$}. Ahora, toda la información de $q_{G}$ está codificada en $G$: La existencia de $x_{1}^2 + x_{2}^2 + x_{3}^2 + x_{4}^2 + x_{1}x_{2} - x_{1}x_{3} - x_{1}x_{4} - x_{2}x_{3} - x_{2}x_{4} + x_{3}x_{4}$ nos dice que la forma cuadrática está definida sobre alguna variable $x$ y que contiene el término $x^{2}$ (porque $q$ es una forma cuadrática unitaria). Más aún cabe recalcar que nosotros estamos descartando gráficas con lazos, por lo que cualquier bigráfica sin lazos en verdad define a una forma cuadrática unitaria.\\
 Los diagramas de Dynkin se presentan en la figura \ref{figura:1.2}. Hay que resaltar que las gráficas $\DynD_{n}$ están definidas para $n \geq 4$ mientras que las gráficas $\DynE_{n}$ solo se definen para $n = 6, 7, 8$. Lo importante de estas gráficas radica en que permite dar una caracterización elegante de las formas unitarias que son definidas positivas tal como se explica a continuación.
 
 \begin{figure}[H]
@@ -290,6 +290,7 @@ Los diagramas de Dynkin se presentan en la figura \ref{figura:1.2}. Hay que resa
     \draw (3, 0) -- (v3);
     \end{tikzpicture}\\
     \newline
+    \newline
     $\DynD_{n}$, $n\ge4$ &
     \begin{tikzpicture}
     [baseline=(v1.base)]
@@ -303,6 +304,7 @@ Los diagramas de Dynkin se presentan en la figura \ref{figura:1.2}. Hay que resa
     -- (v2); \draw (4, 0) -- (v4);
     \end{tikzpicture} \\
     \newline
+    \newline
     $\DynE_{n}$, $n=6$ &
     \begin{tikzpicture} [baseline=(v1.base)]
     \node (v1) at (0, 0) {$2$};
@@ -315,6 +317,7 @@ Los diagramas de Dynkin se presentan en la figura \ref{figura:1.2}. Hay que resa
     \draw (v6) -- (v3);
     \draw (v5) -- (v4);
     \end{tikzpicture}\\
+    \newline
     \newline
     $\DynE_{n}$, $n=7$ &
     \begin{tikzpicture} [baseline=(v1.base)]
@@ -331,6 +334,7 @@ Los diagramas de Dynkin se presentan en la figura \ref{figura:1.2}. Hay que resa
     \draw (v5) -- (v7);
     \draw (v6) -- (v3);
     \end{tikzpicture}\\
+    \newline
     \newline
     $\DynE_{n}$, $n=8$ &
     \begin{tikzpicture} [baseline=(v1.base)]
@@ -355,7 +359,7 @@ Los diagramas de Dynkin se presentan en la figura \ref{figura:1.2}. Hay que resa
 \end{figure}
 Toda forma unitaria $q$ manejada en este trabajo es definida positiva.
 \begin{theorem}
-Sea $q$ una forma unitaria. Entonces $q$ es definida positiva si y solo si $q$ es equivalente a una forma unitaria $q_\Delta$ asociada a un diagrama de Dynkin $\Delta$
+Sea $q$ una forma unitaria y conexa. Entonces $q$ es definida positiva si y solo si $q$ es equivalente a una forma unitaria $q_\Delta$ asociada a un diagrama de Dynkin $\Delta$
 \label{teorema:1.6}
 \end{theorem}
 \paragraph{}

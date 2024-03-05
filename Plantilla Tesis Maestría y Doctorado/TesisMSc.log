@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (MiKTeX 22.1) (format=lualatex 2022.3.3)  9 JAN 2023 11:20
+This is LuaHBTeX, Version 1.14.0 (MiKTeX 22.1) (format=lualatex 2022.3.3)  5 MAR 2024 11:03
  restricted system commands enabled.
 **TesisMSc.tex
 (./TesisMSc.tex
@@ -2095,54 +2095,54 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.4'
 LaTeX Info: Redefining \. on input line 241.
 LaTeX Info: Redefining \% on input line 241.
  [5]
-LaTeX Info: Redefining \. on input line 356.
-LaTeX Info: Redefining \% on input line 356.
+LaTeX Info: Redefining \. on input line 360.
+LaTeX Info: Redefining \% on input line 360.
  [6]
-LaTeX Info: Redefining \. on input line 383.
-LaTeX Info: Redefining \% on input line 383.
+LaTeX Info: Redefining \. on input line 387.
+LaTeX Info: Redefining \% on input line 387.
  [7]
-LaTeX Info: Redefining \. on input line 481.
-LaTeX Info: Redefining \% on input line 481.
+LaTeX Info: Redefining \. on input line 485.
+LaTeX Info: Redefining \% on input line 485.
  [8]
-LaTeX Info: Redefining \. on input line 568.
-LaTeX Info: Redefining \% on input line 568.
+LaTeX Info: Redefining \. on input line 572.
+LaTeX Info: Redefining \% on input line 572.
  [9]
 Overfull \vbox (28.4519pt too high) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 568.
-LaTeX Info: Redefining \% on input line 568.
+LaTeX Info: Redefining \. on input line 572.
+LaTeX Info: Redefining \% on input line 572.
 
 [10]
-LaTeX Info: Redefining \. on input line 684.
-LaTeX Info: Redefining \% on input line 684.
+LaTeX Info: Redefining \. on input line 688.
+LaTeX Info: Redefining \% on input line 688.
  [11]
-LaTeX Info: Redefining \. on input line 753.
-LaTeX Info: Redefining \% on input line 753.
+LaTeX Info: Redefining \. on input line 757.
+LaTeX Info: Redefining \% on input line 757.
  [12]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 778.
+(Font)              <10.95> on input line 782.
 
-Overfull \hbox (32.97269pt too wide) in paragraph at lines 801--802
+Overfull \hbox (32.97269pt too wide) in paragraph at lines 805--806
  [][] 
  []
 
 
-Overfull \hbox (1.67493pt too wide) in paragraph at lines 845--846
+Overfull \hbox (1.67493pt too wide) in paragraph at lines 849--850
  [][] 
  []
 
 
-Overfull \hbox (2.61105pt too wide) in paragraph at lines 756--849
+Overfull \hbox (2.61105pt too wide) in paragraph at lines 760--853
 [][] []
  []
 
 
-Overfull \hbox (2.61105pt too wide) in paragraph at lines 756--849
+Overfull \hbox (2.61105pt too wide) in paragraph at lines 760--853
 [] [] 
  []
 
-LaTeX Info: Redefining \. on input line 884.
-LaTeX Info: Redefining \% on input line 884.
+LaTeX Info: Redefining \. on input line 888.
+LaTeX Info: Redefining \% on input line 888.
 [13])
 LaTeX Info: Redefining \. on input line 21.
 LaTeX Info: Redefining \% on input line 21.
@@ -3243,8 +3243,8 @@ Here is how much of LuaTeX's memory you used:
  1269 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 4 glyph, 175 attribute, 98 glue_spe
 c, 89 attribute_list, 3 write, 1 special, 2 pdf_action nodes
-   avail lists: 1:10,2:12598,3:5162,4:672,5:724,6:130,7:10706,8:136,9:2309,10:33
-,11:1202
+   avail lists: 1:8,2:12598,3:5162,4:672,5:727,6:130,7:10706,8:136,9:2309,10:33,
+11:1202
  59216 multiletter control sequences out of 65536+600000
  99 fonts using 6551063 bytes
  113i,28n,103p,10665b,1538s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3279,7 +3279,7 @@ ts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Acker/AppData/Local/Progra
 ms/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Acker/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/Acker/AppDat
 a/Local/Programs/MiKTeX/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on TesisMSc.pdf (68 pages, 1317763 bytes).
+Output written on TesisMSc.pdf (68 pages, 1317978 bytes).
 
 PDF statistics: 1219 PDF objects out of 1440 (max. 8388607)
  519 named destinations out of 1000 (max. 131072)
