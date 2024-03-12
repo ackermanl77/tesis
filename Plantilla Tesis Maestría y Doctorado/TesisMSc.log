@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (MiKTeX 22.1) (format=lualatex 2022.3.3)  5 MAR 2024 11:03
+This is LuaHBTeX, Version 1.14.0 (MiKTeX 22.1) (format=lualatex 2022.3.3)  5 MAR 2024 11:21
  restricted system commands enabled.
 **TesisMSc.tex
 (./TesisMSc.tex
@@ -3243,8 +3243,8 @@ Here is how much of LuaTeX's memory you used:
  1269 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 4 glyph, 175 attribute, 98 glue_spe
 c, 89 attribute_list, 3 write, 1 special, 2 pdf_action nodes
-   avail lists: 1:8,2:12598,3:5162,4:672,5:727,6:130,7:10706,8:136,9:2309,10:33,
-11:1202
+   avail lists: 1:10,2:12598,3:5162,4:672,5:729,6:130,7:10706,8:136,9:2309,10:33
+,11:1202
  59216 multiletter control sequences out of 65536+600000
  99 fonts using 6551063 bytes
  113i,28n,103p,10665b,1538s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3279,7 +3279,7 @@ ts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Acker/AppData/Local/Progra
 ms/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Acker/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/Acker/AppDat
 a/Local/Programs/MiKTeX/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on TesisMSc.pdf (68 pages, 1317978 bytes).
+Output written on TesisMSc.pdf (68 pages, 1317958 bytes).
 
 PDF statistics: 1219 PDF objects out of 1440 (max. 8388607)
  519 named destinations out of 1000 (max. 131072)
